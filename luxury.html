@@ -28,16 +28,27 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
         /* Lightbox */
-        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center; cursor: zoom-out; }
+        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 9999; justify-content: center; align-items: center; cursor: zoom-out; }
         .lightbox.active { display: flex; }
-        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 8px; box-shadow: 0 25px 50px rgba(0,0,0,0.5); }
-        .zoomable { cursor: zoom-in; transition: transform 0.2s; }
+        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+        .zoomable { cursor: zoom-in; transition: all 0.4s ease; }
         .zoomable:hover { transform: scale(1.02); }
+        /* Smooth scroll */
+        html { scroll-behavior: smooth; }
+        /* Fade in animation */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeInUp 0.8s ease forwards; }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
     </style>
 </head>
 <body class="bg-white text-slate-800 antialiased">
@@ -46,263 +57,301 @@
         <img id="lightbox-img" src="" alt="Enlarged view">
     </div>
 
-    <!-- Elegant Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-b border-slate-100 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Minimal Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white/98 backdrop-blur-md z-50">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
                 <a href="index.html" class="flex items-center">
-                    <img src="images/logo.png" alt="OnPoint Pros" class="h-14 sm:h-16 w-auto">
+                    <img src="images/logo.png" alt="OnPoint Pros" class="h-12 w-auto">
                 </a>
-                <!-- Nav -->
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="#services" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Services</a>
-                    <a href="#gallery" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Gallery</a>
-                    <a href="#contact" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Contact</a>
+                <nav class="hidden md:flex items-center gap-10">
+                    <a href="#process" class="text-slate-500 hover:text-slate-900 text-sm tracking-wide uppercase transition-colors">Process</a>
+                    <a href="#work" class="text-slate-500 hover:text-slate-900 text-sm tracking-wide uppercase transition-colors">Work</a>
+                    <a href="#contact" class="text-slate-500 hover:text-slate-900 text-sm tracking-wide uppercase transition-colors">Contact</a>
                 </nav>
-                <!-- CTA -->
-                <a href="#contact" class="inline-flex items-center px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-lg transition-all duration-200">
-                    Schedule Consultation
+                <a href="tel:+14692381719" class="text-slate-900 font-medium hover:text-amber-600 transition-colors">
+                    (469) 238-1719
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section with Background Image -->
+    <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center pt-20">
-        <!-- Background Image -->
         <div class="absolute inset-0 z-0">
-            <img src="images/kitchen-remodel-luxury.jpg" alt="Luxury Kitchen" class="w-full h-full object-cover" loading="eager" decoding="async" fetchpriority="high">
-            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/40"></div>
+            <img src="images/kitchen-remodel-luxury.jpg" alt="Luxury Kitchen" class="w-full h-full object-cover" loading="eager" fetchpriority="high">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
         </div>
         
-        <!-- Content -->
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
-            <div class="max-w-2xl">
-                <!-- Gold accent line -->
-                <div class="w-20 h-1 bg-amber-400 mb-8"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 py-32">
+            <div class="max-w-xl">
+                <p class="text-amber-400 text-sm tracking-[0.3em] uppercase mb-6 animate-fade-in">Frisco's Premier Design-Build Firm</p>
                 
-                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                    Transform Your Home.<br>
-                    <span class="text-amber-400">Zero Surprises.</span>
+                <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.1] mb-8 animate-fade-in delay-100">
+                    Thoughtful Design.<br>
+                    Flawless Execution.
                 </h1>
                 
-                <p class="text-xl text-slate-300 mb-10 max-w-lg">
-                    Frisco's premier design-build team for homeowners who demand exceptional craftsmanship and complete transparency.
+                <p class="text-lg text-white/70 mb-10 leading-relaxed animate-fade-in delay-200">
+                    We transform homes for families who value craftsmanship, transparency, and an experience as refined as the finished product.
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-amber-400 hover:bg-amber-500 text-slate-900 font-semibold rounded-lg transition-all duration-200 shadow-xl">
-                        Schedule Your Design Consultation
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                        </svg>
-                    </a>
-                    <a href="tel:+14692381719" class="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/30 transition-all duration-200">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                        </svg>
-                        (469) 238-1719
+                <div class="flex flex-col sm:flex-row gap-4 animate-fade-in delay-300">
+                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-amber-400 hover:bg-amber-300 text-slate-900 font-medium tracking-wide transition-all duration-300">
+                        Begin Your Project
                     </a>
                 </div>
-                
-                <!-- Counter Stat -->
-                <div class="mt-12 pt-8 border-t border-white/20">
-                    <div class="flex items-center gap-4">
-                        <span id="counter" class="font-serif text-5xl font-bold text-amber-400">0</span>
-                        <span class="text-xl text-slate-300">Homeowners Served</span>
+            </div>
+        </div>
+        
+        <!-- Stats Bar -->
+        <div class="absolute bottom-0 left-0 right-0 bg-white/10 backdrop-blur-md border-t border-white/20">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 py-6">
+                <div class="grid grid-cols-3 gap-8 text-center">
+                    <div>
+                        <p class="font-serif text-4xl text-white mb-1"><span id="counter">0</span>+</p>
+                        <p class="text-white/60 text-sm tracking-wide">Homes Transformed</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-4xl text-white mb-1">5.0</p>
+                        <p class="text-white/60 text-sm tracking-wide">Google Rating</p>
+                    </div>
+                    <div>
+                        <p class="font-serif text-4xl text-white mb-1">100%</p>
+                        <p class="text-white/60 text-sm tracking-wide">Price-Lock Guarantee</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-16 sm:py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Price-Lock Guarantee -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 text-center">
-                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+    <!-- The Promise Section -->
+    <section class="py-24 lg:py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-20">
+                <p class="text-amber-600 text-sm tracking-[0.3em] uppercase mb-4">The OnPoint Promise</p>
+                <h2 class="font-serif text-4xl lg:text-5xl text-slate-900 mb-6">
+                    Your Vision, Our Commitment
+                </h2>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    Every project begins with understanding what matters most to you—then delivering it without compromise.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12 lg:gap-16">
+                <!-- Promise 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-slate-900 mb-3">Price-Lock Guarantee</h3>
-                    <p class="text-slate-600">Your quote is your final price. No change orders, no surprise bills. Locked-in from day one.</p>
+                    <h3 class="font-serif text-2xl text-slate-900 mb-3">Price-Lock Guarantee</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Your quote is your final price. No change orders, no surprise invoices. Ever.
+                    </p>
                 </div>
-
-                <!-- Design Concierge -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 text-center">
-                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                
+                <!-- Promise 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-slate-900 mb-3">Design Concierge</h3>
-                    <p class="text-slate-600">From material selection to color palette, we guide you through every design decision.</p>
+                    <h3 class="font-serif text-2xl text-slate-900 mb-3">On-Time Delivery</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        We set realistic timelines and meet them. Your life shouldn't be on hold indefinitely.
+                    </p>
                 </div>
-
-                <!-- 5-Star Craftsmanship -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100 text-center">
-                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                
+                <!-- Promise 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl font-bold text-slate-900 mb-3">5-Star Craftsmanship</h3>
-                    <p class="text-slate-600">Meticulous attention to detail on every project. Our reputation is built on excellence.</p>
+                    <h3 class="font-serif text-2xl text-slate-900 mb-3">Daily Updates</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Photo updates every day. You'll always know exactly where your project stands.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 sm:py-28 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="w-16 h-1 bg-amber-400 mx-auto mb-6"></div>
-                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-                    Our Luxury Services
+    <!-- Work Section -->
+    <section id="work" class="py-24 lg:py-32 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <p class="text-amber-600 text-sm tracking-[0.3em] uppercase mb-4">Recent Projects</p>
+                <h2 class="font-serif text-4xl lg:text-5xl text-slate-900">
+                    Our Work Speaks
                 </h2>
-                <p class="text-xl text-slate-600">
-                    Comprehensive design-build solutions for discerning homeowners
-                </p>
             </div>
-
-            <!-- Services Grid -->
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Chef's Kitchens -->
-                <div class="group relative overflow-hidden rounded-2xl">
-                    <img src="images/kitchen-remodel-luxury.jpg" alt="Chef's Kitchen" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500 zoomable" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 class="font-serif text-xl font-bold text-white mb-2">Modern White Kitchen Remodel</h3>
-                        <p class="text-sm text-slate-300">Crisp white cabinets, marble-look surfaces, upgraded lighting, and a larger island that changes how the space lives.</p>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Kitchen Project -->
+                <div class="group bg-white overflow-hidden">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img src="images/kitchen-remodel-luxury.jpg" alt="Modern White Kitchen Remodel" class="w-full h-full object-cover zoomable group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <p class="text-amber-600 text-sm tracking-wide uppercase mb-2">Kitchen Remodel</p>
+                        <h3 class="font-serif text-2xl text-slate-900 mb-3">Modern White Kitchen</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Crisp white cabinets, marble-look surfaces, upgraded lighting, and a larger island that transforms how the space lives.
+                        </p>
                     </div>
                 </div>
-
-                <!-- Spa Bathrooms -->
-                <div class="group relative overflow-hidden rounded-2xl">
-                    <img src="images/bathroom-remodel-luxury.jpg" alt="Spa Bathroom" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500 zoomable" loading="lazy" decoding="async">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 class="font-serif text-xl font-bold text-white mb-2">Luxury Spa Bathroom Remodel</h3>
-                        <p class="text-sm text-slate-300">A complete refresh with a soaking tub, statement tile, and elevated lighting + fixtures.</p>
+                
+                <!-- Bathroom Project -->
+                <div class="group bg-white overflow-hidden">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img src="images/bathroom-remodel-luxury.jpg" alt="Luxury Spa Bathroom" class="w-full h-full object-cover zoomable group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="p-8">
+                        <p class="text-amber-600 text-sm tracking-wide uppercase mb-2">Bathroom Renovation</p>
+                        <h3 class="font-serif text-2xl text-slate-900 mb-3">Luxury Spa Bathroom</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            A complete refresh with a soaking tub, statement tile, and elevated lighting + fixtures.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-20 sm:py-28 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="w-16 h-1 bg-amber-400 mx-auto mb-6"></div>
-                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-                    Our Work
+    <!-- Process Section -->
+    <section id="process" class="py-24 lg:py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-20">
+                <p class="text-amber-600 text-sm tracking-[0.3em] uppercase mb-4">How We Work</p>
+                <h2 class="font-serif text-4xl lg:text-5xl text-slate-900 mb-6">
+                    A Seamless Experience
                 </h2>
-                <p class="text-xl text-slate-600">
-                    Luxury transformations for Frisco homeowners
+                <p class="text-lg text-slate-600">
+                    From first conversation to final walkthrough, we've designed every step to be clear, collaborative, and stress-free.
                 </p>
             </div>
-
-            <!-- Gallery Grid -->
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Kitchen -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
-                    <img src="images/kitchen-remodel-luxury.jpg" alt="Luxury Kitchen Remodel" class="w-full h-64 object-cover zoomable" loading="lazy" decoding="async">
-                    <div class="p-6">
-                        <h3 class="font-serif text-xl font-bold text-slate-900">Complete Kitchen Remodel</h3>
-                        <p class="text-slate-600 text-sm">Frisco, TX</p>
-                    </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="relative">
+                    <div class="text-amber-400 font-serif text-6xl mb-4">01</div>
+                    <h3 class="font-serif text-xl text-slate-900 mb-2">Discovery Call</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        We listen to your vision, assess your space, and understand your priorities.
+                    </p>
                 </div>
-
-                <!-- Bathroom -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
-                    <img src="images/bathroom-remodel-luxury.jpg" alt="Luxury Bathroom Remodel" class="w-full h-64 object-cover zoomable" loading="lazy" decoding="async">
-                    <div class="p-6">
-                        <h3 class="font-serif text-xl font-bold text-slate-900">Master Bathroom Renovation</h3>
-                        <p class="text-slate-600 text-sm">Plano, TX</p>
-                    </div>
+                
+                <!-- Step 2 -->
+                <div class="relative">
+                    <div class="text-amber-400 font-serif text-6xl mb-4">02</div>
+                    <h3 class="font-serif text-xl text-slate-900 mb-2">Design & Proposal</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Receive a detailed plan with material selections, timeline, and locked-in pricing.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="relative">
+                    <div class="text-amber-400 font-serif text-6xl mb-4">03</div>
+                    <h3 class="font-serif text-xl text-slate-900 mb-2">Build Phase</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Our craftsmen bring your vision to life with daily updates and meticulous attention to detail.
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="relative">
+                    <div class="text-amber-400 font-serif text-6xl mb-4">04</div>
+                    <h3 class="font-serif text-xl text-slate-900 mb-2">Final Reveal</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Walk through your transformed space together. We don't leave until you're thrilled.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Reviews Section -->
-    <section class="py-20 sm:py-28 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <div class="w-16 h-1 bg-amber-400 mx-auto mb-6"></div>
-                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-                    What Our Clients Say
+    <section class="py-24 lg:py-32 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <p class="text-amber-600 text-sm tracking-[0.3em] uppercase mb-4">Client Experiences</p>
+                <h2 class="font-serif text-4xl lg:text-5xl text-slate-900">
+                    What Homeowners Say
                 </h2>
             </div>
             
-            <!-- Elfsight Google Reviews Widget -->
             <script src="https://static.elfsight.com/platform/platform.js" async></script>
             <div class="elfsight-app-708ebaf7-df28-4458-b7bf-55a5ef0188e3" data-elfsight-app-lazy></div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 sm:py-28 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+    <section id="contact" class="py-24 lg:py-32 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24">
                 <!-- Left Column -->
-                <div>
-                    <div class="w-16 h-1 bg-amber-400 mb-8"></div>
-                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-                        Schedule Your Design Consultation
+                <div class="text-white">
+                    <p class="text-amber-400 text-sm tracking-[0.3em] uppercase mb-4">Start Your Project</p>
+                    <h2 class="font-serif text-4xl lg:text-5xl mb-6">
+                        Let's Build Something Beautiful
                     </h2>
-                    <p class="text-xl text-slate-400 mb-8">
-                        Tell us about your vision. We'll bring it to life with a detailed proposal and transparent pricing.
+                    <p class="text-lg text-slate-400 mb-10 leading-relaxed">
+                        Share your vision with us. We'll respond within 24 hours with next steps toward making it a reality.
                     </p>
-
-                    <div class="space-y-4">
-                        <a href="tel:+14692381719" class="flex items-center gap-3 text-slate-300 hover:text-white transition-colors">
-                            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    
+                    <div class="space-y-6">
+                        <a href="tel:+14692381719" class="flex items-center gap-4 text-white hover:text-amber-400 transition-colors">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
                                 </svg>
                             </div>
-                            <span class="text-lg font-medium">(469) 238-1719</span>
+                            <span class="text-lg">(469) 238-1719</span>
                         </a>
-                        <div class="flex items-center gap-3 text-slate-300">
-                            <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        <div class="flex items-center gap-4 text-slate-400">
+                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                                 </svg>
                             </div>
                             <span>Serving Frisco, Plano, Allen & North Dallas</span>
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Right Column - Form -->
-                <div class="bg-white rounded-2xl p-8 text-slate-900">
-                    <h3 class="text-2xl font-bold mb-6">Get Your Free Consultation</h3>
-                    <form id="contact-form" class="space-y-5">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Your Name</label>
-                            <input type="text" id="name" name="name" required 
-                                class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors"
-                                placeholder="John Smith">
+                <div class="bg-white p-8 lg:p-10">
+                    <form id="contact-form" class="space-y-6">
+                        <input type="hidden" name="source" value="luxury">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm text-slate-600 mb-2">Name</label>
+                                <input type="text" id="name" name="name" required 
+                                    class="w-full px-4 py-3 border border-slate-200 focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors bg-white">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm text-slate-600 mb-2">Phone</label>
+                                <input type="tel" id="phone" name="phone" required 
+                                    class="w-full px-4 py-3 border border-slate-200 focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors bg-white">
+                            </div>
                         </div>
                         <div>
-                            <label for="phone" class="block text-sm font-medium text-slate-700 mb-2">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" required 
-                                class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors"
-                                placeholder="(469) 238-1719">
+                            <label for="email" class="block text-sm text-slate-600 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                class="w-full px-4 py-3 border border-slate-200 focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors bg-white">
                         </div>
                         <div>
-                            <label for="service" class="block text-sm font-medium text-slate-700 mb-2">Service Needed</label>
+                            <label for="service" class="block text-sm text-slate-600 mb-2">Project Type</label>
                             <select id="service" name="service" required 
-                                class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors bg-white">
-                                <option value="">Select a service...</option>
+                                class="w-full px-4 py-3 border border-slate-200 focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors bg-white">
+                                <option value="">Select...</option>
                                 <option value="kitchen">Kitchen Remodel</option>
                                 <option value="bathroom">Bathroom Renovation</option>
                                 <option value="flooring">Whole-Home Flooring</option>
@@ -313,14 +362,14 @@
                         <div class="flex items-start gap-3">
                             <input type="checkbox" id="consent" name="consent" required
                                 class="mt-1 w-4 h-4 text-amber-600 border-slate-300 rounded focus:ring-amber-500">
-                            <label for="consent" class="text-xs text-slate-600">
+                            <label for="consent" class="text-xs text-slate-500 leading-relaxed">
                                 By submitting, you consent to receive calls and texts (including via autodialer) about your project. Msg &amp; data rates may apply. Reply STOP to opt out.
                             </label>
                         </div>
                         <button type="submit" id="submit-btn"
-                            class="w-full px-6 py-4 bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold rounded-xl transition-all duration-200 shadow-lg flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
-                            <span id="btn-text">Schedule Consultation</span>
-                            <svg id="btn-arrow" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            class="w-full px-6 py-4 bg-slate-900 hover:bg-slate-800 text-white font-medium tracking-wide transition-all duration-200 flex items-center justify-center gap-2">
+                            <span id="btn-text">Request Consultation</span>
+                            <svg id="btn-arrow" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
                             <svg id="btn-spinner" class="w-5 h-5 animate-spin hidden" fill="none" viewBox="0 0 24 24">
@@ -329,13 +378,12 @@
                             </svg>
                         </button>
                     </form>
-                    <!-- Success Message -->
-                    <div id="success-message" class="hidden text-center py-8">
-                        <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    <div id="success-message" class="hidden text-center py-12">
+                        <svg class="w-16 h-16 text-amber-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
-                        <h4 class="text-xl font-bold text-slate-900 mb-2">Thank You!</h4>
-                        <p class="text-slate-600">We'll call you within 24 hours to discuss your project.</p>
+                        <h4 class="text-xl font-medium text-slate-900 mb-2">Thank You</h4>
+                        <p class="text-slate-600">We'll be in touch within 24 hours.</p>
                     </div>
                 </div>
             </div>
@@ -343,59 +391,45 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div class="flex items-center">
-                    <img src="images/logo.png" alt="OnPoint Pros" class="h-12 w-auto" style="filter: brightness(0) invert(1);">
-                </div>
+    <footer class="bg-slate-950 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <img src="images/logo.png" alt="OnPoint Pros" class="h-10 w-auto" style="filter: brightness(0) invert(1);">
                 <p class="text-slate-500 text-sm">
                     © 2026 OnPoint Pros. All rights reserved.
                 </p>
-                <a href="index.html" class="text-slate-400 hover:text-white transition-colors text-sm">
+                <a href="index.html" class="text-slate-400 hover:text-white text-sm transition-colors">
                     ← Back to Home
                 </a>
             </div>
         </div>
     </footer>
 
-    <!-- Smooth Scroll & Form Script -->
     <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Form Submission to LeadConnector
+        // Form submission
         document.getElementById('contact-form').addEventListener('submit', async function(e) {
             e.preventDefault();
-            
             const form = this;
             const submitBtn = document.getElementById('submit-btn');
             const btnText = document.getElementById('btn-text');
             const btnArrow = document.getElementById('btn-arrow');
             const btnSpinner = document.getElementById('btn-spinner');
             const successMessage = document.getElementById('success-message');
-            
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service').value;
-            
+
+            submitBtn.disabled = true;
             btnText.textContent = 'Sending...';
             btnArrow.classList.add('hidden');
             btnSpinner.classList.remove('hidden');
-            submitBtn.disabled = true;
-            
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+
             try {
                 await fetch('https://services.leadconnectorhq.com/hooks/UEW8ayn3dNsZG78pPsZw/webhook-trigger/cad8faea-f902-4134-9863-00dcf134b410', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ name, phone, service, source: 'luxury' })
+                    body: JSON.stringify(data),
+                    mode: 'no-cors'
                 });
                 form.classList.add('hidden');
                 successMessage.classList.remove('hidden');
@@ -405,7 +439,7 @@
             }
         });
 
-        // Lightbox functionality
+        // Lightbox
         document.querySelectorAll('.zoomable').forEach(img => {
             img.addEventListener('click', () => {
                 const lightbox = document.getElementById('lightbox');
@@ -432,8 +466,6 @@
                 }
             }, 16);
         }
-        
-        // Start counter when page loads
         animateCounter(document.getElementById('counter'), 329, 2000);
     </script>
 </body>
