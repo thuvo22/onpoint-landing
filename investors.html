@@ -104,10 +104,12 @@
 
                 <!-- Right Video -->
                 <div class="relative">
-                    <video autoplay loop muted playsinline class="w-full rounded-2xl shadow-2xl" poster="images/flooring-after.jpg">
-                        <source src="images/video.mp4" type="video/mp4">
-                        <img src="images/flooring-after.jpg" alt="Turnover Result" class="w-full rounded-2xl shadow-2xl">
-                    </video>
+                    <div class="aspect-square overflow-hidden rounded-2xl shadow-2xl">
+                        <video autoplay loop muted playsinline class="w-full h-full object-cover" poster="images/flooring-after.jpg">
+                            <source src="images/video.mp4" type="video/mp4">
+                            <img src="images/flooring-after.jpg" alt="Turnover Result" class="w-full h-full object-cover">
+                        </video>
+                    </div>
                     <div class="absolute -bottom-4 -left-4 bg-white rounded-xl p-4 shadow-xl">
                         <div class="flex items-center gap-3">
                             <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center">
