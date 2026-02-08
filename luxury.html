@@ -105,11 +105,17 @@
                         (469) 238-1719
                     </a>
                 </div>
+                
+                <!-- Counter Stat -->
+                <div class="mt-12 pt-8 border-t border-white/20">
+                    <div class="flex items-center gap-4">
+                        <span id="counter" class="font-serif text-5xl font-bold text-amber-400">0</span>
+                        <span class="text-xl text-slate-300">Homeowners Served</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- Trust Triggers Section -->
     <section class="py-16 sm:py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-3 gap-8">
@@ -411,6 +417,24 @@
         document.getElementById('lightbox').addEventListener('click', function() {
             this.classList.remove('active');
         });
+
+        // Counter animation
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
+        }
+        
+        // Start counter when page loads
+        animateCounter(document.getElementById('counter'), 329, 2000);
     </script>
 </body>
 </html>
