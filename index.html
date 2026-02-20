@@ -406,45 +406,85 @@
                     <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Kitchen Remodel FAQs</h2>
                 </div>
                 
-                <div class="space-y-6">
-                    <div class="bg-slate-50 rounded-xl p-6">
-                        <h3 class="font-bold text-slate-900 mb-2">How long does a kitchen remodel take?</h3>
-                        <p class="text-slate-600">Most complete kitchen remodels take 4–8 weeks once materials arrive and work begins. Timelines depend on scope, material lead times, and whether we're moving walls or plumbing. We'll give you a realistic range during your consultation.</p>
+                <div class="space-y-4">
+                    <div class="faq-item bg-slate-50 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)">
+                            <h3 class="font-bold text-slate-900">How long does a kitchen remodel take?</h3>
+                            <svg class="faq-icon w-6 h-6 text-slate-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-slate-600 px-6 pb-6">Most complete kitchen remodels take 4–8 weeks once materials arrive and work begins. Timelines depend on scope, material lead times, and whether we're moving walls or plumbing. We'll give you a realistic range during your consultation.</p>
+                        </div>
                     </div>
                     
-                    <div class="bg-slate-50 rounded-xl p-6">
-                        <h3 class="font-bold text-slate-900 mb-2">What does a kitchen remodel cost?</h3>
-                        <p class="text-slate-600">Kitchen remodels vary widely based on size, materials, and scope. Rather than quote a number that may not apply to your project, we prefer to see your space and understand your goals first. We'll provide a detailed written proposal with clear pricing before any work starts.</p>
+                    <div class="faq-item bg-slate-50 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)">
+                            <h3 class="font-bold text-slate-900">What does a kitchen remodel cost?</h3>
+                            <svg class="faq-icon w-6 h-6 text-slate-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-slate-600 px-6 pb-6">Kitchen remodels vary widely based on size, materials, and scope. Rather than quote a number that may not apply to your project, we prefer to see your space and understand your goals first. We'll provide a detailed written proposal with clear pricing before any work starts.</p>
+                        </div>
                     </div>
                     
-                    <div class="bg-slate-50 rounded-xl p-6">
-                        <h3 class="font-bold text-slate-900 mb-2">What's included in a full kitchen remodel?</h3>
-                        <p class="text-slate-600">Typically: demo, new cabinets, countertops, backsplash, flooring, lighting, plumbing fixtures, painting, and installation of your appliances. We detail everything in your proposal so you know exactly what's covered.</p>
+                    <div class="faq-item bg-slate-50 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)">
+                            <h3 class="font-bold text-slate-900">What's included in a full kitchen remodel?</h3>
+                            <svg class="faq-icon w-6 h-6 text-slate-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-slate-600 px-6 pb-6">Typically: demo, new cabinets, countertops, backsplash, flooring, lighting, plumbing fixtures, painting, and installation of your appliances. We detail everything in your proposal so you know exactly what's covered.</p>
+                        </div>
                     </div>
                     
-                    <div class="bg-slate-50 rounded-xl p-6">
-                        <h3 class="font-bold text-slate-900 mb-2">Do you help with design and material selection?</h3>
-                        <p class="text-slate-600">Yes. We provide design support and guide you through selecting cabinets, counters, tile, fixtures, and finishes. We'll recommend options that fit your style and budget without making the process overwhelming.</p>
+                    <div class="faq-item bg-slate-50 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)">
+                            <h3 class="font-bold text-slate-900">Do you help with design and material selection?</h3>
+                            <svg class="faq-icon w-6 h-6 text-slate-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-slate-600 px-6 pb-6">Yes. We provide design support and guide you through selecting cabinets, counters, tile, fixtures, and finishes. We'll recommend options that fit your style and budget without making the process overwhelming.</p>
+                        </div>
                     </div>
                     
-                    <div class="bg-slate-50 rounded-xl p-6">
-                        <h3 class="font-bold text-slate-900 mb-2">Do you handle permits?</h3>
-                        <p class="text-slate-600">When permits are required (e.g., for electrical or structural changes), we handle the permit process. We'll let you know during planning if your project needs one.</p>
+                    <div class="faq-item bg-slate-50 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)">
+                            <h3 class="font-bold text-slate-900">Do you handle permits?</h3>
+                            <svg class="faq-icon w-6 h-6 text-slate-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-slate-600 px-6 pb-6">When permits are required (e.g., for electrical or structural changes), we handle the permit process. We'll let you know during planning if your project needs one.</p>
+                        </div>
                     </div>
                     
-                    <div class="bg-slate-50 rounded-xl p-6">
-                        <h3 class="font-bold text-slate-900 mb-2">How do you handle dust and cleanup?</h3>
-                        <p class="text-slate-600">We protect your floors and adjacent areas, use dust barriers during demo, and clean up daily. At project completion, we do a thorough deep clean so you can start enjoying your new kitchen right away.</p>
+                    <div class="faq-item bg-slate-50 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)">
+                            <h3 class="font-bold text-slate-900">How do you handle dust and cleanup?</h3>
+                            <svg class="faq-icon w-6 h-6 text-slate-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-slate-600 px-6 pb-6">We protect your floors and adjacent areas, use dust barriers during demo, and clean up daily. At project completion, we do a thorough deep clean so you can start enjoying your new kitchen right away.</p>
+                        </div>
                     </div>
                     
-                    <div class="bg-slate-50 rounded-xl p-6">
-                        <h3 class="font-bold text-slate-900 mb-2">What warranty do you offer?</h3>
-                        <p class="text-slate-600">We provide a workmanship warranty covering our labor. Products like cabinets and countertops have their own manufacturer warranties, and we'll give you clear documentation on all of it.</p>
+                    <div class="faq-item bg-slate-50 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)">
+                            <h3 class="font-bold text-slate-900">What warranty do you offer?</h3>
+                            <svg class="faq-icon w-6 h-6 text-slate-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-slate-600 px-6 pb-6">We provide a workmanship warranty covering our labor. Products like cabinets and countertops have their own manufacturer warranties, and we'll give you clear documentation on all of it.</p>
+                        </div>
                     </div>
                     
-                    <div class="bg-slate-50 rounded-xl p-6">
-                        <h3 class="font-bold text-slate-900 mb-2">How will I stay updated during my project?</h3>
-                        <p class="text-slate-600">You'll have a single point of contact and receive updates at agreed milestones—typically weekly. If questions come up, we respond quickly. No ghosting, no radio silence.</p>
+                    <div class="faq-item bg-slate-50 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left" onclick="toggleFaq(this)">
+                            <h3 class="font-bold text-slate-900">How will I stay updated during my project?</h3>
+                            <svg class="faq-icon w-6 h-6 text-slate-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
+                            <p class="text-slate-600 px-6 pb-6">You'll have a single point of contact and receive updates at agreed milestones—typically weekly. If questions come up, we respond quickly. No ghosting, no radio silence.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -536,5 +576,21 @@
         </div>
     </footer>
 
+    <script>
+        function toggleFaq(button) {
+            const faqItem = button.closest('.faq-item');
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = button.querySelector('.faq-icon');
+            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+            
+            if (isOpen) {
+                answer.style.maxHeight = '0px';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
 </body>
 </html>
