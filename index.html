@@ -69,7 +69,7 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
                 <div class="max-w-4xl mx-auto text-center">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
-                        Modern Kitchen Remodels in Frisco & North Dallas
+                        Modern Kitchen Remodels in <span class="city-text">Frisco & North Dallas</span>
                     </h1>
                     <p class="text-xl sm:text-2xl text-blue-100 mb-10 max-w-3xl mx-auto leading-relaxed">
                         Transform your dated kitchen into a bright, designer-inspired space you'll actually enjoy cooking in. Clean finishes, smart materials, and a smooth process from first call to final walkthrough.
@@ -355,7 +355,7 @@
         <section class="py-16 sm:py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="max-w-3xl mx-auto text-center">
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">Kitchen Remodeling in Frisco & North Dallas</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">Kitchen Remodeling in <span class="city-text">Frisco & North Dallas</span></h2>
                     <p class="text-lg text-slate-600 leading-relaxed">
                         We serve homeowners throughout Frisco, North Dallas, Plano, McKinney, Allen, The Colony, Little Elm, and Prosper. Whether you're looking for a kitchen remodel in Frisco or a kitchen renovation in North Dallas, our team brings the same attention to detail and project management to every home. We know these neighborhoods, understand local permitting when required, and take pride in delivering modern kitchens that fit the style of North Texas homes.
                     </p>
@@ -591,6 +591,51 @@
                 icon.style.transform = 'rotate(180deg)';
             }
         }
+
+        // Dynamic city text from Google Ads ValueTrack
+        (function() {
+            // Map Google Criteria IDs to city names
+            // See: https://developers.google.com/google-ads/api/data/geotargets
+            const cityMap = {
+                // Texas cities (Criteria IDs)
+                '1026339': 'Frisco',
+                '1026493': 'Plano', 
+                '1026441': 'McKinney',
+                '1025197': 'Allen',
+                '1026481': 'Prosper',
+                '1026619': 'The Colony',
+                '1026331': 'Little Elm',
+                '1023191': 'Dallas',
+                '200623': 'North Dallas',  // DMA
+                '9026910': 'North Dallas',  // DMA alternate
+                // Direct city names (if passed as text)
+                'frisco': 'Frisco',
+                'plano': 'Plano',
+                'mckinney': 'McKinney',
+                'allen': 'Allen',
+                'dallas': 'Dallas',
+                'prosper': 'Prosper',
+                'the colony': 'The Colony',
+                'little elm': 'Little Elm',
+                'north dallas': 'North Dallas'
+            };
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const cityParam = urlParams.get('city');
+            
+            if (cityParam) {
+                const cityKey = cityParam.toLowerCase().trim();
+                const cityName = cityMap[cityKey] || cityMap[cityParam] || null;
+                
+                if (cityName) {
+                    document.querySelectorAll('.city-text').forEach(el => {
+                        el.textContent = cityName;
+                    });
+                    // Update page title too
+                    document.title = document.title.replace('Frisco & North Dallas', cityName);
+                }
+            }
+        })();
     </script>
 </body>
 </html>
