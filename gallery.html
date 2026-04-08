@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OnPoint Pros project gallery — finished kitchens, bathrooms, commercial buildouts, painting, and flooring projects across Frisco, Plano, McKinney, Allen, and Prosper.">
+    <title>Project Gallery | Real North Dallas Remodels | OnPoint Pros</title>
+    <link rel="icon" type="image/webp" href="images/logo.webp">
+    <link rel="canonical" href="https://onpointprostx.com/gallery.html">
+    <meta property="og:title" content="OnPoint Pros Project Gallery — North Dallas Remodels">
+    <meta property="og:description" content="See real finished kitchens, bathrooms, and commercial projects across North Dallas.">
+    <meta property="og:image" content="https://onpointprostx.com/images/gallery/g01-kitchen-frisco-modern.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{colors:{brand:{red:"#dc0f0f",redDark:"#a00b0b",gold:"#d49538"}},fontFamily:{sans:["Montserrat","Helvetica","sans-serif"]}}}}</script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body{font-family:'Montserrat',sans-serif;}
+        .modal-open{overflow:hidden;}
+        .gallery-card{transition:transform .25s ease, box-shadow .25s ease;}
+        .gallery-card:hover{transform:translateY(-4px); box-shadow:0 25px 50px -12px rgba(0,0,0,.25);}
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"OnPoint Pros Project Gallery","url":"https://onpointprostx.com/gallery.html","description":"Project gallery of finished North Dallas kitchen, bathroom, commercial, painting, and flooring remodels.","publisher":{"@type":"HomeAndConstructionBusiness","name":"OnPoint Pros"}}</script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+            <a href="/" class="flex items-center"><img src="images/logo.webp" alt="OnPoint Pros" class="h-14 w-auto"></a>
+            <nav class="hidden lg:flex items-center gap-8 text-slate-700 font-medium">
+                <a href="/#services" class="hover:text-red-600">Services</a>
+                <a href="/#service-areas" class="hover:text-red-600">Service Areas</a>
+                <a href="/gallery.html" class="text-red-600 font-bold">Gallery</a>
+                <a href="/about.html" class="hover:text-red-600">About</a>
+                <a href="/blog/" class="hover:text-red-600">Blog</a>
+            </nav>
+            <a href="tel:+14692381719" class="inline-flex items-center px-5 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-lg">(469) 238-1719</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
+            <p class="text-amber-300 font-semibold uppercase tracking-wider mb-3 text-sm">Project Gallery</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-5 leading-tight">Real Finished Projects Across North Dallas</h1>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto">Kitchens, bathrooms, commercial buildouts, painting, and flooring — every project below was completed by the same in-house OnPoint Pros crew. Click any photo to see the project details.</p>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section class="bg-white border-b border-slate-200 sticky top-20 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex gap-2 overflow-x-auto" id="filters">
+                <button data-filter="all" class="filter-btn px-5 py-2 rounded-full border-2 border-red-600 bg-red-600 text-white font-semibold text-sm whitespace-nowrap">All Projects</button>
+                <button data-filter="kitchen" class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 bg-white text-slate-700 hover:border-red-600 font-semibold text-sm whitespace-nowrap">Kitchens</button>
+                <button data-filter="bathroom" class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 bg-white text-slate-700 hover:border-red-600 font-semibold text-sm whitespace-nowrap">Bathrooms</button>
+                <button data-filter="commercial" class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 bg-white text-slate-700 hover:border-red-600 font-semibold text-sm whitespace-nowrap">Commercial</button>
+                <button data-filter="other" class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 bg-white text-slate-700 hover:border-red-600 font-semibold text-sm whitespace-nowrap">Flooring & More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-5">Want a Project Like These?</h2>
+            <p class="text-xl text-slate-300 mb-8">Free on-site estimate. Written line-item quote. Same crew from start to finish.</p>
+            <a href="tel:+14692381719" class="inline-flex px-8 py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 shadow-xl">Call (469) 238-1719</a>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>© 2026 OnPoint Pros · Family-Owned & Fully Insured · <a href="tel:+14692381719" class="hover:text-white">(469) 238-1719</a></p>
+            <p class="mt-2"><a href="/" class="hover:text-white">Home</a> · <a href="/#services" class="hover:text-white">Services</a> · <a href="/about.html" class="hover:text-white">About</a> · <a href="/blog/" class="hover:text-white">Blog</a></p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm overflow-y-auto">
+        <div class="min-h-screen flex items-center justify-center p-4">
+            <div class="bg-white rounded-2xl max-w-5xl w-full overflow-hidden shadow-2xl relative">
+                <button id="modal-close" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-900 flex items-center justify-center shadow-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+                <img id="modal-image" src="" alt="" class="w-full max-h-[55vh] object-cover">
+                <div class="p-6 sm:p-8 lg:p-10">
+                    <div class="flex items-center gap-3 mb-3 flex-wrap">
+                        <span id="modal-category" class="text-xs font-bold uppercase tracking-wider text-red-600 bg-red-50 px-3 py-1 rounded-full"></span>
+                        <span id="modal-city" class="text-xs font-bold uppercase tracking-wider text-slate-600 bg-slate-100 px-3 py-1 rounded-full"></span>
+                    </div>
+                    <h2 id="modal-title" class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4"></h2>
+                    <p id="modal-description" class="text-lg text-slate-600 leading-relaxed mb-6"></p>
+                    <div class="grid sm:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+                            <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Timeline</div>
+                            <div id="modal-timeline" class="font-bold text-slate-900"></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+                            <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Scope</div>
+                            <div id="modal-scope" class="font-bold text-slate-900"></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+                            <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Style</div>
+                            <div id="modal-style" class="font-bold text-slate-900"></div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Materials & Finishes</div>
+                        <div id="modal-materials" class="flex flex-wrap gap-2"></div>
+                    </div>
+                    <a href="tel:+14692381719" class="inline-flex px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700">Get a Free Estimate Like This</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const projects = [
+        {id:1,slug:'g01-kitchen-frisco-modern',title:'Open-Concept White Kitchen',category:'kitchen',catLabel:'Kitchen',city:'Frisco, TX',timeline:'6 weeks',scope:'Full gut renovation',style:'Modern Transitional',description:'Wall removal between kitchen and family room, oversized quartz waterfall island with seating for four, and custom shaker cabinetry. The clients wanted a kitchen that finally connected to the rest of the house — this is what they got.',materials:['White shaker cabinets','Quartz waterfall island','Brass cup pulls','White oak flooring','Vertical-stack subway tile','Custom plaster hood','Brass pendant lights']},
+        {id:2,slug:'g02-kitchen-plano-twotone',title:'Two-Tone Navy Island Kitchen',category:'kitchen',catLabel:'Kitchen',city:'Plano, TX',timeline:'5 weeks',scope:'Cabinet refresh + new island',style:'Transitional',description:'White perimeter shaker cabinets paired with a deep navy island as the focal point. Marble herringbone backsplash adds movement without overpowering. One of our most-photographed Plano projects.',materials:['Two-tone shaker cabinets','Navy painted island','Marble herringbone backsplash','Brass hardware','White oak floors','Pro-grade range hood']},
+        {id:3,slug:'g03-kitchen-mckinney-sage',title:'Sage Green Kitchen Refresh',category:'kitchen',catLabel:'Kitchen',city:'McKinney, TX',timeline:'4 weeks',scope:'Cabinet refinishing + counters',style:'Modern Cottage',description:'Sage green lowers with white uppers, integrated panel-ready appliances, and a vertical-stack ceramic backsplash. Refreshed without a full gut.',materials:['Sage green painted lowers','White upper cabinets','Marble countertops','Brass hardware','Panel-ready dishwasher','Ceramic backsplash']},
+        {id:4,slug:'g04-kitchen-allen-walnut',title:'Modern Walnut Slab Kitchen',category:'kitchen',catLabel:'Kitchen',city:'Allen, TX',timeline:'7 weeks',scope:'Full custom kitchen',style:'Modern Minimal',description:'Slab-front walnut cabinetry with hidden hardware, integrated panel appliances, and a window backsplash. Designed for a modern home where the kitchen needed to feel like furniture.',materials:['Walnut slab cabinets','White quartz counters','Integrated panel fridge','Hidden hardware','Polished concrete floors','Window backsplash']},
+        {id:5,slug:'g05-kitchen-prosper-farmhouse',title:'Modern Farmhouse Kitchen',category:'kitchen',catLabel:'Kitchen',city:'Prosper, TX',timeline:'6 weeks',scope:'Full kitchen remodel',style:'Modern Farmhouse',description:'Open shelving, apron-front sink, and white quartz island anchor this Prosper farmhouse kitchen. A clean modern take on a popular style without going kitschy.',materials:['White shaker cabinets','Open wood shelves','Apron-front sink','White quartz island','White subway tile','Black metal pendants']},
+        {id:6,slug:'g06-kitchen-frisco-classic',title:'Classic Cream Kitchen',category:'kitchen',catLabel:'Kitchen',city:'Frisco, TX',timeline:'5 weeks',scope:'Cabinet replacement',style:'Classic Transitional',description:'Cream painted shaker cabinets with glass-front uppers, polished nickel hardware, and a marble-look quartz top. A timeless Frisco kitchen that will not date in 5 years.',materials:['Cream shaker cabinets','Glass-front uppers','Marble-look quartz','Polished nickel hardware','Marble subway backsplash','Hardwood floors']},
+        {id:7,slug:'g07-bath-frisco-master',title:'Master Bath with Walk-In Shower',category:'bathroom',catLabel:'Bathroom',city:'Frisco, TX',timeline:'3 weeks',scope:'Full master bath gut',style:'Modern Luxury',description:'Tub-to-walk-in-shower conversion with linear drain and curbless entry, plus a freestanding soaking tub and walnut double vanity. Floor-to-ceiling large-format porcelain tile.',materials:['Large-format porcelain tile','Frameless glass enclosure','Linear drain','Walnut double vanity','Quartz countertop','Matte black fixtures','Freestanding tub']},
+        {id:8,slug:'g08-bath-plano-spa',title:'Spa Master Bath',category:'bathroom',catLabel:'Bathroom',city:'Plano, TX',timeline:'4 weeks',scope:'Full master bath gut',style:'Modern Spa',description:'Curbless walk-in shower with rainfall showerhead, double vanity with marble top, and a freestanding oval tub. Dark slate tile gives the room a true spa feel.',materials:['Dark slate large-format tile','Rainfall showerhead','White marble vanity top','Brass fixtures','Freestanding oval tub','Heated floor']},
+        {id:9,slug:'g09-bath-mckinney-guest',title:'Guest Bathroom Refresh',category:'bathroom',catLabel:'Bathroom',city:'McKinney, TX',timeline:'2 weeks',scope:'Cosmetic refresh',style:'Modern Minimal',description:'Single floating vanity, large round mirror, matte black sconces, and a walk-in shower with subway tile. A clean guest bath update without touching the layout.',materials:['White floating vanity','Quartz top','Matte black sconces','Round mirror','Subway tile shower','Gray porcelain floor']},
+        {id:10,slug:'g10-bath-allen-powder',title:'Bold Powder Room',category:'bathroom',catLabel:'Bathroom',city:'Allen, TX',timeline:'1 week',scope:'Cosmetic refresh',style:'Modern Eclectic',description:'Dark green wallpaper, brass sconces, marble-top floating vanity, and hexagonal floor tile. Powder rooms are where you take risks — this one paid off.',materials:['Dark green wallpaper','Brass wall sconces','Marble vanity top','Round mirror','Hexagonal floor tile','Brass faucet']},
+        {id:11,slug:'g11-bath-prosper-luxury',title:'Estate Master Bathroom',category:'bathroom',catLabel:'Bathroom',city:'Prosper, TX',timeline:'5 weeks',scope:'Full custom master bath',style:'Luxury Traditional',description:'Marble walls and floors throughout, freestanding stone tub, full-marble walk-in shower, and a chandelier centered on the arched window. The most luxurious bathroom we built last year.',materials:['Full marble walls','Marble floors','Freestanding stone tub','Gold fixtures','Walnut double vanity','Chandelier','Arched window']},
+        {id:12,slug:'g12-bath-frisco-wetroom',title:'Modern Wet Room',category:'bathroom',catLabel:'Bathroom',city:'Frisco, TX',timeline:'4 weeks',scope:'Master bath conversion',style:'Modern Contemporary',description:'Freestanding tub inside the walk-in shower area, separated by frameless glass divider. Wet-room layouts work beautifully when waterproofed correctly.',materials:['Freestanding tub','Walk-in shower','Frameless glass divider','Large-format porcelain tile','Matte black rainfall head','Floating wood vanity']},
+        {id:13,slug:'g13-commercial-mckinney',title:'Modern Office Buildout',category:'commercial',catLabel:'Commercial',city:'McKinney, TX',timeline:'6 weeks',scope:'Full tenant improvement',style:'Modern Industrial',description:'Open-plan office with glass-walled conference room, polished concrete floors, exposed black ceiling, and modern wood-and-steel desks. Built around the tenant\'s lease commencement date.',materials:['Polished concrete floors','Glass conference walls','Exposed black ceiling','Modern desks','Biophilic plants','Demising walls']},
+        {id:14,slug:'g14-commercial-frisco-cafe',title:'Coffee Shop Buildout',category:'commercial',catLabel:'Commercial',city:'Frisco, TX',timeline:'7 weeks',scope:'Restaurant tenant improvement',style:'Modern Industrial',description:'Exposed brick wall, wood-and-steel counter, marble countertop, edison pendant lights. Cafe buildout from shell to opening day in seven weeks including health inspections.',materials:['Exposed brick','Wood and steel counter','Marble counter top','Edison pendants','Wood bench seating','Espresso bar plumbing']},
+        {id:15,slug:'g15-flooring-allen',title:'Wide-Plank White Oak Floors',category:'other',catLabel:'Flooring',city:'Allen, TX',timeline:'5 days',scope:'Whole-home flooring install',style:'Modern',description:'Wide-plank white oak engineered hardwood throughout the main level. Includes subfloor leveling, acclimation, and proper underlayment — the boring details that make flooring last.',materials:['Wide-plank white oak engineered','Self-leveling underlayment','Floating install','Matte finish','Stair treads matched']},
+        {id:16,slug:'g16-painting-plano',title:'Whole-Home Interior Repaint',category:'other',catLabel:'Painting',city:'Plano, TX',timeline:'6 days',scope:'Whole-home interior',style:'Modern Neutral',description:'Crisp white throughout with a deep navy accent wall in the living room. Sherwin-Williams premium product, full prep including caulking trim and priming bare drywall.',materials:['Sherwin-Williams Cashmere','Crisp white walls','Navy accent wall','Trim sprayed','Doors sprayed','Premium prep']},
+    ];
+
+    const grid = document.getElementById('gallery-grid');
+    const modal = document.getElementById('modal');
+
+    function renderGrid(filter) {
+        grid.innerHTML = '';
+        const list = filter === 'all' ? projects : projects.filter(p => p.category === filter);
+        list.forEach(p => {
+            const card = document.createElement('div');
+            card.className = 'gallery-card bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer';
+            card.innerHTML = `
+                <div class="relative aspect-[4/3] overflow-hidden">
+                    <img src="images/gallery/${p.slug}.jpg" alt="${p.title} in ${p.city}" class="w-full h-full object-cover">
+                    <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">${p.catLabel}</div>
+                </div>
+                <div class="p-5">
+                    <div class="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">${p.city}</div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">${p.title}</h3>
+                    <div class="flex items-center justify-between text-sm">
+                        <span class="text-slate-600">${p.timeline}</span>
+                        <span class="text-red-600 font-semibold">View Details →</span>
+                    </div>
+                </div>
+            `;
+            card.addEventListener('click', () => openModal(p));
+            grid.appendChild(card);
+        });
+    }
+
+    function openModal(p) {
+        document.getElementById('modal-image').src = `images/gallery/${p.slug}.jpg`;
+        document.getElementById('modal-image').alt = p.title;
+        document.getElementById('modal-category').textContent = p.catLabel;
+        document.getElementById('modal-city').textContent = p.city;
+        document.getElementById('modal-title').textContent = p.title;
+        document.getElementById('modal-description').textContent = p.description;
+        document.getElementById('modal-timeline').textContent = p.timeline;
+        document.getElementById('modal-scope').textContent = p.scope;
+        document.getElementById('modal-style').textContent = p.style;
+        const materialsEl = document.getElementById('modal-materials');
+        materialsEl.innerHTML = '';
+        p.materials.forEach(m => {
+            const tag = document.createElement('span');
+            tag.className = 'text-sm bg-red-50 text-red-700 font-semibold px-3 py-1 rounded-full border border-red-100';
+            tag.textContent = m;
+            materialsEl.appendChild(tag);
+        });
+        modal.classList.remove('hidden');
+        document.body.classList.add('modal-open');
+    }
+
+    function closeModal() {
+        modal.classList.add('hidden');
+        document.body.classList.remove('modal-open');
+    }
+
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal || e.target === modal.firstElementChild) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.classList.remove('border-red-600','bg-red-600','text-white');
+                b.classList.add('border-slate-200','bg-white','text-slate-700');
+            });
+            btn.classList.remove('border-slate-200','bg-white','text-slate-700');
+            btn.classList.add('border-red-600','bg-red-600','text-white');
+            renderGrid(btn.dataset.filter);
+        });
+    });
+
+    renderGrid('all');
+    </script>
+
+</body>
+</html>
