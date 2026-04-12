@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://onpointprostx.com/gallery.html">
     <meta property="og:title" content="OnPoint Pros Project Gallery — North Dallas Remodels">
     <meta property="og:description" content="See real finished kitchens, bathrooms, and commercial projects across North Dallas.">
-    <meta property="og:image" content="https://onpointprostx.com/images/gallery/g01-kitchen-frisco-modern.jpg">
+    <meta property="og:image" content="https://onpointprostx.com/images/gallery/g01-kitchen-frisco-modern.webp">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config={theme:{extend:{colors:{brand:{red:"#dc0f0f",redDark:"#a00b0b",gold:"#d49538"}},fontFamily:{sans:["Montserrat","Helvetica","sans-serif"]}}}}</script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -152,7 +152,7 @@
             card.className = 'gallery-card bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer';
             card.innerHTML = `
                 <div class="relative aspect-[4/3] overflow-hidden">
-                    <img src="images/gallery/${p.slug}.jpg" alt="${p.title} in ${p.city}" class="w-full h-full object-cover">
+                    <img loading="lazy" src="images/gallery/${p.slug}.webp" alt="${p.title} in ${p.city}" class="w-full h-full object-cover">
                     <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">${p.catLabel}</div>
                 </div>
                 <div class="p-5">
