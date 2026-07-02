@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OnPoint Pros project gallery — finished kitchens, bathrooms, painting, and flooring projects across the North Dallas and DFW area.">
+    <meta name="description" content="OnPoint Pros project gallery — finished bathrooms, painting, flooring, and drywall projects across the North Dallas and DFW area.">
     <title>Project Gallery | Real North Dallas Remodels | OnPoint Pros</title>
     <link rel="icon" type="image/webp" href="images/logo.webp">
     <link rel="canonical" href="https://onpointprostx.com/gallery.html">
     <meta property="og:title" content="OnPoint Pros Project Gallery — North Dallas Remodels">
-    <meta property="og:description" content="See real finished kitchens, bathrooms, painting, and flooring projects across North Dallas.">
-    <meta property="og:image" content="https://onpointprostx.com/images/gallery/g01-kitchen-frisco-modern.webp">
+    <meta property="og:description" content="See real finished bathrooms, painting, flooring, and drywall projects across North Dallas.">
+    <meta property="og:image" content="https://onpointprostx.com/images/gallery/g07-bath-frisco-master.webp">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config={theme:{extend:{colors:{brand:{red:"#dc0f0f",redDark:"#a00b0b",gold:"#d49538"}},fontFamily:{sans:["Montserrat","Helvetica","sans-serif"]}}}}</script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,7 +19,7 @@
         .gallery-card{transition:transform .25s ease, box-shadow .25s ease;}
         .gallery-card:hover{transform:translateY(-4px); box-shadow:0 25px 50px -12px rgba(0,0,0,.25);}
     </style>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"OnPoint Pros Project Gallery","url":"https://onpointprostx.com/gallery.html","description":"Project gallery of finished North Dallas kitchen, bathroom, painting, and flooring remodels.","publisher":{"@type":"HomeAndConstructionBusiness","name":"OnPoint Pros"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"OnPoint Pros Project Gallery","url":"https://onpointprostx.com/gallery.html","description":"Project gallery of finished North Dallas bathroom, painting, and flooring projects.","publisher":{"@type":"HomeAndConstructionBusiness","name":"OnPoint Pros"}}</script>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
 
@@ -42,7 +42,7 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
             <p class="text-amber-300 font-semibold uppercase tracking-wider mb-3 text-sm">Project Gallery</p>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-5 leading-tight">What We Build Across North Dallas</h1>
-            <p class="text-xl text-slate-300 max-w-3xl mx-auto">Kitchens, bathrooms, painting, and flooring — one trusted crew from start to finish. Click any photo to see project details.</p>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto">Bathrooms, painting, and flooring — one trusted crew from start to finish. Click any photo to see project details.</p>
         </div>
     </section>
 
@@ -51,7 +51,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex gap-2 overflow-x-auto" id="filters">
                 <button data-filter="all" class="filter-btn px-5 py-2 rounded-full border-2 border-red-600 bg-red-600 text-white font-semibold text-sm whitespace-nowrap">All Projects</button>
-                <button data-filter="kitchen" class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 bg-white text-slate-700 hover:border-red-600 font-semibold text-sm whitespace-nowrap">Kitchens</button>
                 <button data-filter="bathroom" class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 bg-white text-slate-700 hover:border-red-600 font-semibold text-sm whitespace-nowrap">Bathrooms</button>
                 <button data-filter="other" class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 bg-white text-slate-700 hover:border-red-600 font-semibold text-sm whitespace-nowrap">Flooring & More</button>
             </div>
@@ -122,12 +121,6 @@
 
     <script>
     const projects = [
-        {id:1,slug:'g01-kitchen-frisco-modern',title:'Open-Concept White Kitchen',category:'kitchen',catLabel:'Kitchen',city:'Modern Transitional',timeline:'6 weeks',scope:'Full gut renovation',style:'Modern Transitional',description:'Wall removal between kitchen and family room, oversized quartz waterfall island with seating for four, and custom shaker cabinetry. The clients wanted a kitchen that finally connected to the rest of the house — this is what they got.',materials:['White shaker cabinets','Quartz waterfall island','Brass cup pulls','White oak flooring','Vertical-stack subway tile','Custom plaster hood','Brass pendant lights']},
-        {id:2,slug:'g02-kitchen-plano-twotone',title:'Two-Tone Navy Island Kitchen',category:'kitchen',catLabel:'Kitchen',city:'Transitional Design',timeline:'5 weeks',scope:'Cabinet refresh + new island',style:'Transitional',description:'White perimeter shaker cabinets paired with a deep navy island as the focal point. Marble herringbone backsplash adds movement without overpowering. One of our most-photographed projects.',materials:['Two-tone shaker cabinets','Navy painted island','Marble herringbone backsplash','Brass hardware','White oak floors','Pro-grade range hood']},
-        {id:3,slug:'g03-kitchen-mckinney-sage',title:'Sage Green Kitchen Refresh',category:'kitchen',catLabel:'Kitchen',city:'Modern Cottage',timeline:'4 weeks',scope:'Cabinet refinishing + counters',style:'Modern Cottage',description:'Sage green lowers with white uppers, integrated panel-ready appliances, and a vertical-stack ceramic backsplash. Refreshed without a full gut.',materials:['Sage green painted lowers','White upper cabinets','Marble countertops','Brass hardware','Panel-ready dishwasher','Ceramic backsplash']},
-        {id:4,slug:'g04-kitchen-allen-walnut',title:'Modern Walnut Slab Kitchen',category:'kitchen',catLabel:'Kitchen',city:'Modern Minimal',timeline:'7 weeks',scope:'Full custom kitchen',style:'Modern Minimal',description:'Slab-front walnut cabinetry with hidden hardware, integrated panel appliances, and a window backsplash. Designed for a modern home where the kitchen needed to feel like furniture.',materials:['Walnut slab cabinets','White quartz counters','Integrated panel fridge','Hidden hardware','Polished concrete floors','Window backsplash']},
-        {id:5,slug:'g05-kitchen-prosper-farmhouse',title:'Modern Farmhouse Kitchen',category:'kitchen',catLabel:'Kitchen',city:'Modern Farmhouse',timeline:'6 weeks',scope:'Full kitchen remodel',style:'Modern Farmhouse',description:'Open shelving, apron-front sink, and white quartz island anchor this farmhouse kitchen. A clean modern take on a popular style without going kitschy.',materials:['White shaker cabinets','Open wood shelves','Apron-front sink','White quartz island','White subway tile','Black metal pendants']},
-        {id:6,slug:'g06-kitchen-frisco-classic',title:'Classic Cream Kitchen',category:'kitchen',catLabel:'Kitchen',city:'Classic Transitional',timeline:'5 weeks',scope:'Cabinet replacement',style:'Classic Transitional',description:'Cream painted shaker cabinets with glass-front uppers, polished nickel hardware, and a marble-look quartz top. A timeless kitchen that will not date in 5 years.',materials:['Cream shaker cabinets','Glass-front uppers','Marble-look quartz','Polished nickel hardware','Marble subway backsplash','Hardwood floors']},
         {id:7,slug:'g07-bath-frisco-master',title:'Master Bath with Walk-In Shower',category:'bathroom',catLabel:'Bathroom',city:'Modern Luxury',timeline:'3 weeks',scope:'Full master bath gut',style:'Modern Luxury',description:'Tub-to-walk-in-shower conversion with linear drain and curbless entry, plus a freestanding soaking tub and walnut double vanity. Floor-to-ceiling large-format porcelain tile.',materials:['Large-format porcelain tile','Frameless glass enclosure','Linear drain','Walnut double vanity','Quartz countertop','Matte black fixtures','Freestanding tub']},
         {id:8,slug:'g08-bath-plano-spa',title:'Spa Master Bath',category:'bathroom',catLabel:'Bathroom',city:'Modern Spa',timeline:'4 weeks',scope:'Full master bath gut',style:'Modern Spa',description:'Curbless walk-in shower with rainfall showerhead, double vanity with marble top, and a freestanding oval tub. Dark slate tile gives the room a true spa feel.',materials:['Dark slate large-format tile','Rainfall showerhead','White marble vanity top','Brass fixtures','Freestanding oval tub','Heated floor']},
         {id:9,slug:'g09-bath-mckinney-guest',title:'Guest Bathroom Refresh',category:'bathroom',catLabel:'Bathroom',city:'Modern Minimal',timeline:'2 weeks',scope:'Cosmetic refresh',style:'Modern Minimal',description:'Single floating vanity, large round mirror, matte black sconces, and a walk-in shower with subway tile. A clean guest bath update without touching the layout.',materials:['White floating vanity','Quartz top','Matte black sconces','Round mirror','Subway tile shower','Gray porcelain floor']},
