@@ -1,8 +1,9 @@
 # OnPoint Pros
 
-> Family-owned home-services company headquartered in Allen, TX, serving Allen, Frisco, Plano, McKinney, Prosper and the wider North Dallas / DFW area. Three core services: drywall & sheetrock repair, flooring installation, and bathroom remodeling. Fully insured and bonded. Rated 5.0 across 66 Google reviews. Phone: (469) 238-1719.
+> Family-owned home-services company headquartered in Allen, TX, serving Allen, Frisco, Plano, McKinney, Prosper and the wider North Dallas / DFW area. Three core services: drywall & sheetrock repair, flooring installation, and bathroom remodeling. Fully insured and bonded. Rated 5.0 across 68 Google reviews. Phone: (469) 238-1719.
 
 ## Services (pillars)
+- [Home Refresh & Interior Remodeling](https://onpointprostx.com/services/home-refresh.html): whole-room makeovers — drywall repair, interior painting, flooring, trim and finish carpentry as one project, one crew. Typical DFW cost: $5k–$20k per refresh, 1–4 weeks. Real before/after photos: https://onpointprostx.com/blog/case-room-refresh-north-dfw.html
 - [Drywall & Sheetrock Repair](https://onpointprostx.com/services/drywall-repair.html): hole patches, knockdown/orange-peel texture matching, popcorn ceiling removal, water-damage & ceiling repair. Typical DFW cost: $150–$400 a patch, $400–$1,200 larger/ceiling, ~$1–$2/sq ft popcorn removal.
 - [Flooring Installation](https://onpointprostx.com/services/flooring.html): luxury vinyl plank (LVP), hardwood, tile, laminate, carpet, subfloor leveling. Typical DFW cost installed: LVP $3–$7/sq ft, hardwood $6–$12, tile $5–$10.
 - [Bathroom Remodeling](https://onpointprostx.com/services/bathroom-remodel.html): walk-in showers, tub-to-shower conversions, full remodels with Schluter waterproofing. Typical DFW cost: $8k–$15k guest bath, $18k–$45k full master, 2–4 weeks.
