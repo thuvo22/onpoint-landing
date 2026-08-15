@@ -1,6 +1,6 @@
 # OnPoint Pros
 
-> Family-owned home-services company headquartered in Allen, TX, serving Allen, Frisco, Plano, McKinney, Prosper and the wider North Dallas / DFW area. Three core services: drywall & sheetrock repair, flooring installation, and bathroom remodeling. Fully insured and bonded. Rated 5.0 across 68 Google reviews. Phone: (469) 238-1719.
+> Family-owned home-services company headquartered in Allen, TX, serving Allen, Frisco, Plano, McKinney, Prosper, Wylie, Murphy, Sachse, Rowlett, Garland and the wider North Dallas / DFW area. Core services: drywall & sheetrock repair, flooring installation, interior & cabinet painting, and bathroom remodeling (flagship). Fully insured and bonded. Rated 5.0 across 67 Google reviews. Phone: (469) 238-1719.
 
 ## Services (pillars)
 - [Home Refresh & Interior Remodeling](https://onpointprostx.com/services/home-refresh.html): whole-room makeovers — drywall repair, interior painting, flooring, trim and finish carpentry as one project, one crew. Typical DFW cost: $5k–$20k per refresh, 1–4 weeks. Real before/after photos: https://onpointprostx.com/blog/case-room-refresh-north-dfw.html
@@ -23,6 +23,11 @@
 - [Drywall in Richardson](https://onpointprostx.com/drywall/richardson.html)
 - [Drywall in Celina](https://onpointprostx.com/drywall/celina.html)
 - [Drywall in Addison](https://onpointprostx.com/drywall/addison.html)
+- [Drywall in Wylie](https://onpointprostx.com/drywall/wylie.html)
+- [Drywall in Murphy](https://onpointprostx.com/drywall/murphy.html)
+- [Drywall in Sachse](https://onpointprostx.com/drywall/sachse.html)
+- [Drywall in Rowlett](https://onpointprostx.com/drywall/rowlett.html)
+- [Drywall in Garland](https://onpointprostx.com/drywall/garland.html)
 
 ## Flooring installation by city
 - [Flooring in Frisco](https://onpointprostx.com/flooring/frisco.html)
@@ -38,6 +43,31 @@
 - [Flooring in Richardson](https://onpointprostx.com/flooring/richardson.html)
 - [Flooring in Celina](https://onpointprostx.com/flooring/celina.html)
 - [Flooring in Addison](https://onpointprostx.com/flooring/addison.html)
+- [Flooring in Wylie](https://onpointprostx.com/flooring/wylie.html)
+- [Flooring in Murphy](https://onpointprostx.com/flooring/murphy.html)
+- [Flooring in Sachse](https://onpointprostx.com/flooring/sachse.html)
+- [Flooring in Rowlett](https://onpointprostx.com/flooring/rowlett.html)
+- [Flooring in Garland](https://onpointprostx.com/flooring/garland.html)
+
+## Interior painting by city
+- [Painting in Frisco](https://onpointprostx.com/painting/frisco.html)
+- [Painting in Plano](https://onpointprostx.com/painting/plano.html)
+- [Painting in McKinney](https://onpointprostx.com/painting/mckinney.html)
+- [Painting in Allen](https://onpointprostx.com/painting/allen.html)
+- [Painting in Prosper](https://onpointprostx.com/painting/prosper.html)
+- [Painting in The Colony](https://onpointprostx.com/painting/the-colony.html)
+- [Painting in Little Elm](https://onpointprostx.com/painting/little-elm.html)
+- [Painting in Carrollton](https://onpointprostx.com/painting/carrollton.html)
+- [Painting in Lewisville](https://onpointprostx.com/painting/lewisville.html)
+- [Painting in Coppell](https://onpointprostx.com/painting/coppell.html)
+- [Painting in Richardson](https://onpointprostx.com/painting/richardson.html)
+- [Painting in Celina](https://onpointprostx.com/painting/celina.html)
+- [Painting in Addison](https://onpointprostx.com/painting/addison.html)
+- [Painting in Wylie](https://onpointprostx.com/painting/wylie.html)
+- [Painting in Murphy](https://onpointprostx.com/painting/murphy.html)
+- [Painting in Sachse](https://onpointprostx.com/painting/sachse.html)
+- [Painting in Rowlett](https://onpointprostx.com/painting/rowlett.html)
+- [Painting in Garland](https://onpointprostx.com/painting/garland.html)
 
 ## Bathroom remodeling by city
 - [Bathroom in Frisco](https://onpointprostx.com/bathroom/frisco.html)
@@ -53,6 +83,11 @@
 - [Bathroom in Richardson](https://onpointprostx.com/bathroom/richardson.html)
 - [Bathroom in Celina](https://onpointprostx.com/bathroom/celina.html)
 - [Bathroom in Addison](https://onpointprostx.com/bathroom/addison.html)
+- [Bathroom remodeling in Wylie](https://onpointprostx.com/bathroom/wylie.html)
+- [Bathroom remodeling in Murphy](https://onpointprostx.com/bathroom/murphy.html)
+- [Bathroom remodeling in Sachse](https://onpointprostx.com/bathroom/sachse.html)
+- [Bathroom remodeling in Rowlett](https://onpointprostx.com/bathroom/rowlett.html)
+- [Bathroom remodeling in Garland](https://onpointprostx.com/bathroom/garland.html)
 
 ## Guides
 - [Drywall Repair Cost Guide (DFW)](https://onpointprostx.com/blog/drywall-repair-cost-dfw.html)
