@@ -1,0 +1,41 @@
+# Pages excluded from sitemap.xml — files stay live and internally linked,
+# they're just not advertised to Google.
+#
+# Why (2026-08-18): the domain earns ~10 organic clicks/week and Google had
+# never crawled a single city spoke ("Discovered - currently not indexed",
+# lastCrawl: None). 126 submitted URLs against a crawl budget of roughly a
+# dozen starved the pages that actually rank. Everything excluded here had
+# ZERO impressions in the trailing 60 days. Re-add in small batches once the
+# indexed set is winning. One glob per line.
+
+bathroom/*.html
+drywall/*.html
+painting/*.html
+flooring/addison.html
+flooring/allen.html
+flooring/carrollton.html
+flooring/celina.html
+flooring/coppell.html
+flooring/frisco.html
+flooring/garland.html
+flooring/lewisville.html
+flooring/little-elm.html
+flooring/mckinney.html
+flooring/murphy.html
+flooring/plano.html
+flooring/prosper.html
+flooring/rowlett.html
+flooring/sachse.html
+flooring/the-colony.html
+flooring/wylie.html
+dfw/addison.html
+dfw/carrollton.html
+dfw/coppell.html
+dfw/garland.html
+dfw/lewisville.html
+dfw/murphy.html
+dfw/richardson.html
+dfw/rowlett.html
+dfw/sachse.html
+dfw/the-colony.html
+dfw/wylie.html
