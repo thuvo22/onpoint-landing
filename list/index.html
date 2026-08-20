@@ -50,6 +50,33 @@
   <a href="#form" class="block w-full max-w-md mx-auto mt-5 py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-extrabold uppercase tracking-wide text-center shadow-lg transition">Send my list, get my range today</a>
 </section>
 
+<!-- WHAT PEOPLE ARE SAYING -->
+<section class="max-w-xl mx-auto px-5 pt-10">
+  <div class="md:relative md:left-1/2 md:-translate-x-1/2 md:w-screen">
+   <div class="bg-white rounded-3xl shadow-sm -mx-3 md:mx-4 lg:mx-8 px-3 md:px-6 py-10 md:py-14">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center text-slate-900">What people are saying:</h2>
+    <p class="text-center font-semibold text-slate-600 mt-2 mb-8">★★★★★ 5.0 on Google</p>
+    <div class="max-w-[340px] sm:max-w-sm mx-auto mb-8 relative">
+      <video id="reviewVid" class="w-full rounded-2xl shadow-2xl bg-black" playsinline preload="metadata" poster="video/review-poster.jpg">
+        <source src="video/review.mp4" type="video/mp4">
+      </video>
+      <button id="reviewPlay" class="absolute inset-0 w-full h-full flex items-center justify-center" aria-label="Play customer review video">
+        <span class="w-20 h-20 rounded-full bg-slate-700/70 shadow-2xl flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-white translate-x-0.5"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd"/></svg>
+        </span>
+      </button>
+      <p class="text-center text-sm text-slate-500 mt-2">A Plano homeowner, right after the crew finished</p>
+    </div>
+    <div class="max-w-7xl mx-auto md:px-8 space-y-5 md:space-y-0 md:flex md:items-start md:justify-center">
+      <img src="images/review-jamie-hl.jpg" alt="Five star Google review from Jamie W-B, Local Guide with 127 reviews: used OnPoint for several projects, very professional, punctual, honest, efficient. Recommend for any projects or remodeling." loading="lazy" class="w-full md:w-[36%] rounded-xl shadow-2xl bg-white md:-rotate-2 md:translate-y-3 md:z-10 relative hover:z-50 transition-transform hover:scale-105">
+      <img src="images/review-gary-hl.jpg" alt="Five star Google review from Gary Marshall, MD: returned my call in minutes, provided a fair and reasonable estimate, and came out later the same day. I would hire him again without a doubt." loading="lazy" class="w-full md:w-[37%] rounded-xl shadow-2xl bg-white md:rotate-1 md:-ml-[12%] md:-translate-y-2 md:z-20 relative hover:z-50 transition-transform hover:scale-105">
+      <img src="images/review-vijayakumar-hl.jpg" alt="Five star Google review from Vijayakumar Neelamegam: repaired our kitchen ceiling drywall, the repairs blend in seamlessly, the ceiling looks like new, would highly recommend." loading="lazy" class="w-full md:w-[37%] rounded-xl shadow-2xl bg-white md:-rotate-1 md:-ml-[12%] md:translate-y-5 md:z-30 relative hover:z-50 transition-transform hover:scale-105">
+      <img src="images/review-mary-hl.jpg" alt="Five star Google review from Mary Louise Cordell Pope: great price, flexible, on time, and professional. He truly is a jack of all trades." loading="lazy" class="w-full md:w-[36%] rounded-xl shadow-2xl bg-white md:rotate-2 md:-ml-[12%] md:translate-y-1 md:z-40 relative hover:z-50 transition-transform hover:scale-105">
+    </div>
+   </div>
+  </div>
+</section>
+
 <!-- WHAT YOU GET — numbered, countable -->
 <section class="max-w-xl mx-auto px-5 pt-6">
   <div class="bg-white rounded-xl shadow p-4">
@@ -79,9 +106,17 @@
 
 <!-- FORM -->
 <section class="max-w-xl mx-auto px-5 py-8" id="form">
-  <form id="listForm" class="bg-white rounded-2xl shadow-lg p-6 space-y-4" novalidate>
+  <form id="listForm" class="bg-white rounded-2xl shadow-lg overflow-hidden" novalidate>
+    <div class="flex items-center justify-center gap-5 text-sm py-4 px-6 border-b border-slate-200">
+      <span id="progStep1" class="flex items-center gap-2 font-semibold text-slate-900"><span class="dot w-2.5 h-2.5 rounded-full bg-red-600"></span>Your list</span>
+      <span id="progStep2" class="flex items-center gap-2 text-slate-400"><span class="dot w-2.5 h-2.5 rounded-full bg-slate-300"></span>Your info</span>
+    </div>
+    <div class="p-6 space-y-4">
     <!-- honeypot -->
     <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+
+    <h3 class="text-2xl font-bold text-slate-900">Get your price range</h3>
+    <p class="text-slate-600 -mt-2">Type your list like a text. Dillon reads it himself and texts your range today. No visit needed yet.</p>
 
     <div id="step1" class="space-y-4">
       <div>
@@ -96,7 +131,7 @@
       <label class="block">
         <span class="font-semibold text-slate-800">Your list</span>
         <span class="block text-sm text-slate-500 mb-1">Everything. The drywall, the doors, the paint, the light that doesn't work.</span>
-        <textarea name="list_text" rows="5" required class="w-full rounded-lg border border-slate-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none" placeholder="- Patch drywall in hallway&#10;- Paint 3 bedrooms&#10;- Fix door that sticks&#10;- ..."></textarea>
+        <textarea name="list_text" rows="5" required class="w-full rounded-xl border border-slate-200 bg-slate-50 p-3.5 focus:ring-2 focus:ring-red-600 focus:bg-white focus:outline-none" placeholder="- Patch drywall in hallway&#10;- Paint 3 bedrooms&#10;- Fix door that sticks&#10;- ..."></textarea>
       </label>
       <div>
         <span class="font-semibold text-slate-800">Your date</span>
@@ -114,40 +149,41 @@
         <input type="hidden" name="date" value="">
         <p id="dateErr" class="hidden text-sm text-red-600 mt-1">Tap a timeframe or pick a date.</p>
       </div>
-      <button type="button" id="toStep2" class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition">Send my list, get my range today →</button>
+      <button type="button" id="toStep2" class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition flex items-center justify-center gap-2">Continue <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/></svg></button>
     </div>
 
     <div id="step2" class="space-y-4 step-hidden">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <label class="block">
           <span class="font-semibold text-slate-800">Name</span>
-          <input type="text" name="name" required class="w-full rounded-lg border border-slate-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none" placeholder="First name is fine">
+          <input type="text" name="name" required class="w-full rounded-xl border border-slate-200 bg-slate-50 p-3.5 focus:ring-2 focus:ring-red-600 focus:bg-white focus:outline-none" placeholder="First name is fine">
         </label>
         <label class="block">
           <span class="font-semibold text-slate-800">Phone</span>
-          <input type="tel" name="phone" required class="w-full rounded-lg border border-slate-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none" placeholder="(469) 555-0123">
+          <input type="tel" name="phone" required class="w-full rounded-xl border border-slate-200 bg-slate-50 p-3.5 focus:ring-2 focus:ring-red-600 focus:bg-white focus:outline-none" placeholder="(469) 555-0123">
         </label>
         <label class="block">
           <span class="font-semibold text-slate-800">Zip code</span>
-          <input type="text" name="zip" inputmode="numeric" class="w-full rounded-lg border border-slate-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none" placeholder="75025">
+          <input type="text" name="zip" inputmode="numeric" class="w-full rounded-xl border border-slate-200 bg-slate-50 p-3.5 focus:ring-2 focus:ring-red-600 focus:bg-white focus:outline-none" placeholder="75025">
         </label>
         <label class="block">
           <span class="font-semibold text-slate-800">Budget range</span>
-          <select name="budget" class="w-full rounded-lg border border-slate-300 p-3 bg-white focus:ring-2 focus:ring-red-600 focus:outline-none">
+          <select name="budget" class="w-full rounded-xl border border-slate-200 bg-slate-50 p-3.5 focus:ring-2 focus:ring-red-600 focus:bg-white focus:outline-none">
             <option value="">Not sure yet</option>
             <option>Under $2,000</option>
-            <option>$2,000 – $5,000</option>
-            <option>$5,000 – $15,000</option>
+            <option>$2,000 to $5,000</option>
+            <option>$5,000 to $15,000</option>
             <option>$15,000+</option>
           </select>
         </label>
       </div>
+      <p class="text-sm text-slate-500">By entering your information, you consent to OnPoint Pros texting you about your project. No spam, opt out anytime.</p>
       <button type="submit" id="submitBtn" class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition">Send my list, get my range today</button>
       <p id="formErr" class="hidden text-sm text-red-600 font-medium"></p>
     </div>
 
-    <p class="text-center text-sm text-slate-500">Dillon reads it personally and texts your range today. No visit needed yet.</p>
     <p class="text-center text-sm text-slate-500">Prefer to text? <a href="sms:+13465725599" class="font-semibold text-red-600">Text your list to (346) 572-5599</a></p>
+    </div>
   </form>
 </section>
 
@@ -176,27 +212,6 @@
       <summary class="font-bold cursor-pointer text-slate-900">Is my list too small (or too big)?</summary>
       <p class="text-slate-600 text-sm mt-2">If it's a list, it fits. Most lists we do run from one full day of work to a full bathroom, usually $3,000 to $20,000. One tiny item probably isn't worth a crew. Three or more usually is.</p>
     </details>
-  </div>
-  <div class="mt-10 md:relative md:left-1/2 md:-translate-x-1/2 md:w-screen">
-    <p class="text-center font-bold text-slate-700 mb-5 text-base">★★★★★ 5.0 on Google. Real reviews:</p>
-    <div class="max-w-[300px] sm:max-w-xs mx-auto mb-8 relative">
-      <video id="reviewVid" class="w-full rounded-2xl shadow-2xl bg-black" playsinline preload="metadata" poster="video/review-poster.jpg">
-        <source src="video/review.mp4" type="video/mp4">
-      </video>
-      <button id="reviewPlay" class="absolute inset-0 w-full h-full flex items-center justify-center" aria-label="Play customer review video">
-        <span class="w-20 h-20 rounded-full bg-white/90 shadow-2xl flex items-center justify-center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-red-600 translate-x-0.5"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd"/></svg>
-        </span>
-      </button>
-      <p class="text-center text-sm text-slate-500 mt-2">A Plano homeowner, right after the crew finished</p>
-    </div>
-    <div class="max-w-7xl mx-auto md:px-8 space-y-5 md:space-y-0 md:flex md:items-start md:justify-center">
-      <img src="images/review-jamie-hl.jpg" alt="Five star Google review from Jamie W-B, Local Guide with 127 reviews: used OnPoint for several projects, very professional, punctual, honest, efficient. Recommend for any projects or remodeling." loading="lazy" class="w-full md:w-[36%] rounded-xl shadow-2xl bg-white md:-rotate-2 md:translate-y-3 md:z-10 relative hover:z-50 transition-transform hover:scale-105">
-      <img src="images/review-gary-hl.jpg" alt="Five star Google review from Gary Marshall, MD: returned my call in minutes, provided a fair and reasonable estimate, and came out later the same day. I would hire him again without a doubt." loading="lazy" class="w-full md:w-[37%] rounded-xl shadow-2xl bg-white md:rotate-1 md:-ml-[12%] md:-translate-y-2 md:z-20 relative hover:z-50 transition-transform hover:scale-105">
-      <img src="images/review-vijayakumar-hl.jpg" alt="Five star Google review from Vijayakumar Neelamegam: repaired our kitchen ceiling drywall, the repairs blend in seamlessly, the ceiling looks like new, would highly recommend." loading="lazy" class="w-full md:w-[37%] rounded-xl shadow-2xl bg-white md:-rotate-1 md:-ml-[12%] md:translate-y-5 md:z-30 relative hover:z-50 transition-transform hover:scale-105">
-      <img src="images/review-mary-hl.jpg" alt="Five star Google review from Mary Louise Cordell Pope: great price, flexible, on time, and professional. He truly is a jack of all trades." loading="lazy" class="w-full md:w-[36%] rounded-xl shadow-2xl bg-white md:rotate-2 md:-ml-[12%] md:translate-y-1 md:z-40 relative hover:z-50 transition-transform hover:scale-105">
-    </div>
-  </div>
   </div>
   <div class="text-center mt-6">
     <a href="#form" class="inline-block w-full sm:w-auto px-10 py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition">Send my list, get my range today</a>
@@ -270,6 +285,11 @@ document.getElementById('toStep2').addEventListener('click', () => {
   if (!date) { dateErr.classList.remove('hidden'); return; }
   document.getElementById('step1').classList.add('step-hidden');
   document.getElementById('step2').classList.remove('step-hidden');
+  const p1 = document.getElementById('progStep1'), p2 = document.getElementById('progStep2');
+  p1.classList.replace('font-semibold', 'font-normal'); p1.classList.replace('text-slate-900', 'text-slate-400');
+  p1.querySelector('.dot').classList.replace('bg-red-600', 'bg-slate-300');
+  p2.classList.add('font-semibold'); p2.classList.replace('text-slate-400', 'text-slate-900');
+  p2.querySelector('.dot').classList.replace('bg-slate-300', 'bg-red-600');
   form.name.focus();
 });
 form.addEventListener('submit', async (e) => {
