@@ -169,11 +169,22 @@
   </div>
   <div class="mt-10 md:relative md:left-1/2 md:-translate-x-1/2 md:w-screen">
     <p class="text-center font-bold text-slate-700 mb-5 text-base">★★★★★ 5.0 on Google. Real reviews:</p>
-    <div class="max-w-7xl mx-auto px-1 md:px-8 pb-4 md:flex md:items-start md:justify-center">
-      <img src="images/review-jamie-hl.jpg" alt="Five star Google review from Jamie W-B, Local Guide with 127 reviews: used OnPoint for several projects, very professional, punctual, honest, efficient. Recommend for any projects or remodeling." loading="lazy" class="w-full md:w-[36%] rounded-xl shadow-2xl bg-white -rotate-2 md:translate-y-3 z-10 relative hover:z-50 transition-transform hover:scale-105">
-      <img src="images/review-gary-hl.jpg" alt="Five star Google review from Gary Marshall, MD: returned my call in minutes, provided a fair and reasonable estimate, and came out later the same day. I would hire him again without a doubt." loading="lazy" class="w-full md:w-[37%] rounded-xl shadow-2xl bg-white rotate-1 -mt-7 md:mt-0 md:-ml-[12%] md:-translate-y-2 z-20 relative hover:z-50 transition-transform hover:scale-105">
-      <img src="images/review-vijayakumar-hl.jpg" alt="Five star Google review from Vijayakumar Neelamegam: repaired our kitchen ceiling drywall, the repairs blend in seamlessly, the ceiling looks like new, would highly recommend." loading="lazy" class="w-full md:w-[37%] rounded-xl shadow-2xl bg-white -rotate-1 -mt-7 md:mt-0 md:-ml-[12%] md:translate-y-5 z-30 relative hover:z-50 transition-transform hover:scale-105">
-      <img src="images/review-mary-hl.jpg" alt="Five star Google review from Mary Louise Cordell Pope: great price, flexible, on time, and professional. He truly is a jack of all trades." loading="lazy" class="w-full md:w-[36%] rounded-xl shadow-2xl bg-white rotate-2 -mt-7 md:mt-0 md:-ml-[12%] md:translate-y-1 z-40 relative hover:z-50 transition-transform hover:scale-105">
+    <div class="max-w-[300px] sm:max-w-xs mx-auto mb-8 relative">
+      <video id="reviewVid" class="w-full rounded-2xl shadow-2xl bg-black" playsinline preload="metadata" poster="video/review-poster.jpg">
+        <source src="video/review.mp4" type="video/mp4">
+      </video>
+      <button id="reviewPlay" class="absolute inset-0 w-full h-full flex items-center justify-center" aria-label="Play customer review video">
+        <span class="w-20 h-20 rounded-full bg-white/90 shadow-2xl flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-red-600 translate-x-0.5"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd"/></svg>
+        </span>
+      </button>
+      <p class="text-center text-sm text-slate-500 mt-2">A Plano homeowner, right after the crew finished</p>
+    </div>
+    <div class="max-w-7xl mx-auto md:px-8 space-y-5 md:space-y-0 md:flex md:items-start md:justify-center">
+      <img src="images/review-jamie-hl.jpg" alt="Five star Google review from Jamie W-B, Local Guide with 127 reviews: used OnPoint for several projects, very professional, punctual, honest, efficient. Recommend for any projects or remodeling." loading="lazy" class="w-full md:w-[36%] rounded-xl shadow-2xl bg-white md:-rotate-2 md:translate-y-3 md:z-10 relative hover:z-50 transition-transform hover:scale-105">
+      <img src="images/review-gary-hl.jpg" alt="Five star Google review from Gary Marshall, MD: returned my call in minutes, provided a fair and reasonable estimate, and came out later the same day. I would hire him again without a doubt." loading="lazy" class="w-full md:w-[37%] rounded-xl shadow-2xl bg-white md:rotate-1 md:-ml-[12%] md:-translate-y-2 md:z-20 relative hover:z-50 transition-transform hover:scale-105">
+      <img src="images/review-vijayakumar-hl.jpg" alt="Five star Google review from Vijayakumar Neelamegam: repaired our kitchen ceiling drywall, the repairs blend in seamlessly, the ceiling looks like new, would highly recommend." loading="lazy" class="w-full md:w-[37%] rounded-xl shadow-2xl bg-white md:-rotate-1 md:-ml-[12%] md:translate-y-5 md:z-30 relative hover:z-50 transition-transform hover:scale-105">
+      <img src="images/review-mary-hl.jpg" alt="Five star Google review from Mary Louise Cordell Pope: great price, flexible, on time, and professional. He truly is a jack of all trades." loading="lazy" class="w-full md:w-[36%] rounded-xl shadow-2xl bg-white md:rotate-2 md:-ml-[12%] md:translate-y-1 md:z-40 relative hover:z-50 transition-transform hover:scale-105">
     </div>
   </div>
   </div>
@@ -206,6 +217,14 @@ pill.addEventListener('click', unmute);
 const p = vid.play();
 if (p) p.catch(() => {
   document.getElementById('soundCard').innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-12 h-12 sm:w-16 sm:h-16"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd"/></svg><span class="font-extrabold text-xl sm:text-3xl leading-tight text-center">Tap to play</span>';
+});
+
+const rVid = document.getElementById('reviewVid');
+const rPlay = document.getElementById('reviewPlay');
+rPlay.addEventListener('click', () => {
+  rVid.controls = true;
+  rVid.play();
+  rPlay.remove();
 });
 
 const form = document.getElementById('listForm');
