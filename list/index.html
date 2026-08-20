@@ -26,10 +26,13 @@
 
 <!-- HERO VIDEO = PROOF -->
 <section class="max-w-xl mx-auto px-5">
-  <div class="rounded-2xl overflow-hidden shadow-xl bg-black mx-auto" style="max-width:380px">
-    <video controls playsinline preload="metadata" poster="video/poster.jpg" class="w-full h-auto">
+  <div class="rounded-2xl overflow-hidden shadow-xl bg-black mx-auto relative" style="max-width:380px" id="videoWrap">
+    <video id="heroVid" autoplay muted playsinline preload="auto" poster="video/poster.jpg" class="w-full h-auto cursor-pointer">
       <source src="video/hero.mp4" type="video/mp4">
     </video>
+    <button id="soundPill" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-white/95 text-slate-900 font-bold text-sm px-4 py-2.5 rounded-full shadow-lg animate-pulse">
+      <span aria-hidden="true">🔊</span> Video playing. Tap for sound
+    </button>
   </div>
   <p class="text-center text-sm text-slate-500 mt-2">Dillon, owner-led crew in Allen TX (60 seconds)</p>
   <p class="text-center text-sm text-slate-600 mt-3 italic">"Texted a list on Tuesday, priced the same day, started the next week." (homeowner, Castle Hills)</p>
@@ -141,6 +144,27 @@
 </footer>
 
 <script>
+// Muted autoplay with tap-to-unmute. On unmute, restart from the top so
+// the pitch plays whole. If the browser blocks even muted autoplay
+// (iOS low power), the pill becomes a play button.
+const vid = document.getElementById('heroVid');
+const pill = document.getElementById('soundPill');
+function unmute() {
+  vid.muted = false;
+  vid.currentTime = 0;
+  vid.controls = true;
+  vid.play();
+  pill.remove();
+  vid.removeEventListener('click', unmute);
+}
+vid.addEventListener('click', unmute);
+pill.addEventListener('click', unmute);
+const p = vid.play();
+if (p) p.catch(() => {
+  pill.innerHTML = '<span aria-hidden="true">▶</span> Tap to play';
+  pill.classList.remove('animate-pulse');
+});
+
 const form = document.getElementById('listForm');
 const err = document.getElementById('formErr');
 document.getElementById('toStep2').addEventListener('click', () => {
