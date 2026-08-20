@@ -22,6 +22,7 @@
   <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-slate-900">Got a list and a date,<br>but no crew?</h1>
   <p class="mt-3 text-xl font-semibold text-slate-800">One crew for the whole list. Done before your date.</p>
   <p class="mt-2 text-slate-600">Send the list, get a price range <b>today</b>, one walk-through, price locked before we start.</p>
+  <p class="mt-3 text-sm text-slate-500"><b class="text-slate-700">Perfect for:</b> sellers racing to listing photos · buyers fixing it before move-in · owners with a list that has waited too long</p>
 </header>
 
 <!-- HERO VIDEO = PROOF -->
@@ -41,9 +42,15 @@
 <!-- WHAT YOU GET — numbered, countable -->
 <section class="max-w-xl mx-auto px-5 pt-6">
   <div class="grid grid-cols-3 gap-2 text-center text-sm">
-    <div class="bg-white rounded-xl shadow p-3"><b class="text-red-600 block text-lg">1</b>Range texted <b>today</b></div>
-    <div class="bg-white rounded-xl shadow p-3"><b class="text-red-600 block text-lg">2</b>One walk-through, price <b>locked</b></div>
-    <div class="bg-white rounded-xl shadow p-3"><b class="text-red-600 block text-lg">3</b>Photo update <b>every night</b></div>
+    <div class="bg-white rounded-xl shadow p-3"><b class="text-red-600 block text-lg">1</b>Type your list and deadline</div>
+    <div class="bg-white rounded-xl shadow p-3"><b class="text-red-600 block text-lg">2</b>Dillon texts your range <b>today</b></div>
+    <div class="bg-white rounded-xl shadow p-3"><b class="text-red-600 block text-lg">3</b>One walk-through, price <b>locked</b></div>
+  </div>
+
+  <!-- 2. NAMED GUARANTEE, above the fold -->
+  <div class="mt-3 bg-slate-900 text-white rounded-xl shadow-lg p-4 text-center">
+    <p class="font-extrabold tracking-tight text-lg">Our No-Surprise Promise</p>
+    <p class="text-slate-200 text-sm mt-1">One written price before we start. It only changes if you change the list. And a photo update every night until it's done.</p>
   </div>
 </section>
 
@@ -54,6 +61,15 @@
     <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
 
     <div id="step1" class="space-y-4">
+      <div>
+        <span class="font-semibold text-slate-800 block mb-1">Which are you?</span>
+        <div class="flex flex-wrap gap-2" id="situationChips">
+          <button type="button" data-v="Getting ready to list" class="chip px-3 py-2 rounded-full border border-slate-300 text-sm font-medium">Getting ready to list</button>
+          <button type="button" data-v="Just closed" class="chip px-3 py-2 rounded-full border border-slate-300 text-sm font-medium">Just closed</button>
+          <button type="button" data-v="Just fixing my house" class="chip px-3 py-2 rounded-full border border-slate-300 text-sm font-medium">Just fixing my house</button>
+        </div>
+        <input type="hidden" name="situation" value="">
+      </div>
       <label class="block">
         <span class="font-semibold text-slate-800">Your list</span>
         <span class="block text-sm text-slate-500 mb-1">Everything. The drywall, the doors, the paint, the light that doesn't work.</span>
@@ -64,7 +80,7 @@
         <span class="block text-sm text-slate-500 mb-1">Listing photos, closing, or move-in. Whatever the deadline is.</span>
         <input type="text" name="date" required class="w-full rounded-lg border border-slate-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none" placeholder="e.g. Photos on Sept 12 / We close Oct 1">
       </label>
-      <button type="button" id="toStep2" class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition">Next: get my range today →</button>
+      <button type="button" id="toStep2" class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition">Send my list, get my range today →</button>
     </div>
 
     <div id="step2" class="space-y-4 step-hidden">
@@ -92,7 +108,7 @@
           </select>
         </label>
       </div>
-      <button type="submit" id="submitBtn" class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition">Send my list, get a range today</button>
+      <button type="submit" id="submitBtn" class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition">Send my list, get my range today</button>
       <p id="formErr" class="hidden text-sm text-red-600 font-medium"></p>
     </div>
 
@@ -127,19 +143,20 @@
     </details>
     <details class="bg-white rounded-xl shadow p-4">
       <summary class="font-bold cursor-pointer text-slate-900">Is my list too small (or too big)?</summary>
-      <p class="text-slate-600 text-sm mt-2">If it's a list, it fits. A day of drywall, doors, and paint, or a full bathroom. One item probably isn't worth a crew. Three or more usually is.</p>
+      <p class="text-slate-600 text-sm mt-2">If it's a list, it fits. Most lists we do run from one full day of work to a full bathroom, usually $3,000 to $20,000. One tiny item probably isn't worth a crew. Three or more usually is.</p>
     </details>
   </div>
   <div class="text-center mt-8 text-sm text-slate-500">
-    <p class="font-semibold text-slate-700 mb-1">★★★★★ 5-star rated on Google</p>
-    <p>"They arrived when they said, finished before our photos, and the price never moved." (seller, Plano)</p>
+    <p class="font-semibold text-slate-700 mb-1">★★★★★ 5.0 on Google from 65+ North Dallas homeowners</p>
+    <p>"They arrived when they said, finished before our photos, and the price never moved."<br><b class="text-slate-600">Home seller in Plano</b></p>
   </div>
   <div class="text-center mt-6">
-    <a href="#form" class="inline-block w-full sm:w-auto px-10 py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition">Send my list, get a range today</a>
+    <a href="#form" class="inline-block w-full sm:w-auto px-10 py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition">Send my list, get my range today</a>
   </div>
 </section>
 
 <footer class="max-w-xl mx-auto px-5 pb-8 text-center text-xs text-slate-400">
+  <p class="mb-1">Serving Allen, Plano, Frisco, McKinney and nearby.</p>
   <p>OnPoint Pros LLC · Allen, TX · <a href="tel:+13465725599" class="underline">(346) 572-5599</a> · <a href="/privacy.html" class="underline">Privacy</a></p>
 </footer>
 
@@ -167,6 +184,11 @@ if (p) p.catch(() => {
 
 const form = document.getElementById('listForm');
 const err = document.getElementById('formErr');
+document.querySelectorAll('#situationChips .chip').forEach(c => c.addEventListener('click', () => {
+  document.querySelectorAll('#situationChips .chip').forEach(x => x.classList.remove('bg-red-600','text-white','border-red-600'));
+  c.classList.add('bg-red-600','text-white','border-red-600');
+  form.situation.value = c.dataset.v;
+}));
 document.getElementById('toStep2').addEventListener('click', () => {
   const list = form.list_text.value.trim(), date = form.date.value.trim();
   if (!list || !date) { form.list_text.reportValidity(); form.date.reportValidity(); return; }
@@ -186,14 +208,15 @@ form.addEventListener('submit', async (e) => {
       method: 'POST', headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         name: form.name.value, phone: form.phone.value, zip: form.zip.value,
-        date: form.date.value, list_text: form.list_text.value,
+        date: form.date.value,
+        list_text: (form.situation.value ? 'Situation: ' + form.situation.value + '\n' : '') + form.list_text.value,
         budget: form.budget.value, website: form.website.value
       })
     });
     if (!r.ok) throw new Error('send failed');
     location.href = '/list/thanks.html';
   } catch (_) {
-    btn.disabled = false; btn.textContent = 'Send my list, get a range today';
+    btn.disabled = false; btn.textContent = 'Send my list, get my range today';
     err.textContent = "Something went wrong — text your list to (346) 572-5599 instead and Dillon will reply today.";
     err.classList.remove('hidden');
   }
