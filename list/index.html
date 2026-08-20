@@ -76,11 +76,22 @@
         <span class="block text-sm text-slate-500 mb-1">Everything. The drywall, the doors, the paint, the light that doesn't work.</span>
         <textarea name="list_text" rows="5" required class="w-full rounded-lg border border-slate-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none" placeholder="- Patch drywall in hallway&#10;- Paint 3 bedrooms&#10;- Fix door that sticks&#10;- ..."></textarea>
       </label>
-      <label class="block">
+      <div>
         <span class="font-semibold text-slate-800">Your date</span>
-        <span class="block text-sm text-slate-500 mb-1">Listing photos, closing, or move-in. Whatever the deadline is.</span>
-        <input type="text" name="date" required class="w-full rounded-lg border border-slate-300 p-3 focus:ring-2 focus:ring-red-600 focus:outline-none" placeholder="e.g. Photos on Sept 12 / We close Oct 1">
-      </label>
+        <span class="block text-sm text-slate-500 mb-1">Listing photos, closing, or move-in. Tap one:</span>
+        <div class="flex flex-wrap gap-2" id="dateChips">
+          <button type="button" data-v="Within 2 weeks" class="chip px-3 py-2 rounded-full border border-slate-300 text-sm font-medium">Within 2 weeks</button>
+          <button type="button" data-v="Within a month" class="chip px-3 py-2 rounded-full border border-slate-300 text-sm font-medium">Within a month</button>
+          <button type="button" data-v="1 to 3 months" class="chip px-3 py-2 rounded-full border border-slate-300 text-sm font-medium">1 to 3 months</button>
+          <button type="button" data-v="Not sure yet" class="chip px-3 py-2 rounded-full border border-slate-300 text-sm font-medium">Not sure yet</button>
+        </div>
+        <label class="flex items-center gap-2 mt-2 text-sm text-slate-600">
+          <span>Or exact date:</span>
+          <input type="date" id="exactDate" class="rounded-lg border border-slate-300 p-2 focus:ring-2 focus:ring-red-600 focus:outline-none bg-white">
+        </label>
+        <input type="hidden" name="date" value="">
+        <p id="dateErr" class="hidden text-sm text-red-600 mt-1">Tap a timeframe or pick a date.</p>
+      </div>
       <button type="button" id="toStep2" class="w-full py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition">Send my list, get my range today →</button>
     </div>
 
@@ -194,9 +205,30 @@ document.querySelectorAll('#situationChips .chip').forEach(c => c.addEventListen
   c.classList.add('bg-red-600','text-white','border-red-600');
   form.situation.value = c.dataset.v;
 }));
+const dateErr = document.getElementById('dateErr');
+const exactDate = document.getElementById('exactDate');
+exactDate.min = new Date().toISOString().slice(0, 10);
+function clearDateChips() {
+  document.querySelectorAll('#dateChips .chip').forEach(x => x.classList.remove('bg-red-600','text-white','border-red-600'));
+}
+document.querySelectorAll('#dateChips .chip').forEach(c => c.addEventListener('click', () => {
+  clearDateChips();
+  c.classList.add('bg-red-600','text-white','border-red-600');
+  form.date.value = c.dataset.v;
+  exactDate.value = '';
+  dateErr.classList.add('hidden');
+}));
+exactDate.addEventListener('change', () => {
+  if (!exactDate.value) return;
+  clearDateChips();
+  const d = new Date(exactDate.value + 'T12:00:00');
+  form.date.value = 'By ' + d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  dateErr.classList.add('hidden');
+});
 document.getElementById('toStep2').addEventListener('click', () => {
   const list = form.list_text.value.trim(), date = form.date.value.trim();
-  if (!list || !date) { form.list_text.reportValidity(); form.date.reportValidity(); return; }
+  if (!list) { form.list_text.reportValidity(); return; }
+  if (!date) { dateErr.classList.remove('hidden'); return; }
   document.getElementById('step1').classList.add('step-hidden');
   document.getElementById('step2').classList.remove('step-hidden');
   form.name.focus();
