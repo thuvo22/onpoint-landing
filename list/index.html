@@ -10,6 +10,11 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   .step-hidden{display:none}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .55s cubic-bezier(0.25,0.46,0.45,0.94),transform .55s cubic-bezier(0.25,0.46,0.45,0.94)}
+  .rv-scale{opacity:0;transform:scale(0.85);transition:opacity .55s cubic-bezier(0.25,0.46,0.45,0.94),transform .55s cubic-bezier(0.25,0.46,0.45,0.94)}
+  .rv-d1{transition-delay:.12s}.rv-d2{transition-delay:.24s}.rv-d3{transition-delay:.36s}
+  .rv.on,.rv-scale.on{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){.rv,.rv-scale{opacity:1;transform:none;transition:none}}
 .grain-bg{background-color:#faf9f7;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.10'/%3E%3C/svg%3E")}
   video{max-height:78vh}
 </style>
@@ -24,7 +29,7 @@
   </span>
 </div>
 <header class="bg-slate-900 text-white px-5 pt-8 pb-44 -mb-40 text-center">
-  <div class="max-w-xl mx-auto">
+  <div class="max-w-xl mx-auto rv">
     <div class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-400 mb-4">
       <span aria-hidden="true">★★★★★</span><span class="text-slate-200">5-star rated on Google</span>
     </div>
@@ -35,7 +40,7 @@
 
 <!-- HERO VIDEO = PROOF (bridges dark into light) -->
 <section class="max-w-xl mx-auto px-5 relative">
-  <div class="rounded-2xl overflow-hidden shadow-xl bg-black mx-auto relative" style="max-width:380px" id="videoWrap">
+  <div class="rounded-2xl overflow-hidden shadow-xl bg-black mx-auto relative rv-scale" style="max-width:380px" id="videoWrap">
     <video id="heroVid" autoplay muted playsinline preload="auto" poster="video/poster-v2.jpg" class="w-full h-auto cursor-pointer">
       <source src="video/hero-v2.mp4" type="video/mp4">
     </video>
@@ -48,17 +53,17 @@
     </button>
   </div>
   <p class="text-center text-sm text-slate-500 mt-2">Dillon, owner-led crew in Allen TX (60 seconds)</p>
-  <p class="text-center text-lg text-slate-800 mt-5 max-w-md mx-auto">It's a done-for-you home improvement service where <b>one trusted crew handles your entire list</b>, from paint to plumbing, and finishes <b>on time at a fixed price</b> for North Dallas homeowners, backed by our 5.0-star Google rating.</p>
-  <a href="#form" class="block w-full max-w-md mx-auto mt-5 py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-extrabold uppercase tracking-wide text-center shadow-lg transition">Get my price estimate today</a>
+  <p class="text-center text-lg text-slate-800 mt-5 max-w-md mx-auto rv">It's a done-for-you home improvement service where <b>one trusted crew handles your entire list</b>, from paint to plumbing, and finishes <b>on time at a fixed price</b> for North Dallas homeowners, backed by our 5.0-star Google rating.</p>
+  <a href="#form" class="rv rv-d1 block w-full max-w-md mx-auto mt-5 py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-extrabold uppercase tracking-wide text-center shadow-lg transition">Get my price estimate today</a>
 </section>
 
 <!-- WHAT PEOPLE ARE SAYING -->
 <section class="max-w-xl mx-auto px-5 pt-10">
   <div class="md:relative md:left-1/2 md:-translate-x-1/2 md:w-screen">
    <div class="grain-bg rounded-3xl shadow-sm -mx-3 md:mx-4 lg:mx-8 px-3 md:px-6 py-10 md:py-14">
-    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center text-slate-900">What people are saying:</h2>
-    <p class="text-center font-semibold text-slate-600 mt-2 mb-8">★★★★★ 5.0 on Google</p>
-    <div class="max-w-[340px] sm:max-w-sm mx-auto mb-8 relative">
+    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center text-slate-900 rv">What people are saying:</h2>
+    <p class="text-center font-semibold text-slate-600 mt-2 mb-8 rv rv-d1">★★★★★ 5.0 on Google</p>
+    <div class="max-w-[340px] sm:max-w-sm mx-auto mb-8 relative rv-scale">
       <video id="reviewVid" class="w-full rounded-2xl shadow-2xl bg-black" playsinline preload="metadata" poster="video/review-poster-v2.jpg">
         <source src="video/review-v2.mp4" type="video/mp4">
       </video>
@@ -69,7 +74,7 @@
       </button>
       <p class="text-center text-sm text-slate-500 mt-2">A Plano homeowner, right after the crew finished</p>
     </div>
-    <div class="max-w-7xl mx-auto md:px-8 space-y-5 md:space-y-0 md:flex md:items-start md:justify-center">
+    <div class="rv rv-d1 max-w-7xl mx-auto md:px-8 space-y-5 md:space-y-0 md:flex md:items-start md:justify-center">
       <img src="images/review-jamie-hl.jpg" alt="Five star Google review from Jamie W-B, Local Guide with 127 reviews: used OnPoint for several projects, very professional, punctual, honest, efficient. Recommend for any projects or remodeling." loading="lazy" class="w-full md:w-[36%] rounded-xl shadow-2xl bg-white md:-rotate-2 md:translate-y-3 md:z-10 relative hover:z-50 transition-transform hover:scale-105">
       <img src="images/review-gary-hl.jpg" alt="Five star Google review from Gary Marshall, MD: returned my call in minutes, provided a fair and reasonable estimate, and came out later the same day. I would hire him again without a doubt." loading="lazy" class="w-full md:w-[37%] rounded-xl shadow-2xl bg-white md:rotate-1 md:-ml-[12%] md:-translate-y-2 md:z-20 relative hover:z-50 transition-transform hover:scale-105">
       <img src="images/review-vijayakumar-hl.jpg" alt="Five star Google review from Vijayakumar Neelamegam: repaired our kitchen ceiling drywall, the repairs blend in seamlessly, the ceiling looks like new, would highly recommend." loading="lazy" class="w-full md:w-[37%] rounded-xl shadow-2xl bg-white md:-rotate-1 md:-ml-[12%] md:translate-y-5 md:z-30 relative hover:z-50 transition-transform hover:scale-105">
@@ -81,7 +86,7 @@
 
 <!-- WHAT YOU GET — numbered, countable -->
 <section class="max-w-xl mx-auto px-5 pt-6">
-  <div class="bg-white rounded-xl shadow p-4">
+  <div class="bg-white rounded-xl shadow p-4 rv">
     <div class="relative">
       <div class="absolute left-[15px] top-4 bottom-4 w-0.5 bg-red-100"></div>
       <div class="flex items-center gap-3 relative">
@@ -100,7 +105,7 @@
   </div>
 
   <!-- 2. NAMED GUARANTEE, above the fold -->
-  <div class="mt-3 bg-slate-900 text-white rounded-xl shadow-lg p-4 text-center">
+  <div class="mt-3 bg-slate-900 text-white rounded-xl shadow-lg p-4 text-center rv rv-d1">
     <p class="font-extrabold tracking-tight text-lg">Our No-Surprise Promise</p>
     <p class="text-slate-200 text-sm mt-1">One written price before we start. It only changes if you change the list. And a photo update every night until it's done.</p>
   </div>
@@ -109,9 +114,9 @@
 <!-- FORM -->
 <section class="bg-slate-900 py-12 mt-10" id="form">
  <div class="max-w-xl mx-auto px-5">
-  <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center text-white">Send your list</h2>
+  <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center text-white rv">Send your list</h2>
   <p class="text-center text-slate-300 mt-2 mb-7">Takes about 60 seconds. No email, no account.</p>
-  <form id="listForm" class="bg-white rounded-2xl shadow-lg overflow-hidden" novalidate>
+  <form id="listForm" class="bg-white rounded-2xl shadow-lg overflow-hidden rv rv-d1" novalidate>
     <div class="flex items-center justify-center gap-5 text-sm py-4 px-6 border-b border-slate-200">
       <span id="progStep1" class="flex items-center gap-2 font-semibold text-slate-900"><span class="dot w-2.5 h-2.5 rounded-full bg-red-600"></span>Your info</span>
       <span id="progStep2" class="flex items-center gap-2 text-slate-400"><span class="dot w-2.5 h-2.5 rounded-full bg-slate-300"></span>Your list</span>
@@ -194,7 +199,7 @@
 
 <!-- 3 OBJECTION BULLETS -->
 <section class="max-w-xl mx-auto px-5 pb-10">
-  <div class="bg-white rounded-xl shadow divide-y divide-slate-100">
+  <div class="bg-white rounded-xl shadow divide-y divide-slate-100 rv">
     <div class="p-4 border-l-4 border-red-600 rounded-tl-xl">
       <p class="font-bold text-slate-900">"Will the price grow halfway?"</p>
       <p class="text-slate-600 text-sm mt-1">One price, locked in writing before we start. It only changes if you add to the list.</p>
@@ -209,16 +214,16 @@
     </div>
   </div>
   <div class="mt-4 space-y-2">
-    <details class="bg-white rounded-xl shadow p-4">
+    <details class="bg-white rounded-xl shadow p-4 rv">
       <summary class="font-bold cursor-pointer text-slate-900">How fast can you start?</summary>
       <p class="text-slate-600 text-sm mt-2">Usually within a week of the walk-through. If your date is tighter than that, say so in the form and Dillon will tell you today whether it's doable.</p>
     </details>
-    <details class="bg-white rounded-xl shadow p-4">
+    <details class="bg-white rounded-xl shadow p-4 rv">
       <summary class="font-bold cursor-pointer text-slate-900">Is my list too small (or too big)?</summary>
       <p class="text-slate-600 text-sm mt-2">If it's a list, it fits. Most lists we do run from one full day of work to a full bathroom, usually $3,000 to $20,000. One tiny item probably isn't worth a crew. Three or more usually is.</p>
     </details>
   </div>
-  <div class="text-center mt-6">
+  <div class="text-center mt-6 rv">
     <a href="#form" class="inline-block w-full sm:w-auto px-10 py-4 rounded-xl bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition">Send my list, get my range today</a>
   </div>
 </section>
@@ -256,6 +261,13 @@ rPlay.addEventListener('click', () => {
   rVid.play();
   rPlay.remove();
 });
+
+const rvIO = new IntersectionObserver((es) => {
+  es.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add('on'); rvIO.unobserve(e.target); }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.rv, .rv-scale').forEach((el) => rvIO.observe(el));
 
 const form = document.getElementById('listForm');
 const err = document.getElementById('formErr');
