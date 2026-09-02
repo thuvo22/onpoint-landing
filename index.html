@@ -860,13 +860,50 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6">Ready to Start Your DFW Remodel?</h2>
             <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">Free on-site estimate. No high-pressure sales. Written quote in your hands before you ever sign anything.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
                 <a href="tel:+14692381719" class="inline-flex items-center justify-center px-8 py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-all shadow-xl">
                     Call (469) 238-1719
                 </a>
                 <a href="mailto:hello@onpointprostx.com" class="inline-flex items-center justify-center px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-lg transition-all border border-slate-700">
                     Email Us
                 </a>
+            </div>
+
+            <!-- Estimate request form. This is the opt-in mechanism carriers
+                 review for A2P 10DLC: the SMS consent checkbox is unchecked by
+                 default, is not required to submit, and names the sender, the
+                 message types, frequency, rates, STOP/HELP and both policies. -->
+            <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 text-left max-w-2xl mx-auto">
+                <h3 class="text-2xl font-extrabold text-slate-900 mb-1">Request your free estimate</h3>
+                <p class="text-slate-600 mb-6">Tell us what you need and we will get back to you the same day.</p>
+                <form id="estimateForm" novalidate class="space-y-4">
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <label class="block">
+                            <span class="text-sm font-bold text-slate-800">Name</span>
+                            <input type="text" name="name" required class="mt-1 w-full rounded-lg border border-slate-300 p-3 text-slate-900 focus:ring-2 focus:ring-red-600 focus:outline-none" placeholder="Your name">
+                        </label>
+                        <label class="block">
+                            <span class="text-sm font-bold text-slate-800">Mobile phone</span>
+                            <input type="tel" name="phone" required class="mt-1 w-full rounded-lg border border-slate-300 p-3 text-slate-900 focus:ring-2 focus:ring-red-600 focus:outline-none" placeholder="(469) 555-0123">
+                        </label>
+                    </div>
+                    <label class="block">
+                        <span class="text-sm font-bold text-slate-800">What do you need done?</span>
+                        <textarea name="message" rows="3" required class="mt-1 w-full rounded-lg border border-slate-300 p-3 text-slate-900 focus:ring-2 focus:ring-red-600 focus:outline-none" placeholder="Bathroom remodel, drywall repair, painting, a punch list..."></textarea>
+                    </label>
+
+                    <label class="flex items-start gap-3 rounded-lg bg-slate-50 border border-slate-200 p-4">
+                        <input type="checkbox" name="sms_consent" value="yes" class="mt-1 h-5 w-5 shrink-0 accent-red-600">
+                        <span class="text-sm text-slate-700 leading-relaxed">
+                            By checking this box I agree to receive text messages from <strong>OnPoint Pros</strong> at the mobile number provided above about my estimate, appointment reminders and my project. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for help. Consent is not a condition of purchase. See our <a href="/privacy.html" class="text-red-600 underline">Privacy Policy</a> and <a href="/terms.html" class="text-red-600 underline">Terms and Conditions</a>.
+                        </span>
+                    </label>
+
+                    <button type="submit" id="estimateBtn" class="w-full py-4 rounded-lg bg-red-600 hover:bg-red-700 text-white text-lg font-bold shadow-lg transition">Request my free estimate</button>
+                    <p id="estimateMsg" class="hidden text-sm font-medium"></p>
+                    <p class="text-xs text-slate-500">We use your information only to contact you about your request. We never sell it, and no mobile information is shared with third parties or affiliates for marketing purposes.</p>
+                </form>
             </div>
         </div>
     </section>
@@ -949,6 +986,46 @@
 })();
 </script>
 
+<script>
+(function () {
+  var f = document.getElementById('estimateForm');
+  if (!f) return;
+  var msg = document.getElementById('estimateMsg'), btn = document.getElementById('estimateBtn');
+  function say(t, ok) {
+    msg.textContent = t;
+    msg.className = 'text-sm font-medium ' + (ok ? 'text-green-700' : 'text-red-600');
+  }
+  f.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    var digits = (f.phone.value.match(/\d/g) || []).join('');
+    if (!f.name.value.trim()) { say('Please enter your name.', false); return; }
+    if (digits.length < 10) { say('Please enter a 10 digit phone number.', false); return; }
+    if (!f.message.value.trim()) { say('Please tell us what you need done.', false); return; }
+    btn.disabled = true; btn.textContent = 'Sending...';
+    try {
+      var r = await fetch('https://api.onpointpros.io/leads/landing-list', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: f.name.value, phone: f.phone.value, zip: '', date: '',
+          list_text: f.message.value +
+            (f.sms_consent.checked
+              ? '\n\n[SMS consent: YES, checked on onpointprostx.com estimate form]'
+              : '\n\n[SMS consent: not given]'),
+          budget: '', website: f.website.value
+        })
+      });
+      if (!r.ok) throw new Error('failed');
+      f.reset();
+      say('Thank you. We will get back to you today. If you need us sooner, call (469) 238-1719.', true);
+      msg.classList.remove('hidden');
+    } catch (err) {
+      say('Something went wrong. Please call or text us at (469) 238-1719.', false);
+      msg.classList.remove('hidden');
+    }
+    btn.disabled = false; btn.textContent = 'Request my free estimate';
+  });
+})();
+</script>
 <script src="/cookie-consent.js" defer></script>
 </body>
 </html>
