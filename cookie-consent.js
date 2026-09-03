@@ -115,7 +115,7 @@
     necessary: ["Necessary", "Required for the site to work, such as security and remembering your form entries. These cannot be switched off."],
     preferences: ["Preferences", "Remembers choices you make, like your area or a form you already started."],
     statistics: ["Statistics", "Tells us which pages people actually read, so we know what is worth writing."],
-    marketing: ["Marketing", "Lets us measure which ads bring real customers, and stop paying for the ones that do not."]
+    marketing: ["Marketing", "Helps us understand how people find us so we can reach the right homeowners."]
   };
 
   var root = null;
@@ -250,7 +250,7 @@
 
     var inner = el("div", "opp-cc-inner");
     inner.appendChild(el("div", "opp-cc-copy",
-      "<b>We use cookies.</b> Some keep the site working. Others help us see which pages and ads actually bring customers. " +
+      "<b>We use cookies.</b> Some keep the site working. Others help us understand how people use it so we can make it better. " +
       "You choose what we may use. Read our <a href='/privacy.html' style='color:#fff'>Privacy Policy</a>."));
 
     var actions = el("div", "opp-cc-actions");
