@@ -106,6 +106,9 @@
     ".opp-cc-foot{border-top:1px solid #1e293b;padding:16px 20px;display:flex;flex-direction:column;gap:10px}",
     ".opp-cc-foot .opp-cc-btn{width:100%}",
     ".opp-cc-open{position:fixed;left:14px;bottom:14px;z-index:2147482000;background:#0f172a;color:#fff;border:0;border-radius:999px;padding:9px 14px;font-size:12px;font-weight:600;cursor:pointer;opacity:.82;font-family:inherit}",
+    // The sitewide Call / Free Estimate bar (estimate-form.js) owns the bottom
+    // edge on phones; the pill sat on top of the Call button (2026-09-03).
+    "@media (max-width:639px){body.opp-has-bar .opp-cc-open{bottom:calc(72px + env(safe-area-inset-bottom));opacity:.6;padding:6px 10px;font-size:11px}}",
     ".opp-cc-open:hover{opacity:1}",
     "@media (max-width:640px){.opp-cc-actions{width:100%}.opp-cc-actions .opp-cc-btn{flex:1 1 auto}}"
   ].join("");
