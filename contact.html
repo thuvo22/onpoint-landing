@@ -111,7 +111,7 @@
             (f.sms_consent.checked
               ? '\n\n[SMS consent: YES, checked on onpointprostx.com/contact.html]'
               : '\n\n[SMS consent: not given]'),
-          budget: '', website: f.website.value
+          budget: '', website: f.website.value, page: 'contact'
         })
       });
       if (!r.ok) throw new Error('failed');

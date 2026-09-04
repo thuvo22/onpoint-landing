@@ -340,7 +340,7 @@ form.addEventListener('submit', async (e) => {
         name: form.name.value, phone: form.phone.value, zip: form.zip.value,
         date: form.date.value,
         list_text: (form.situation.value ? 'Situation: ' + form.situation.value + '\n' : '') + form.list_text.value,
-        budget: form.budget.value, website: form.website.value
+        budget: form.budget.value, website: form.website.value, page: 'list'
       })
     });
     if (!r.ok) throw new Error('send failed');
