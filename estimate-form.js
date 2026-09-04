@@ -34,6 +34,40 @@
     return m ? m[1] : '';
   }
 
+
+  // ---- phone validity (Twilio Lookup via our API) ------------------------
+  // On blur: a mistyped or made-up number is caught before submit. Invalid
+  // blocks the send; a landline is allowed but told we will call, not text.
+  var PHONE_CHECK = 'https://api.onpointpros.io/leads/phone-check';
+  var phoneVerdicts = {};
+  async function checkPhone(raw) {
+    var digits = (raw.match(/\d/g) || []).join('').slice(-10);
+    if (digits.length < 10) return { valid: false, reason: 'Please enter a 10 digit phone number.' };
+    if (phoneVerdicts[digits]) return phoneVerdicts[digits];
+    try {
+      var r = await fetch(PHONE_CHECK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+                                         body: JSON.stringify({ phone: digits }) });
+      var v = r.ok ? await r.json() : { valid: true, textable: true };
+      phoneVerdicts[digits] = v;
+      return v;
+    } catch (_) { return { valid: true, textable: true }; }
+  }
+  function phoneHint(input) {
+    var h = input.parentNode.querySelector('.opp-phone-hint');
+    if (!h) { h = document.createElement('p'); h.className = 'opp-phone-hint text-xs mt-1'; input.insertAdjacentElement('afterend', h); }
+    return h;
+  }
+  function wirePhone(input) {
+    input.addEventListener('blur', async function () {
+      var digits = (input.value.match(/\d/g) || []).join('');
+      if (digits.length < 10) return;
+      var v = await checkPhone(input.value), h = phoneHint(input);
+      if (!v.valid) { h.textContent = v.reason || 'Please enter a valid phone number.'; h.className = 'opp-phone-hint text-xs mt-1 text-red-600'; input.classList.add('border-red-500'); }
+      else if (v.textable === false) { h.textContent = 'This looks like a landline, so we will call you instead of texting.'; h.className = 'opp-phone-hint text-xs mt-1 text-amber-700'; input.classList.remove('border-red-500'); }
+      else { h.textContent = ''; input.classList.remove('border-red-500'); }
+    });
+  }
+
   // ---- form -------------------------------------------------------------
   function formHtml() {
     return '' +
@@ -67,7 +101,15 @@
       if (!form.name.value.trim()) { say('Please enter your name.', false); return; }
       if (digits.length < 10) { say('Please enter a 10 digit phone number.', false); return; }
       if (!form.message.value.trim()) { say('Please tell us what you need done.', false); return; }
-      btn.disabled = true; btn.textContent = 'Sending...';
+      btn.disabled = true; btn.textContent = 'Checking number...';
+      var verdict = await checkPhone(form.phone.value);
+      if (!verdict.valid) {
+        btn.disabled = false; btn.textContent = 'Get my free estimate';
+        say(verdict.reason || 'Please enter a valid phone number we can reach you at.', false);
+        form.phone.focus();
+        return;
+      }
+      btn.textContent = 'Sending...';
       try {
         var r = await fetch(API, {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -80,6 +122,7 @@
             budget: '', website: form.website.value, page: pageName()
           })
         });
+        if (r.status === 422) { var j = await r.json().catch(function(){return {};}); throw new Error(j.detail || 'invalid'); }
         if (!r.ok) throw new Error('failed');
         form.querySelectorAll('input,textarea').forEach(function (el) { if (el.type !== 'hidden') el.disabled = true; });
         btn.remove();
@@ -87,7 +130,8 @@
         try { if (window.gtag) gtag('event', 'generate_lead', { page: pageName(), method: 'estimate_form' }); } catch (_) {}
       } catch (err) {
         btn.disabled = false; btn.textContent = 'Get my free estimate';
-        say('Something went wrong. Please call or text us at ' + PHONE_DISPLAY + '.', false);
+        say(err && err.message && err.message !== 'failed' ? err.message
+            : 'Something went wrong. Please call or text us at ' + PHONE_DISPLAY + '.', false);
       }
     });
   }
@@ -101,6 +145,7 @@
     wrap.innerHTML = formHtml();
     holder.appendChild(wrap.firstChild);
     wireForm(holder.querySelector('.opp-est-form'));
+    wirePhone(holder.querySelector('.opp-est-form input[name=phone]'));
     return true;
   }
 
