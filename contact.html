@@ -52,6 +52,17 @@
                 <textarea name="message" rows="4" required class="mt-1 w-full rounded-lg border border-gray-300 p-3 text-gray-900 focus:ring-2 focus:ring-red-600 focus:outline-none" placeholder="Bathroom remodel, drywall repair, painting, flooring, a punch list..."></textarea>
             </label>
 
+            <div>
+                <span class="text-sm font-bold text-gray-900">Photos <span class="font-normal text-gray-500">(optional)</span></span>
+                <label for="estimatePhotos" class="mt-1 flex items-center justify-center gap-2 w-full rounded-lg border-2 border-dashed border-gray-300 p-4 text-gray-600 cursor-pointer hover:border-red-400 hover:text-red-600 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <span id="photoLabel">Add photos of the space</span>
+                </label>
+                <input type="file" id="estimatePhotos" name="photos" accept="image/*" multiple class="hidden">
+                <div id="photoGrid" class="mt-2 grid grid-cols-4 sm:grid-cols-6 gap-2"></div>
+                <p class="mt-1 text-xs text-gray-500">A few pictures help us give you an accurate range faster.</p>
+            </div>
+
             <label class="flex items-start gap-3 rounded-lg bg-gray-50 border border-gray-200 p-4">
                 <input type="checkbox" name="sms_consent" value="yes" class="mt-1 h-5 w-5 shrink-0 accent-red-600">
                 <span class="text-sm text-gray-700 leading-relaxed">
@@ -95,6 +106,44 @@
     msg.className = 'text-sm font-medium ' + (ok ? 'text-green-700' : 'text-red-600');
     msg.classList.remove('hidden');
   }
+  var photos = [];
+  var picker = document.getElementById('estimatePhotos');
+  var grid = document.getElementById('photoGrid');
+  var photoLabel = document.getElementById('photoLabel');
+  picker.addEventListener('change', function () {
+    Array.prototype.forEach.call(picker.files, function (file) {
+      if (photos.length >= 20 || !/^image\//.test(file.type)) return;
+      photos.push(file);
+      var cell = document.createElement('div');
+      cell.className = 'relative aspect-square rounded-lg overflow-hidden bg-gray-100';
+      var img = document.createElement('img');
+      img.className = 'w-full h-full object-cover';
+      img.src = URL.createObjectURL(file);
+      var x = document.createElement('button');
+      x.type = 'button'; x.textContent = '\u00d7'; x.setAttribute('aria-label', 'Remove photo');
+      x.className = 'absolute top-0 right-0 m-1 h-6 w-6 rounded-full bg-black/60 text-white text-sm leading-none';
+      x.addEventListener('click', function () { photos.splice(photos.indexOf(file), 1); cell.remove(); count(); });
+      cell.appendChild(img); cell.appendChild(x); grid.appendChild(cell);
+    });
+    picker.value = '';
+    count();
+  });
+  function count() {
+    photoLabel.textContent = photos.length ? photos.length + ' photo' + (photos.length === 1 ? '' : 's') + ' added, tap to add more' : 'Add photos of the space';
+  }
+  async function sendPhotos(baseUrl) {
+    var sent = 0;
+    for (var i = 0; i < photos.length; i++) {
+      btn.textContent = 'Sending photo ' + (i + 1) + ' of ' + photos.length + '...';
+      var fd = new FormData();
+      fd.append('file', photos[i], photos[i].name || 'photo.jpg');
+      try {
+        var r = await fetch(baseUrl + '/upload', { method: 'POST', body: fd });
+        if (r.ok) sent++;
+      } catch (_) {}
+    }
+    return sent;
+  }
   f.addEventListener('submit', async function (e) {
     e.preventDefault();
     var digits = (f.phone.value.match(/\d/g) || []).join('');
@@ -124,8 +173,15 @@
       });
       if (r.status === 422) { var j = await r.json().catch(function(){return {};}); throw new Error(j.detail || 'invalid'); }
       if (!r.ok) throw new Error('failed');
-      f.reset();
-      say('Thank you. We will get back to you today. If you need us sooner, call (469) 238-1719.', true);
+      var res = await r.json().catch(function(){return {};});
+      var note = '';
+      if (photos.length) {
+        var sent = res.photo_url ? await sendPhotos(res.photo_url) : 0;
+        note = sent === photos.length ? ' Your ' + (sent === 1 ? 'photo is' : sent + ' photos are') + ' in.'
+             : ' ' + (photos.length - sent) + ' of your photos did not go through. You can text them to (469) 238-1719.';
+      }
+      f.reset(); photos = []; grid.innerHTML = ''; count();
+      say('Thank you. We will get back to you today.' + note + ' If you need us sooner, call (469) 238-1719.', true);
     } catch (err) {
       say(err && err.message && err.message !== 'failed' ? err.message
           : 'Something went wrong. Please call or text us at (469) 238-1719.', false);
