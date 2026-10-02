@@ -19,7 +19,7 @@
 (function () {
   var path = location.pathname;
   if (/^\/list\/?/.test(path) || /\/contact\.html$/.test(path)) return;
-  var PHONE_DISPLAY = '(469) 238-1719', PHONE_TEL = 'tel:+14692381719';
+  var PHONE_DISPLAY = '(469) 617-5235', PHONE_TEL = 'tel:+14696175235';
   var API = 'https://api.onpointpros.io/leads/landing-list';
 
   function pageName() {
