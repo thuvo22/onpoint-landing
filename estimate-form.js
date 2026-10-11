@@ -25,11 +25,20 @@
   var isBathroom = false;
   var isHomepage = path === '/' || path === '/index.html';
   var serviceType = 'unspecified';
+  function timedFetch(url, options, milliseconds) {
+    var controller = new AbortController(), timer;
+    options = Object.assign({}, options, { signal: controller.signal });
+    var deadline = new Promise(function (_, reject) {
+      timer = setTimeout(function () { controller.abort(); reject(new Error('timeout')); }, milliseconds);
+    });
+    return Promise.race([fetch(url, options), deadline]).finally(function () { clearTimeout(timer); });
+  }
   var serviceLabels = {
     bathroom: 'Full bathroom remodel', repairs: 'Drywall & interior repairs',
     painting: 'Painting', flooring: 'Flooring', other: 'Other residential project'
   };
 
+  function budgetLabel(value) { return ({ under_20k: 'Under $20,000', '20k_30k': '$20,000 to $30,000', '30k_45k': '$30,000 to $45,000', '45k_plus': '$45,000 or more' })[value] || ''; }
   function submitLabel() { return isBathroom ? 'Request my bathroom planning call' : 'Get my free estimate'; }
 
   function pageName() {
@@ -55,8 +64,8 @@
     if (digits.length < 10) return { valid: false, reason: 'Please enter a 10 digit phone number.' };
     if (phoneVerdicts[digits]) return phoneVerdicts[digits];
     try {
-      var r = await fetch(PHONE_CHECK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
-                                         body: JSON.stringify({ phone: digits }) });
+      var r = await timedFetch(PHONE_CHECK, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+                                         body: JSON.stringify({ phone: digits }) }, 8000);
       var v = r.ok ? await r.json() : { valid: true, textable: true };
       phoneVerdicts[digits] = v;
       return v;
@@ -93,6 +102,7 @@
           '<label class="block text-sm font-semibold text-slate-900">Phone<input type="tel" name="phone" required autocomplete="tel" placeholder="Mobile phone" class="' + fieldClass + '"></label>' +
         '</div>' +
         (isBathroom ? '<label class="block mt-3 text-sm font-semibold text-slate-900">Project ZIP code (optional)<input type="text" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="10" placeholder="75002" class="' + fieldClass + '"></label>' : '') +
+        (isBathroom ? '<label class="block mt-3 text-sm font-semibold text-slate-900">Budget range (optional)<select name="budget" class="' + fieldClass + '"><option value="">Not sure yet</option><option value="under_20k">Under $20,000</option><option value="20k_30k">$20,000 to $30,000</option><option value="30k_45k">$30,000 to $45,000</option><option value="45k_plus">$45,000 or more</option></select></label>' : '') +
         '<label class="block mt-3 text-sm font-semibold text-slate-900">' + (isBathroom ? 'Project scope &amp; preferred timing' : 'What do you need done?') +
           '<textarea name="message" rows="3" required placeholder="' + (isBathroom ? 'What would you change in your bathroom, and when would you like to begin?' : 'Tell us about your project.') + '" class="' + fieldClass + '"></textarea></label>' +
         '<label class="mt-3 flex items-start gap-2 text-xs text-slate-600 leading-relaxed">' +
@@ -106,19 +116,23 @@
 
   function wireForm(form) {
     var msg = form.querySelector('.opp-est-msg'), btn = form.querySelector('button[type=submit]');
+    var inFlight = false, submitted = false;
     function say(t, ok) {
       msg.textContent = t;
       msg.className = 'opp-est-msg mt-3 text-sm font-medium ' + (ok ? 'text-green-700' : 'text-red-600');
     }
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
+      if (inFlight || submitted) return;
       var digits = (form.phone.value.match(/\d/g) || []).join('');
       if (!form.name.value.trim()) { say('Please enter your name.', false); form.name.focus(); return; }
       if (digits.length < 10) { say('Please enter a 10 digit phone number.', false); form.phone.focus(); return; }
       if (!form.message.value.trim()) { say('Please tell us what you need done.', false); form.message.focus(); return; }
+      inFlight = true;
       btn.disabled = true; btn.textContent = 'Checking number...';
       var verdict = await checkPhone(form.phone.value);
       if (!verdict.valid) {
+        inFlight = false;
         btn.disabled = false; btn.textContent = submitLabel();
         say(verdict.reason || 'Please enter a valid phone number we can reach you at.', false);
         form.phone.focus();
@@ -131,24 +145,29 @@
           body: JSON.stringify({
             name: form.name.value, phone: form.phone.value, zip: form.zip ? form.zip.value.trim() : '', date: '',
             list_text: (serviceLabels[serviceType] ? '[Service: ' + serviceLabels[serviceType] + ']\n\n' : '') + form.message.value +
+              (window.OnPointMeasurement ? window.OnPointMeasurement.leadContext() : '') +
               (form.sms_consent.checked
                 ? '\n\n[SMS consent: YES, checked on onpointprostx.com/' + pageName() + ']'
                 : '\n\n[SMS consent: not given]'),
-            budget: '', website: form.website.value, page: pageName()
+            budget: isBathroom && form.budget ? budgetLabel(form.budget.value) : '', website: form.website.value, page: pageName()
           })
         });
         if (r.status === 422) { var j = await r.json().catch(function(){return {};}); throw new Error(j.detail || 'invalid'); }
         if (!r.ok) throw new Error('failed');
-        form.querySelectorAll('input,textarea').forEach(function (el) { if (el.type !== 'hidden') el.disabled = true; });
+        var res = await r.json().catch(function () { return {}; });
+        if (res.ok !== true) throw new Error('failed');
+        submitted = true;
+        form.querySelectorAll('input,textarea,select').forEach(function (el) { if (el.type !== 'hidden') el.disabled = true; });
         btn.remove();
         say((isBathroom ? 'Thank you. We will contact you about your bathroom planning call.' : 'Thank you. We will contact you about your project request.') + ' Need us sooner? Call ' + PHONE_DISPLAY + '.', true);
         msg.focus();
-        try { if (window.gtag) window.gtag('event', 'generate_lead', { page: pageName(), method: 'estimate_form', service_type: serviceType }); } catch (_) {}
+        try { if (window.OnPointMeasurement) window.OnPointMeasurement.acceptedLead(res, 'estimate_form', serviceType); } catch (_) {}
       } catch (err) {
+        inFlight = false;
         btn.disabled = false; btn.textContent = submitLabel();
         say(err && err.message && err.message !== 'failed' ? err.message
             : 'Something went wrong. Please call or text us at ' + PHONE_DISPLAY + '.', false);
-      }
+      } finally { inFlight = false; }
     });
   }
 
@@ -169,7 +188,7 @@
   function mountBar(hasForm) {
     if (document.querySelector('.opp-sticky-bar')) return;
     var target = isHomepage ? '/contact.html' : (hasForm ? '#estimate' : '/contact.html');
-    var actionLabel = isBathroom ? 'Planning Call' : (isHomepage ? 'Request a Quote' : 'Free Estimate');
+    var actionLabel = isBathroom ? 'Planning Call' : 'Request a Quote';
     var bar = document.createElement('div');
     bar.className = 'opp-sticky-bar sm:hidden fixed inset-x-0 bottom-0 z-40 bg-white/95 backdrop-blur border-t border-slate-200 px-3 py-2 flex gap-2';
     bar.style.paddingBottom = 'calc(0.5rem + env(safe-area-inset-bottom))';
@@ -193,8 +212,11 @@
   function init() {
     var sec = document.getElementById('estimate');
     var declaredService = sec ? sec.getAttribute('data-service') : '';
-    isBathroom = path === '/services/bathroom-remodel.html' || declaredService === 'bathroom';
-    serviceType = isBathroom ? 'bathroom' : (Object.prototype.hasOwnProperty.call(serviceLabels, declaredService) ? declaredService : 'unspecified');
+    isBathroom = path === '/services/bathroom-remodel.html' || /^\/bathroom\//.test(path) || declaredService === 'bathroom';
+    serviceType = isBathroom ? 'bathroom' : (Object.prototype.hasOwnProperty.call(serviceLabels, declaredService) ? declaredService :
+      (/^\/drywall\/|\/drywall-repair\.html$/.test(path) ? 'repairs' :
+      (/^\/painting\/|\/painting\.html$/.test(path) ? 'painting' :
+      (/^\/flooring\/|\/flooring\.html$/.test(path) ? 'flooring' : 'unspecified'))));
     var hasForm = mountForm();
     mountBar(hasForm);
   }

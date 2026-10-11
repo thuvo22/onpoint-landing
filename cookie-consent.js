@@ -66,7 +66,8 @@
 
   var saved = load();
   // Default denied on a first visit. Runs before tags so nothing leaks.
-  pushConsent(saved ? saved : { __mode: "default" });
+  pushConsent({ __mode: "default" });
+  if (saved) pushConsent(saved);
 
   // ---- styles ----------------------------------------------------------
   var css = document.createElement("style");
@@ -136,6 +137,7 @@
     save(state);
     pushConsent(state);
     saved = state;
+    window.dispatchEvent(new CustomEvent("opp:consent", { detail: { statistics: !!state.statistics } }));
   }
 
   function acceptAll() {
@@ -283,7 +285,7 @@
     if (t) { e.preventDefault(); openPanel(); }
   });
 
-  window.OnPointConsent = { open: openPanel, get: load };
+  window.OnPointConsent = { open: openPanel, get: function () { return saved || load(); } };
 
   function boot() {
     if (!load()) openBar(); else ensureReopen();
