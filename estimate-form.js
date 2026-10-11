@@ -9,8 +9,9 @@
  *   - inside #estimate (city/service pages) — replaces the call-only block
  *     with the button kept, form added; height is reserved before paint so
  *     nothing shifts (CLS).
- *   - pages with no #estimate get only the sticky bar, whose Free Estimate
- *     button goes to /contact.html.
+ *   - pages with no #estimate get only the sticky bar, linking to contact.
+ *   - the main bathroom hub (or #estimate[data-service="bathroom"]) starts
+ *     a planning call; other service/city pages retain their estimate flow.
  * Never on /list/ (Meta funnel has its own form) or /contact.html.
  *
  * Posts to the same endpoint as contact.html with page = the path, so the
@@ -21,6 +22,15 @@
   if (/^\/list\/?/.test(path) || /\/contact\.html$/.test(path)) return;
   var PHONE_DISPLAY = '(469) 617-5235', PHONE_TEL = 'tel:+14696175235';
   var API = 'https://api.onpointpros.io/leads/landing-list';
+  var isBathroom = false;
+  var isHomepage = path === '/' || path === '/index.html';
+  var serviceType = 'unspecified';
+  var serviceLabels = {
+    bathroom: 'Full bathroom remodel', repairs: 'Drywall & interior repairs',
+    painting: 'Painting', flooring: 'Flooring', other: 'Other residential project'
+  };
+
+  function submitLabel() { return isBathroom ? 'Request my bathroom planning call' : 'Get my free estimate'; }
 
   function pageName() {
     var p = path.replace(/^\//, '').replace(/\.html$/, '').replace(/\/index$/, '') || 'home';
@@ -70,22 +80,27 @@
 
   // ---- form -------------------------------------------------------------
   function formHtml() {
+    var fieldClass = 'mt-1 w-full rounded-lg border border-slate-300 p-3 text-slate-900 focus:ring-2 focus:ring-red-600 focus:outline-none';
     return '' +
       '<form class="opp-est-form mt-8 mx-auto max-w-xl text-left bg-white rounded-2xl shadow-2xl p-5 sm:p-6" novalidate>' +
         '<input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">' +
-        '<p class="text-slate-900 font-extrabold text-lg mb-1">Or get your price by text</p>' +
-        '<p class="text-slate-600 text-sm mb-4">Tell us what you need. We reply the same day, no obligation.</p>' +
+        '<p class="text-slate-900 font-extrabold text-lg mb-1">' + (isBathroom ? 'Tell us about your bathroom' : 'Or get your price by text') + '</p>' +
+        '<p class="text-slate-600 text-sm mb-4">' + (isBathroom
+          ? 'Full bathroom remodels start at $25,000. Begin with a planning call. If the project is a fit, a paid Blueprint planning session is next: usually $1,000, credited toward your remodel. We will explain the scope and fee before you book it.'
+          : 'Tell us what you need. We reply the same day, no obligation.') + '</p>' +
         '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">' +
-          '<input type="text" name="name" required placeholder="Your name" class="w-full rounded-lg border border-slate-300 p-3 text-slate-900 focus:ring-2 focus:ring-red-600 focus:outline-none">' +
-          '<input type="tel" name="phone" required placeholder="Mobile phone" class="w-full rounded-lg border border-slate-300 p-3 text-slate-900 focus:ring-2 focus:ring-red-600 focus:outline-none">' +
+          '<label class="block text-sm font-semibold text-slate-900">Name<input type="text" name="name" required autocomplete="name" placeholder="Your name" class="' + fieldClass + '"></label>' +
+          '<label class="block text-sm font-semibold text-slate-900">Phone<input type="tel" name="phone" required autocomplete="tel" placeholder="Mobile phone" class="' + fieldClass + '"></label>' +
         '</div>' +
-        '<textarea name="message" rows="3" required placeholder="What do you need done?" class="mt-3 w-full rounded-lg border border-slate-300 p-3 text-slate-900 focus:ring-2 focus:ring-red-600 focus:outline-none"></textarea>' +
+        (isBathroom ? '<label class="block mt-3 text-sm font-semibold text-slate-900">Project ZIP code (optional)<input type="text" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="10" placeholder="75002" class="' + fieldClass + '"></label>' : '') +
+        '<label class="block mt-3 text-sm font-semibold text-slate-900">' + (isBathroom ? 'Project scope &amp; preferred timing' : 'What do you need done?') +
+          '<textarea name="message" rows="3" required placeholder="' + (isBathroom ? 'What would you change in your bathroom, and when would you like to begin?' : 'Tell us about your project.') + '" class="' + fieldClass + '"></textarea></label>' +
         '<label class="mt-3 flex items-start gap-2 text-xs text-slate-600 leading-relaxed">' +
           '<input type="checkbox" name="sms_consent" value="yes" class="mt-0.5 h-4 w-4 shrink-0 accent-red-600">' +
-          '<span>I agree to receive text messages from OnPoint Pros about my estimate at the number above. Message frequency varies. Msg and data rates may apply. Reply STOP to opt out. <a href="/privacy.html" class="underline">Privacy</a> and <a href="/terms.html" class="underline">Terms</a>.</span>' +
+          '<span>I agree to receive text messages from OnPoint Pros about my project request at the number above. Message frequency varies. Msg and data rates may apply. Reply STOP to opt out or HELP for help. Consent is optional and is not a condition of purchase. <a href="/privacy.html" class="underline">Privacy</a> and <a href="/terms.html" class="underline">Terms</a>.</span>' +
         '</label>' +
-        '<button type="submit" class="mt-4 w-full py-3.5 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold shadow-lg transition">Get my free estimate</button>' +
-        '<p class="opp-est-msg hidden mt-3 text-sm font-medium"></p>' +
+        '<button type="submit" class="mt-4 w-full py-3.5 rounded-lg bg-red-600 hover:bg-red-700 text-white font-bold shadow-lg transition">' + submitLabel() + '</button>' +
+        '<p class="opp-est-msg hidden mt-3 text-sm font-medium" role="status" aria-live="polite" tabindex="-1"></p>' +
       '</form>';
   }
 
@@ -98,13 +113,13 @@
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
       var digits = (form.phone.value.match(/\d/g) || []).join('');
-      if (!form.name.value.trim()) { say('Please enter your name.', false); return; }
-      if (digits.length < 10) { say('Please enter a 10 digit phone number.', false); return; }
-      if (!form.message.value.trim()) { say('Please tell us what you need done.', false); return; }
+      if (!form.name.value.trim()) { say('Please enter your name.', false); form.name.focus(); return; }
+      if (digits.length < 10) { say('Please enter a 10 digit phone number.', false); form.phone.focus(); return; }
+      if (!form.message.value.trim()) { say('Please tell us what you need done.', false); form.message.focus(); return; }
       btn.disabled = true; btn.textContent = 'Checking number...';
       var verdict = await checkPhone(form.phone.value);
       if (!verdict.valid) {
-        btn.disabled = false; btn.textContent = 'Get my free estimate';
+        btn.disabled = false; btn.textContent = submitLabel();
         say(verdict.reason || 'Please enter a valid phone number we can reach you at.', false);
         form.phone.focus();
         return;
@@ -114,8 +129,8 @@
         var r = await fetch(API, {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            name: form.name.value, phone: form.phone.value, zip: '', date: '',
-            list_text: form.message.value +
+            name: form.name.value, phone: form.phone.value, zip: form.zip ? form.zip.value.trim() : '', date: '',
+            list_text: (serviceLabels[serviceType] ? '[Service: ' + serviceLabels[serviceType] + ']\n\n' : '') + form.message.value +
               (form.sms_consent.checked
                 ? '\n\n[SMS consent: YES, checked on onpointprostx.com/' + pageName() + ']'
                 : '\n\n[SMS consent: not given]'),
@@ -126,10 +141,11 @@
         if (!r.ok) throw new Error('failed');
         form.querySelectorAll('input,textarea').forEach(function (el) { if (el.type !== 'hidden') el.disabled = true; });
         btn.remove();
-        say('Thank you. We will text you today. Need us sooner? Call ' + PHONE_DISPLAY + '.', true);
-        try { if (window.gtag) gtag('event', 'generate_lead', { page: pageName(), method: 'estimate_form' }); } catch (_) {}
+        say((isBathroom ? 'Thank you. We will contact you about your bathroom planning call.' : 'Thank you. We will contact you about your project request.') + ' Need us sooner? Call ' + PHONE_DISPLAY + '.', true);
+        msg.focus();
+        try { if (window.gtag) window.gtag('event', 'generate_lead', { page: pageName(), method: 'estimate_form', service_type: serviceType }); } catch (_) {}
       } catch (err) {
-        btn.disabled = false; btn.textContent = 'Get my free estimate';
+        btn.disabled = false; btn.textContent = submitLabel();
         say(err && err.message && err.message !== 'failed' ? err.message
             : 'Something went wrong. Please call or text us at ' + PHONE_DISPLAY + '.', false);
       }
@@ -152,13 +168,14 @@
   // ---- sticky bar (mobile only) ----------------------------------------
   function mountBar(hasForm) {
     if (document.querySelector('.opp-sticky-bar')) return;
-    var target = hasForm ? '#estimate' : '/contact.html';
+    var target = isHomepage ? '/contact.html' : (hasForm ? '#estimate' : '/contact.html');
+    var actionLabel = isBathroom ? 'Planning Call' : (isHomepage ? 'Request a Quote' : 'Free Estimate');
     var bar = document.createElement('div');
     bar.className = 'opp-sticky-bar sm:hidden fixed inset-x-0 bottom-0 z-40 bg-white/95 backdrop-blur border-t border-slate-200 px-3 py-2 flex gap-2';
     bar.style.paddingBottom = 'calc(0.5rem + env(safe-area-inset-bottom))';
     bar.innerHTML =
       '<a href="' + PHONE_TEL + '" class="flex-1 inline-flex items-center justify-center py-3 rounded-lg bg-slate-900 text-white font-bold text-sm">Call ' + PHONE_DISPLAY + '</a>' +
-      '<a href="' + target + '" class="flex-1 inline-flex items-center justify-center py-3 rounded-lg bg-red-600 text-white font-bold text-sm">Free Estimate</a>';
+      '<a href="' + target + '" class="flex-1 inline-flex items-center justify-center py-3 rounded-lg bg-red-600 text-white font-bold text-sm">' + actionLabel + '</a>';
     document.body.appendChild(bar);
     document.body.classList.add('opp-has-bar');   // cookie pill moves up out of its way
     // keep the bar off the last content / cookie banner
@@ -174,6 +191,10 @@
   }
 
   function init() {
+    var sec = document.getElementById('estimate');
+    var declaredService = sec ? sec.getAttribute('data-service') : '';
+    isBathroom = path === '/services/bathroom-remodel.html' || declaredService === 'bathroom';
+    serviceType = isBathroom ? 'bathroom' : (Object.prototype.hasOwnProperty.call(serviceLabels, declaredService) ? declaredService : 'unspecified');
     var hasForm = mountForm();
     mountBar(hasForm);
   }
