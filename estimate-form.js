@@ -86,7 +86,7 @@
         '<input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">' +
         '<p class="text-slate-900 font-extrabold text-lg mb-1">' + (isBathroom ? 'Tell us about your bathroom' : 'Or get your price by text') + '</p>' +
         '<p class="text-slate-600 text-sm mb-4">' + (isBathroom
-          ? 'Full bathroom remodels start at $25,000. Begin with a planning call. If the project is a fit, a paid Blueprint planning session is next: usually $1,000, credited toward your remodel. We will explain the scope and fee before you book it.'
+          ? 'Full bathroom remodels start at $20,000. Begin with a planning call. If the project is a fit, a paid Blueprint planning session is next: usually $1,000, credited toward your remodel. We will explain the scope and fee before you book it.'
           : 'Tell us what you need. We reply the same day, no obligation.') + '</p>' +
         '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">' +
           '<label class="block text-sm font-semibold text-slate-900">Name<input type="text" name="name" required autocomplete="name" placeholder="Your name" class="' + fieldClass + '"></label>' +
