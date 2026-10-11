@@ -10,7 +10,7 @@
     <link rel="icon" type="image/webp" href="/images/logo.webp">
     <link rel="preload" href="/assets/fonts/montserrat-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/assets/css/default.min.css?v=cb18c78e25bc">
+    <link rel="stylesheet" href="/assets/css/default.min.css?v=48229b5d3e4f">
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
@@ -50,6 +50,25 @@
             <div id="bathroomPlanningNote" hidden class="rounded-lg bg-gray-50 border border-gray-200 p-4 text-sm text-gray-700" role="note">
                 <p class="font-bold text-gray-900 mb-1">Bathroom planning, before construction</p>
                 <p>Full bathroom remodels start at $20,000. This request starts an initial planning call. If the project is a fit, the next step is a paid Blueprint planning session, usually $1,000 and credited toward your remodel. We will explain the scope and fee before you book it.</p>
+            </div>
+
+            <div id="repairMinimumNote" hidden class="rounded-lg bg-gray-50 border border-gray-200 p-4 text-sm text-gray-700" role="note">
+                <p class="font-bold text-gray-900 mb-1">Drywall projects start at $1,000</p>
+                <p>Several repair areas can be combined in one project. Send your full repair list and photos so we can review the scope. Painting and other interior work are quoted separately.</p>
+            </div>
+
+            <div id="bathroomBudgetField" hidden>
+                <label class="block" for="contactBudget">
+                    <span class="text-sm font-bold text-gray-900">Bathroom budget <span class="font-normal text-gray-500">(optional)</span></span>
+                    <select id="contactBudget" name="budget" class="mt-1 w-full rounded-lg border border-gray-300 p-3 text-gray-900 bg-white focus:ring-2 focus:ring-red-600 focus:outline-none">
+                        <option value="">Not sure yet</option>
+                        <option value="under_20k">Under $20,000</option>
+                        <option value="20k_30k">$20,000–$30,000</option>
+                        <option value="30k_45k">$30,000–$45,000</option>
+                        <option value="45k_plus">$45,000+</option>
+                    </select>
+                </label>
+                <p class="mt-1 text-xs text-gray-500">Full bathroom remodels have a $20,000 minimum. Your selection helps us discuss a suitable scope; it is not a quote or booking.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -117,128 +136,9 @@
     </div>
 </footer>
 
-<script>
-(function () {
-  var f = document.getElementById('estimateForm');
-  if (!f) return;
-  var msg = document.getElementById('estimateMsg'), btn = document.getElementById('estimateBtn');
-  var service = document.getElementById('contactService');
-  var serviceLabels = {
-    bathroom: 'Full bathroom remodel', repairs: 'Drywall & interior repairs',
-    painting: 'Painting', flooring: 'Flooring', other: 'Other residential project'
-  };
-  function validService(value) { return Object.prototype.hasOwnProperty.call(serviceLabels, value); }
-  function buttonLabel() { return service.value === 'bathroom' ? 'Request my bathroom planning call' : 'Request my project quote'; }
-  function updateService() {
-    var bathroom = service.value === 'bathroom';
-    document.getElementById('contactHeading').textContent = bathroom ? 'Start your bathroom remodel' : 'Tell us about your project';
-    document.getElementById('contactIntro').textContent = bathroom
-      ? 'Tell us about your bathroom, the changes you want, and your preferred timing. We will contact you to discuss the next step.'
-      : (service.value ? 'Need help with drywall, painting, flooring or interior repairs? Tell us about the work so we can discuss a quote.' : 'Planning a bathroom remodel or need help with repairs? Choose your service and tell us what you have in mind.');
-    document.getElementById('bathroomPlanningNote').hidden = !bathroom;
-    f.message.placeholder = bathroom ? 'What would you change in your bathroom, and when would you like to begin?' : 'Describe your project and when you hope to get started.';
-    btn.textContent = service.value ? buttonLabel() : 'Send my project request';
-  }
-  var requestedService = new URLSearchParams(location.search).get('service');
-  if (validService(requestedService)) service.value = requestedService;
-  service.addEventListener('change', updateService);
-  updateService();
-  function say(t, ok) {
-    msg.textContent = t;
-    msg.className = 'text-sm font-medium ' + (ok ? 'text-green-700' : 'text-red-600');
-    msg.classList.remove('hidden');
-  }
-  var photos = [];
-  var picker = document.getElementById('estimatePhotos');
-  var grid = document.getElementById('photoGrid');
-  var photoLabel = document.getElementById('photoLabel');
-  picker.addEventListener('change', function () {
-    Array.prototype.forEach.call(picker.files, function (file) {
-      if (photos.length >= 20 || !/^image\//.test(file.type)) return;
-      photos.push(file);
-      var cell = document.createElement('div');
-      cell.className = 'relative aspect-square rounded-lg overflow-hidden bg-gray-100';
-      var img = document.createElement('img');
-      img.className = 'w-full h-full object-cover';
-      img.alt = 'Selected project photo';
-      img.src = URL.createObjectURL(file);
-      var x = document.createElement('button');
-      x.type = 'button'; x.textContent = '\u00d7'; x.setAttribute('aria-label', 'Remove photo');
-      x.className = 'absolute top-0 right-0 m-1 h-6 w-6 rounded-full bg-black/60 text-white text-sm leading-none';
-      x.addEventListener('click', function () { photos.splice(photos.indexOf(file), 1); URL.revokeObjectURL(img.src); cell.remove(); count(); });
-      cell.appendChild(img); cell.appendChild(x); grid.appendChild(cell);
-    });
-    picker.value = '';
-    count();
-  });
-  function count() {
-    photoLabel.textContent = photos.length ? photos.length + ' photo' + (photos.length === 1 ? '' : 's') + ' added, tap to add more' : 'Add photos of the space';
-  }
-  async function sendPhotos(baseUrl) {
-    var sent = 0;
-    for (var i = 0; i < photos.length; i++) {
-      btn.textContent = 'Sending photo ' + (i + 1) + ' of ' + photos.length + '...';
-      var fd = new FormData();
-      fd.append('file', photos[i], photos[i].name || 'photo.jpg');
-      try {
-        var r = await fetch(baseUrl + '/upload', { method: 'POST', body: fd });
-        if (r.ok) sent++;
-      } catch (_) {}
-    }
-    return sent;
-  }
-  f.addEventListener('submit', async function (e) {
-    e.preventDefault();
-    var digits = (f.phone.value.match(/\d/g) || []).join('');
-    if (!validService(service.value)) { say('Please choose the service you need.', false); service.focus(); return; }
-    if (!f.name.value.trim()) { say('Please enter your name.', false); f.name.focus(); return; }
-    if (digits.length < 10) { say('Please enter a 10 digit phone number.', false); f.phone.focus(); return; }
-    if (!f.message.value.trim()) { say('Please tell us what you need done.', false); f.message.focus(); return; }
-    var selectedService = service.value;
-    btn.disabled = true; btn.textContent = 'Checking number...';
-    try {
-      var pc = await fetch('https://api.onpointpros.io/leads/phone-check', { method: 'POST',
-        headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ phone: digits }) });
-      var pv = pc.ok ? await pc.json() : { valid: true };
-      if (!pv.valid) { btn.disabled = false; btn.textContent = buttonLabel();
-        say(pv.reason || 'Please enter a valid phone number we can reach you at.', false); f.phone.focus(); return; }
-    } catch (_) {}
-    btn.textContent = 'Sending...';
-    try {
-      var r = await fetch('https://api.onpointpros.io/leads/landing-list', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name: f.name.value, phone: f.phone.value, zip: f.zip.value.trim(), date: '',
-          list_text: '[Service: ' + serviceLabels[selectedService] + ']\n\n' + f.message.value +
-            (f.sms_consent.checked
-              ? '\n\n[SMS consent: YES, checked on onpointprostx.com/contact.html]'
-              : '\n\n[SMS consent: not given]'),
-          budget: '', website: f.website.value, page: 'contact'
-        })
-      });
-      if (r.status === 422) { var j = await r.json().catch(function(){return {};}); throw new Error(j.detail || 'invalid'); }
-      if (!r.ok) throw new Error('failed');
-      var res = await r.json().catch(function(){return {};});
-      try { if (window.gtag) window.gtag('event', 'generate_lead', { page: 'contact', method: 'contact_form', service_type: selectedService }); } catch (_) {}
-      var note = '';
-      if (photos.length) {
-        var sent = res.photo_url ? await sendPhotos(res.photo_url) : 0;
-        note = sent === photos.length ? ' Your ' + (sent === 1 ? 'photo is' : sent + ' photos are') + ' in.'
-             : ' ' + (photos.length - sent) + ' of your photos did not go through. You can text them to (469) 617-5235.';
-      }
-      grid.querySelectorAll('img').forEach(function (img) { URL.revokeObjectURL(img.src); });
-      f.reset(); service.value = selectedService; updateService(); photos = []; grid.innerHTML = ''; count();
-      say((selectedService === 'bathroom' ? 'Thank you. We will contact you about your bathroom planning call.' : 'Thank you. We will contact you about your project request.') + note + ' If you need us sooner, call (469) 617-5235.', true);
-      msg.focus();
-    } catch (err) {
-      say(err && err.message && err.message !== 'failed' ? err.message
-          : 'Something went wrong. Please call or text us at (469) 617-5235.', false);
-    }
-    btn.disabled = false; btn.textContent = buttonLabel();
-  });
-})();
-</script>
 <script src="/phone-format.js" defer></script>
-<script src="/cookie-consent.js" defer></script>
+<script src="/cookie-consent.js?v=242ca6aeb1e2" defer></script>
+<script src="/site-measurement.js?v=07a4998a1bb5" defer></script>
+<script src="/contact-form.js?v=d01c619e334e" defer></script>
 </body>
 </html>

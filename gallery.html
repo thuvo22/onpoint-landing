@@ -67,8 +67,8 @@
     <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl sm:text-4xl font-extrabold mb-5">Want a Project Like These?</h2>
-            <p class="text-xl text-slate-300 mb-8">Free on-site estimate. Written line-item quote. One project lead from start to finish.</p>
-            <a href="tel:+14696175235" class="inline-flex px-8 py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 shadow-xl">Call (469) 617-5235</a>
+            <p class="text-xl text-slate-300 mb-8">Full bathroom remodels start at $20,000. Begin with a planning call; the paid Primary Bath Blueprint usually costs $1,000, credited toward your remodel. We confirm the scope and fee before you book.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4"><a href="/contact.html?service=bathroom" class="inline-flex justify-center px-8 py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700">Bathroom Planning Call</a><a href="/contact.html?service=repairs" class="inline-flex justify-center px-8 py-4 bg-white text-slate-900 font-bold rounded-lg">Request a Repair Quote</a></div><p class="mt-5 text-sm text-slate-300">Drywall projects have a $1,000 minimum. Other repair work is quoted by scope.</p>
         </div>
     </section>
 
@@ -113,7 +113,7 @@
                         <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Materials & Finishes</div>
                         <div id="modal-materials" class="flex flex-wrap gap-2"></div>
                     </div>
-                    <a href="tel:+14696175235" class="inline-flex px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700">Get a Free Estimate Like This</a>
+                    <a href="tel:+14696175235" class="inline-flex px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700">Discuss a Similar Project</a>
                 </div>
             </div>
         </div>
@@ -222,7 +222,7 @@
   nav.querySelectorAll('a').forEach(function(a){
     html += '<a href="'+a.getAttribute('href')+'" class="block px-4 py-3 text-lg font-bold text-slate-800 hover:text-red-600 hover:bg-red-50 rounded-lg border-b border-slate-100">'+a.textContent.trim()+'</a>';
   });
-  html += '</nav><a href="tel:+14696175235" class="mt-5 inline-flex items-center justify-center w-full px-5 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow-lg">Call (469) 617-5235</a><a href="#contact" class="mt-3 inline-flex items-center justify-center w-full px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg">Get a Free Estimate</a></div>';
+  html += '</nav><a href="tel:+14696175235" class="mt-5 inline-flex items-center justify-center w-full px-5 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow-lg">Call (469) 617-5235</a><a href="/contact.html" class="mt-3 inline-flex items-center justify-center w-full px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg">Discuss Your Project</a></div>';
   panel.innerHTML = html;
   header.parentNode.insertBefore(panel, header.nextSibling);
   function toggle(){
@@ -235,8 +235,9 @@
 })();
 </script>
 
-<script src="/estimate-form.js" defer></script>
 <script src="/phone-format.js" defer></script>
-<script src="/cookie-consent.js" defer></script>
+<script src="/cookie-consent.js?v=242ca6aeb1e2" defer></script>
+<script src="/site-measurement.js?v=07a4998a1bb5" defer></script>
+<script src="/estimate-form.js?v=c9b0720f450a" defer></script>
 </body>
 </html>
