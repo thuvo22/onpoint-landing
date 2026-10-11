@@ -13,6 +13,8 @@ python3 tools/generate_sitemap.py --check
 python3 tools/test_generate_sitemap.py
 ```
 
+The homepage, bathroom pages, contact page and drywall hub use `?v=` content hashes on CSS and shared estimate-form script URLs. After changing those assets, refresh the existing version values with the first 12 characters of the file’s SHA-256 digest so returning visitors receive the matching assets.
+
 Commit both source changes and the generated `assets/css/site.min.css` and `assets/css/default.min.css` files. GitHub Pages serves the checked-in files; it does not need Node at runtime.
 
 After adding or removing public pages, run `python3 tools/generate_sitemap.py`, review the resulting `sitemap.xml`, then run the checks above. The generator follows the explicit exclusions in `sitemap-exclude.txt`; campaign funnels and legal pages are intentionally omitted.
