@@ -1,41 +1,10 @@
-# Pages excluded from sitemap.xml — files stay live and internally linked,
-# they're just not advertised to Google.
+# Sitemap policy, reviewed 2026-10-10.
+# The August experiment omitted most city/service pages after low impressions.
+# An omitted sitemap URL is not itself an indexing failure. These pages remain
+# linked, self-canonical and indexable, so the current sitemap includes them.
+# Improve local evidence separately; submission does not guarantee indexing.
 #
-# Why (2026-08-18): the domain earns ~10 organic clicks/week and Google had
-# never crawled a single city spoke ("Discovered - currently not indexed",
-# lastCrawl: None). 126 submitted URLs against a crawl budget of roughly a
-# dozen starved the pages that actually rank. Everything excluded here had
-# ZERO impressions in the trailing 60 days. Re-add in small batches once the
-# indexed set is winning. One glob per line.
-
-bathroom/*.html
-drywall/*.html
-painting/*.html
-flooring/addison.html
-flooring/allen.html
-flooring/carrollton.html
-flooring/celina.html
-flooring/coppell.html
-flooring/frisco.html
-flooring/garland.html
-flooring/lewisville.html
-flooring/little-elm.html
-flooring/mckinney.html
-flooring/murphy.html
-flooring/plano.html
-flooring/prosper.html
-flooring/rowlett.html
-flooring/sachse.html
-flooring/the-colony.html
-flooring/wylie.html
-dfw/addison.html
-dfw/carrollton.html
-dfw/coppell.html
-dfw/garland.html
-dfw/lewisville.html
-dfw/murphy.html
-dfw/richardson.html
-dfw/rowlett.html
-dfw/sachse.html
-dfw/the-colony.html
-dfw/wylie.html
+# Legal pages remain accessible and indexable but are not search landing pages.
+# Noindex lead-flow pages are excluded automatically by generate_sitemap.py.
+privacy.html
+terms.html

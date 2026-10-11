@@ -1,0 +1,12 @@
+{
+  "name": "onpoint-pros-site",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:css && npm run check:sitemap",
+    "build:css": "node scripts/build-css.cjs",
+    "check:sitemap": "python3 tools/generate_sitemap.py --check && python3 tools/test_generate_sitemap.py"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

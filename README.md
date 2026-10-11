@@ -1,79 +1,34 @@
-# OnPoint Pros Landing Page
+# OnPoint Pros website
 
-A modern, high-converting landing page for OnPoint Pros - Frisco's premier general contractor and renovation team.
+Static HTML, images, and small JavaScript files for onpointprostx.com. Published files live at the repository root for GitHub Pages.
 
-## Features
+## Build the production CSS
 
-- **Luxury Minimalist Design** - Clean whites, slate grays, and royal blue accents
-- **Traffic Segmentation** - Separates Homeowners (high-ticket) and Investors (volume)
-- **Mobile-First Responsive** - Looks great on all devices
-- **Tailwind CSS** - No custom CSS required, fully CDN-based
-- **Click-to-Call** - One-tap calling from mobile devices
+Use Node.js and npm:
 
-## Sections
-
-1. Sticky Header with Call-to-Action
-2. Hero with dual CTAs for traffic segmentation
-3. "Choose Your Path" two-column service breakdown
-4. Social Proof / Testimonials
-5. Portfolio Gallery (placeholder)
-6. Contact Form Footer
-
-## Deployment to GitHub Pages
-
-### Quick Setup
-
-1. Create a new repository on GitHub (e.g., `onpoint-pros-site`)
-
-2. Initialize and push:
-```bash
-cd onpoint-landing
-git init
-git add .
-git commit -m "Initial commit: OnPoint Pros landing page"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/onpoint-pros-site.git
-git push -u origin main
+```sh
+npm ci
+npm run build:css
+python3 tools/generate_sitemap.py --check
+python3 tools/test_generate_sitemap.py
 ```
 
-3. Enable GitHub Pages:
-   - Go to repository **Settings** → **Pages**
-   - Source: **Deploy from a branch**
-   - Branch: **main** / **(root)**
-   - Click **Save**
+Commit both source changes and the generated `assets/css/site.min.css` and `assets/css/default.min.css` files. GitHub Pages serves the checked-in files; it does not need Node at runtime.
 
-4. Your site will be live at: `https://YOUR_USERNAME.github.io/onpoint-pros-site/`
+After adding or removing public pages, run `python3 tools/generate_sitemap.py`, review the resulting `sitemap.xml`, then run the checks above. The generator follows the explicit exclusions in `sitemap-exclude.txt`; campaign funnels and legal pages are intentionally omitted.
 
-### Custom Domain (Optional)
+Tailwind is pinned to 3.4.17 in `package-lock.json`. The build scans all public HTML directories and the root JavaScript files, including the classes used by the gallery, estimate form, mobile navigation, and cookie controls. Keep dynamically selected classes as complete literal strings so Tailwind can find them. Rebuild CSS whenever those classes change. Add a content path to `tailwind.config.cjs` when adding a new template directory.
 
-1. Add a `CNAME` file with your domain:
+Most pages use `site.min.css`, preserving their Montserrat font stack and custom brand colors. Contact, privacy, terms, and the three campaign pages under `before/` and `list/` use `default.min.css`, preserving their original Tailwind defaults and inline font choices. No new Tailwind plugins are enabled.
+
+Fonts are self-hosted in `assets/fonts/` and declared in `styles/site.css` with `font-display: swap`. The Latin and Latin Extended files are loaded only when the page needs their characters. Font source URLs, checksums, and SIL Open Font Licenses are included alongside the assets. Do not restore the Google Fonts stylesheet or Tailwind browser CDN script.
+
+## Preview and verify
+
+```sh
+python3 -m http.server 8080
 ```
-www.onpointprostx.com
-```
 
-2. Configure DNS with your registrar:
-   - Add CNAME record: `www` → `YOUR_USERNAME.github.io`
-   - Or A records pointing to GitHub's IPs
+Check the homepage at mobile and desktop widths, a service page, contact form, gallery and project dialog, cookie controls, and a campaign page. Confirm styles and fonts load without a third-party CSS request. Do not submit real lead forms during visual checks. Homepage hero images should load eagerly; below-fold images should remain lazy-loaded.
 
-## Customization
-
-### Update Phone Number
-Replace `(469) 555-1234` and `tel:+14695551234` with your actual business number.
-
-### Add Real Images
-Replace the placeholder gallery items with actual project photos by adding `<img>` tags inside the gallery divs.
-
-### Connect Contact Form
-The form currently has `action="#"`. To make it functional:
-- Use a service like Formspree, Netlify Forms, or your own backend
-- Update the `action` attribute with your form endpoint
-
-## Tech Stack
-
-- HTML5 (Semantic)
-- Tailwind CSS v3 (CDN)
-- No JavaScript frameworks required
-
----
-
-© 2026 OnPoint Pros
+Production deployment uses the repository's configured GitHub Pages branch and custom domain. DNS, HTTPS redirect settings, and third-party business profiles are managed separately from these static files.
