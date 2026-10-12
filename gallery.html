@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OnPoint Pros project gallery: finished bathrooms, painting, flooring, and drywall projects across the North Dallas and DFW area.">
+    <meta name="description" content="See OnPoint Pros bathroom projects in Allen, Plano and McKinney, plus real drywall, painting and flooring before-and-after photos.">
     <title>Project Gallery | Real North Dallas Remodels | OnPoint Pros</title>
     <link rel="icon" type="image/webp" href="images/logo.webp">
     <link rel="canonical" href="https://onpointprostx.com/gallery.html">
     <meta property="og:title" content="OnPoint Pros Project Gallery — North Dallas Remodels">
-    <meta property="og:description" content="See real finished bathrooms, painting, flooring, and drywall projects across North Dallas.">
-    <meta property="og:image" content="https://onpointprostx.com/images/gallery/g07-bath-frisco-master.webp">
+    <meta property="og:description" content="Explore bathroom projects in Allen, Plano and McKinney, plus drywall, painting and flooring before-and-after photos.">
+    <meta property="og:image" content="https://onpointprostx.com/images/projects/proof-allen-after.webp">
     <link rel="preload" href="/assets/fonts/montserrat-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/assets/css/site.min.css">
+    <link rel="stylesheet" href="/assets/css/site.min.css?v=adc5a692d494">
     <style>
         body{font-family:'Montserrat',sans-serif;} summary::-webkit-details-marker{display:none;} summary::marker{display:none;} summary{list-style:none;position:relative;padding-right:2rem;} summary::after{content:"";position:absolute;right:0;top:50%;width:10px;height:10px;border-right:2.5px solid #dc2626;border-bottom:2.5px solid #dc2626;transform:translateY(-75%) rotate(45deg);transition:transform .2s ease;} details[open] summary::after{transform:translateY(-25%) rotate(225deg);}
-        .modal-open{overflow:hidden;}
         .gallery-card{transition:transform .25s ease, box-shadow .25s ease;}
         .gallery-card:hover{transform:translateY(-4px); box-shadow:0 25px 50px -12px rgba(0,0,0,.25);}
+        .gallery-card[hidden],#gallery-filters[hidden]{display:none;}
+        .gallery-photo{display:block;background:#f1f5f9;}
+        .gallery-photo img{width:100%;height:18rem;object-fit:contain;}
+        a:focus-visible,button:focus-visible{outline:3px solid #dc2626;outline-offset:4px;}
+        @media(prefers-reduced-motion:reduce){.gallery-card{transition:none;}.gallery-card:hover{transform:none;}}
     </style>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"OnPoint Pros Project Gallery","url":"https://onpointprostx.com/gallery.html","description":"Project gallery of finished North Dallas bathroom, painting, and flooring projects.","publisher":{"@type":"HomeAndConstructionBusiness","name":"OnPoint Pros","@id":"https://onpointprostx.com/#business"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"OnPoint Pros Project Gallery","url":"https://onpointprostx.com/gallery.html","description":"Bathroom projects in Allen, Plano and McKinney, plus drywall, painting and flooring before-and-after photos.","publisher":{"@type":"HomeAndConstructionBusiness","name":"OnPoint Pros","@id":"https://onpointprostx.com/#business"}}</script>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
 
@@ -36,30 +40,99 @@
         </div>
     </header>
 
+    <main>
     <!-- Hero -->
     <section class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 text-center">
             <p class="text-amber-300 font-semibold uppercase tracking-wider mb-3 text-sm">Project Gallery</p>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-5 leading-tight">What We Build Across North Dallas</h1>
-            <p class="text-xl text-slate-300 max-w-3xl mx-auto">Bathrooms, painting, and flooring, one trusted crew from start to finish. Click any photo to see project details.</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-5 leading-tight">Bathroom Remodels &amp; Home Updates</h1>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto">Explore our bathroom work in Allen, Plano and McKinney, along with drywall repairs, painting and flooring. Open a bathroom project to compare the photos and see its scope.</p>
         </div>
     </section>
 
-    <!-- Filter Tabs -->
-    <section class="bg-white border-b border-slate-200 sticky top-20 z-30">
+    <!-- Filters enhance the complete gallery; all projects remain available without JavaScript. -->
+    <section id="gallery-filters" hidden class="bg-white border-b border-slate-200 sticky top-20 z-30" aria-label="Filter projects">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex gap-2 overflow-x-auto" id="filters">
-                <button data-filter="all" class="filter-btn px-5 py-2 rounded-full border-2 border-red-600 bg-red-600 text-white font-semibold text-sm whitespace-nowrap">All Projects</button>
-                <button data-filter="bathroom" class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 bg-white text-slate-700 hover:border-red-600 font-semibold text-sm whitespace-nowrap">Bathrooms</button>
-                <button data-filter="other" class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 bg-white text-slate-700 hover:border-red-600 font-semibold text-sm whitespace-nowrap">Flooring & More</button>
+                <button type="button" data-filter="all" aria-pressed="true" aria-controls="gallery-grid" class="filter-btn px-5 py-2 rounded-full border-2 border-red-600 bg-red-600 text-white font-semibold text-sm whitespace-nowrap">All Projects</button>
+                <button type="button" data-filter="bathroom" aria-pressed="false" aria-controls="gallery-grid" class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 bg-white text-slate-700 hover:border-red-600 font-semibold text-sm whitespace-nowrap">Bathrooms</button>
+                <button type="button" data-filter="other" aria-pressed="false" aria-controls="gallery-grid" class="filter-btn px-5 py-2 rounded-full border-2 border-slate-200 bg-white text-slate-700 hover:border-red-600 font-semibold text-sm whitespace-nowrap">Repairs &amp; Home Updates</button>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Grid -->
-    <section class="py-12 sm:py-16">
+    <section class="py-12 sm:py-16" aria-labelledby="projects-heading">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <h2 id="projects-heading" class="text-3xl font-extrabold text-slate-900 mb-4">Explore our work</h2>
+            <p id="gallery-count" role="status" aria-live="polite" aria-atomic="true" class="text-slate-600 mb-6">Showing all 6 projects.</p>
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article data-category="bathroom" class="gallery-card bg-white rounded-2xl overflow-hidden border border-slate-200">
+                    <a href="/bathroom/allen.html#local-project" class="gallery-photo" aria-label="See the Allen bathroom before and after">
+                        <img src="/images/projects/proof-allen-after.webp" alt="Completed Allen bathroom with a glass shower, marble-look tile, brass-toned fixtures, updated vanity and freestanding tub" width="969" height="1623" loading="lazy" decoding="async">
+                    </a>
+                    <div class="p-5">
+                        <p class="text-xs uppercase tracking-wider text-red-700 font-semibold mb-2">Bathroom · Allen</p>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3">Glass shower and freestanding tub</h3>
+                        <p class="text-slate-600 mb-4">Compare the original wood-toned vanity, framed shower and built-in tub with the updated tile, glass shower, vanity and freestanding tub.</p>
+                        <a href="/bathroom/allen.html#local-project" class="text-red-700 font-semibold underline">See the Allen bathroom project →</a>
+                    </div>
+                </article>
+                <article data-category="bathroom" class="gallery-card bg-white rounded-2xl overflow-hidden border border-slate-200">
+                    <a href="/blog/plano-tile-shower-tub-project.html" class="gallery-photo" aria-label="See the Plano tile shower and tub project">
+                        <img src="/images/projects/plano-bath-after.webp" alt="Completed Plano bathroom with a dark tiled shower, frameless glass, built-in tub surround and light tile floor" width="900" height="1200" loading="lazy" decoding="async">
+                    </a>
+                    <div class="p-5">
+                        <p class="text-xs uppercase tracking-wider text-red-700 font-semibold mb-2">Bathroom · Plano</p>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3">Tile shower and built-in tub</h3>
+                        <p class="text-slate-600 mb-4">See this room during demolition and after completion, with dark shower tile, a recessed niche, frameless glass and a built-in tub surround.</p>
+                        <a href="/blog/plano-tile-shower-tub-project.html" class="text-red-700 font-semibold underline">Explore the Plano bathroom project →</a>
+                    </div>
+                </article>
+                <article data-category="bathroom" class="gallery-card bg-white rounded-2xl overflow-hidden border border-slate-200">
+                    <a href="/bathroom/mckinney.html#local-project" class="gallery-photo" aria-label="See the McKinney bathroom before and after">
+                        <img src="/images/projects/proof-mckinney-after.webp" alt="Completed McKinney walk-in shower with full-height light tile, taupe accent stripe, bronze-toned fixtures and an updated dark vanity" width="1536" height="1024" loading="lazy" decoding="async">
+                    </a>
+                    <div class="p-5">
+                        <p class="text-xs uppercase tracking-wider text-red-700 font-semibold mb-2">Bathroom · McKinney</p>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3">Tub and shower to walk-in tile shower</h3>
+                        <p class="text-slate-600 mb-4">The tub and shower enclosure became a walk-in shower with full-height light tile, a taupe accent stripe and an updated vanity.</p>
+                        <a href="/bathroom/mckinney.html#local-project" class="text-red-700 font-semibold underline">See the McKinney bathroom project →</a>
+                    </div>
+                </article>
+                <article data-category="other" class="gallery-card bg-white rounded-2xl overflow-hidden border border-slate-200">
+                    <a href="/images/jobs/ba-01-wall-window.jpg" class="gallery-photo" aria-label="Enlarge the wall repair before-and-after photo">
+                        <img src="/images/jobs/ba-01-wall-window.jpg" alt="Before and after a wall repair below a window, from exposed framing to a finished textured wall" width="1600" height="656" loading="lazy" decoding="async">
+                    </a>
+                    <div class="p-5">
+                        <p class="text-xs uppercase tracking-wider text-red-700 font-semibold mb-2">Drywall repair</p>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3">Wall repair below a window</h3>
+                        <p class="text-slate-600 mb-4">The photo pair shows the opened wall and the finished repair. Select the image to see the texture and finish at full size.</p>
+                        <a href="/services/drywall-repair.html" class="text-red-700 font-semibold underline">Explore drywall repair →</a>
+                    </div>
+                </article>
+                <article data-category="other" class="gallery-card bg-white rounded-2xl overflow-hidden border border-slate-200">
+                    <a href="/images/jobs/ba-06-accent-wall.jpg" class="gallery-photo" aria-label="Enlarge the accent wall before-and-after photo">
+                        <img src="/images/jobs/ba-06-accent-wall.jpg" alt="Living room accent wall before in dark red and after in a lighter neutral color" width="1600" height="656" loading="lazy" decoding="async">
+                    </a>
+                    <div class="p-5">
+                        <p class="text-xs uppercase tracking-wider text-red-700 font-semibold mb-2">Interior painting</p>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3">Accent wall color update</h3>
+                        <p class="text-slate-600 mb-4">A dark red accent wall changed to a lighter neutral finish. Select the image to compare the room before and after painting.</p>
+                        <a href="/blog/case-room-refresh-north-dfw.html" class="text-red-700 font-semibold underline">See more home updates →</a>
+                    </div>
+                </article>
+                <article data-category="other" class="gallery-card bg-white rounded-2xl overflow-hidden border border-slate-200">
+                    <a href="/images/jobs/ba-03-carpet-to-lvp.jpg" class="gallery-photo" aria-label="Enlarge the bedroom flooring before-and-after photo">
+                        <img src="/images/jobs/ba-03-carpet-to-lvp.jpg" alt="Bedroom before with carpet and after with wood-look plank flooring" width="1058" height="700" loading="lazy" decoding="async">
+                    </a>
+                    <div class="p-5">
+                        <p class="text-xs uppercase tracking-wider text-red-700 font-semibold mb-2">Flooring</p>
+                        <h3 class="font-bold text-lg text-slate-900 mb-3">Carpet to plank flooring</h3>
+                        <p class="text-slate-600 mb-4">The bedroom photos show carpet replaced by wood-look plank flooring. Select the image for a closer look at the change.</p>
+                        <a href="/blog/case-room-refresh-north-dfw.html" class="text-red-700 font-semibold underline">See more home updates →</a>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -72,6 +145,8 @@
         </div>
     </section>
 
+    </main>
+
     <footer class="bg-slate-900 text-slate-400 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
             <p>© 2026 OnPoint Pros · Family-Owned & Fully Insured · <a href="tel:+14696175235" class="hover:text-white">(469) 617-5235</a> · <a href="mailto:team@onpointprostx.com" class="hover:text-white">team@onpointprostx.com</a></p>
@@ -80,129 +155,31 @@
             <p class="mt-4 text-sm"><a href="/contact.html" class="underline hover:text-white">Contact</a> &middot; <a href="/privacy.html" class="underline hover:text-white">Privacy Policy</a> &middot; <a href="/terms.html" class="underline hover:text-white">Terms and Conditions</a> &middot; <a href="#" data-cookie-settings class="underline hover:text-white">Cookie Settings</a></p>
     </footer>
 
-    <!-- Modal -->
-    <div id="modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm overflow-y-auto">
-        <div class="min-h-screen flex items-center justify-center p-4">
-            <div class="bg-white rounded-2xl max-w-5xl w-full overflow-hidden shadow-2xl relative">
-                <button id="modal-close" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-900 flex items-center justify-center shadow-lg">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-                </button>
-                <img id="modal-image" src="" alt="" class="w-full max-h-[55vh] object-cover">
-                <div class="p-6 sm:p-8 lg:p-10">
-                    <div class="flex items-center gap-3 mb-3 flex-wrap">
-                        <span id="modal-category" class="text-xs font-bold uppercase tracking-wider text-red-600 bg-red-50 px-3 py-1 rounded-full"></span>
-                        <span id="modal-city" class="text-xs font-bold uppercase tracking-wider text-slate-600 bg-slate-100 px-3 py-1 rounded-full"></span>
-                    </div>
-                    <h2 id="modal-title" class="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-4"></h2>
-                    <p id="modal-description" class="text-lg text-slate-600 leading-relaxed mb-6"></p>
-                    <div class="grid sm:grid-cols-3 gap-4 mb-6">
-                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
-                            <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Timeline</div>
-                            <div id="modal-timeline" class="font-bold text-slate-900"></div>
-                        </div>
-                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
-                            <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Scope</div>
-                            <div id="modal-scope" class="font-bold text-slate-900"></div>
-                        </div>
-                        <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
-                            <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Style</div>
-                            <div id="modal-style" class="font-bold text-slate-900"></div>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">Materials & Finishes</div>
-                        <div id="modal-materials" class="flex flex-wrap gap-2"></div>
-                    </div>
-                    <a href="tel:+14696175235" class="inline-flex px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700">Discuss a Similar Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
-    const projects = [
-        {id:7,slug:'g07-bath-frisco-master',title:'Master Bath with Walk-In Shower',category:'bathroom',catLabel:'Bathroom',city:'Modern Luxury',timeline:'3 weeks',scope:'Full master bath gut',style:'Modern Luxury',description:'Tub-to-walk-in-shower conversion with linear drain and curbless entry, plus a freestanding soaking tub and walnut double vanity. Floor-to-ceiling large-format porcelain tile.',materials:['Large-format porcelain tile','Frameless glass enclosure','Linear drain','Walnut double vanity','Quartz countertop','Matte black fixtures','Freestanding tub']},
-        {id:8,slug:'g08-bath-plano-spa',title:'Spa Master Bath',category:'bathroom',catLabel:'Bathroom',city:'Modern Spa',timeline:'4 weeks',scope:'Full master bath gut',style:'Modern Spa',description:'Curbless walk-in shower with rainfall showerhead, double vanity with marble top, and a freestanding oval tub. Dark slate tile gives the room a true spa feel.',materials:['Dark slate large-format tile','Rainfall showerhead','White marble vanity top','Brass fixtures','Freestanding oval tub','Heated floor']},
-        {id:9,slug:'g09-bath-mckinney-guest',title:'Guest Bathroom Refresh',category:'bathroom',catLabel:'Bathroom',city:'Modern Minimal',timeline:'2 weeks',scope:'Cosmetic refresh',style:'Modern Minimal',description:'Single floating vanity, large round mirror, matte black sconces, and a walk-in shower with subway tile. A clean guest bath update without touching the layout.',materials:['White floating vanity','Quartz top','Matte black sconces','Round mirror','Subway tile shower','Gray porcelain floor']},
-        {id:10,slug:'g10-bath-allen-powder',title:'Bold Powder Room',category:'bathroom',catLabel:'Bathroom',city:'Modern Eclectic',timeline:'1 week',scope:'Cosmetic refresh',style:'Modern Eclectic',description:'Dark green wallpaper, brass sconces, marble-top floating vanity, and hexagonal floor tile. Powder rooms are where you take risks. This one paid off.',materials:['Dark green wallpaper','Brass wall sconces','Marble vanity top','Round mirror','Hexagonal floor tile','Brass faucet']},
-        {id:11,slug:'g11-bath-prosper-luxury',title:'Estate Master Bathroom',category:'bathroom',catLabel:'Bathroom',city:'Luxury Traditional',timeline:'5 weeks',scope:'Full custom master bath',style:'Luxury Traditional',description:'Marble walls and floors throughout, freestanding stone tub, full-marble walk-in shower, and a chandelier centered on the arched window. The most luxurious bathroom we built last year.',materials:['Full marble walls','Marble floors','Freestanding stone tub','Gold fixtures','Walnut double vanity','Chandelier','Arched window']},
-        {id:12,slug:'g12-bath-frisco-wetroom',title:'Modern Wet Room',category:'bathroom',catLabel:'Bathroom',city:'Modern Contemporary',timeline:'4 weeks',scope:'Master bath conversion',style:'Modern Contemporary',description:'Freestanding tub inside the walk-in shower area, separated by frameless glass divider. Wet-room layouts work beautifully when waterproofed correctly.',materials:['Freestanding tub','Walk-in shower','Frameless glass divider','Large-format porcelain tile','Matte black rainfall head','Floating wood vanity']},
-        {id:15,slug:'g15-flooring-allen',title:'Wide-Plank White Oak Floors',category:'other',catLabel:'Flooring',city:'Whole-Home Install',timeline:'5 days',scope:'Whole-home flooring install',style:'Modern',description:'Wide-plank white oak engineered hardwood throughout the main level. Includes subfloor leveling, acclimation, and proper underlayment, the boring details that make flooring last.',materials:['Wide-plank white oak engineered','Self-leveling underlayment','Floating install','Matte finish','Stair treads matched']},
-        {id:16,slug:'g16-painting-plano',title:'Whole-Home Interior Repaint',category:'other',catLabel:'Painting',city:'Modern Neutral',timeline:'6 days',scope:'Whole-home interior',style:'Modern Neutral',description:'Crisp white throughout with a deep navy accent wall in the living room. Sherwin-Williams premium product, full prep including caulking trim and priming bare drywall.',materials:['Sherwin-Williams Cashmere','Crisp white walls','Navy accent wall','Trim sprayed','Doors sprayed','Premium prep']},
-    ];
-
-    const grid = document.getElementById('gallery-grid');
-    const modal = document.getElementById('modal');
-
-    function renderGrid(filter) {
-        grid.innerHTML = '';
-        const list = filter === 'all' ? projects : projects.filter(p => p.category === filter);
-        list.forEach(p => {
-            const card = document.createElement('div');
-            card.className = 'gallery-card bg-white rounded-2xl overflow-hidden border border-slate-200 cursor-pointer';
-            card.innerHTML = `
-                <div class="relative aspect-[4/3] overflow-hidden">
-                    <img loading="lazy" src="images/gallery/${p.slug}.webp" alt="${p.title} — ${p.city}" class="w-full h-full object-cover">
-                    <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">${p.catLabel}</div>
-                </div>
-                <div class="p-5">
-                    <div class="text-xs uppercase tracking-wider text-slate-500 font-semibold mb-1">${p.city}</div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">${p.title}</h3>
-                    <div class="flex items-center justify-between text-sm">
-                        <span class="text-slate-600">${p.timeline}</span>
-                        <span class="text-red-600 font-semibold">View Details →</span>
-                    </div>
-                </div>
-            `;
-            card.addEventListener('click', () => openModal(p));
-            grid.appendChild(card);
-        });
-    }
-
-    function openModal(p) {
-        document.getElementById('modal-image').src = `images/gallery/${p.slug}.jpg`;
-        document.getElementById('modal-image').alt = p.title;
-        document.getElementById('modal-category').textContent = p.catLabel;
-        document.getElementById('modal-city').textContent = p.city;
-        document.getElementById('modal-title').textContent = p.title;
-        document.getElementById('modal-description').textContent = p.description;
-        document.getElementById('modal-timeline').textContent = p.timeline;
-        document.getElementById('modal-scope').textContent = p.scope;
-        document.getElementById('modal-style').textContent = p.style;
-        const materialsEl = document.getElementById('modal-materials');
-        materialsEl.innerHTML = '';
-        p.materials.forEach(m => {
-            const tag = document.createElement('span');
-            tag.className = 'text-sm bg-red-50 text-red-700 font-semibold px-3 py-1 rounded-full border border-red-100';
-            tag.textContent = m;
-            materialsEl.appendChild(tag);
-        });
-        modal.classList.remove('hidden');
-        document.body.classList.add('modal-open');
-    }
-
-    function closeModal() {
-        modal.classList.add('hidden');
-        document.body.classList.remove('modal-open');
-    }
-
-    document.getElementById('modal-close').addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => { if (e.target === modal || e.target === modal.firstElementChild) closeModal(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
-
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.filter-btn').forEach(b => {
-                b.classList.remove('border-red-600','bg-red-600','text-white');
-                b.classList.add('border-slate-200','bg-white','text-slate-700');
+    (function () {
+        var filters = document.getElementById('gallery-filters');
+        var buttons = Array.from(document.querySelectorAll('.filter-btn'));
+        var cards = Array.from(document.querySelectorAll('#gallery-grid article'));
+        var status = document.getElementById('gallery-count');
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var filter = button.dataset.filter;
+                var visible = 0;
+                cards.forEach(function (card) {
+                    card.hidden = filter !== 'all' && card.dataset.category !== filter;
+                    if (!card.hidden) visible += 1;
+                });
+                buttons.forEach(function (item) {
+                    var selected = item === button;
+                    item.setAttribute('aria-pressed', String(selected));
+                    ['border-red-600', 'bg-red-600', 'text-white'].forEach(function (name) { item.classList.toggle(name, selected); });
+                    ['border-slate-200', 'bg-white', 'text-slate-700'].forEach(function (name) { item.classList.toggle(name, !selected); });
+                });
+                status.textContent = filter === 'all' ? 'Showing all ' + visible + ' projects.' : 'Showing ' + visible + ' projects: ' + button.textContent + '.';
             });
-            btn.classList.remove('border-slate-200','bg-white','text-slate-700');
-            btn.classList.add('border-red-600','bg-red-600','text-white');
-            renderGrid(btn.dataset.filter);
         });
-    });
-
-    renderGrid('all');
+        filters.hidden = false;
+    })();
     </script>
 
 <script>
@@ -213,10 +190,14 @@
   var btn = document.createElement('button');
   btn.className = 'lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg text-slate-700 hover:bg-slate-100 mr-1';
   btn.setAttribute('aria-label','Toggle menu');
+  btn.setAttribute('aria-expanded','false');
+  btn.setAttribute('aria-controls','gallery-mobile-nav');
   btn.innerHTML = '<svg id="mm-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg><svg id="mm-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>';
   var ctaGroup = header.querySelector('div.flex.items-center.gap-3');
   if (ctaGroup) ctaGroup.insertBefore(btn, ctaGroup.firstChild);
+  else header.firstElementChild.insertBefore(btn, nav.nextElementSibling);
   var panel = document.createElement('div');
+  panel.id = 'gallery-mobile-nav';
   panel.className = 'lg:hidden hidden fixed inset-x-0 top-20 bg-white border-b border-slate-200 shadow-2xl z-40 max-h-[calc(100vh-5rem)] overflow-y-auto';
   var html = '<div class="max-w-7xl mx-auto px-4 py-6"><nav class="flex flex-col gap-1">';
   nav.querySelectorAll('a').forEach(function(a){
@@ -227,10 +208,12 @@
   header.parentNode.insertBefore(panel, header.nextSibling);
   function toggle(){
     var open = panel.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', String(open));
     document.getElementById('mm-icon-open').classList.toggle('hidden', open);
     document.getElementById('mm-icon-close').classList.toggle('hidden', !open);
   }
   btn.addEventListener('click', toggle);
+  document.addEventListener('keydown', function(event){ if (event.key === 'Escape' && !panel.classList.contains('hidden')) { toggle(); btn.focus(); } });
   panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if (!panel.classList.contains('hidden')) toggle(); }); });
 })();
 </script>
