@@ -10,8 +10,10 @@
   var loaded = false, viewed = false, accepted = Object.create(null);
   var productionHost = /^(www\.)?onpointprostx\.com$/.test(location.hostname);
   var services = ['bathroom', 'repairs', 'painting', 'flooring', 'other', 'unspecified'];
-  var sourceNames = ['google', 'bing', 'yahoo', 'duckduckgo', 'facebook', 'instagram', 'nextdoor', 'youtube', 'chatgpt', 'perplexity', 'email'];
-  var mediumNames = ['organic', 'cpc', 'ppc', 'paid_search', 'paid_social', 'social', 'email', 'referral'];
+  // Existing Business Profile posts use the fixed gbp / post tags. Keep the
+  // allowlist explicit so free-form campaign values never enter analytics.
+  var sourceNames = ['gbp', 'google', 'bing', 'yahoo', 'duckduckgo', 'facebook', 'instagram', 'nextdoor', 'youtube', 'chatgpt', 'perplexity', 'email'];
+  var mediumNames = ['post', 'organic', 'cpc', 'ppc', 'paid_search', 'paid_social', 'social', 'email', 'referral'];
 
   function allowed() {
     var consent = window.OnPointConsent && window.OnPointConsent.get();
