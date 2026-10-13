@@ -1,0 +1,34 @@
+/* Homeowner video stories: shared by the homepage and bathroom service page. */
+.customer-stories { padding: 4rem 0; background: #f8fafc; color: #0f172a; }
+.customer-stories__inner { max-width: 72rem; margin: 0 auto; padding: 0 1rem; }
+.customer-stories--service .customer-stories__inner { max-width: 64rem; }
+.customer-stories__heading { max-width: 48rem; margin-bottom: 2rem; }
+.customer-stories__eyebrow { margin-bottom: .75rem; color: #b91c1c; font-size: .875rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.customer-stories h2 { margin: 0 0 1rem; font-size: 2rem; font-weight: 800; line-height: 1.2; }
+.customer-stories__intro { margin: 0; color: #475569; font-size: 1.125rem; line-height: 1.65; }
+.customer-stories__grid { display: grid; gap: 1.5rem; }
+.customer-story { min-width: 0; overflow: hidden; border: 1px solid #e2e8f0; border-radius: 1rem; background: #fff; }
+.customer-story__video { display: block; width: 100%; height: 400px; max-height: 440px; aspect-ratio: 9 / 16; object-fit: contain; background: #0f172a; }
+.customer-story__body { padding: 1.5rem; }
+.customer-story__duration { margin: 0 0 .5rem; color: #64748b; font-size: .875rem; font-weight: 600; }
+.customer-story h3 { margin: 0 0 1rem; font-size: 1.25rem; font-weight: 700; line-height: 1.4; }
+.customer-story blockquote { margin: 0 0 1.25rem; border-left: 3px solid #dc2626; padding-left: 1rem; color: #334155; font-size: 1.125rem; line-height: 1.65; }
+.customer-story__transcript { border-top: 1px solid #e2e8f0; padding-top: 1rem; }
+.customer-story__transcript summary { position: relative; padding-right: 1.5rem; color: #334155; cursor: pointer; font-weight: 600; list-style: none; }
+.customer-story__transcript summary::-webkit-details-marker { display: none; }
+.customer-story__transcript summary::marker { content: ''; }
+.customer-story__transcript summary::after { content: '+'; position: absolute; top: 50%; right: 0; width: auto; height: auto; border: 0; color: #b91c1c; font-size: 1.25rem; transform: translateY(-50%); }
+.customer-story__transcript[open] summary::after { content: '−'; transform: translateY(-50%); }
+.customer-story__transcript p { margin: 1rem 0 0; color: #475569; font-size: .9375rem; line-height: 1.75; }
+.customer-story__link { display: inline-block; margin-top: 1rem; color: #b91c1c; font-size: .875rem; font-weight: 600; text-decoration: underline; text-underline-offset: .2em; }
+.customer-stories__cta { display: inline-flex; align-items: center; justify-content: center; margin-top: 2rem; padding: 1rem 1.5rem; border-radius: .5rem; background: #dc2626; color: #fff; font-weight: 700; text-align: center; line-height: 1.5; text-decoration: none; }
+.customer-stories__cta:hover { background: #b91c1c; }
+.customer-stories :is(a, summary, video):focus-visible { outline: 3px solid #dc2626; outline-offset: 4px; }
+@media (min-width: 640px) {
+  .customer-stories { padding: 5rem 0; }
+  .customer-stories__inner { padding: 0 1.5rem; }
+  .customer-stories h2 { font-size: 2.5rem; }
+  .customer-story__video { height: 440px; }
+}
+@media (min-width: 768px) { .customer-stories__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1024px) { .customer-stories__inner { padding: 0 2rem; } }
