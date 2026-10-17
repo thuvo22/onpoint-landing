@@ -4,7 +4,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from generate_sitemap import collect_urls
+from generate_sitemap import collect_entries, collect_urls, lastmod_map, render_sitemap
 
 
 class SitemapEligibilityTests(unittest.TestCase):
@@ -53,6 +53,23 @@ class SitemapEligibilityTests(unittest.TestCase):
         self.page("contact.html", "<title>Contact</title>")
         with self.assertRaises(ValueError):
             collect_urls(self.root)
+
+    def test_lastmod_moves_only_when_page_bytes_change(self):
+        self.page("about.html", '<link rel="canonical" href="https://onpointprostx.com/about.html">')
+        entries = collect_entries(self.root)
+        dates, ledger = lastmod_map(self.root, entries, {}, today="2026-10-01")
+        self.assertEqual(dates["https://onpointprostx.com/about.html"], "2026-10-01")
+        dates, ledger = lastmod_map(self.root, entries, ledger, today="2026-10-17")
+        self.assertEqual(dates["https://onpointprostx.com/about.html"], "2026-10-01")
+        self.page("about.html", '<link rel="canonical" href="https://onpointprostx.com/about.html"><title>Changed</title>')
+        dates, ledger = lastmod_map(self.root, entries, ledger, today="2026-10-17")
+        self.assertEqual(dates["https://onpointprostx.com/about.html"], "2026-10-17")
+        self.assertIn(b"<lastmod>2026-10-17</lastmod>", render_sitemap(["https://onpointprostx.com/about.html"], dates))
+
+    def test_removed_page_leaves_the_ledger(self):
+        self.page("a.html", '<link rel="canonical" href="https://onpointprostx.com/a.html">')
+        _, ledger = lastmod_map(self.root, collect_entries(self.root), {"gone.html": {"sha256": "x", "lastmod": "2026-01-01"}}, today="2026-10-17")
+        self.assertEqual(set(ledger), {"a.html"})
 
 
 if __name__ == "__main__":

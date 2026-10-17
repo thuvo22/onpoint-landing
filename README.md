@@ -17,7 +17,9 @@ The homepage, bathroom pages, contact page and drywall hub use `?v=` content has
 
 Commit both source changes and the generated `assets/css/site.min.css` and `assets/css/default.min.css` files. GitHub Pages serves the checked-in files; it does not need Node at runtime.
 
-After adding or removing public pages, run `python3 tools/generate_sitemap.py`, review the resulting `sitemap.xml`, then run the checks above. The generator follows the explicit exclusions in `sitemap-exclude.txt`; campaign funnels and legal pages are intentionally omitted.
+After adding, removing or editing public pages, run `python3 tools/generate_sitemap.py`, review the resulting `sitemap.xml` and `tools/sitemap-lastmod.json`, then run the checks above. The generator follows the explicit exclusions in `sitemap-exclude.txt`; campaign funnels and legal pages are intentionally omitted. `lastmod` comes from the ledger: a page's date moves only when its bytes change, so commit both files together.
+
+Before a release, refresh the printed Google review count with `python3 tools/update_review_count.py --from-api` (or `--count N`). The site carries no AggregateRating schema on purpose; do not add one.
 
 Tailwind is pinned to 3.4.17 in `package-lock.json`. The build scans all public HTML directories and the root JavaScript files, including the classes used by the gallery, estimate form, mobile navigation, and cookie controls. Keep dynamically selected classes as complete literal strings so Tailwind can find them. Rebuild CSS whenever those classes change. Add a content path to `tailwind.config.cjs` when adding a new template directory.
 

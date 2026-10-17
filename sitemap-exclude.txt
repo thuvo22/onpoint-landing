@@ -4,7 +4,8 @@
 # linked, self-canonical and indexable, so the current sitemap includes them.
 # Improve local evidence separately; submission does not guarantee indexing.
 #
-# Legal pages remain accessible and indexable but are not search landing pages.
+# Legal pages remain accessible but are not search landing pages. privacy.html stays
+# indexable; terms.html is noindex since 2026-10-17 (thin, unlisted, no search role).
 # Noindex lead-flow pages are excluded automatically by generate_sitemap.py.
 privacy.html
 terms.html
