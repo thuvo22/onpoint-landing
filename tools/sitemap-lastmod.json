@@ -497,7 +497,7 @@
  },
  "services/flooring.html": {
   "lastmod": "2026-10-23",
-  "sha256": "6422885ba5a1b6dc47fa94d7e6c2e65fc3af0d49c1c5b5f9d4223fac20093734"
+  "sha256": "0a5e20a3a3ffd0d6667f29adc747ee8c9246c28a2f66a21a5a28bdd6eeea1b0a"
  },
  "services/home-refresh.html": {
   "lastmod": "2026-10-11",
@@ -505,6 +505,6 @@
  },
  "services/painting.html": {
   "lastmod": "2026-10-23",
-  "sha256": "0916bd1c47dcf67192523d127991128b1694090894179ee9ffb6904d9c2b7836"
+  "sha256": "63b38d7e7a32a752e6db3df133a31a8239a66a30468db215931658f191089ffb"
  }
 }
