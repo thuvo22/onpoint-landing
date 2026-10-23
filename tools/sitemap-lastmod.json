@@ -492,19 +492,19 @@
   "sha256": "c180fe8e6833dabb971102d578f4c5609cfe96b9b2f67a5be93e6881b0db94fa"
  },
  "services/drywall-repair.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "b9ce74833900e4756a65a20d0d9d27619efbe9be05fa3c63cff07c252879302f"
+  "lastmod": "2026-10-23",
+  "sha256": "5e498552afed573f89d57dce44bc7fa2f8372157f60e79bc4cb28d535eb194e9"
  },
  "services/flooring.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "e2789abb4fe1a0d82f35ef90837f555e0afb0b599ee87f3c6a84d07d13262a6c"
+  "lastmod": "2026-10-23",
+  "sha256": "6422885ba5a1b6dc47fa94d7e6c2e65fc3af0d49c1c5b5f9d4223fac20093734"
  },
  "services/home-refresh.html": {
   "lastmod": "2026-10-11",
   "sha256": "fde0e01fa57c9da720271a91d8e860f370fd4e0d663973e0a28e2d67c3d58125"
  },
  "services/painting.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "38a3f4478d8405f1341b210348bfb9896a6ca207e6c31c31d21920f51f163002"
+  "lastmod": "2026-10-23",
+  "sha256": "0916bd1c47dcf67192523d127991128b1694090894179ee9ffb6904d9c2b7836"
  }
 }
