@@ -29,7 +29,7 @@
  },
  "bathroom/garland.html": {
   "lastmod": "2026-10-23",
-  "sha256": "4ecb75aaae8c4c5763f794887a24e42b1ca0b20952692fac1f545a39dbb1138f"
+  "sha256": "267091953754568e5a74531eea5fc1ea7b9588368578e6c2df4dff8693cbd560"
  },
  "bathroom/lewisville.html": {
   "lastmod": "2026-10-23",
@@ -45,7 +45,7 @@
  },
  "bathroom/murphy.html": {
   "lastmod": "2026-10-23",
-  "sha256": "5a4fb8a8f167ec2445c5fb420e4363ae86292e8d624d955986a68421e13bc253"
+  "sha256": "c12a815d97c8bbaa660f859cdbf1ac0cc15f0e5cd8615182e69d7d213841b272"
  },
  "bathroom/plano.html": {
   "lastmod": "2026-10-23",
@@ -61,11 +61,11 @@
  },
  "bathroom/rowlett.html": {
   "lastmod": "2026-10-23",
-  "sha256": "a11b7a5e2e8a31bb3611495f0a327893fd2febe09d223a9fdad00d5332f9a9a1"
+  "sha256": "4612a9256c30fd59ab08bf0d3d0f09160b6f26f5817df440f7df9c3e40108c66"
  },
  "bathroom/sachse.html": {
   "lastmod": "2026-10-23",
-  "sha256": "0d59635621d248ef1d274a3dcff766c496e62594c27960dd9a86ff0d2debd155"
+  "sha256": "ccc3b49723a7e378a54a8c472196fa78f15ef3593b81efdc05cf70981e1e62d5"
  },
  "bathroom/the-colony.html": {
   "lastmod": "2026-10-23",
@@ -188,300 +188,300 @@
   "sha256": "9d281045514b854ebf560f6eac854f7bf4d702121908e621d7675f28784c3e90"
  },
  "dfw/addison.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "59b927c4d3c4d6c668bff253e5e3ec486116f24fa5063177bf654abec2800db4"
+  "lastmod": "2026-10-23",
+  "sha256": "0e163dcf68c87db62858fc80d6053db84eae35478b0261105c65643eba369159"
  },
  "dfw/allen.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "60c6c29e2578939fa17f79855648b87618022f44b34eb4bbb8a15c7c0ae94c28"
+  "lastmod": "2026-10-23",
+  "sha256": "c44ba60a2370edee49c49d947408e3193f3481815a7710cf11ed798dd4e79bbc"
  },
  "dfw/carrollton.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "3d35e197fd0b8aa9563de3607854dce892a5e98af2002163cb58accd7528f403"
+  "lastmod": "2026-10-23",
+  "sha256": "272612a95576cf90d02c05ba0e7f1d3074327fc86c4d73a1d68c51b3dd3a592c"
  },
  "dfw/celina.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "24f85fe9f60554d1aa4e5e557fe4721b63f88c0bc31e157f9eec7807bd8af5a0"
+  "lastmod": "2026-10-23",
+  "sha256": "f04b4f38fc2d33a5e304d4d491438c2db154f051146b7bde0f1f9f7e0ac0846c"
  },
  "dfw/coppell.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "1dc1c540d3736296c5d1cc19c6585b4d60cce539eca10704a23e539da1ea0e40"
+  "lastmod": "2026-10-23",
+  "sha256": "4f9508b151206d9f3612fac305447ad004ff607c3fedf20fa0b0e388005aa760"
  },
  "dfw/frisco.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "1c1b653dc06720db010472706381e8fc8246f8b7f26e34e3462377e9a0631fde"
+  "lastmod": "2026-10-23",
+  "sha256": "af125dd27b556353d43902d1fd3c0462323f709dc1d496f568647dd91629a1fa"
  },
  "dfw/garland.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "d7c39e5da424ef7682c6595fd0ef6ec460aae6b2d509740bcac98761e10ddfcb"
+  "lastmod": "2026-10-23",
+  "sha256": "1e6de1102b6f90f24cb6ff5fa2c8f94daa4f18e379f458f65a1654af4f432dcc"
  },
  "dfw/lewisville.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "4e43f8a9579275489ec295278067e86c363c899e4d892b49d444d7c6cbcbc289"
+  "lastmod": "2026-10-23",
+  "sha256": "86a27a1b06a01847298859a29bd8d8be28ed9705299cac18b9738c18bf492994"
  },
  "dfw/little-elm.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "288c74260b6fb222ad5e755cc017f88b3625074776d1daeeddb1f4ad62f47976"
+  "lastmod": "2026-10-23",
+  "sha256": "69cca9bc9612651d30383951e7694770828d3a8c92a5fd2eefa3c1558aec31a0"
  },
  "dfw/mckinney.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "413723976a5c8ae69795eecc3d81602536b23e94a2a30086df5a7e4c3043b4c5"
+  "lastmod": "2026-10-23",
+  "sha256": "3324f65b22e135ac336a3cc0f92feffadc82b70c0b9fcdff155468d5cc353be4"
  },
  "dfw/murphy.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "68ce849856346eaaf98336787c9f954fc17b55d4b225f5400a52de5ddf018f3a"
+  "lastmod": "2026-10-23",
+  "sha256": "ec482e0bb857615d1172063d8cd8e3a94bb241d4995b96a92da2c70e16d1074f"
  },
  "dfw/plano.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "a466ad952ceaeb4bad0a2c7b5cd5d60b9ff72428e66ca95dc05d158adb9b3717"
+  "lastmod": "2026-10-23",
+  "sha256": "3d868c453c7a9223691414c65c30b5be471705c5973cad3ff586c90936d5e8bd"
  },
  "dfw/prosper.html": {
-  "lastmod": "2026-10-13",
-  "sha256": "0d4542522d9c113f78c51fc51b93289425de82d355525a6bb6abdbb462499c29"
+  "lastmod": "2026-10-23",
+  "sha256": "d1d387795307519a11266ddc55523364e900a54c1ef61d4b5e56958b95d8cbf8"
  },
  "dfw/richardson.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "3adc6724f779affdad9d069a6c96a154ef745cf99a16dff28eaa738ebbb1aaae"
+  "lastmod": "2026-10-23",
+  "sha256": "e95c2e925f2bcf358da7300e495756e3a9229fa3786965f743cd00cc95aa6b15"
  },
  "dfw/rowlett.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "c02755572fdf3c370e9680085e9493b64e318ab1c006ec232d7512afa49ef4c0"
+  "lastmod": "2026-10-23",
+  "sha256": "96ac5cdf6edb86e7cf458ad1bc81e0d0b0c8b1d84323c895c1db8bb67c153b0f"
  },
  "dfw/sachse.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "74d916a5fe953b536f6459047f7cca874e9c56692f934a79d278fa76bc711983"
+  "lastmod": "2026-10-23",
+  "sha256": "3b182caca3c055783c7800bd37641f61c51a0465316b414d5e7aa6a6cf6a0677"
  },
  "dfw/the-colony.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "9828dee3445714d0e911411719693f6235ca28564f2318b2058a1b83d7f6207a"
+  "lastmod": "2026-10-23",
+  "sha256": "c173b80827794c5c1edc4a8ea2f5f72a1027b469f38d33882dcc743200bf6b72"
  },
  "dfw/wylie.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "862ba6af491ec699572c97db6c049aec1dd55d331117dc9ff6c26a84c6a17d51"
+  "lastmod": "2026-10-23",
+  "sha256": "cee74aa4ab57d11c5067196502daa18d2b5ed1a7adbfdbde5ab463ac662d349e"
  },
  "drywall/addison.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "de241ec3f1ed4caeb9156f23e23cb79e90d1f655392d6384a5190a576a66853e"
+  "lastmod": "2026-10-23",
+  "sha256": "5a8b4fee3b4f441870237213c57f83f4792482a5d0a5a836dacdeaaaf7bc02e2"
  },
  "drywall/allen.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "863cc8aba63fab3eaf6bf1d5ad1adfa020c2033003cd61f2d655871a219f454e"
+  "lastmod": "2026-10-23",
+  "sha256": "9731879c2b066a822e3d45253042809689ab6bcf8946b21138ec6df776cdd2e0"
  },
  "drywall/carrollton.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "7d91557ed8acd9ba44d300e3e2c8373e9956e2c8e626ce0dec99caf9fa6ef8bb"
+  "lastmod": "2026-10-23",
+  "sha256": "f43f63071ead523b777425a73cf66932729a441fd7ac537b236fb4e6668d2681"
  },
  "drywall/celina.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "207fb4cbe43a0d96f945800709be78b9697149a40072290417fc261a85f26422"
+  "lastmod": "2026-10-23",
+  "sha256": "a614460ed451bd6a8feb70842937a9c72a92f2ed508149f0c96d74c40e20c1e3"
  },
  "drywall/coppell.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "9bc86152150c10c520b8caed1049c2fa99ec407155cc2a3fc45b093324d62944"
+  "lastmod": "2026-10-23",
+  "sha256": "4621d4c42ca6d812bf299a6c29e033d875a0be8a65240f7ce1cbc8c89295cad5"
  },
  "drywall/frisco.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "8f2371bd1a4766e895bb39ff9ba5331e22a94d014ed2c14dcce72fc0e2ff34d5"
+  "lastmod": "2026-10-23",
+  "sha256": "65b170e79eacb2a5f75341775c7e2710cf13c8e64ea0c782c36ed232fb4c89b2"
  },
  "drywall/garland.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "97b3f30e00224f4c308af525bdeebc6e2bd8c22ea504db77af6047f3079a7d6b"
+  "lastmod": "2026-10-23",
+  "sha256": "0209a11f7f35a3f926ffdd31430a8d71da83091de2c82275d7e8e87e9af75ac3"
  },
  "drywall/lewisville.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "1f9d7c19a561334886605b4d1656a95c4c437cadf789c71ddae4a7dd0428cf20"
+  "lastmod": "2026-10-23",
+  "sha256": "e66a5f674af80fc8cc7a32559b7175ac6da129332698d03eff9fabd5952f41d2"
  },
  "drywall/little-elm.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "8338e7410538fd1ad3f152fc47c60c2d4cf3002121497f2643e050b0d3884bcb"
+  "lastmod": "2026-10-23",
+  "sha256": "8624b47efd85e15620c09599b8303c1fd427e7dcf3571184a878f793db718e67"
  },
  "drywall/mckinney.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "1ab1ab64187197a63787a68ad2b80484de1b80b4e2a6544703a2872698a4f4f4"
+  "lastmod": "2026-10-23",
+  "sha256": "f00c7e35e0f5744f02d213b635aaa2c29a2edb196d8fb0ae214811f6cbbbd28b"
  },
  "drywall/murphy.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "75d2cf5f7f204d6b65c53ba2ef9833cf0c01aa1cd9e98032aab4cdd7fa7c75ad"
+  "lastmod": "2026-10-23",
+  "sha256": "e3df6cbf1c38c2103822704726da9b87196af1b9926ee9fe7fb1e1dbcc53e4d8"
  },
  "drywall/plano.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "15b8372b3113a95d40535d4a47b1d81dfa6a345273bfd0ecf9820b04a6a1ff97"
+  "lastmod": "2026-10-23",
+  "sha256": "37efbb3e01b38ab3d6e2e6d52d6bf80f45e84694a196130d50f85a1b57cb9bbb"
  },
  "drywall/prosper.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "b093b5b306e1c8afa236d4fadff45582a9b28913363f4190be84462ae03e2633"
+  "lastmod": "2026-10-23",
+  "sha256": "bb528f02627213f56027efca47247512ac4882ee42fc492ad32b34ca8a3a32af"
  },
  "drywall/richardson.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "7fc40da52068c0fde06667f5bdd985f68079917aac4933425d9654e0781b4b75"
+  "lastmod": "2026-10-23",
+  "sha256": "f16e95d10632191825ffe202520a0634e6ef91c0feb47a4d92822082acdcf1cf"
  },
  "drywall/rowlett.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "ddf1e60f9e45acde62b53d0b03baeb96332720b5d68beccef03eecded16b6fe5"
+  "lastmod": "2026-10-23",
+  "sha256": "4bb9bf56ce9afe9dd868513ba86a011ac3b80bcadd64316287bd752bfd3ec0dd"
  },
  "drywall/sachse.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "490e0d4a2888096040d647f4710926976d2e4cd127fcacf0d77181fa66e40cc4"
+  "lastmod": "2026-10-23",
+  "sha256": "5580c02b154ce433bed8c6f2737d10b0ad22639bd23fd71071dfbc3fe775043a"
  },
  "drywall/the-colony.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "9c16f013c8c0098be65754d166c678ff39760a99e4c0748489d5cc429d846906"
+  "lastmod": "2026-10-23",
+  "sha256": "e6987d9bff47811365d2f30950d799be5de6fcb39e214721c3dd04dda2361677"
  },
  "drywall/wylie.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "93a5de043ed13eb7d52cbad66a881d413d87107a614ceda5d8cb8665429b33e0"
+  "lastmod": "2026-10-23",
+  "sha256": "78512dd371b53322944616b03a45593b20e84ae53fc0a21d620f8ea8159ba725"
  },
  "flooring/addison.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "666d0dd333203ef93d74a541713086963e996f32942203ccf57d19189f4ceb34"
+  "lastmod": "2026-10-23",
+  "sha256": "94931bf582c75e106f4021bfc6ded6468bfc53dd0289dbe02f4a066770c5cf96"
  },
  "flooring/allen.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "6253b937274105a23368ea086270eb79d2a3d459cd976703f33dfbc601156e1f"
+  "lastmod": "2026-10-23",
+  "sha256": "572da6edb3c654ff73eb5fd8132baaea531137e4a4da820bb00371736b9da90d"
  },
  "flooring/carrollton.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "e653c4fa8cf11bb0bf051ae779669b1c7af42aed12f1ba3b3830669359d7af43"
+  "lastmod": "2026-10-23",
+  "sha256": "c9da9d8736af414fc5e15335abb5704ef5b4e9fcd0a72c637d282d69fdfc341c"
  },
  "flooring/celina.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "b568c7c33abd0b9215c05e124d2ca415459a83dba85e9bf145aabbcbb5fdfbd9"
+  "lastmod": "2026-10-23",
+  "sha256": "34ba567d6fcb07a23fc7517e72007dff6aed7a5f5418d62c2c086702c768b39e"
  },
  "flooring/coppell.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "73d818f375c509a1a8b5eae55f941e7f035b28fa067878ab2397385443a46a9f"
+  "lastmod": "2026-10-23",
+  "sha256": "531b54cdab6ea22adb2642e91b2004091de0072766dafc8f4aec106eb2722276"
  },
  "flooring/frisco.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "9da4bea31ff896d6718852ea94896a460262c784c6f759a73f60bacde9fbc33f"
+  "lastmod": "2026-10-23",
+  "sha256": "60458d7ea88a1b68a7fdf508daeaee38f7b3a380a4017d17588eb906277639ea"
  },
  "flooring/garland.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "bdd5d186564ae712304e9e4cd4305c14db603fc5b3dd8f5748ba58175bdf5510"
+  "lastmod": "2026-10-23",
+  "sha256": "2308af0099abcb40ce28916fe5efa2ec79c72b047b73afa41f467e1ba5795749"
  },
  "flooring/lewisville.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "93931ec59e0b48d809885249c6f3a46fb80b90675070c46da032dc6f0ac3f331"
+  "lastmod": "2026-10-23",
+  "sha256": "bbba99ebd38bf21c240baea8f9369a2d442dd660e36e807d7d71840edd1f1fe0"
  },
  "flooring/little-elm.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "4851b2bddf1f6a39a8c4abe85ec9fa052aa1c889901f850343bf0ec0a1098e83"
+  "lastmod": "2026-10-23",
+  "sha256": "ff82cb9bc90b645345b3c750669065051fb95451b302333e81c0239f9ba7f283"
  },
  "flooring/mckinney.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "48faa606d3c0636b05c3481acbd1463e78851fbfc324c4d8f5f43fc7fb9b9d33"
+  "lastmod": "2026-10-23",
+  "sha256": "89e2292272f8aec87247a0d1f4cd0fa88b54f7544a353711f4c1d44bdde59712"
  },
  "flooring/murphy.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "84c68e0f4a4664076b0645bb7c45d3bb92667a48b734b52bbc50054e5da5e6d1"
+  "lastmod": "2026-10-23",
+  "sha256": "b44c3547178fa90337693509bd48c76f051542885cabfc41c1b9a578ab1305e0"
  },
  "flooring/plano.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "5951b7d8c9df873f976022e198dbc60d68ade2ecd448b783427d4cb26662dedf"
+  "lastmod": "2026-10-23",
+  "sha256": "b5b29104961d0ca46c5cee33c2c12cfd97ceaff9a2f22098a15ef57d9fc6a6ca"
  },
  "flooring/prosper.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "0966ce1f2fc4218f1f3a9dda7d92e71102fe132a08adfeead10b06c816a81230"
+  "lastmod": "2026-10-23",
+  "sha256": "921c0b31f6f2595972d4c6ceb268c5e977d4a095423584fdfd4d9ffee48ac897"
  },
  "flooring/richardson.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "e9bd2c33bf602e88b2a42acb624ab401ff30a6b049805ad913d64828226a3f0f"
+  "lastmod": "2026-10-23",
+  "sha256": "cb6df310b6ed8dd484c20f17cd19611fcdec3316f50232811935a2ad5ffa7b8c"
  },
  "flooring/rowlett.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "c28b8572e1f14b6737fe705e8009e14a8d7b05ae327dc23f84660574d00165c7"
+  "lastmod": "2026-10-23",
+  "sha256": "169c2258dbcedbd542f97dacf9af3de451a32fb23e0a0fdd00fd9a99d5bab20a"
  },
  "flooring/sachse.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "0a180f69e00dc91b8051af53bd634634c4766818a48f57f664fd48d73ad66525"
+  "lastmod": "2026-10-23",
+  "sha256": "b42521b95824b5548de05d7e18602530ac0a754ca8d1eb207f4ee4db25798be3"
  },
  "flooring/the-colony.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "13ad2681ec4b193d0ba202a8d8012bcc22a775135689ecec30d769ee65dcc581"
+  "lastmod": "2026-10-23",
+  "sha256": "fdb2e788756049dab9b5a90333274f563d849abefafcac09216508437cb92732"
  },
  "flooring/wylie.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "ec36251e4996f2637a53fd6c5cbc0c343f8e8efed18d5290679f0efad2cde5bb"
+  "lastmod": "2026-10-23",
+  "sha256": "2ca0179d3662f212bfbff9eee2844fbe9e75e392b0f1a1648ab8fb97b7dcfef1"
  },
  "gallery.html": {
   "lastmod": "2026-10-13",
   "sha256": "a7e26d42692bcc83768af719a861ee95087ebda87e67ee9c4bcddb013fe1cf2c"
  },
  "index.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "6253786672126dd3ecb04fe6010462dbb9c44d3ea2a2ec87f68f57d989f5166b"
+  "lastmod": "2026-10-23",
+  "sha256": "ce4bb9199d327ed0da258fc1e46b4f826f06c98a2725d22a52669ac24429202d"
  },
  "painting/addison.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "31047c5e0a7a8f344adaa87ac52a73f8a67976b903e7c599ba5841be67237af2"
+  "lastmod": "2026-10-23",
+  "sha256": "797f9c0daa009625cd211576d907dfb63c63f17905a626c220cc3c0725a6553b"
  },
  "painting/allen.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "cfb9cfdb4d0ea9aa76eeb0ebbea03b60434b04c39343dd12d8012730e54685b6"
+  "lastmod": "2026-10-23",
+  "sha256": "b9778968285f1e2c5ba75e5226e3a2aeadddecf62e920c953a17edbe1b2bbe71"
  },
  "painting/carrollton.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "b7ba2749a35ca964af6b8b841948af060041abc4eb9f1526b7f79ade269f8c88"
+  "lastmod": "2026-10-23",
+  "sha256": "90043d2bf927a9beaae39602ef46adec97dbc36409458fd9300b03f1edb9fbd7"
  },
  "painting/celina.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "abb9c0eac41591fb5e9f330f376f67307afe89cc830634c1aedf5998655ba27f"
+  "lastmod": "2026-10-23",
+  "sha256": "38e53f0a5a3264fcdd104aa7784b2bcc3d4ce68c7d33af6352c5dbae504746e9"
  },
  "painting/coppell.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "65d31d44fb1141cd4f36e134035451886384fe9bbbbf0150828003048ca0e45f"
+  "lastmod": "2026-10-23",
+  "sha256": "957c052ebef6a372fe75e39d1e8aa2978a65113257d11e38516ce9c8528b979c"
  },
  "painting/frisco.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "2d680d99499564e8ad5818a86daac52a154469836aac7cf664f966fce749a12f"
+  "lastmod": "2026-10-23",
+  "sha256": "1a244c27fb6ca20670ad29853c40bf35f3cf1ea7152404e014edd2f52500e466"
  },
  "painting/garland.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "a3481722794f8004ed08d27a651fc4adf9db67d0264b9dcae96c15f9beac9a1d"
+  "lastmod": "2026-10-23",
+  "sha256": "c3989cab9cce1f39469eb5bd6a3d3a85efc625384b68dcfac8de3f7a197d4206"
  },
  "painting/lewisville.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "bc8c4eaac8dbaa39017ebb930fe720bf5f8227645adf3d9bcc21c829bab432c2"
+  "lastmod": "2026-10-23",
+  "sha256": "828e7b58f033c1dee78a3e3f06a11230700530bf18a616c67decdb353034e300"
  },
  "painting/little-elm.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "57d94f7407e6ba34705a81f65f7936c4fbaa1f5f8ef2c28d20c3939849a41a63"
+  "lastmod": "2026-10-23",
+  "sha256": "80a8ab743ea7e2b527fa4ee7532de30ca00b78810320697dd3eac16b6e2accfc"
  },
  "painting/mckinney.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "cca920f09dad160d877387e9f9dc18feb169db5fcb7875da599188a09b346d5e"
+  "lastmod": "2026-10-23",
+  "sha256": "36ea3b62e3d12b3c056a8d7fdffd584bd0cbb3f4f6e73f2116cd9dbf667cfeee"
  },
  "painting/murphy.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "c2f970f4347f6389c40370f54b2b190e03fed133f4f4c27fd192a36e4f18c740"
+  "lastmod": "2026-10-23",
+  "sha256": "07f79feb2d0524929cc13ad4fad28eddb54ef2871cfe50d289dd6ca588648ce6"
  },
  "painting/plano.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "fd50f69ad8b06be28cefc9adf09ce20bffde2e98e9c7d952d29a195820dd2784"
+  "lastmod": "2026-10-23",
+  "sha256": "344e576b60a18a7e74a6d494179d6992a9ac909f6da6a723b99380755b9eb56d"
  },
  "painting/prosper.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "55cbbd0d05c4b70e2ac0df0f67285d060db294579729e257364872d44f594e7c"
+  "lastmod": "2026-10-23",
+  "sha256": "03d746773f57b5197aec091eac50c8c4442b6594b8c543dbd5c9a1f5163b3af4"
  },
  "painting/richardson.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "eb26e0aabb78c842f49196de0b9b6c0ffcda0e641dee8227367adc590985d623"
+  "lastmod": "2026-10-23",
+  "sha256": "17e92e3797aa80a9f055c8c5eb42a4710894dccaa0d91c7fb17781178eaa295b"
  },
  "painting/rowlett.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "d894cf938b1b0b6890b49cbf5295b9dbe6d01e6df2bb54d50f3057c1232a744b"
+  "lastmod": "2026-10-23",
+  "sha256": "d02896672063c19024fb9d28243dbac1be7e2249094542c0d539e802c76db825"
  },
  "painting/sachse.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "aa0c48b6d5759b6a2fb1b5b2ca7c42f2f7a4b577a4b0aa902e1329a973437c93"
+  "lastmod": "2026-10-23",
+  "sha256": "be98fa7c18450a025ceed244460d5ce4c8c40664288dcb492ab29cad61df3e98"
  },
  "painting/the-colony.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "9d8b1d3a15bbd5ffd50495409ba7b2db0a3c213fbe184265e96d5ea34e8f7bc0"
+  "lastmod": "2026-10-23",
+  "sha256": "4413b75aae04ba95277b4f65bd723e69ab9722149b7c941afd5af2ca35cbef22"
  },
  "painting/wylie.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "547e695993ace171f6ebb5ea201f9a31a4fab070bd2905eb69345b3ec57ccfc6"
+  "lastmod": "2026-10-23",
+  "sha256": "07232fb2c2b6890349ce1d7b589030e140417babbf47cb4a37cde321c6221c63"
  },
  "process.html": {
   "lastmod": "2026-10-13",
@@ -493,11 +493,11 @@
  },
  "services/drywall-repair.html": {
   "lastmod": "2026-10-23",
-  "sha256": "d5e89ade129b74c4db5eb58db77841b632f52f1a406f39ab775966570615c8df"
+  "sha256": "71ee29a9afade4d6495ee7bedeb2170df513767beae338ee5352cd3a77a7f7e5"
  },
  "services/flooring.html": {
   "lastmod": "2026-10-23",
-  "sha256": "0a5e20a3a3ffd0d6667f29adc747ee8c9246c28a2f66a21a5a28bdd6eeea1b0a"
+  "sha256": "3687a5859a6d22f2482f8310c76999890cd4757db07350c47787be15a59bcd0b"
  },
  "services/home-refresh.html": {
   "lastmod": "2026-10-11",
@@ -505,6 +505,6 @@
  },
  "services/painting.html": {
   "lastmod": "2026-10-23",
-  "sha256": "63b38d7e7a32a752e6db3df133a31a8239a66a30468db215931658f191089ffb"
+  "sha256": "a122ffb40518090e2d786bb4697890533a52e23323b68ce1dafc1c039094dd85"
  }
 }
