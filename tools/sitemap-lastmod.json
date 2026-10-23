@@ -24,8 +24,8 @@
   "sha256": "c36c7aea64ec5283d45bac6e53344e6fe68d268fef14443ec0563bc22aaf70cf"
  },
  "bathroom/frisco.html": {
-  "lastmod": "2026-10-13",
-  "sha256": "8af24e0f94f0a00ee557b1c54e40c183e0a2a493fa7915e59937b13de7497843"
+  "lastmod": "2026-10-23",
+  "sha256": "f12284ca470ec81657822d1995b5c117cae6be89a153b8f02b0a358bc562d173"
  },
  "bathroom/garland.html": {
   "lastmod": "2026-10-17",
@@ -40,16 +40,16 @@
   "sha256": "5643a6603415b531e8dee9e598fa7610d3d7a6602d8573c6a5afd8191a3993ba"
  },
  "bathroom/mckinney.html": {
-  "lastmod": "2026-10-13",
-  "sha256": "6cc6ad7bce3b17660b70a9ff9dae54664d2e79f3a43921a3636cd872a8613cfa"
+  "lastmod": "2026-10-23",
+  "sha256": "ea2ab618c1dccb7663495d78a76130c31793ea2a2b9b391c1d8696d542ac8cea"
  },
  "bathroom/murphy.html": {
   "lastmod": "2026-10-17",
   "sha256": "4e869df0cd280d5c397a37b168b7ff3a0e908c5914580214e15a8eacf78d0f38"
  },
  "bathroom/plano.html": {
-  "lastmod": "2026-10-13",
-  "sha256": "7598fd38de9c851e7562e84d7be5594185c28c3a675c894ffbe8b813bf5ba110"
+  "lastmod": "2026-10-23",
+  "sha256": "b828ebf32ebf71dec502046c718945c889ecdc9702de15b1a06635c1138bc12d"
  },
  "bathroom/prosper.html": {
   "lastmod": "2026-10-13",
@@ -176,12 +176,12 @@
   "sha256": "01306bd7c70dfa65f39fbc4af282db3862f5897c458f69e9c07ad5bcccc87fb4"
  },
  "blog/tub-to-shower-conversion-cost-dfw.html": {
-  "lastmod": "2026-10-11",
-  "sha256": "560f2c6e09e7be1f3eb5f5f60b61821bb20d08cf5534c5d6ce19659263ece00a"
+  "lastmod": "2026-10-23",
+  "sha256": "78093816c7541a397264a01364663a97c25a1c5ea894aa6141fa7f3cd5168264"
  },
  "blog/walk-in-shower-guide-dfw.html": {
-  "lastmod": "2026-10-11",
-  "sha256": "2aa154b1c6f6cabe3a4e643bbd3d51ebb3a63247944992d69e51c949f4dc04cf"
+  "lastmod": "2026-10-23",
+  "sha256": "0102529bd93f6af1e671231780eff9a5bc3097819f7d5be50a2d7503669b1e34"
  },
  "contact.html": {
   "lastmod": "2026-10-17",
@@ -488,8 +488,8 @@
   "sha256": "5ff7602ab579e1c542017212218b28e5f0d3a807bc3e9c74908d04580aac6b4f"
  },
  "services/bathroom-remodel.html": {
-  "lastmod": "2026-10-17",
-  "sha256": "945fc436b5e5070cf3225edca07b43a95976e0142c17e9e1156503be83f469da"
+  "lastmod": "2026-10-23",
+  "sha256": "c180fe8e6833dabb971102d578f4c5609cfe96b9b2f67a5be93e6881b0db94fa"
  },
  "services/drywall-repair.html": {
   "lastmod": "2026-10-17",
