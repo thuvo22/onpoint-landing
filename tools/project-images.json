@@ -1,0 +1,743 @@
+{
+  "images/jobs/ba-01-wall-window.jpg": {
+    "sha256": "8da3e8e51280975488c5c4986f129709ef637a0958870ea3dcb9b917f6b79ee0",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 229176,
+    "original_width": 1600,
+    "original_height": 656,
+    "variants": [
+      {
+        "path": "images/optimized/ba-01-wall-window-83efbd966631-480w.webp",
+        "width": 480,
+        "height": 197,
+        "bytes": 18966
+      },
+      {
+        "path": "images/optimized/ba-01-wall-window-83efbd966631-800w.webp",
+        "width": 800,
+        "height": 328,
+        "bytes": 49474
+      },
+      {
+        "path": "images/optimized/ba-01-wall-window-83efbd966631-1200w.webp",
+        "width": 1200,
+        "height": 492,
+        "bytes": 102772
+      },
+      {
+        "path": "images/optimized/ba-01-wall-window-83efbd966631-1600w.webp",
+        "width": 1600,
+        "height": 656,
+        "bytes": 164698
+      }
+    ]
+  },
+  "images/jobs/ba-03-carpet-to-lvp.jpg": {
+    "sha256": "fb5b6c30a64b7459b7612eef94a9418a512600c008da09a7f1565b6d1f000cfb",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 132074,
+    "original_width": 1058,
+    "original_height": 700,
+    "variants": [
+      {
+        "path": "images/optimized/ba-03-carpet-to-lvp-e3fa9c17e609-480w.webp",
+        "width": 480,
+        "height": 318,
+        "bytes": 20898
+      },
+      {
+        "path": "images/optimized/ba-03-carpet-to-lvp-e3fa9c17e609-800w.webp",
+        "width": 800,
+        "height": 529,
+        "bytes": 52236
+      },
+      {
+        "path": "images/optimized/ba-03-carpet-to-lvp-e3fa9c17e609-1058w.webp",
+        "width": 1058,
+        "height": 700,
+        "bytes": 85860
+      }
+    ]
+  },
+  "images/jobs/ba-06-accent-wall.jpg": {
+    "sha256": "7815be217bb0ca2b194c1a92a1254aec343bc7446ebe4db4cdfb303d6005a0f5",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 119540,
+    "original_width": 1600,
+    "original_height": 656,
+    "variants": [
+      {
+        "path": "images/optimized/ba-06-accent-wall-03e26f93f7d9-480w.webp",
+        "width": 480,
+        "height": 197,
+        "bytes": 11010
+      },
+      {
+        "path": "images/optimized/ba-06-accent-wall-03e26f93f7d9-800w.webp",
+        "width": 800,
+        "height": 328,
+        "bytes": 22312
+      },
+      {
+        "path": "images/optimized/ba-06-accent-wall-03e26f93f7d9-1200w.webp",
+        "width": 1200,
+        "height": 492,
+        "bytes": 37860
+      },
+      {
+        "path": "images/optimized/ba-06-accent-wall-03e26f93f7d9-1600w.webp",
+        "width": 1600,
+        "height": 656,
+        "bytes": 54828
+      }
+    ]
+  },
+  "images/jobs/ba-08-stairs-lvp.jpg": {
+    "sha256": "d13b522270d9da4295fd7355b32f671bd653354ba8c9df81c407524187585fdd",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 121622,
+    "original_width": 1058,
+    "original_height": 700,
+    "variants": [
+      {
+        "path": "images/optimized/ba-08-stairs-lvp-90af8db933a6-480w.webp",
+        "width": 480,
+        "height": 318,
+        "bytes": 22428
+      },
+      {
+        "path": "images/optimized/ba-08-stairs-lvp-90af8db933a6-800w.webp",
+        "width": 800,
+        "height": 529,
+        "bytes": 45510
+      },
+      {
+        "path": "images/optimized/ba-08-stairs-lvp-90af8db933a6-1058w.webp",
+        "width": 1058,
+        "height": 700,
+        "bytes": 69088
+      }
+    ]
+  },
+  "images/jobs/ba-12-bedroom-lvp.jpg": {
+    "sha256": "43f8ef50af58b3d000f0a97a3bdaca4ec8f6611a0e6e0f5949b96592fb1656aa",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 175668,
+    "original_width": 1600,
+    "original_height": 656,
+    "variants": [
+      {
+        "path": "images/optimized/ba-12-bedroom-lvp-c73a2c3501f5-480w.webp",
+        "width": 480,
+        "height": 197,
+        "bytes": 15856
+      },
+      {
+        "path": "images/optimized/ba-12-bedroom-lvp-c73a2c3501f5-800w.webp",
+        "width": 800,
+        "height": 328,
+        "bytes": 37488
+      },
+      {
+        "path": "images/optimized/ba-12-bedroom-lvp-c73a2c3501f5-1200w.webp",
+        "width": 1200,
+        "height": 492,
+        "bytes": 71666
+      },
+      {
+        "path": "images/optimized/ba-12-bedroom-lvp-c73a2c3501f5-1600w.webp",
+        "width": 1600,
+        "height": 656,
+        "bytes": 112588
+      }
+    ]
+  },
+  "images/jobs/ba-17-livingroom-lvp.jpg": {
+    "sha256": "56ea625bada0b2d6bec0bcdfa61510458ff5e63528f900b80bd922ba7974902d",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 181581,
+    "original_width": 1600,
+    "original_height": 656,
+    "variants": [
+      {
+        "path": "images/optimized/ba-17-livingroom-lvp-d9f80048c2cf-480w.webp",
+        "width": 480,
+        "height": 197,
+        "bytes": 19574
+      },
+      {
+        "path": "images/optimized/ba-17-livingroom-lvp-d9f80048c2cf-800w.webp",
+        "width": 800,
+        "height": 328,
+        "bytes": 42930
+      },
+      {
+        "path": "images/optimized/ba-17-livingroom-lvp-d9f80048c2cf-1200w.webp",
+        "width": 1200,
+        "height": 492,
+        "bytes": 77482
+      },
+      {
+        "path": "images/optimized/ba-17-livingroom-lvp-d9f80048c2cf-1600w.webp",
+        "width": 1600,
+        "height": 656,
+        "bytes": 115044
+      }
+    ]
+  },
+  "images/jobs/ba-18-popcorn.jpg": {
+    "sha256": "5e28764300d4e8f735d294e39eecee3b74918658485c8d744370ba83c657bb9a",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 155492,
+    "original_width": 1600,
+    "original_height": 656,
+    "variants": [
+      {
+        "path": "images/optimized/ba-18-popcorn-696d7571607b-480w.webp",
+        "width": 480,
+        "height": 197,
+        "bytes": 12190
+      },
+      {
+        "path": "images/optimized/ba-18-popcorn-696d7571607b-800w.webp",
+        "width": 800,
+        "height": 328,
+        "bytes": 31286
+      },
+      {
+        "path": "images/optimized/ba-18-popcorn-696d7571607b-1200w.webp",
+        "width": 1200,
+        "height": 492,
+        "bytes": 61952
+      },
+      {
+        "path": "images/optimized/ba-18-popcorn-696d7571607b-1600w.webp",
+        "width": 1600,
+        "height": 656,
+        "bytes": 96518
+      }
+    ]
+  },
+  "images/jobs/ba-19-subfloor.jpg": {
+    "sha256": "4e3a3e6be23a91069c5762c1dc37a5ffd4d085eade2b1d1ba95b0958768c06c2",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 161553,
+    "original_width": 1058,
+    "original_height": 700,
+    "variants": [
+      {
+        "path": "images/optimized/ba-19-subfloor-43d54099cd94-480w.webp",
+        "width": 480,
+        "height": 318,
+        "bytes": 30204
+      },
+      {
+        "path": "images/optimized/ba-19-subfloor-43d54099cd94-800w.webp",
+        "width": 800,
+        "height": 529,
+        "bytes": 70982
+      },
+      {
+        "path": "images/optimized/ba-19-subfloor-43d54099cd94-1058w.webp",
+        "width": 1058,
+        "height": 700,
+        "bytes": 112684
+      }
+    ]
+  },
+  "images/projects/plano-bath-after.webp": {
+    "sha256": "03363096cd63fd2e9ce04e77068eb924f99104f0a1ac43a4547baaf5ac065e2f",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 121982,
+    "original_width": 900,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/plano-bath-after-cf539680204c-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 45180
+      },
+      {
+        "path": "images/optimized/plano-bath-after-cf539680204c-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 98902
+      },
+      {
+        "path": "images/optimized/plano-bath-after-cf539680204c-900w.webp",
+        "width": 900,
+        "height": 1200,
+        "bytes": 117042
+      }
+    ]
+  },
+  "images/projects/plano-bath-before.webp": {
+    "sha256": "ebb06fb8b671ca6ba61dbed159d393324b99c363a248228ee596cb4a4fd2787c",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 158174,
+    "original_width": 900,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/plano-bath-before-04f98be1e067-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 55756
+      },
+      {
+        "path": "images/optimized/plano-bath-before-04f98be1e067-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 127720
+      },
+      {
+        "path": "images/optimized/plano-bath-before-04f98be1e067-900w.webp",
+        "width": 900,
+        "height": 1200,
+        "bytes": 153930
+      }
+    ]
+  },
+  "images/projects/plano-bath-build.webp": {
+    "sha256": "412b228e3b26fb9746d16b9438ba2294105bea9dee68f114198070d8cfdfd946",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 142406,
+    "original_width": 900,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/plano-bath-build-b26e1e0191ca-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 52178
+      },
+      {
+        "path": "images/optimized/plano-bath-build-b26e1e0191ca-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 124172
+      },
+      {
+        "path": "images/optimized/plano-bath-build-b26e1e0191ca-900w.webp",
+        "width": 900,
+        "height": 1200,
+        "bytes": 142406
+      }
+    ]
+  },
+  "images/projects/proof-allen-after.webp": {
+    "sha256": "b5099c3c2bf8170118b2a8ca75f0adb7c7bdc4c8f54234e25c31569c032f25b4",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 126878,
+    "original_width": 969,
+    "original_height": 1623,
+    "variants": [
+      {
+        "path": "images/optimized/proof-allen-after-4b05338910fe-480w.webp",
+        "width": 480,
+        "height": 804,
+        "bytes": 31498
+      },
+      {
+        "path": "images/optimized/proof-allen-after-4b05338910fe-800w.webp",
+        "width": 800,
+        "height": 1340,
+        "bytes": 66368
+      },
+      {
+        "path": "images/optimized/proof-allen-after-4b05338910fe-969w.webp",
+        "width": 969,
+        "height": 1623,
+        "bytes": 88536
+      }
+    ]
+  },
+  "images/projects/proof-allen-before.webp": {
+    "sha256": "7f6d9316cacaaac70bf17ad0331d2ec2f29cf7aea70246ceead42f840700fce5",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 128980,
+    "original_width": 1086,
+    "original_height": 1448,
+    "variants": [
+      {
+        "path": "images/optimized/proof-allen-before-671d97fd1976-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 25882
+      },
+      {
+        "path": "images/optimized/proof-allen-before-671d97fd1976-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 55228
+      },
+      {
+        "path": "images/optimized/proof-allen-before-671d97fd1976-1086w.webp",
+        "width": 1086,
+        "height": 1448,
+        "bytes": 90620
+      }
+    ]
+  },
+  "images/projects/proof-mckinney-after.webp": {
+    "sha256": "1508acb4435241eaadbdef896e6a64df69166feb1784a12189187210e25da07f",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 160922,
+    "original_width": 1536,
+    "original_height": 1024,
+    "variants": [
+      {
+        "path": "images/optimized/proof-mckinney-after-0158bb9331cf-480w.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 19922
+      },
+      {
+        "path": "images/optimized/proof-mckinney-after-0158bb9331cf-800w.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 44460
+      },
+      {
+        "path": "images/optimized/proof-mckinney-after-0158bb9331cf-1200w.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 84146
+      },
+      {
+        "path": "images/optimized/proof-mckinney-after-0158bb9331cf-1536w.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 126936
+      }
+    ]
+  },
+  "images/projects/proof-mckinney-before.webp": {
+    "sha256": "b07e518d76a25033e6602e570ed317a518a9df75104e1169be4bdd0cf39d9a90",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 114750,
+    "original_width": 1536,
+    "original_height": 1024,
+    "variants": [
+      {
+        "path": "images/optimized/proof-mckinney-before-a54708a0eb8b-480w.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 11658
+      },
+      {
+        "path": "images/optimized/proof-mckinney-before-a54708a0eb8b-800w.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 27510
+      },
+      {
+        "path": "images/optimized/proof-mckinney-before-a54708a0eb8b-1200w.webp",
+        "width": 1200,
+        "height": 800,
+        "bytes": 52602
+      },
+      {
+        "path": "images/optimized/proof-mckinney-before-a54708a0eb8b-1536w.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 81784
+      }
+    ]
+  },
+  "images/projects/service-proof/ceiling-restoration-before-after.png": {
+    "sha256": "04487f181fd15496da899c984fd3b18066b5d88a7f86651ddeda78ae6918a5a0",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 2153820,
+    "original_width": 1542,
+    "original_height": 1020,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-restoration-before-after-bce50e0227ba-480w.webp",
+        "width": 480,
+        "height": 318,
+        "bytes": 20860
+      },
+      {
+        "path": "images/optimized/ceiling-restoration-before-after-bce50e0227ba-800w.webp",
+        "width": 800,
+        "height": 529,
+        "bytes": 45348
+      },
+      {
+        "path": "images/optimized/ceiling-restoration-before-after-bce50e0227ba-1200w.webp",
+        "width": 1200,
+        "height": 794,
+        "bytes": 80644
+      },
+      {
+        "path": "images/optimized/ceiling-restoration-before-after-bce50e0227ba-1542w.webp",
+        "width": 1542,
+        "height": 1020,
+        "bytes": 112544
+      }
+    ]
+  },
+  "images/projects/service-proof/garage-redrywall-after.jpeg": {
+    "sha256": "3da86454655d45432c1d00875b632875abba4984646ee24731f8a0680336ed2c",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 53952,
+    "original_width": 1280,
+    "original_height": 720,
+    "variants": [
+      {
+        "path": "images/optimized/garage-redrywall-after-7bf9983ae527-480w.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 8634
+      },
+      {
+        "path": "images/optimized/garage-redrywall-after-7bf9983ae527-800w.webp",
+        "width": 800,
+        "height": 450,
+        "bytes": 16130
+      },
+      {
+        "path": "images/optimized/garage-redrywall-after-7bf9983ae527-1200w.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 24950
+      },
+      {
+        "path": "images/optimized/garage-redrywall-after-7bf9983ae527-1280w.webp",
+        "width": 1280,
+        "height": 720,
+        "bytes": 27176
+      }
+    ]
+  },
+  "images/projects/service-proof/garage-redrywall-demolition.jpeg": {
+    "sha256": "79a24aae0febc23ab5159bcb8664c2e7ebdc1b849c32abff40a6f06462a8baa5",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 956595,
+    "original_width": 4032,
+    "original_height": 3024,
+    "variants": [
+      {
+        "path": "images/optimized/garage-redrywall-demolition-e561a4257870-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 27972
+      },
+      {
+        "path": "images/optimized/garage-redrywall-demolition-e561a4257870-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 66496
+      },
+      {
+        "path": "images/optimized/garage-redrywall-demolition-e561a4257870-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 121358
+      },
+      {
+        "path": "images/optimized/garage-redrywall-demolition-e561a4257870-1600w.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 186266
+      }
+    ]
+  },
+  "images/projects/service-proof/high-ceiling-scaffold.webp": {
+    "sha256": "da190dae42950e1ef81aac869b0f423a5333b21fbd9e3e90d2deea393633b10e",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 210976,
+    "original_width": 1200,
+    "original_height": 1600,
+    "variants": [
+      {
+        "path": "images/optimized/high-ceiling-scaffold-c315859d0f0d-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 45890
+      },
+      {
+        "path": "images/optimized/high-ceiling-scaffold-c315859d0f0d-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 103612
+      },
+      {
+        "path": "images/optimized/high-ceiling-scaffold-c315859d0f0d-1200w.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 195198
+      }
+    ]
+  },
+  "images/projects/service-proof/office-walls-after.jpeg": {
+    "sha256": "62be9632537fc4a31716c00cc1df1301b6125598921e41d33826b9cd944f200c",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 142753,
+    "original_width": 1200,
+    "original_height": 1600,
+    "variants": [
+      {
+        "path": "images/optimized/office-walls-after-1fafe6859981-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 25992
+      },
+      {
+        "path": "images/optimized/office-walls-after-1fafe6859981-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 58970
+      },
+      {
+        "path": "images/optimized/office-walls-after-1fafe6859981-1200w.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 107816
+      }
+    ]
+  },
+  "images/projects/service-proof/office-walls-before.jpeg": {
+    "sha256": "88e875b8fc76a85dae250da1834b6470b1eac8e5edbe83b4014fce47f98f6046",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 148322,
+    "original_width": 1200,
+    "original_height": 1600,
+    "variants": [
+      {
+        "path": "images/optimized/office-walls-before-52a124547564-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 26218
+      },
+      {
+        "path": "images/optimized/office-walls-before-52a124547564-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 59606
+      },
+      {
+        "path": "images/optimized/office-walls-before-52a124547564-1200w.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 111424
+      }
+    ]
+  },
+  "images/projects/service-proof/room-refinish-after.jpeg": {
+    "sha256": "8eaaf5a7911fb8852fccf92e6beb745103c31bb9f02d3d0d67a35318276cc1f9",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 210901,
+    "original_width": 1600,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/room-refinish-after-a071667a27b6-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 24142
+      },
+      {
+        "path": "images/optimized/room-refinish-after-a071667a27b6-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 58014
+      },
+      {
+        "path": "images/optimized/room-refinish-after-a071667a27b6-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 118252
+      },
+      {
+        "path": "images/optimized/room-refinish-after-a071667a27b6-1600w.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 188778
+      }
+    ]
+  },
+  "images/projects/service-proof/room-refinish-before.jpeg": {
+    "sha256": "1c58029b303bd45fd9285d174e5662568126137dcdd9f1bb73e2e63ea87b7d57",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 163221,
+    "original_width": 1179,
+    "original_height": 882,
+    "variants": [
+      {
+        "path": "images/optimized/room-refinish-before-5ca60666e488-480w.webp",
+        "width": 480,
+        "height": 359,
+        "bytes": 38538
+      },
+      {
+        "path": "images/optimized/room-refinish-before-5ca60666e488-800w.webp",
+        "width": 800,
+        "height": 598,
+        "bytes": 85704
+      },
+      {
+        "path": "images/optimized/room-refinish-before-5ca60666e488-1179w.webp",
+        "width": 1179,
+        "height": 882,
+        "bytes": 153242
+      }
+    ]
+  },
+  "images/projects/service-proof/textured-wall-patch-after.jpeg": {
+    "sha256": "fa08ae12980b6fc19cd26045be1397b5098efa50679be8d0772554a3648776db",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 173435,
+    "original_width": 1200,
+    "original_height": 1600,
+    "variants": [
+      {
+        "path": "images/optimized/textured-wall-patch-after-ca20c4dc78db-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 33568
+      },
+      {
+        "path": "images/optimized/textured-wall-patch-after-ca20c4dc78db-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 80878
+      },
+      {
+        "path": "images/optimized/textured-wall-patch-after-ca20c4dc78db-1200w.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 146474
+      }
+    ]
+  },
+  "images/projects/service-proof/textured-wall-patch-before.jpeg": {
+    "sha256": "2a7ebe01ed3c48ddb826e3500cfdceb0917ebcd6b922abbb406c7809ac8761b8",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 159217,
+    "original_width": 1200,
+    "original_height": 1600,
+    "variants": [
+      {
+        "path": "images/optimized/textured-wall-patch-before-8eb7e94236b8-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 32864
+      },
+      {
+        "path": "images/optimized/textured-wall-patch-before-8eb7e94236b8-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 70446
+      },
+      {
+        "path": "images/optimized/textured-wall-patch-before-8eb7e94236b8-1200w.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 126876
+      }
+    ]
+  }
+}
