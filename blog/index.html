@@ -49,14 +49,14 @@
             <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Drywall &amp; Sheetrock Guides</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
                 <a href="drywall-repair-cost-dfw.html" class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-red-600 transition"><div class="text-xs text-red-600 font-bold uppercase mb-2">Cost Guide</div><h3 class="font-bold text-slate-900 mb-2">Drywall Repair Cost Guide for DFW Homeowners</h3><p class="text-sm text-slate-600">What patches, ceilings, water damage, and popcorn removal actually cost.</p></a>
-                <a href="popcorn-ceiling-removal-dfw.html" class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-red-600 transition"><div class="text-xs text-red-600 font-bold uppercase mb-2">Guide</div><h3 class="font-bold text-slate-900 mb-2">Popcorn Ceiling Removal in DFW: Cost &amp; Process</h3><p class="text-sm text-slate-600">The step-by-step, asbestos in older homes, and finish options.</p></a>
+                <a href="popcorn-ceiling-removal-dfw.html" class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-red-600 transition"><div class="text-xs text-red-600 font-bold uppercase mb-2">Guide</div><h3 class="font-bold text-slate-900 mb-2">Popcorn Ceiling Removal in DFW: Cost &amp; Process</h3><p class="text-sm text-slate-600">Ceiling assessment, repair scope, finish options and what to include in your quote.</p></a>
                 <a href="drywall-cracks-nail-pops-water-damage-dfw.html" class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-red-600 transition"><div class="text-xs text-red-600 font-bold uppercase mb-2">Guide</div><h3 class="font-bold text-slate-900 mb-2">Drywall Cracks, Nail Pops &amp; Water Damage</h3><p class="text-sm text-slate-600">Why DFW homes crack, which signs matter, and how each is fixed.</p></a>
             </div>
 
             <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Flooring Guides</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
                 <a href="best-flooring-dfw-homes.html" class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-red-600 transition"><div class="text-xs text-red-600 font-bold uppercase mb-2">Guide</div><h3 class="font-bold text-slate-900 mb-2">Best Flooring for DFW Homes: LVP, Hardwood, Tile &amp; Carpet</h3><p class="text-sm text-slate-600">How to choose the right floor room by room for the North Texas climate.</p></a>
-                <a href="lvp-vs-hardwood.html" class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-red-600 transition"><div class="text-xs text-red-600 font-bold uppercase mb-2">Guide</div><h3 class="font-bold text-slate-900 mb-2">LVP vs. Engineered Hardwood: Which Holds Up in DFW?</h3><p class="text-sm text-slate-600">The waterproof vs. real-wood tradeoff for Texas homes.</p></a>
+                <a href="lvp-vs-hardwood.html" class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-red-600 transition"><div class="text-xs text-red-600 font-bold uppercase mb-2">Guide</div><h3 class="font-bold text-slate-900 mb-2">LVP vs. Engineered Hardwood: Which Holds Up in DFW?</h3><p class="text-sm text-slate-600">Compare moisture limits, wear, subfloor preparation and the complete installation scope.</p></a>
                 <a href="flooring-cost-dfw.html" class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-red-600 transition"><div class="text-xs text-red-600 font-bold uppercase mb-2">Cost Guide</div><h3 class="font-bold text-slate-900 mb-2">Flooring Installation Cost Guide for DFW</h3><p class="text-sm text-slate-600">Per-square-foot pricing for LVP, hardwood, tile, and carpet.</p></a>
             </div>
 
@@ -94,7 +94,7 @@
 
             <h2 class="text-2xl font-extrabold text-slate-900 mb-6">Case Studies</h2>
             <div class="grid md:grid-cols-2 gap-5">
-                <a href="case-room-refresh-north-dfw.html" class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-red-600 transition"><div class="text-xs text-red-600 font-bold uppercase mb-2">Case Study &middot; Real Photos</div><h3 class="font-bold text-slate-900 mb-2">From a Patched Wall to a Full Room Refresh: Real North DFW Before &amp; Afters</h3></a>
+                <a href="case-room-refresh-north-dfw.html" class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-red-600 transition"><div class="text-xs text-red-600 font-bold uppercase mb-2">Project Photos &middot; Planning</div><h3 class="font-bold text-slate-900 mb-2">Room Refresh Before &amp; After: North DFW Project Photos</h3><p class="text-sm text-slate-600">Separate room, garage drywall and flooring comparisons, with a checklist for planning your own scope.</p></a>
                 <a href="case-plano-master-bath.html" class="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl hover:border-red-600 transition"><div class="text-xs text-red-600 font-bold uppercase mb-2">Case Study</div><h3 class="font-bold text-slate-900 mb-2">Plano Master Bath: Tub-to-Walk-in-Shower Conversion</h3></a>
             </div>
         </div>
@@ -112,26 +112,33 @@
   var header = document.querySelector('header');
   if (!nav || !header) return;
   var btn = document.createElement('button');
+  btn.type = 'button';
   btn.className = 'lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg text-slate-700 hover:bg-slate-100 mr-1';
   btn.setAttribute('aria-label','Toggle menu');
+  btn.setAttribute('aria-expanded','false');
+  btn.setAttribute('aria-controls','blog-index-mobile-nav');
   btn.innerHTML = '<svg id="mm-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg><svg id="mm-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>';
   var ctaGroup = header.querySelector('div.flex.items-center.gap-3');
   if (ctaGroup) ctaGroup.insertBefore(btn, ctaGroup.firstChild);
+  else header.firstElementChild.insertBefore(btn, nav.nextElementSibling);
   var panel = document.createElement('div');
+  panel.id = 'blog-index-mobile-nav';
   panel.className = 'lg:hidden hidden fixed inset-x-0 top-20 bg-white border-b border-slate-200 shadow-2xl z-40 max-h-[calc(100vh-5rem)] overflow-y-auto';
   var html = '<div class="max-w-7xl mx-auto px-4 py-6"><nav class="flex flex-col gap-1">';
   nav.querySelectorAll('a').forEach(function(a){
     html += '<a href="'+a.getAttribute('href')+'" class="block px-4 py-3 text-lg font-bold text-slate-800 hover:text-red-600 hover:bg-red-50 rounded-lg border-b border-slate-100">'+a.textContent.trim()+'</a>';
   });
-  html += '</nav><a href="tel:+14696175235" class="mt-5 inline-flex items-center justify-center w-full px-5 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow-lg">Call (469) 617-5235</a><a href="#contact" class="mt-3 inline-flex items-center justify-center w-full px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg">Get a Free Estimate</a></div>';
+  html += '</nav><a href="tel:+14696175235" class="mt-5 inline-flex items-center justify-center w-full px-5 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow-lg">Call (469) 617-5235</a><a href="/contact.html" class="mt-3 inline-flex items-center justify-center w-full px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg">Discuss Your Project</a></div>';
   panel.innerHTML = html;
   header.parentNode.insertBefore(panel, header.nextSibling);
   function toggle(){
     var open = panel.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', String(open));
     document.getElementById('mm-icon-open').classList.toggle('hidden', open);
     document.getElementById('mm-icon-close').classList.toggle('hidden', !open);
   }
   btn.addEventListener('click', toggle);
+  document.addEventListener('keydown', function(event){ if (event.key === 'Escape' && !panel.classList.contains('hidden')) { toggle(); btn.focus(); } });
   panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if (!panel.classList.contains('hidden')) toggle(); }); });
 })();
 </script>
