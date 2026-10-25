@@ -261,23 +261,23 @@
  },
  "drywall/addison.html": {
   "lastmod": "2026-10-25",
-  "sha256": "fe47c9561e42d525ff0175083e71f36505a8a6555207a89a3a98d5d50dd3e60c"
+  "sha256": "c82c98e7284965b29ecce10b61af869e00254678e7518a3ae89ffbdda0380419"
  },
  "drywall/allen.html": {
   "lastmod": "2026-10-25",
-  "sha256": "442bc0453041eabdc0c35aafdf2a871bf5c74fc574f49e747309607876279a8d"
+  "sha256": "5ad0f32adebf2892c82d98b32e0dc1f64d6859d74639a2e546dc8e34cb9ea286"
  },
  "drywall/carrollton.html": {
   "lastmod": "2026-10-25",
-  "sha256": "4eb262f4630d5f3bba29008781b926c510c7b4855fb3f292be92e2558f0046bb"
+  "sha256": "7384cac07f37530b89f41eee39755be5ebe68e1fa155a01c3c86a1b5668a7432"
  },
  "drywall/celina.html": {
   "lastmod": "2026-10-25",
-  "sha256": "4a280a7e163e4beeabc534c34f2d0fd42ce8fe451f876607f0c0579a6eea8e0b"
+  "sha256": "0f11f4fd8353d721258635f9ad3797214d43647ddc9a1cc53c11330f72ac0f7b"
  },
  "drywall/coppell.html": {
   "lastmod": "2026-10-25",
-  "sha256": "c29de648f651c0d03a04498e06d8dfe3aee1b2e730e92260b2953b5ec5223b47"
+  "sha256": "6f4abc5829af5eabf00309fe5267f4908bdc761c2aba605a01ceb68a5643415e"
  },
  "drywall/frisco.html": {
   "lastmod": "2026-10-25",
@@ -285,23 +285,23 @@
  },
  "drywall/garland.html": {
   "lastmod": "2026-10-25",
-  "sha256": "d3ab10bb62be34bb44148d8a4525a68f1a93a4ebf13bbbf1f68d921fbb8e57d3"
+  "sha256": "48ddf156810e338392931ef9a1df3772cd9ed372233d802df806dbe117d70ba2"
  },
  "drywall/lewisville.html": {
   "lastmod": "2026-10-25",
-  "sha256": "953a8e6c1f90c794e00071e08415b25e586a6e96abfc092496adfe99b4663184"
+  "sha256": "362b6e867cd6edd6447f35dc2589bf6e6aeda6f7a538928e9e2a37066309d112"
  },
  "drywall/little-elm.html": {
   "lastmod": "2026-10-25",
-  "sha256": "4d1da80c03415ede6447f6c2d20d8a544bd3f5e6e58316a4c55f6e4c66519021"
+  "sha256": "b38087307ecce741106d1854301e14eec4808de06b00586c4726e1a20cb0d2bc"
  },
  "drywall/mckinney.html": {
   "lastmod": "2026-10-25",
-  "sha256": "5a0537f95e33f5cebee000513d842316a7b9079b270ec0d1d6ea95225c7eaa11"
+  "sha256": "e268efb69dcfd9af19cb0d2bbae3cb7f5ac1c641b6c9c06133eb263b835da4c9"
  },
  "drywall/murphy.html": {
   "lastmod": "2026-10-25",
-  "sha256": "01b1ad13bf3f1feb96b7670786910aa1467317ea7cf2ca6185b40317156aca08"
+  "sha256": "d9f6adaa517edc83034cdbb71fb53a5cbb104b49dafd42de5048cc11733bee50"
  },
  "drywall/plano.html": {
   "lastmod": "2026-10-25",
@@ -309,27 +309,27 @@
  },
  "drywall/prosper.html": {
   "lastmod": "2026-10-25",
-  "sha256": "ab6d9e532044df973a139463e4e2fce9aaffcecddb219675e013380e814ccdd8"
+  "sha256": "aa87810dbc75f00c545670594df74e23db4a41fd02ed7a7ab9199894fbd66ac7"
  },
  "drywall/richardson.html": {
   "lastmod": "2026-10-25",
-  "sha256": "19e72d2ec0564d6298e9d6b8a4837ddc1d7a5814dc0b0279a39101bd01a8fabf"
+  "sha256": "1178fa1a210f10e7d7370cfb4a94768edc46eed807b953b47f2293a36cfa9c03"
  },
  "drywall/rowlett.html": {
   "lastmod": "2026-10-25",
-  "sha256": "f4277f4fb35591795c94765e887d72376514048ef1d02ac60d8cc55c6b2c7036"
+  "sha256": "5ffd03073f3358379a05b680113d1ed9a1ec605a343676ae0e0226f44bb2772e"
  },
  "drywall/sachse.html": {
   "lastmod": "2026-10-25",
-  "sha256": "a4e977dd26e1044e8f07e6dc208c3cea488fed5cd029bce92f2697c0e426a3ae"
+  "sha256": "f920102bb60a44bd8dd314619d60ba9b54c85a6352bd4ed94d8cff3667480c2b"
  },
  "drywall/the-colony.html": {
   "lastmod": "2026-10-25",
-  "sha256": "d7760f47dbbbbd98e4c75d1a377365fd37cb383a77cd9967e788ae5293b6f921"
+  "sha256": "82501de6d6c648920a52158df3d3aead36afe960bc5624f2a83ea2133841386d"
  },
  "drywall/wylie.html": {
   "lastmod": "2026-10-25",
-  "sha256": "cdefd37c6f7f59e0c0fb8d261f3d60066cf4bc6f72859cfc1c67619a89d068b0"
+  "sha256": "1f8f7b9a13fdf1921c37b867510ec829c3ad9a4b406833386806f700844f4023"
  },
  "flooring/addison.html": {
   "lastmod": "2026-10-25",
