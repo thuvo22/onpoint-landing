@@ -187,7 +187,8 @@
   // ---- sticky bar (mobile only) ----------------------------------------
   function mountBar(hasForm) {
     if (document.querySelector('.opp-sticky-bar')) return;
-    var target = isHomepage ? '/contact.html' : (hasForm ? '#estimate' : '/contact.html');
+    var contactTarget = '/contact.html' + (Object.prototype.hasOwnProperty.call(serviceLabels, serviceType) ? '?service=' + encodeURIComponent(serviceType) : '');
+    var target = isHomepage ? '/contact.html' : (hasForm ? '#estimate' : contactTarget);
     var actionLabel = isBathroom ? 'Planning Call' : 'Request a Quote';
     var bar = document.createElement('div');
     bar.className = 'opp-sticky-bar sm:hidden fixed inset-x-0 bottom-0 z-40 bg-white/95 backdrop-blur border-t border-slate-200 px-3 py-2 flex gap-2';
@@ -211,7 +212,7 @@
 
   function init() {
     var sec = document.getElementById('estimate');
-    var declaredService = sec ? sec.getAttribute('data-service') : '';
+    var declaredService = (sec && sec.getAttribute('data-service')) || document.body.getAttribute('data-contact-service') || '';
     isBathroom = path === '/services/bathroom-remodel.html' || /^\/bathroom\//.test(path) || declaredService === 'bathroom';
     serviceType = isBathroom ? 'bathroom' : (Object.prototype.hasOwnProperty.call(serviceLabels, declaredService) ? declaredService :
       (/^\/drywall\/|\/drywall-repair\.html$/.test(path) ? 'repairs' :
