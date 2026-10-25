@@ -17,7 +17,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://onpointprostx.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://onpointprostx.com/blog/"},{"@type":"ListItem","position":3,"name":"Small Bathroom Remodel Ideas That Actually Work in DFW Homes","item":"https://onpointprostx.com/blog/small-bathroom-remodel-ideas-dfw.html"}]}</script>
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it worth remodeling a small bathroom in DFW?", "acceptedAnswer": {"@type": "Answer", "text": "It can improve daily use, but the right scope depends on your budget and goals. OnPoint Pros full bathroom remodels start at $20,000; a smaller cosmetic refresh is a different scope, so confirm fit on the planning call."}}, {"@type": "Question", "name": "What's the best flooring for a small DFW bathroom?", "acceptedAnswer": {"@type": "Answer", "text": "Large-format porcelain tile or quality luxury vinyl plank both look great and survive moisture. We usually steer clients away from natural stone in bathrooms because it stains and needs sealing."}}, {"@type": "Question", "name": "Can you remodel a small bathroom without moving plumbing?", "acceptedAnswer": {"@type": "Answer", "text": "Often, yes: keeping the toilet, vanity, and shower in place keeps the project affordable. We only recommend moving plumbing when the existing layout truly doesn't work."}}]}</script>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased">
+<body data-contact-service="bathroom" class="bg-slate-50 text-slate-800 antialiased">
 
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
@@ -86,25 +86,32 @@
   if (!nav || !header) return;
   var btn = document.createElement('button');
   btn.className = 'lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg text-slate-700 hover:bg-slate-100 mr-1';
+  btn.setAttribute('type','button');
   btn.setAttribute('aria-label','Toggle menu');
+  btn.setAttribute('aria-expanded','false');
+  btn.setAttribute('aria-controls','small-bathroom-remodel-ideas-dfw-mobile-nav');
   btn.innerHTML = '<svg id="mm-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg><svg id="mm-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>';
   var ctaGroup = header.querySelector('div.flex.items-center.gap-3');
   if (ctaGroup) ctaGroup.insertBefore(btn, ctaGroup.firstChild);
+  else header.firstElementChild.insertBefore(btn, nav.nextElementSibling);
   var panel = document.createElement('div');
+  panel.id = 'small-bathroom-remodel-ideas-dfw-mobile-nav';
   panel.className = 'lg:hidden hidden fixed inset-x-0 top-20 bg-white border-b border-slate-200 shadow-2xl z-40 max-h-[calc(100vh-5rem)] overflow-y-auto';
   var html = '<div class="max-w-7xl mx-auto px-4 py-6"><nav class="flex flex-col gap-1">';
   nav.querySelectorAll('a').forEach(function(a){
     html += '<a href="'+a.getAttribute('href')+'" class="block px-4 py-3 text-lg font-bold text-slate-800 hover:text-red-600 hover:bg-red-50 rounded-lg border-b border-slate-100">'+a.textContent.trim()+'</a>';
   });
-  html += '</nav><a href="tel:+14696175235" class="mt-5 inline-flex items-center justify-center w-full px-5 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow-lg">Call (469) 617-5235</a><a href="/contact.html" class="mt-3 inline-flex items-center justify-center w-full px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg">Discuss Your Project</a></div>';
+  html += '</nav><a href="tel:+14696175235" class="mt-5 inline-flex items-center justify-center w-full px-5 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow-lg">Call (469) 617-5235</a><a href="/contact.html?service=bathroom" class="mt-3 inline-flex items-center justify-center w-full px-5 py-4 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-lg">Request a Bathroom Planning Call</a></div>';
   panel.innerHTML = html;
   header.parentNode.insertBefore(panel, header.nextSibling);
   function toggle(){
     var open = panel.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', String(open));
     document.getElementById('mm-icon-open').classList.toggle('hidden', open);
     document.getElementById('mm-icon-close').classList.toggle('hidden', !open);
   }
   btn.addEventListener('click', toggle);
+  document.addEventListener('keydown', function(event){ if (event.key === 'Escape' && !panel.classList.contains('hidden')) { toggle(); btn.focus(); } });
   panel.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ if (!panel.classList.contains('hidden')) toggle(); }); });
 })();
 </script>
