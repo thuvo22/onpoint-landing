@@ -327,29 +327,29 @@
     ]
   },
   "images/projects/proof-allen-after.webp": {
-    "sha256": "b5099c3c2bf8170118b2a8ca75f0adb7c7bdc4c8f54234e25c31569c032f25b4",
-    "recipe": "webp-q85-method6-lanczos-v1",
-    "original_bytes": 126878,
+    "sha256": "6999463524b44babbd18a3de53c38af7a47d32c4e0dee8255e39756fd5506283",
+    "recipe": "cwebp-q85-m6-resize-v1",
+    "original_bytes": 376240,
     "original_width": 969,
-    "original_height": 1623,
+    "original_height": 1622,
     "variants": [
       {
-        "path": "images/optimized/proof-allen-after-4b05338910fe-480w.webp",
+        "path": "images/optimized/proof-allen-after-4f0cd53cce88-480w.webp",
         "width": 480,
-        "height": 804,
-        "bytes": 31498
+        "height": 803,
+        "bytes": 43726
       },
       {
-        "path": "images/optimized/proof-allen-after-4b05338910fe-800w.webp",
+        "path": "images/optimized/proof-allen-after-4f0cd53cce88-800w.webp",
         "width": 800,
-        "height": 1340,
-        "bytes": 66368
+        "height": 1339,
+        "bytes": 100856
       },
       {
-        "path": "images/optimized/proof-allen-after-4b05338910fe-969w.webp",
+        "path": "images/optimized/proof-allen-after-4f0cd53cce88-969w.webp",
         "width": 969,
-        "height": 1623,
-        "bytes": 88536
+        "height": 1622,
+        "bytes": 167462
       }
     ]
   },
