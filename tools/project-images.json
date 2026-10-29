@@ -739,5 +739,68 @@
         "bytes": 126876
       }
     ]
+  },
+  "images/projects/frisco-primary-bathroom-shower-20261028.webp": {
+    "sha256": "51c78c64e49444e1e6f4dda926b6d589eacd4545f557143a52067b5ede47148c",
+    "recipe": "reuse-verified-landing-webp-20261028-v1",
+    "original_bytes": 129006,
+    "original_width": 1086,
+    "original_height": 1448,
+    "variants": [
+      {
+        "path": "images/optimized/frisco-primary-bathroom-shower-20261028-600w.webp",
+        "width": 600,
+        "height": 800,
+        "bytes": 42536
+      },
+      {
+        "path": "images/projects/frisco-primary-bathroom-shower-20261028.webp",
+        "width": 1086,
+        "height": 1448,
+        "bytes": 129006
+      }
+    ]
+  },
+  "images/projects/frisco-primary-bathroom-vanity-front-20261028.webp": {
+    "sha256": "80a7b86fe24fa7e6e86016280fa6db4943355f0ad39d5822f1d8b58085dff492",
+    "recipe": "reuse-verified-landing-webp-20261028-v1",
+    "original_bytes": 114070,
+    "original_width": 1086,
+    "original_height": 1448,
+    "variants": [
+      {
+        "path": "images/optimized/frisco-primary-bathroom-vanity-front-20261028-600w.webp",
+        "width": 600,
+        "height": 800,
+        "bytes": 34236
+      },
+      {
+        "path": "images/projects/frisco-primary-bathroom-vanity-front-20261028.webp",
+        "width": 1086,
+        "height": 1448,
+        "bytes": 114070
+      }
+    ]
+  },
+  "images/projects/frisco-primary-bathroom-vanity-angle-20261028.webp": {
+    "sha256": "1691b2e606076933773312462377e4396ecd0a461cf5448f619acecfcfa9367c",
+    "recipe": "reuse-verified-landing-webp-20261028-v1",
+    "original_bytes": 155000,
+    "original_width": 1086,
+    "original_height": 1448,
+    "variants": [
+      {
+        "path": "images/optimized/frisco-primary-bathroom-vanity-angle-20261028-600w.webp",
+        "width": 600,
+        "height": 800,
+        "bytes": 42328
+      },
+      {
+        "path": "images/projects/frisco-primary-bathroom-vanity-angle-20261028.webp",
+        "width": 1086,
+        "height": 1448,
+        "bytes": 155000
+      }
+    ]
   }
 }
