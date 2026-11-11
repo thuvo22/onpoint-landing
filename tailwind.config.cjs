@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     './*.html',
-    './{services,dfw,bathroom,drywall,flooring,painting,blog,before,list}/**/*.html',
+    './{services,dfw,bathroom,drywall,flooring,painting,blog,before,list,the-colony}/**/*.html',
     './*.js',
   ],
   theme: {

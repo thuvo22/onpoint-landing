@@ -20,7 +20,11 @@
 (function () {
   var path = location.pathname;
   if (/^\/list\/?/.test(path) || /\/contact\.html$/.test(path)) return;
-  var PHONE_DISPLAY = '(469) 617-5235', PHONE_TEL = 'tel:+14696175235';
+  // A folder that is its own business (the Colony drywall office) sets
+  // data-phone / data-tel on <body>; everything else keeps the Allen line.
+  var bodyEl = document.body;
+  var PHONE_DISPLAY = (bodyEl && bodyEl.getAttribute('data-phone')) || '(469) 617-5235';
+  var PHONE_TEL = (bodyEl && bodyEl.getAttribute('data-tel')) || 'tel:+14696175235';
   var API = 'https://api.onpointpros.io/leads/landing-list';
   var isBathroom = false;
   var isHomepage = path === '/' || path === '/index.html';
@@ -215,7 +219,7 @@
     var declaredService = (sec && sec.getAttribute('data-service')) || document.body.getAttribute('data-contact-service') || '';
     isBathroom = path === '/services/bathroom-remodel.html' || /^\/bathroom\//.test(path) || declaredService === 'bathroom';
     serviceType = isBathroom ? 'bathroom' : (Object.prototype.hasOwnProperty.call(serviceLabels, declaredService) ? declaredService :
-      (/^\/drywall\/|\/drywall-repair\.html$/.test(path) ? 'repairs' :
+      (/^\/drywall\/|^\/the-colony\/|\/drywall-repair\.html$/.test(path) ? 'repairs' :
       (/^\/painting\/|\/painting\.html$/.test(path) ? 'painting' :
       (/^\/flooring\/|\/flooring\.html$/.test(path) ? 'flooring' : 'unspecified'))));
     var hasForm = mountForm();
