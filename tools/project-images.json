@@ -1,4 +1,847 @@
 {
+  "images/colony/ceiling-01.jpg": {
+    "sha256": "6ce187bd3bcfb1845c0b4325bf02a3830cf92d7b64b0c63440c64e7d0aa7ec78",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 51874,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-01-204296706acc-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 6702
+      },
+      {
+        "path": "images/optimized/ceiling-01-204296706acc-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 14670
+      },
+      {
+        "path": "images/optimized/ceiling-01-204296706acc-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 29484
+      }
+    ]
+  },
+  "images/colony/ceiling-02.jpg": {
+    "sha256": "58125f269e38949e0ca741f130e4a641bc02d4fad6a1cbb9586b18a6af3e0f78",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 75201,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-02-c4e5ffef7393-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 8196
+      },
+      {
+        "path": "images/optimized/ceiling-02-c4e5ffef7393-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 23144
+      },
+      {
+        "path": "images/optimized/ceiling-02-c4e5ffef7393-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 52680
+      }
+    ]
+  },
+  "images/colony/ceiling-03.jpg": {
+    "sha256": "097acfbb9337cd1b0aaac169b54af46d60fe1e7895aee9717face9eabc14ac62",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 51045,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-03-e32568c885c7-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 4128
+      },
+      {
+        "path": "images/optimized/ceiling-03-e32568c885c7-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 12286
+      },
+      {
+        "path": "images/optimized/ceiling-03-e32568c885c7-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 29330
+      }
+    ]
+  },
+  "images/colony/ceiling-04.jpg": {
+    "sha256": "c9eed858d9ba092b7b1c509970a1075feb19743130b451c1f04c13c35a46c3d0",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 154539,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-04-aa153a69314a-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 27488
+      },
+      {
+        "path": "images/optimized/ceiling-04-aa153a69314a-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 76586
+      },
+      {
+        "path": "images/optimized/ceiling-04-aa153a69314a-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 158716
+      }
+    ]
+  },
+  "images/colony/ceiling-05.jpg": {
+    "sha256": "9ab9b767e76ae98a90ed55ec1bb2730c7b98465db3b508fe829f0f4eb507842f",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 144050,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-05-1839fe649ee4-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 30608
+      },
+      {
+        "path": "images/optimized/ceiling-05-1839fe649ee4-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 67332
+      },
+      {
+        "path": "images/optimized/ceiling-05-1839fe649ee4-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 125606
+      }
+    ]
+  },
+  "images/colony/ceiling-07.jpg": {
+    "sha256": "948bb4ad3c45705ef91562564101191121247654b29c64e42c37a1165adda850",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 230269,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-07-78f6dafb7e4e-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 37756
+      },
+      {
+        "path": "images/optimized/ceiling-07-78f6dafb7e4e-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 130186
+      },
+      {
+        "path": "images/optimized/ceiling-07-78f6dafb7e4e-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 286384
+      }
+    ]
+  },
+  "images/colony/ceiling-09.jpg": {
+    "sha256": "901cdd39aadea945bf137718495fa16c7a8d61d82c43b7144194d11b4020f3fe",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 108407,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-09-2ff6ad0c025b-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 13230
+      },
+      {
+        "path": "images/optimized/ceiling-09-2ff6ad0c025b-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 41174
+      },
+      {
+        "path": "images/optimized/ceiling-09-2ff6ad0c025b-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 87084
+      }
+    ]
+  },
+  "images/colony/ceiling-10.jpg": {
+    "sha256": "9bc85c55695e42442b2c07c13daf9b19fa44098e43014f017704d4c2af1ea672",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 67042,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-10-ce078270ad13-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 10616
+      },
+      {
+        "path": "images/optimized/ceiling-10-ce078270ad13-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 23158
+      },
+      {
+        "path": "images/optimized/ceiling-10-ce078270ad13-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 41362
+      }
+    ]
+  },
+  "images/colony/hero-garage-drywall.jpg": {
+    "sha256": "dc34a5408e7795ccd13df9f2ecbe788104a5c0394b1f446488242d064f6ed31c",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 248194,
+    "original_width": 1600,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/hero-garage-drywall-e1f63cac6453-480w.webp",
+        "width": 480,
+        "height": 270,
+        "bytes": 24982
+      },
+      {
+        "path": "images/optimized/hero-garage-drywall-e1f63cac6453-800w.webp",
+        "width": 800,
+        "height": 450,
+        "bytes": 61518
+      },
+      {
+        "path": "images/optimized/hero-garage-drywall-e1f63cac6453-1200w.webp",
+        "width": 1200,
+        "height": 675,
+        "bytes": 121882
+      },
+      {
+        "path": "images/optimized/hero-garage-drywall-e1f63cac6453-1600w.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 191882
+      }
+    ]
+  },
+  "images/colony/install-01.jpg": {
+    "sha256": "81354e9a5e0d54f8c9c8a5e7f8565b9cf9b4324623f0567bdab458c33f1ddbd2",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 109657,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/install-01-875f7c0e6969-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 22266
+      },
+      {
+        "path": "images/optimized/install-01-875f7c0e6969-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 45546
+      },
+      {
+        "path": "images/optimized/install-01-875f7c0e6969-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 79736
+      }
+    ]
+  },
+  "images/colony/install-02.jpg": {
+    "sha256": "e1fb69b5e2edacbff5165bd8ad4a9d9f3d66a62e076b9a1fee921221a9aab1a3",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 86750,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/install-02-9d4d39ff513b-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 14482
+      },
+      {
+        "path": "images/optimized/install-02-9d4d39ff513b-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 29960
+      },
+      {
+        "path": "images/optimized/install-02-9d4d39ff513b-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 56426
+      }
+    ]
+  },
+  "images/colony/install-03.jpg": {
+    "sha256": "694dd25c3c593ce7813dfd68365ad6204cdb056ae8d2907f93807b8d43a88238",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 81107,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/install-03-8f7418b34bda-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 12962
+      },
+      {
+        "path": "images/optimized/install-03-8f7418b34bda-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 26708
+      },
+      {
+        "path": "images/optimized/install-03-8f7418b34bda-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 52006
+      }
+    ]
+  },
+  "images/colony/install-04.jpg": {
+    "sha256": "a66d07283e9361dd604c25d052678d63042ecc21c52bc791390fa5c92c1771dc",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 189612,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/install-04-d860ba405e4b-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 38730
+      },
+      {
+        "path": "images/optimized/install-04-d860ba405e4b-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 93904
+      },
+      {
+        "path": "images/optimized/install-04-d860ba405e4b-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 176672
+      }
+    ]
+  },
+  "images/colony/install-05.jpg": {
+    "sha256": "f52f83f9ee8f034537ccc5d6d1469cfbbca2865032302de4d3c9cebedbe0c64f",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 154107,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/install-05-0d63740c0d31-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 34980
+      },
+      {
+        "path": "images/optimized/install-05-0d63740c0d31-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 75890
+      },
+      {
+        "path": "images/optimized/install-05-0d63740c0d31-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 129060
+      }
+    ]
+  },
+  "images/colony/install-06.jpg": {
+    "sha256": "cef425b0804d40693f839378ae0907b902026be930527d2f652345cf4c2adc98",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 179290,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/install-06-1f71e2c8e5e1-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 40998
+      },
+      {
+        "path": "images/optimized/install-06-1f71e2c8e5e1-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 94424
+      },
+      {
+        "path": "images/optimized/install-06-1f71e2c8e5e1-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 160062
+      }
+    ]
+  },
+  "images/colony/install-07.jpg": {
+    "sha256": "482914bdab48646c07fc0fcc28d8f421dcaf126371cb4ce7d472cade8785edb0",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 162498,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/install-07-c9f45b23b794-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 36074
+      },
+      {
+        "path": "images/optimized/install-07-c9f45b23b794-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 81800
+      },
+      {
+        "path": "images/optimized/install-07-c9f45b23b794-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 138194
+      }
+    ]
+  },
+  "images/colony/install-08.jpg": {
+    "sha256": "cab776f051c9f919ccec55cf5ab37c33693d071149b3cb29fb3e15decadf2cda",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 75572,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/install-08-054be893ae7d-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 12754
+      },
+      {
+        "path": "images/optimized/install-08-054be893ae7d-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 27530
+      },
+      {
+        "path": "images/optimized/install-08-054be893ae7d-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 52582
+      }
+    ]
+  },
+  "images/colony/install-09.jpg": {
+    "sha256": "5b6a0c1ee5f65e7a63cd80f8fbed5cd70c7f11048af3387f6e892a49987aa1ff",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 84184,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/install-09-dd3a99703a45-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 11752
+      },
+      {
+        "path": "images/optimized/install-09-dd3a99703a45-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 26506
+      },
+      {
+        "path": "images/optimized/install-09-dd3a99703a45-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 55660
+      }
+    ]
+  },
+  "images/colony/repair-03.jpg": {
+    "sha256": "c431165f2d8be928f7e18669da1c5cbd80fdfb562887c5ea5bbd6bcd85f8e814",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 93996,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/repair-03-241df1d2ad19-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 9172
+      },
+      {
+        "path": "images/optimized/repair-03-241df1d2ad19-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 34734
+      },
+      {
+        "path": "images/optimized/repair-03-241df1d2ad19-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 77808
+      }
+    ]
+  },
+  "images/colony/repair-04.jpg": {
+    "sha256": "649c82a8b43c6d309dca3931e2b408d6048e5da55c4ffe5234c51c9d42dd7020",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 46689,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/repair-04-a75d19135be3-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 3464
+      },
+      {
+        "path": "images/optimized/repair-04-a75d19135be3-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 9656
+      },
+      {
+        "path": "images/optimized/repair-04-a75d19135be3-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 25252
+      }
+    ]
+  },
+  "images/colony/repair-05.jpg": {
+    "sha256": "4f6546f6a9edd324fea48629ccd1a8be2ff00edcd883e408a7c72be8c6dc045f",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 205825,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/repair-05-4771d9b65d4a-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 38620
+      },
+      {
+        "path": "images/optimized/repair-05-4771d9b65d4a-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 106326
+      },
+      {
+        "path": "images/optimized/repair-05-4771d9b65d4a-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 217050
+      }
+    ]
+  },
+  "images/colony/repair-06.jpg": {
+    "sha256": "cfc65cb4a7ded601ed877f250e86b1c78f06a550777c369b45956f0a1d8cb206",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 168101,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/repair-06-38066fb10ee7-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 26196
+      },
+      {
+        "path": "images/optimized/repair-06-38066fb10ee7-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 78640
+      },
+      {
+        "path": "images/optimized/repair-06-38066fb10ee7-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 166668
+      }
+    ]
+  },
+  "images/colony/repair-07.jpg": {
+    "sha256": "67266f9d9ece265abb87b21cd60297f7965ca7ddea46df023e32842f9b60fe91",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 153586,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/repair-07-a6039964a66a-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 25402
+      },
+      {
+        "path": "images/optimized/repair-07-a6039964a66a-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 67460
+      },
+      {
+        "path": "images/optimized/repair-07-a6039964a66a-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 139404
+      }
+    ]
+  },
+  "images/colony/texture-01.jpg": {
+    "sha256": "4f76b6f0cb6b36a85723c71d4982e06fe9cf5427d30d2ede4226ead31e918bd1",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 130875,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/texture-01-437a25e01aed-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 24636
+      },
+      {
+        "path": "images/optimized/texture-01-437a25e01aed-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 63674
+      },
+      {
+        "path": "images/optimized/texture-01-437a25e01aed-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 114292
+      }
+    ]
+  },
+  "images/colony/texture-02.jpg": {
+    "sha256": "d7f0ba029e5b0ad68360bcb4d5acf5213dc1bd76ada1797e036535ebc9d6ffe3",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 99189,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/texture-02-d2ce83204575-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 15296
+      },
+      {
+        "path": "images/optimized/texture-02-d2ce83204575-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 38356
+      },
+      {
+        "path": "images/optimized/texture-02-d2ce83204575-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 81492
+      }
+    ]
+  },
+  "images/colony/texture-03.jpg": {
+    "sha256": "721e55119f28bb44edc8a890176071eac88cea9ce340ff0defa9020607bf04f5",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 79362,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/texture-03-1bce1c841da6-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 8788
+      },
+      {
+        "path": "images/optimized/texture-03-1bce1c841da6-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 30638
+      },
+      {
+        "path": "images/optimized/texture-03-1bce1c841da6-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 68144
+      }
+    ]
+  },
+  "images/colony/texture-04.jpg": {
+    "sha256": "3bfe255b545f2afc3b6a2eb5a582e8fc8a8dbf5d868d273b18ab050e16f89960",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 118361,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/texture-04-8b172ef9316e-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 23002
+      },
+      {
+        "path": "images/optimized/texture-04-8b172ef9316e-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 49600
+      },
+      {
+        "path": "images/optimized/texture-04-8b172ef9316e-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 90252
+      }
+    ]
+  },
+  "images/colony/texture-05.jpg": {
+    "sha256": "deec0478e1768dc69c28cdfdfd458abfbc2df6dabb5f5ca6ee7a5ea60fb84397",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 129532,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/texture-05-866ab89d0155-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 23708
+      },
+      {
+        "path": "images/optimized/texture-05-866ab89d0155-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 56158
+      },
+      {
+        "path": "images/optimized/texture-05-866ab89d0155-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 105158
+      }
+    ]
+  },
+  "images/colony/texture-06.jpg": {
+    "sha256": "d55ad98c959ca7618502347191d7ad6d8d38c3092dfc2bae5f59068e5fa345f2",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 124974,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/texture-06-b658bc01c7b7-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 24864
+      },
+      {
+        "path": "images/optimized/texture-06-b658bc01c7b7-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 54642
+      },
+      {
+        "path": "images/optimized/texture-06-b658bc01c7b7-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 97296
+      }
+    ]
+  },
+  "images/colony/texture-07.jpg": {
+    "sha256": "0e64fae5540b4b1f69be2c56f17f61f46273f7df74d33483a9fd2141532f04b2",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 98485,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/texture-07-8ccbdd209222-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 15338
+      },
+      {
+        "path": "images/optimized/texture-07-8ccbdd209222-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 35928
+      },
+      {
+        "path": "images/optimized/texture-07-8ccbdd209222-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 71306
+      }
+    ]
+  },
+  "images/colony/texture-09.jpg": {
+    "sha256": "dcfc18a301575e3b0dfab22f495ed7757bb862f4329d731db845e57488c949bc",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 126932,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/texture-09-9c6665c6399b-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 15716
+      },
+      {
+        "path": "images/optimized/texture-09-9c6665c6399b-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 52918
+      },
+      {
+        "path": "images/optimized/texture-09-9c6665c6399b-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 120824
+      }
+    ]
+  },
   "images/jobs/ba-01-wall-window.jpg": {
     "sha256": "8da3e8e51280975488c5c4986f129709ef637a0958870ea3dcb9b917f6b79ee0",
     "recipe": "webp-q85-method6-lanczos-v1",
@@ -185,39 +1028,6 @@
       }
     ]
   },
-  "images/jobs/ba-18-popcorn.jpg": {
-    "sha256": "5e28764300d4e8f735d294e39eecee3b74918658485c8d744370ba83c657bb9a",
-    "recipe": "webp-q85-method6-lanczos-v1",
-    "original_bytes": 155492,
-    "original_width": 1600,
-    "original_height": 656,
-    "variants": [
-      {
-        "path": "images/optimized/ba-18-popcorn-696d7571607b-480w.webp",
-        "width": 480,
-        "height": 197,
-        "bytes": 12190
-      },
-      {
-        "path": "images/optimized/ba-18-popcorn-696d7571607b-800w.webp",
-        "width": 800,
-        "height": 328,
-        "bytes": 31286
-      },
-      {
-        "path": "images/optimized/ba-18-popcorn-696d7571607b-1200w.webp",
-        "width": 1200,
-        "height": 492,
-        "bytes": 61952
-      },
-      {
-        "path": "images/optimized/ba-18-popcorn-696d7571607b-1600w.webp",
-        "width": 1600,
-        "height": 656,
-        "bytes": 96518
-      }
-    ]
-  },
   "images/jobs/ba-19-subfloor.jpg": {
     "sha256": "4e3a3e6be23a91069c5762c1dc37a5ffd4d085eade2b1d1ba95b0958768c06c2",
     "recipe": "webp-q85-method6-lanczos-v1",
@@ -242,6 +1052,87 @@
         "width": 1058,
         "height": 700,
         "bytes": 112684
+      }
+    ]
+  },
+  "images/projects/frisco-primary-bathroom-shower-20261028.webp": {
+    "sha256": "51c78c64e49444e1e6f4dda926b6d589eacd4545f557143a52067b5ede47148c",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 129006,
+    "original_width": 1086,
+    "original_height": 1448,
+    "variants": [
+      {
+        "path": "images/optimized/frisco-primary-bathroom-shower-20261028-3585768da580-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 34826
+      },
+      {
+        "path": "images/optimized/frisco-primary-bathroom-shower-20261028-3585768da580-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 78374
+      },
+      {
+        "path": "images/optimized/frisco-primary-bathroom-shower-20261028-3585768da580-1086w.webp",
+        "width": 1086,
+        "height": 1448,
+        "bytes": 121156
+      }
+    ]
+  },
+  "images/projects/frisco-primary-bathroom-vanity-angle-20261028.webp": {
+    "sha256": "1691b2e606076933773312462377e4396ecd0a461cf5448f619acecfcfa9367c",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 155000,
+    "original_width": 1086,
+    "original_height": 1448,
+    "variants": [
+      {
+        "path": "images/optimized/frisco-primary-bathroom-vanity-angle-20261028-d40d505a21a5-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 30602
+      },
+      {
+        "path": "images/optimized/frisco-primary-bathroom-vanity-angle-20261028-d40d505a21a5-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 84748
+      },
+      {
+        "path": "images/optimized/frisco-primary-bathroom-vanity-angle-20261028-d40d505a21a5-1086w.webp",
+        "width": 1086,
+        "height": 1448,
+        "bytes": 141472
+      }
+    ]
+  },
+  "images/projects/frisco-primary-bathroom-vanity-front-20261028.webp": {
+    "sha256": "80a7b86fe24fa7e6e86016280fa6db4943355f0ad39d5822f1d8b58085dff492",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 114070,
+    "original_width": 1086,
+    "original_height": 1448,
+    "variants": [
+      {
+        "path": "images/optimized/frisco-primary-bathroom-vanity-front-20261028-5b4b8a904db0-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 26406
+      },
+      {
+        "path": "images/optimized/frisco-primary-bathroom-vanity-front-20261028-5b4b8a904db0-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 66178
+      },
+      {
+        "path": "images/optimized/frisco-primary-bathroom-vanity-front-20261028-5b4b8a904db0-1086w.webp",
+        "width": 1086,
+        "height": 1448,
+        "bytes": 106790
       }
     ]
   },
@@ -328,25 +1219,25 @@
   },
   "images/projects/proof-allen-after.webp": {
     "sha256": "6999463524b44babbd18a3de53c38af7a47d32c4e0dee8255e39756fd5506283",
-    "recipe": "cwebp-q85-m6-resize-v1",
+    "recipe": "webp-q85-method6-lanczos-v1",
     "original_bytes": 376240,
     "original_width": 969,
     "original_height": 1622,
     "variants": [
       {
-        "path": "images/optimized/proof-allen-after-4f0cd53cce88-480w.webp",
+        "path": "images/optimized/proof-allen-after-ad01aeaba879-480w.webp",
         "width": 480,
         "height": 803,
-        "bytes": 43726
+        "bytes": 48472
       },
       {
-        "path": "images/optimized/proof-allen-after-4f0cd53cce88-800w.webp",
+        "path": "images/optimized/proof-allen-after-ad01aeaba879-800w.webp",
         "width": 800,
         "height": 1339,
-        "bytes": 100856
+        "bytes": 122794
       },
       {
-        "path": "images/optimized/proof-allen-after-4f0cd53cce88-969w.webp",
+        "path": "images/optimized/proof-allen-after-ad01aeaba879-969w.webp",
         "width": 969,
         "height": 1622,
         "bytes": 167462
@@ -737,69 +1628,6 @@
         "width": 1200,
         "height": 1600,
         "bytes": 126876
-      }
-    ]
-  },
-  "images/projects/frisco-primary-bathroom-shower-20261028.webp": {
-    "sha256": "51c78c64e49444e1e6f4dda926b6d589eacd4545f557143a52067b5ede47148c",
-    "recipe": "reuse-verified-landing-webp-20261028-v1",
-    "original_bytes": 129006,
-    "original_width": 1086,
-    "original_height": 1448,
-    "variants": [
-      {
-        "path": "images/optimized/frisco-primary-bathroom-shower-20261028-600w.webp",
-        "width": 600,
-        "height": 800,
-        "bytes": 42536
-      },
-      {
-        "path": "images/projects/frisco-primary-bathroom-shower-20261028.webp",
-        "width": 1086,
-        "height": 1448,
-        "bytes": 129006
-      }
-    ]
-  },
-  "images/projects/frisco-primary-bathroom-vanity-front-20261028.webp": {
-    "sha256": "80a7b86fe24fa7e6e86016280fa6db4943355f0ad39d5822f1d8b58085dff492",
-    "recipe": "reuse-verified-landing-webp-20261028-v1",
-    "original_bytes": 114070,
-    "original_width": 1086,
-    "original_height": 1448,
-    "variants": [
-      {
-        "path": "images/optimized/frisco-primary-bathroom-vanity-front-20261028-600w.webp",
-        "width": 600,
-        "height": 800,
-        "bytes": 34236
-      },
-      {
-        "path": "images/projects/frisco-primary-bathroom-vanity-front-20261028.webp",
-        "width": 1086,
-        "height": 1448,
-        "bytes": 114070
-      }
-    ]
-  },
-  "images/projects/frisco-primary-bathroom-vanity-angle-20261028.webp": {
-    "sha256": "1691b2e606076933773312462377e4396ecd0a461cf5448f619acecfcfa9367c",
-    "recipe": "reuse-verified-landing-webp-20261028-v1",
-    "original_bytes": 155000,
-    "original_width": 1086,
-    "original_height": 1448,
-    "variants": [
-      {
-        "path": "images/optimized/frisco-primary-bathroom-vanity-angle-20261028-600w.webp",
-        "width": 600,
-        "height": 800,
-        "bytes": 42328
-      },
-      {
-        "path": "images/projects/frisco-primary-bathroom-vanity-angle-20261028.webp",
-        "width": 1086,
-        "height": 1448,
-        "bytes": 155000
       }
     ]
   }

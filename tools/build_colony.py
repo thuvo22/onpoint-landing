@@ -60,14 +60,11 @@ def _p(cat, n, alt):
     return (f"/images/colony/{cat}-{n:02d}.jpg", alt, 1200, 900)
 
 REPAIR_PHOTOS = [
-    _p("repair", 1, "Before: a hole punched through the wall beside a door"),
-    _p("repair", 2, "After: the same wall patched, textured and painted"),
     _p("repair", 3, "Before: ceiling drywall torn open next to the attic access panel"),
     _p("repair", 4, "After: the ceiling patched, textured and painted around the panel"),
     _p("repair", 5, "Before: the wall under a window opened back to the insulation"),
     _p("repair", 6, "After: the same wall patched, textured and painted with the baseboard back on"),
     _p("repair", 7, "Our crew finishing new drywall in a two story entry, floors covered in plastic"),
-    _p("repair", 8, "Before: a small hole in a textured wall, the most common repair we see"),
 ]
 CEILING_PHOTOS = [
     _p("ceiling", 1, "Before: ceiling drywall torn open beside an air vent after a leak"),
@@ -100,12 +97,12 @@ INSTALL_PHOTOS = [
     _p("install", 8, "New drywall hung in a closet during a bath remodel"),
     _p("install", 9, "After: a small room finished smooth and primed"),
 ]
-MIX_PHOTOS = [REPAIR_PHOTOS[0], REPAIR_PHOTOS[1], CEILING_PHOTOS[1], CEILING_PHOTOS[2], TEXTURE_PHOTOS[3], INSTALL_PHOTOS[6]]
+MIX_PHOTOS = [REPAIR_PHOTOS[2], REPAIR_PHOTOS[3], CEILING_PHOTOS[1], CEILING_PHOTOS[2], TEXTURE_PHOTOS[3], INSTALL_PHOTOS[6]]
 CITY_PHOTOS = {
-    "lewisville": [INSTALL_PHOTOS[4], INSTALL_PHOTOS[6], CEILING_PHOTOS[0], REPAIR_PHOTOS[1]],
-    "little-elm": [REPAIR_PHOTOS[7], REPAIR_PHOTOS[1], INSTALL_PHOTOS[1], TEXTURE_PHOTOS[2]],
+    "lewisville": [INSTALL_PHOTOS[4], INSTALL_PHOTOS[6], CEILING_PHOTOS[0], REPAIR_PHOTOS[3]],
+    "little-elm": [REPAIR_PHOTOS[2], REPAIR_PHOTOS[3], INSTALL_PHOTOS[1], TEXTURE_PHOTOS[2]],
     "frisco": [CEILING_PHOTOS[1], CEILING_PHOTOS[2], TEXTURE_PHOTOS[6], INSTALL_PHOTOS[0]],
-    "plano": [TEXTURE_PHOTOS[0], TEXTURE_PHOTOS[2], REPAIR_PHOTOS[2], REPAIR_PHOTOS[3]],
+    "plano": [TEXTURE_PHOTOS[0], TEXTURE_PHOTOS[2], REPAIR_PHOTOS[0], REPAIR_PHOTOS[1]],
 }
 
 SERVICES = [

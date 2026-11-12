@@ -95,7 +95,7 @@ def main():
                 continue
             path = key(attrs.get('src' if tag == 'img' else 'poster',''),p.relative_to(ROOT).as_posix())
             path = reverse.get(path,path)
-            if path and path.startswith(('images/jobs/','images/projects/')):
+            if path and path.startswith(('images/jobs/','images/projects/','images/colony/')):
                 originals.add(path)
     manifest = {}
     (ROOT/'images/optimized').mkdir(exist_ok=True)
