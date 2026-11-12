@@ -273,11 +273,11 @@
  },
  "drywall/celina.html": {
   "lastmod": "2026-11-12",
-  "sha256": "8401473d743af123271d6cc93524e0a06a668cac3573f7afcdb97e89e449f6c0"
+  "sha256": "c4faead93886a3185e3f56fc047423f81a5dacb536ea2870d46c6019acdc38e0"
  },
  "drywall/coppell.html": {
   "lastmod": "2026-11-12",
-  "sha256": "98add95233f59c9841dd170c7bc6037b29d300da947d5e74e5dc3f67165c0f88"
+  "sha256": "6e8f97614897769e3c18514e11543116dbf766365f507f7b55d1c84f95df1230"
  },
  "drywall/frisco.html": {
   "lastmod": "2026-11-12",
@@ -285,7 +285,7 @@
  },
  "drywall/garland.html": {
   "lastmod": "2026-11-12",
-  "sha256": "889425779295042931ccac403ff6f07c965933378c343f1fd55fe8241e9b8a82"
+  "sha256": "7e8a822610baca8d277cfa82209a1423c7123c01c1920a8d1da331229b7c2ea7"
  },
  "drywall/lewisville.html": {
   "lastmod": "2026-11-12",
@@ -301,7 +301,7 @@
  },
  "drywall/murphy.html": {
   "lastmod": "2026-11-12",
-  "sha256": "d760892138523a8fd436c6807fbf24db50b6a1c8472078362d82d4b5bacab729"
+  "sha256": "3a210b9a513cd4eb121cd4cc57e8211b5f6980b379dd3257a45f9f9e2af79af4"
  },
  "drywall/plano.html": {
   "lastmod": "2026-11-12",
@@ -309,19 +309,19 @@
  },
  "drywall/prosper.html": {
   "lastmod": "2026-11-12",
-  "sha256": "583a008ef377cff88e47779330849b5fcf8728ef30abdbd419f6f1ebb6ce4725"
+  "sha256": "3905de26423e9a35bdea5dedce7b8e784bb37c1606b6a06824e3ee16ad05e173"
  },
  "drywall/richardson.html": {
   "lastmod": "2026-11-12",
-  "sha256": "f15e62138aebafea878bf777ec7a546eac35a1741487e4c7328cb07b7ffeb2ff"
+  "sha256": "d97ec2cf50d14a05db9a26d9b3bd0133bebf8ddef5721a27989ee00dbec4dc5e"
  },
  "drywall/rowlett.html": {
   "lastmod": "2026-11-12",
-  "sha256": "1e38b3d984f34bdc2e2a29576373298058891f146027fb149108a345662a25ad"
+  "sha256": "3dc808cd32ad7d74557e8044c980d4af1c43d0a654014697d680e15b288b47e0"
  },
  "drywall/sachse.html": {
   "lastmod": "2026-11-12",
-  "sha256": "76045adca5b575657c870a6cc544b124ef2f69fdd00975eb96cdbe8333ef35fb"
+  "sha256": "a1543013ed43fe1df07fe747d13032803a1bf1223c92e6e84fd41797684fc722"
  },
  "drywall/the-colony.html": {
   "lastmod": "2026-11-12",
@@ -509,7 +509,7 @@
  },
  "the-colony/ceiling-water-damage-repair.html": {
   "lastmod": "2026-11-12",
-  "sha256": "23cbd695a2b67246138e412d6127e5a5331bf4fcdbd468a6611f0530b16676bf"
+  "sha256": "63cfcf27e0abfc14e8352e37435ec32f9b96dff445604b9a517b313eb40df596"
  },
  "the-colony/contact.html": {
   "lastmod": "2026-11-12",
@@ -517,34 +517,34 @@
  },
  "the-colony/drywall-installation.html": {
   "lastmod": "2026-11-12",
-  "sha256": "b4528db4065c8eb1b7aa8eeae229eefa0bedd3be31b3f976c53122a279f76291"
+  "sha256": "4150d47dfa026f7d1c6da113a80116aa87f0707c90689165de156634a8f9cdc0"
  },
  "the-colony/drywall-repair.html": {
   "lastmod": "2026-11-12",
-  "sha256": "620dd3e0fcea7c920cd7882e74a06d560dac392f1503598d26b17dfafbaf644b"
+  "sha256": "c6bc86705980b92bb187fcd3310fedd9f86e49597a98d1f09ee471c5a57d4a38"
  },
  "the-colony/frisco.html": {
   "lastmod": "2026-11-12",
-  "sha256": "f904b9ec91b847557b35d706d782847e218021452c66b715b3e3c5313ca5d74d"
+  "sha256": "5cb2dba2efa61ff68df221f85b8b645e0d4cac04c413c3ab04455cc6a9ca7c3e"
  },
  "the-colony/index.html": {
   "lastmod": "2026-11-12",
-  "sha256": "664a78ac9105912cfd85e64845a60f515f5baa670a8a67db2cd38a4b2db0b7bd"
+  "sha256": "728e9bcbc6169f1eaf32cbd8bc61e4b10656161599b3da54edc12640e14d1efc"
  },
  "the-colony/lewisville.html": {
   "lastmod": "2026-11-12",
-  "sha256": "7da5bba2cbccb173ead7b73bac4ce71ecabd668bf65e37ada2d4853406686f6d"
+  "sha256": "5436c4f2d71f6abce25d92fc1def1b056b683a5f783f9e0efb01d98bbdfa8404"
  },
  "the-colony/little-elm.html": {
   "lastmod": "2026-11-12",
-  "sha256": "c8051008a62458757b44961988d519d2a780d1bb381de5a5408029ea1c4dbc9f"
+  "sha256": "575f86c174fccb64f9cd1762a007069c30e1a52ff0952943355dd4ad569e890f"
  },
  "the-colony/plano.html": {
   "lastmod": "2026-11-12",
-  "sha256": "bebf38fcd7fa62a0215031cd7ed9829b8d99ec56b4af6590f2be125969854ac0"
+  "sha256": "d3f49d2f5b98be6fb021c4d20be5556aafcf032c3c443df428a20ff0ee6e94fe"
  },
  "the-colony/texture-matching-popcorn-removal.html": {
   "lastmod": "2026-11-12",
-  "sha256": "bdc56eee01f6d9314d10746ea1682bc927dbb0590a04e9022e3c35ddcf49868e"
+  "sha256": "77057f716e48d8728dfee194d0006e1f80740af28edac97a8d4c242c40bc6430"
  }
 }

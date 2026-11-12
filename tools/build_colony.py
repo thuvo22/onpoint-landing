@@ -56,8 +56,8 @@ PHOTOS = [
     ("/images/jobs/ba-18-popcorn.jpg", "Before and after: popcorn ceiling removed and refinished smooth", 1600, 656),
 ]
 
-def _p(cat, n, alt):
-    return (f"/images/colony/{cat}-{n:02d}.jpg", alt, 1200, 900)
+def _p(cat, n, alt, w=1200, h=900):
+    return (f"/images/colony/{cat}-{n:02d}.jpg", alt, w, h)
 
 def _pair(title, before, after, caption, labels=("BEFORE", "AFTER")):
     return dict(title=title, before=before, after=after, caption=caption, labels=labels)
@@ -105,6 +105,27 @@ PAIR_POPCORN = _pair("Popcorn ceiling removed",
     _p("texture", 2, "The same room with the popcorn scraped off and the ceiling ready for texture"),
     "The popcorn ceiling and dark crown molding, then the same room from the window side with the popcorn scraped off, the molding out and the ceiling ready for its new finish.")
 
+PAIR_SHOWER = _pair("Shower ceiling after a leak",
+    _p("ceiling", 16, "A tile shower ceiling torn open to the framing after a leak from above"),
+    _p("ceiling", 17, "The same shower ceiling closed, textured and painted"),
+    "The shower ceiling opened up to dry out after a leak, then new moisture resistant board, texture and paint over the tile.")
+PAIR_GARAGE_WALL = _pair("Garage wall opened to the insulation",
+    _p("repair", 10, "A garage wall cut back to the insulation behind the fridge"),
+    _p("repair", 11, "The same garage wall closed, textured and painted"),
+    "The damaged section cut out to the studs and insulation, then new board, texture and paint with the fridge back in place.")
+PAIR_LAUNDRY = _pair("Laundry room wall split open",
+    _p("repair", 12, "A laundry room wall split along the seam from floor to cabinet"),
+    _p("repair", 13, "The same laundry wall rebuilt, textured and painted"),
+    "A seam that opened from the baseboard to the cabinets, cut back, retaped and finished so the crack does not come back.")
+PAIR_SINK = _pair("Wall opened behind a pedestal sink",
+    _p("repair", 14, "The wall cut open behind a pedestal sink for a plumbing repair"),
+    _p("repair", 15, "The same wall closed and textured to match"),
+    "The plumber's access cut behind the sink, then new drywall and matched texture so the wall reads as one piece.")
+PAIR_HALLWAY = _pair("Hallway ceiling collapse",
+    _p("ceiling", 14, "A hallway ceiling sagging and torn open after a leak", 900, 1200),
+    _p("ceiling", 15, "The same hallway ceiling rebuilt with a framed access panel", 900, 1200),
+    "The ceiling came down after a leak above. We replaced the drywall, framed a clean access panel and textured and painted the hallway.")
+
 S_CREW_ENTRY = _p("repair", 7, "Our crew finishing new drywall in a two story entry, floors covered in plastic")
 S_CEIL_VENT = _p("ceiling", 1, "Ceiling drywall torn open beside an air vent after a leak, before we started")
 S_CEIL_JOISTS = _p("ceiling", 4, "A bedroom ceiling cut open to the joists so the wet drywall can come out")
@@ -128,16 +149,16 @@ S_GARAGE_CREW = _p("install", 6, "Our crew hanging the new garage drywall")
 S_CLOSET = _p("install", 8, "New drywall hung in a closet during a bath remodel")
 S_SMOOTH = _p("install", 9, "A small room finished smooth and primed")
 
-REPAIR_PHOTOS = dict(pairs=[PAIR_ATTIC, PAIR_WINDOW, PAIR_ENTRY], singles=[S_HALL_PATCH, S_SCAFFOLD, S_STAIN])
-CEILING_PHOTOS = dict(pairs=[PAIR_VENT, PAIR_WET_CEILING, PAIR_BEDROOM, PAIR_LIGHT, PAIR_ATTIC], singles=[S_STAIN, S_SCAFFOLD, S_HALL_PATCH, S_KITCHEN_CEIL])
-TEXTURE_PHOTOS = dict(pairs=[PAIR_POPCORN, PAIR_LIGHT], singles=[S_MASKED, S_SPRAY_1, S_SPRAY_2, S_HOPPER, S_LIVING_CEIL, S_SMOOTH])
-INSTALL_PHOTOS = dict(pairs=[PAIR_GARAGE, PAIR_CONVERSION], singles=[S_GARAGE_BEFORE, S_GARAGE_CREW, S_CONV_HANG, S_CONV_TAPED, S_CLOSET, S_SMOOTH])
-MIX_PHOTOS = dict(pairs=[PAIR_VENT, PAIR_WINDOW, PAIR_CONVERSION], singles=[S_SPRAY_1, S_GARAGE_CREW, S_SCAFFOLD])
+REPAIR_PHOTOS = dict(pairs=[PAIR_GARAGE_WALL, PAIR_LAUNDRY, PAIR_WINDOW, PAIR_ATTIC, PAIR_SINK, PAIR_ENTRY], singles=[S_SCAFFOLD, S_STAIN, S_KITCHEN_CEIL])
+CEILING_PHOTOS = dict(pairs=[PAIR_VENT, PAIR_HALLWAY, PAIR_WET_CEILING, PAIR_BEDROOM, PAIR_SHOWER, PAIR_LIGHT, PAIR_ATTIC], singles=[S_STAIN, S_SCAFFOLD, S_KITCHEN_CEIL])
+TEXTURE_PHOTOS = dict(pairs=[PAIR_POPCORN, PAIR_LIGHT, PAIR_SINK], singles=[S_MASKED, S_SPRAY_1, S_HOPPER, S_LIVING_CEIL, S_SMOOTH, S_KITCHEN_CEIL])
+INSTALL_PHOTOS = dict(pairs=[PAIR_GARAGE, PAIR_CONVERSION, PAIR_GARAGE_WALL], singles=[S_GARAGE_BEFORE, S_GARAGE_CREW, S_CONV_HANG, S_CONV_TAPED, S_CLOSET, S_SMOOTH])
+MIX_PHOTOS = dict(pairs=[PAIR_VENT, PAIR_GARAGE_WALL, PAIR_CONVERSION], singles=[S_SPRAY_1, S_GARAGE_CREW, S_SCAFFOLD])
 CITY_PHOTOS = {
-    "lewisville": dict(pairs=[PAIR_GARAGE, PAIR_VENT], singles=[S_GARAGE_CREW, S_SPRAY_1, S_SCAFFOLD]),
-    "little-elm": dict(pairs=[PAIR_ATTIC, PAIR_BEDROOM], singles=[S_CONV_TAPED, S_MASKED, S_SCAFFOLD]),
-    "frisco": dict(pairs=[PAIR_WET_CEILING, PAIR_ENTRY], singles=[S_MASKED, S_CONV_HANG, S_KITCHEN_CEIL]),
-    "plano": dict(pairs=[PAIR_WINDOW, PAIR_POPCORN], singles=[S_SPRAY_1, S_GARAGE_CREW, S_MASKED]),
+    "lewisville": dict(pairs=[PAIR_GARAGE, PAIR_VENT, PAIR_LAUNDRY], singles=[S_GARAGE_CREW, S_SPRAY_1, S_SCAFFOLD]),
+    "little-elm": dict(pairs=[PAIR_ATTIC, PAIR_BEDROOM, PAIR_GARAGE_WALL], singles=[S_CONV_TAPED, S_MASKED, S_SCAFFOLD]),
+    "frisco": dict(pairs=[PAIR_WET_CEILING, PAIR_ENTRY, PAIR_SHOWER], singles=[S_MASKED, S_CONV_HANG, S_KITCHEN_CEIL]),
+    "plano": dict(pairs=[PAIR_WINDOW, PAIR_POPCORN, PAIR_HALLWAY], singles=[S_SPRAY_1, S_GARAGE_CREW, S_MASKED]),
 }
 
 SERVICES = [

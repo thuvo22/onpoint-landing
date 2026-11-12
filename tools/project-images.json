@@ -188,33 +188,6 @@
       }
     ]
   },
-  "images/colony/ceiling-10.jpg": {
-    "sha256": "9bc85c55695e42442b2c07c13daf9b19fa44098e43014f017704d4c2af1ea672",
-    "recipe": "webp-q85-method6-lanczos-v1",
-    "original_bytes": 67042,
-    "original_width": 1200,
-    "original_height": 900,
-    "variants": [
-      {
-        "path": "images/optimized/ceiling-10-ce078270ad13-480w.webp",
-        "width": 480,
-        "height": 360,
-        "bytes": 10616
-      },
-      {
-        "path": "images/optimized/ceiling-10-ce078270ad13-800w.webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 23158
-      },
-      {
-        "path": "images/optimized/ceiling-10-ce078270ad13-1200w.webp",
-        "width": 1200,
-        "height": 900,
-        "bytes": 41362
-      }
-    ]
-  },
   "images/colony/ceiling-11.jpg": {
     "sha256": "93b036ea9a0b8a30a8ce7f503f027037813a81c31aa449d53873a501659f6334",
     "recipe": "webp-q85-method6-lanczos-v1",
@@ -293,6 +266,114 @@
         "width": 1200,
         "height": 900,
         "bytes": 30436
+      }
+    ]
+  },
+  "images/colony/ceiling-14.jpg": {
+    "sha256": "1bb0a0b8e5d9200a017f980ed05123ace4086c0e2bbdec900a5cdfb91a9463fe",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 106142,
+    "original_width": 900,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-14-4ce4a7a96f33-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 33044
+      },
+      {
+        "path": "images/optimized/ceiling-14-4ce4a7a96f33-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 61804
+      },
+      {
+        "path": "images/optimized/ceiling-14-4ce4a7a96f33-900w.webp",
+        "width": 900,
+        "height": 1200,
+        "bytes": 71284
+      }
+    ]
+  },
+  "images/colony/ceiling-15.jpg": {
+    "sha256": "215ec231ae63dbc56b3b985a74689ae882ee762de1abbbf9e061477dde29c903",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 88889,
+    "original_width": 900,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-15-8a0ea8a39802-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 23144
+      },
+      {
+        "path": "images/optimized/ceiling-15-8a0ea8a39802-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 46990
+      },
+      {
+        "path": "images/optimized/ceiling-15-8a0ea8a39802-900w.webp",
+        "width": 900,
+        "height": 1200,
+        "bytes": 55904
+      }
+    ]
+  },
+  "images/colony/ceiling-16.jpg": {
+    "sha256": "0091f32dd299c0a0c38aa6a9c6cc5e978f931c6a66f4aaf088cd0e6d35876311",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 65344,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-16-139b0dbcc161-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 9914
+      },
+      {
+        "path": "images/optimized/ceiling-16-139b0dbcc161-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 21836
+      },
+      {
+        "path": "images/optimized/ceiling-16-139b0dbcc161-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 38336
+      }
+    ]
+  },
+  "images/colony/ceiling-17.jpg": {
+    "sha256": "151d520377bdf57acb3545a3d26cef28d042e7a2f4782a6047ff2af254dfa806",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 59079,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-17-014ab37e9119-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 7124
+      },
+      {
+        "path": "images/optimized/ceiling-17-014ab37e9119-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 18142
+      },
+      {
+        "path": "images/optimized/ceiling-17-014ab37e9119-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 35418
       }
     ]
   },
@@ -761,6 +842,168 @@
       }
     ]
   },
+  "images/colony/repair-10.jpg": {
+    "sha256": "a7bdf2b4d0aa24b1b074dbbbf858ca8bf4af2545dcce679a6867670b3e494450",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 144543,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/repair-10-e88e4b96dc22-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 30030
+      },
+      {
+        "path": "images/optimized/repair-10-e88e4b96dc22-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 65610
+      },
+      {
+        "path": "images/optimized/repair-10-e88e4b96dc22-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 117094
+      }
+    ]
+  },
+  "images/colony/repair-11.jpg": {
+    "sha256": "bb8a0627f7d018d15b0283fede8272695bc36f705144715080cf7a9bbe618448",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 131248,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/repair-11-8db5ae645a4d-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 22302
+      },
+      {
+        "path": "images/optimized/repair-11-8db5ae645a4d-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 54074
+      },
+      {
+        "path": "images/optimized/repair-11-8db5ae645a4d-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 106644
+      }
+    ]
+  },
+  "images/colony/repair-12.jpg": {
+    "sha256": "a1b214f6f12520c43ad01b2cedc0278805910a9f7a6d28b1b287ce6d039155bb",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 103462,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/repair-12-4cdd0c39bd48-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 14846
+      },
+      {
+        "path": "images/optimized/repair-12-4cdd0c39bd48-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 38536
+      },
+      {
+        "path": "images/optimized/repair-12-4cdd0c39bd48-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 78522
+      }
+    ]
+  },
+  "images/colony/repair-13.jpg": {
+    "sha256": "0cb1d0fb00bf254c6c4213761681af509632715f221c5d43db65c568af624fe3",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 104889,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/repair-13-a3d76641996d-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 15372
+      },
+      {
+        "path": "images/optimized/repair-13-a3d76641996d-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 40276
+      },
+      {
+        "path": "images/optimized/repair-13-a3d76641996d-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 81382
+      }
+    ]
+  },
+  "images/colony/repair-14.jpg": {
+    "sha256": "10efad7e562036d821fc89d3720e60310630b365e7e83665df81257c827c54f6",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 126942,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/repair-14-fc3583210047-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 22748
+      },
+      {
+        "path": "images/optimized/repair-14-fc3583210047-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 58682
+      },
+      {
+        "path": "images/optimized/repair-14-fc3583210047-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 104916
+      }
+    ]
+  },
+  "images/colony/repair-15.jpg": {
+    "sha256": "b6dbf64ace0b5ad75c1d9daaf3fe7be68c6d7559d832f38fde24b16db64000e9",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 143610,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/repair-15-bc97933eacdb-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 25120
+      },
+      {
+        "path": "images/optimized/repair-15-bc97933eacdb-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 68964
+      },
+      {
+        "path": "images/optimized/repair-15-bc97933eacdb-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 128772
+      }
+    ]
+  },
   "images/colony/texture-01.jpg": {
     "sha256": "4f76b6f0cb6b36a85723c71d4982e06fe9cf5427d30d2ede4226ead31e918bd1",
     "recipe": "webp-q85-method6-lanczos-v1",
@@ -866,33 +1109,6 @@
         "width": 1200,
         "height": 900,
         "bytes": 90252
-      }
-    ]
-  },
-  "images/colony/texture-05.jpg": {
-    "sha256": "deec0478e1768dc69c28cdfdfd458abfbc2df6dabb5f5ca6ee7a5ea60fb84397",
-    "recipe": "webp-q85-method6-lanczos-v1",
-    "original_bytes": 129532,
-    "original_width": 1200,
-    "original_height": 900,
-    "variants": [
-      {
-        "path": "images/optimized/texture-05-866ab89d0155-480w.webp",
-        "width": 480,
-        "height": 360,
-        "bytes": 23708
-      },
-      {
-        "path": "images/optimized/texture-05-866ab89d0155-800w.webp",
-        "width": 800,
-        "height": 600,
-        "bytes": 56158
-      },
-      {
-        "path": "images/optimized/texture-05-866ab89d0155-1200w.webp",
-        "width": 1200,
-        "height": 900,
-        "bytes": 105158
       }
     ]
   },
