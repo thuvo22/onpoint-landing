@@ -297,7 +297,7 @@
  },
  "drywall/mckinney.html": {
   "lastmod": "2026-11-12",
-  "sha256": "e67cae2b1da6cda2c7928a1300b41b2452e3962050ed3cc8dd1dbcc72519ddc8"
+  "sha256": "69a8cb78daf7083bcbb918116193da7cece2533201ba9b9398b3080798d3591e"
  },
  "drywall/murphy.html": {
   "lastmod": "2026-11-12",
@@ -541,10 +541,10 @@
  },
  "the-colony/plano.html": {
   "lastmod": "2026-11-12",
-  "sha256": "6a60f50e5ed30b8b2825d62d08e3905d1f8f36558a136101e0ab2abcabafc564"
+  "sha256": "bebf38fcd7fa62a0215031cd7ed9829b8d99ec56b4af6590f2be125969854ac0"
  },
  "the-colony/texture-matching-popcorn-removal.html": {
   "lastmod": "2026-11-12",
-  "sha256": "2850a4b593139ebe0bb519048728ae526205862a3e48f6fb427334ed3142832f"
+  "sha256": "bdc56eee01f6d9314d10746ea1682bc927dbb0590a04e9022e3c35ddcf49868e"
  }
 }

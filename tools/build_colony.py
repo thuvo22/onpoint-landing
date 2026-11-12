@@ -100,6 +100,11 @@ PAIR_CONVERSION = _pair("Garage conversion, drywall to finished room",
     _p("install", 10, "The same garage conversion finished, with the kitchenette and new floor in place"),
     "The conversion with the drywall hung and mudded around the cabinet run, then the finished room with the kitchenette, paint and flooring in.", ("DRYWALL", "FINISHED"))
 
+PAIR_POPCORN = _pair("Popcorn ceiling removed",
+    _p("texture", 1, "A popcorn ceiling with dated crown molding in an empty room"),
+    _p("texture", 2, "The same room with the popcorn scraped off and the ceiling ready for texture"),
+    "The popcorn ceiling and dark crown molding, then the same room from the window side with the popcorn scraped off, the molding out and the ceiling ready for its new finish.")
+
 S_CREW_ENTRY = _p("repair", 7, "Our crew finishing new drywall in a two story entry, floors covered in plastic")
 S_CEIL_VENT = _p("ceiling", 1, "Ceiling drywall torn open beside an air vent after a leak, before we started")
 S_CEIL_JOISTS = _p("ceiling", 4, "A bedroom ceiling cut open to the joists so the wet drywall can come out")
@@ -125,14 +130,14 @@ S_SMOOTH = _p("install", 9, "A small room finished smooth and primed")
 
 REPAIR_PHOTOS = dict(pairs=[PAIR_ATTIC, PAIR_WINDOW, PAIR_ENTRY], singles=[S_HALL_PATCH, S_SCAFFOLD, S_STAIN])
 CEILING_PHOTOS = dict(pairs=[PAIR_VENT, PAIR_WET_CEILING, PAIR_BEDROOM, PAIR_LIGHT, PAIR_ATTIC], singles=[S_STAIN, S_SCAFFOLD, S_HALL_PATCH, S_KITCHEN_CEIL])
-TEXTURE_PHOTOS = dict(pairs=[PAIR_LIGHT], singles=[S_POPCORN_1, S_POPCORN_2, S_MASKED, S_SPRAY_1, S_SPRAY_2, S_HOPPER, S_LIVING_CEIL, S_SMOOTH])
+TEXTURE_PHOTOS = dict(pairs=[PAIR_POPCORN, PAIR_LIGHT], singles=[S_MASKED, S_SPRAY_1, S_SPRAY_2, S_HOPPER, S_LIVING_CEIL, S_SMOOTH])
 INSTALL_PHOTOS = dict(pairs=[PAIR_GARAGE, PAIR_CONVERSION], singles=[S_GARAGE_BEFORE, S_GARAGE_CREW, S_CONV_HANG, S_CONV_TAPED, S_CLOSET, S_SMOOTH])
 MIX_PHOTOS = dict(pairs=[PAIR_VENT, PAIR_WINDOW, PAIR_CONVERSION], singles=[S_SPRAY_1, S_GARAGE_CREW, S_SCAFFOLD])
 CITY_PHOTOS = {
     "lewisville": dict(pairs=[PAIR_GARAGE, PAIR_VENT], singles=[S_GARAGE_CREW, S_SPRAY_1, S_SCAFFOLD]),
     "little-elm": dict(pairs=[PAIR_ATTIC, PAIR_BEDROOM], singles=[S_CONV_TAPED, S_MASKED, S_SCAFFOLD]),
     "frisco": dict(pairs=[PAIR_WET_CEILING, PAIR_ENTRY], singles=[S_MASKED, S_CONV_HANG, S_KITCHEN_CEIL]),
-    "plano": dict(pairs=[PAIR_WINDOW, PAIR_LIGHT], singles=[S_POPCORN_1, S_SPRAY_1, S_GARAGE_CREW]),
+    "plano": dict(pairs=[PAIR_WINDOW, PAIR_POPCORN], singles=[S_SPRAY_1, S_GARAGE_CREW, S_MASKED]),
 }
 
 SERVICES = [
