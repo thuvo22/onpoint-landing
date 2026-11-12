@@ -215,6 +215,87 @@
       }
     ]
   },
+  "images/colony/ceiling-11.jpg": {
+    "sha256": "93b036ea9a0b8a30a8ce7f503f027037813a81c31aa449d53873a501659f6334",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 37333,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-11-083334b0667e-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 4324
+      },
+      {
+        "path": "images/optimized/ceiling-11-083334b0667e-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 9290
+      },
+      {
+        "path": "images/optimized/ceiling-11-083334b0667e-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 19060
+      }
+    ]
+  },
+  "images/colony/ceiling-12.jpg": {
+    "sha256": "7beb2fd0d43f5d7c41b61f3ca83a0aa534da11e352190051eab4766c307b751c",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 108058,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-12-b4fb76440136-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 15334
+      },
+      {
+        "path": "images/optimized/ceiling-12-b4fb76440136-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 46156
+      },
+      {
+        "path": "images/optimized/ceiling-12-b4fb76440136-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 102240
+      }
+    ]
+  },
+  "images/colony/ceiling-13.jpg": {
+    "sha256": "99d6c590dca99328e11491d8a34520bd547e52928749c1e1186f3c2eb1cdc3ac",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 44312,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/ceiling-13-6490c094646f-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 4770
+      },
+      {
+        "path": "images/optimized/ceiling-13-6490c094646f-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 14328
+      },
+      {
+        "path": "images/optimized/ceiling-13-6490c094646f-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 30436
+      }
+    ]
+  },
   "images/colony/hero-garage-drywall.jpg": {
     "sha256": "dc34a5408e7795ccd13df9f2ecbe788104a5c0394b1f446488242d064f6ed31c",
     "recipe": "webp-q85-method6-lanczos-v1",
@@ -491,6 +572,33 @@
       }
     ]
   },
+  "images/colony/install-10.jpg": {
+    "sha256": "419b8470af0e0ec276392f9444618345035d63a1c2db2d1043a4da6cb583525f",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 120153,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/install-10-00e089afdb8e-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 19988
+      },
+      {
+        "path": "images/optimized/install-10-00e089afdb8e-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 49648
+      },
+      {
+        "path": "images/optimized/install-10-00e089afdb8e-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 96400
+      }
+    ]
+  },
   "images/colony/repair-03.jpg": {
     "sha256": "c431165f2d8be928f7e18669da1c5cbd80fdfb562887c5ea5bbd6bcd85f8e814",
     "recipe": "webp-q85-method6-lanczos-v1",
@@ -623,6 +731,33 @@
         "width": 1200,
         "height": 900,
         "bytes": 139404
+      }
+    ]
+  },
+  "images/colony/repair-09.jpg": {
+    "sha256": "fc68b780c745fc8a5cc22cf05579d0a548767ddca7cae15bff00efd82adaad43",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 105611,
+    "original_width": 1200,
+    "original_height": 900,
+    "variants": [
+      {
+        "path": "images/optimized/repair-09-7082c86f7b19-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 14170
+      },
+      {
+        "path": "images/optimized/repair-09-7082c86f7b19-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 34134
+      },
+      {
+        "path": "images/optimized/repair-09-7082c86f7b19-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 75260
       }
     ]
   },

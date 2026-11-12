@@ -59,8 +59,8 @@ PHOTOS = [
 def _p(cat, n, alt):
     return (f"/images/colony/{cat}-{n:02d}.jpg", alt, 1200, 900)
 
-def _pair(title, before, after, caption):
-    return dict(title=title, before=before, after=after, caption=caption)
+def _pair(title, before, after, caption, labels=("BEFORE", "AFTER")):
+    return dict(title=title, before=before, after=after, caption=caption, labels=labels)
 
 PAIR_ATTIC = _pair("Ceiling hole next to the attic panel",
     _p("repair", 3, "Ceiling drywall torn open next to the attic access panel"),
@@ -78,6 +78,27 @@ PAIR_GARAGE = _pair("Garage drywall, studs to finished board",
     _p("install", 5, "The garage stripped to the studs with the floor protected"),
     _p("install", 7, "The garage hung and taped, ready for texture and paint"),
     "The garage stripped to the studs with the floor covered, then every wall and the ceiling hung and taped.")
+
+PAIR_VENT = _pair("Ceiling torn open beside a vent",
+    _p("ceiling", 1, "Ceiling drywall torn open beside an air vent after a leak"),
+    _p("ceiling", 11, "The same ceiling replaced, textured and painted, lights and vent back in"),
+    "The ceiling came apart beside the vent after a leak. New drywall, matched texture and paint, with the recessed lights and vent reset.")
+PAIR_BEDROOM = _pair("Bedroom ceiling opened to the joists",
+    _p("ceiling", 4, "A bedroom ceiling cut open to the joists so the wet drywall can come out"),
+    _p("ceiling", 12, "The same bedroom ceiling closed, textured and painted"),
+    "The wet section cut out to the joists so the framing could dry, then new board, texture and paint across the whole ceiling.")
+PAIR_LIGHT = _pair("Ceiling hole next to a recessed light",
+    _p("ceiling", 13, "Ceiling drywall torn open next to a recessed light and vent"),
+    _p("texture", 3, "The same ceiling finished in light orange peel around the recessed light"),
+    "A torn hole beside the recessed light, then the patch textured in light orange peel so it disappears into the ceiling.")
+PAIR_ENTRY = _pair("Two story entry, new drywall to finished",
+    _p("repair", 7, "Our crew finishing new drywall in a two story entry, floors covered in plastic"),
+    _p("repair", 9, "The same entry finished, painted and cleaned up"),
+    "Our crew on ladders finishing the new board in the entry, then the same entry painted with the floors uncovered.", ("IN PROGRESS", "AFTER"))
+PAIR_CONVERSION = _pair("Garage conversion, drywall to finished room",
+    _p("install", 3, "New drywall hung and mudded around a built in cabinet in a garage conversion"),
+    _p("install", 10, "The same garage conversion finished, with the kitchenette and new floor in place"),
+    "The conversion with the drywall hung and mudded around the cabinet run, then the finished room with the kitchenette, paint and flooring in.", ("DRYWALL", "FINISHED"))
 
 S_CREW_ENTRY = _p("repair", 7, "Our crew finishing new drywall in a two story entry, floors covered in plastic")
 S_CEIL_VENT = _p("ceiling", 1, "Ceiling drywall torn open beside an air vent after a leak, before we started")
@@ -102,16 +123,16 @@ S_GARAGE_CREW = _p("install", 6, "Our crew hanging the new garage drywall")
 S_CLOSET = _p("install", 8, "New drywall hung in a closet during a bath remodel")
 S_SMOOTH = _p("install", 9, "A small room finished smooth and primed")
 
-REPAIR_PHOTOS = dict(pairs=[PAIR_ATTIC, PAIR_WINDOW], singles=[S_CREW_ENTRY, S_HALL_PATCH, S_CABINET])
-CEILING_PHOTOS = dict(pairs=[PAIR_WET_CEILING, PAIR_ATTIC], singles=[S_CEIL_VENT, S_CEIL_JOISTS, S_STAIN, S_SCAFFOLD, S_HALL_PATCH, S_KITCHEN_CEIL])
-TEXTURE_PHOTOS = dict(pairs=[], singles=[S_POPCORN_1, S_POPCORN_2, S_ORANGE_PEEL, S_MASKED, S_SPRAY_1, S_SPRAY_2, S_HOPPER, S_LIVING_CEIL, S_SMOOTH])
-INSTALL_PHOTOS = dict(pairs=[PAIR_GARAGE], singles=[S_GARAGE_BEFORE, S_GARAGE_CREW, S_CONV_HANG, S_CONV_TAPED, S_CABINET, S_CLOSET])
-MIX_PHOTOS = dict(pairs=[PAIR_WET_CEILING, PAIR_WINDOW], singles=[S_SPRAY_1, S_GARAGE_CREW, S_SCAFFOLD])
+REPAIR_PHOTOS = dict(pairs=[PAIR_ATTIC, PAIR_WINDOW, PAIR_ENTRY], singles=[S_HALL_PATCH, S_SCAFFOLD, S_STAIN])
+CEILING_PHOTOS = dict(pairs=[PAIR_VENT, PAIR_WET_CEILING, PAIR_BEDROOM, PAIR_LIGHT, PAIR_ATTIC], singles=[S_STAIN, S_SCAFFOLD, S_HALL_PATCH, S_KITCHEN_CEIL])
+TEXTURE_PHOTOS = dict(pairs=[PAIR_LIGHT], singles=[S_POPCORN_1, S_POPCORN_2, S_MASKED, S_SPRAY_1, S_SPRAY_2, S_HOPPER, S_LIVING_CEIL, S_SMOOTH])
+INSTALL_PHOTOS = dict(pairs=[PAIR_GARAGE, PAIR_CONVERSION], singles=[S_GARAGE_BEFORE, S_GARAGE_CREW, S_CONV_HANG, S_CONV_TAPED, S_CLOSET, S_SMOOTH])
+MIX_PHOTOS = dict(pairs=[PAIR_VENT, PAIR_WINDOW, PAIR_CONVERSION], singles=[S_SPRAY_1, S_GARAGE_CREW, S_SCAFFOLD])
 CITY_PHOTOS = {
-    "lewisville": dict(pairs=[PAIR_GARAGE], singles=[S_CEIL_VENT, S_GARAGE_CREW, S_SPRAY_1]),
-    "little-elm": dict(pairs=[PAIR_ATTIC], singles=[S_CONV_TAPED, S_ORANGE_PEEL, S_SCAFFOLD]),
-    "frisco": dict(pairs=[PAIR_WET_CEILING], singles=[S_MASKED, S_CONV_HANG, S_KITCHEN_CEIL]),
-    "plano": dict(pairs=[PAIR_WINDOW], singles=[S_POPCORN_1, S_ORANGE_PEEL, S_GARAGE_CREW]),
+    "lewisville": dict(pairs=[PAIR_GARAGE, PAIR_VENT], singles=[S_GARAGE_CREW, S_SPRAY_1, S_SCAFFOLD]),
+    "little-elm": dict(pairs=[PAIR_ATTIC, PAIR_BEDROOM], singles=[S_CONV_TAPED, S_MASKED, S_SCAFFOLD]),
+    "frisco": dict(pairs=[PAIR_WET_CEILING, PAIR_ENTRY], singles=[S_MASKED, S_CONV_HANG, S_KITCHEN_CEIL]),
+    "plano": dict(pairs=[PAIR_WINDOW, PAIR_LIGHT], singles=[S_POPCORN_1, S_SPRAY_1, S_GARAGE_CREW]),
 }
 
 SERVICES = [
@@ -283,9 +304,10 @@ def photos(h2, picks):
     out = []
     for pr in pairs:
         b, a = pr["before"], pr["after"]
+        lb, la = pr.get("labels", ("BEFORE", "AFTER"))
         out.append(f'<figure class="bg-white rounded-2xl border border-slate-200 overflow-hidden mb-6"><div class="grid grid-cols-2 gap-1 bg-slate-200">'
-                   f'<div class="relative">{_img(*b)}<span class="absolute top-0 left-0 bg-slate-900 text-amber-300 text-xs sm:text-base font-bold tracking-wide px-2 py-1">BEFORE</span></div>'
-                   f'<div class="relative">{_img(*a)}<span class="absolute top-0 left-0 bg-slate-900 text-amber-300 text-xs sm:text-base font-bold tracking-wide px-2 py-1">AFTER</span></div></div>'
+                   f'<div class="relative">{_img(*b)}<span class="absolute top-0 left-0 bg-slate-900 text-amber-300 text-xs sm:text-base font-bold tracking-wide px-2 py-1">{lb}</span></div>'
+                   f'<div class="relative">{_img(*a)}<span class="absolute top-0 left-0 bg-slate-900 text-amber-300 text-xs sm:text-base font-bold tracking-wide px-2 py-1">{la}</span></div></div>'
                    f'<figcaption class="p-4"><h3 class="font-bold text-slate-900">{esc(pr["title"])}</h3><p class="text-sm text-slate-600 mt-1">{esc(pr["caption"])}</p></figcaption></figure>')
     pair_html = "".join(out)
     single_html = ""
@@ -293,7 +315,7 @@ def photos(h2, picks):
         figs = "".join(f'<figure class="bg-white rounded-2xl border border-slate-200 overflow-hidden">{_img(src, alt, w, h)}<figcaption class="p-4 text-sm text-slate-600">{esc(alt)}</figcaption></figure>' for src, alt, w, h in singles)
         sub = '<h3 class="text-xl font-bold text-slate-900 mt-10 mb-5 text-center">On the Job</h3>' if pairs else ""
         single_html = f'{sub}<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">{figs}</div>'
-    intro = "Each before and after card is the same spot, shot by our crew before we started and once we were done." if pairs else "Our own jobs, photographed by our crew."
+    intro = "Each two photo card is the same spot, shot by our crew at the start and once we were done." if pairs else "Our own jobs, photographed by our crew."
     return f"""
     <section class="py-16 bg-slate-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
