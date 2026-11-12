@@ -56,6 +56,58 @@ PHOTOS = [
     ("/images/jobs/ba-18-popcorn.jpg", "Before and after: popcorn ceiling removed and refinished smooth", 1600, 656),
 ]
 
+def _p(cat, n, alt):
+    return (f"/images/colony/{cat}-{n:02d}.jpg", alt, 1200, 900)
+
+REPAIR_PHOTOS = [
+    _p("repair", 1, "Before: a hole punched through the wall beside a door"),
+    _p("repair", 2, "After: the same wall patched, textured and painted"),
+    _p("repair", 3, "Before: ceiling drywall torn open next to the attic access panel"),
+    _p("repair", 4, "After: the ceiling patched, textured and painted around the panel"),
+    _p("repair", 5, "Before: the wall under a window opened back to the insulation"),
+    _p("repair", 6, "After: the same wall patched, textured and painted with the baseboard back on"),
+    _p("repair", 7, "Our crew finishing new drywall in a two story entry, floors covered in plastic"),
+    _p("repair", 8, "Before: a small hole in a textured wall, the most common repair we see"),
+]
+CEILING_PHOTOS = [
+    _p("ceiling", 1, "Before: ceiling drywall torn open beside an air vent after a leak"),
+    _p("ceiling", 2, "Before: a water damaged ceiling corner cut open to dry the framing"),
+    _p("ceiling", 3, "After: the same ceiling corner replaced, textured and painted"),
+    _p("ceiling", 4, "A bedroom ceiling cut open to the joists so the wet drywall can come out"),
+    _p("ceiling", 5, "Scaffold and plastic over the stairs for a two story living room ceiling repair"),
+    _p("ceiling", 7, "A water stain spreading across a textured ceiling, the first sign of a leak above"),
+    _p("ceiling", 9, "After: a kitchen ceiling patched, retextured and painted"),
+    _p("ceiling", 10, "A hallway ceiling patch cut square and ready for new drywall"),
+]
+TEXTURE_PHOTOS = [
+    _p("texture", 1, "Before: a popcorn ceiling in an empty room, ready for removal"),
+    _p("texture", 2, "Before: the same room from the window side, popcorn ceiling and old border"),
+    _p("texture", 3, "After: a ceiling finished in light orange peel around a recessed light"),
+    _p("texture", 4, "Our crew spraying new ceiling texture with the room sealed in plastic"),
+    _p("texture", 5, "Spraying texture across a garage ceiling from the ladder"),
+    _p("texture", 6, "The texture hopper gun at work, everything below covered"),
+    _p("texture", 7, "A living room masked in plastic before the ceiling is retextured"),
+    _p("texture", 9, "After: a retextured living room ceiling blended into the crown molding"),
+]
+INSTALL_PHOTOS = [
+    _p("install", 1, "New drywall going up next to open insulated studs in a garage conversion"),
+    _p("install", 2, "A garage conversion hung and taped, waiting on texture"),
+    _p("install", 3, "New drywall hung and mudded around a built in cabinet"),
+    _p("install", 4, "Before: a garage cleared out ahead of new drywall on every wall and the ceiling"),
+    _p("install", 5, "The garage stripped to the studs with the floor protected"),
+    _p("install", 6, "Our crew hanging the new garage drywall"),
+    _p("install", 7, "The garage hung and taped, ready for texture and paint"),
+    _p("install", 8, "New drywall hung in a closet during a bath remodel"),
+    _p("install", 9, "After: a small room finished smooth and primed"),
+]
+MIX_PHOTOS = [REPAIR_PHOTOS[0], REPAIR_PHOTOS[1], CEILING_PHOTOS[1], CEILING_PHOTOS[2], TEXTURE_PHOTOS[3], INSTALL_PHOTOS[6]]
+CITY_PHOTOS = {
+    "lewisville": [INSTALL_PHOTOS[4], INSTALL_PHOTOS[6], CEILING_PHOTOS[0], REPAIR_PHOTOS[1]],
+    "little-elm": [REPAIR_PHOTOS[7], REPAIR_PHOTOS[1], INSTALL_PHOTOS[1], TEXTURE_PHOTOS[2]],
+    "frisco": [CEILING_PHOTOS[1], CEILING_PHOTOS[2], TEXTURE_PHOTOS[6], INSTALL_PHOTOS[0]],
+    "plano": [TEXTURE_PHOTOS[0], TEXTURE_PHOTOS[2], REPAIR_PHOTOS[2], REPAIR_PHOTOS[3]],
+}
+
 SERVICES = [
     ("drywall-repair.html", "Drywall Repair", "Holes, cracks, nail pops and damage left by plumbers or electricians, patched and textured so you cannot find them."),
     ("ceiling-water-damage-repair.html", "Ceilings and Water Damage", "Wet, sagging or stained ceilings cut out, replaced, retextured and painted after the leak is fixed."),
@@ -223,7 +275,7 @@ def photos(h2, picks):
     <section class="py-16 bg-slate-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3 text-center">{esc(h2)}</h2>
-            <p class="text-center text-slate-500 mb-10">Our own jobs, photographed by our crew. The after shot is the same spot once we were done.</p>
+            <p class="text-center text-slate-500 mb-10">Our own jobs, photographed by our crew.</p>
             <div class="grid md:grid-cols-2 gap-6">{figs}</div>
         </div>
     </section>
@@ -398,7 +450,7 @@ def build(scripts_v):
             "Drywall is the whole job here, not a side service. Garages that were never finished, additions that need hanging and taping, ceilings that came down after a leak, holes left behind by a plumber or an electrician, popcorn ceilings that need to go. We handle all of it from the Colony office.",
             "A patch is easy. A patch you cannot find in afternoon light is the part most crews get wrong. We spray the texture on a sample board first, match it to your wall, then blend it in so the repair disappears. Then we prime and paint, so you are not left with a patch that still needs a painter.",
             "We show up when we say we will, protect your floors and furniture, give you one clear price before work starts and leave the house clean. That is the standard on every job, from a doorknob hole to a full garage.",
-        ]) + cards("Drywall Services From the Colony Office", SERVICES) + photos("Recent Drywall Work", PHOTOS[:4]) + reviews("What Our Customers Say") + areas("the-colony") + neighborhoods("The Colony", CITIES[0][3]) + f_sec + bathroom_handoff() + estimate(
+        ]) + cards("Drywall Services From the Colony Office", SERVICES) + photos("Recent Drywall Work", MIX_PHOTOS) + reviews("What Our Customers Say") + areas("the-colony") + neighborhoods("The Colony", CITIES[0][3]) + f_sec + bathroom_handoff() + estimate(
         "Get a Drywall Quote From the Colony Office", "Drywall projects start at $1,000. Send photos of every area and we will confirm the scope and price before work starts.") + footer()
     written.append(page("index.html",
         "Drywall Contractor The Colony TX | OnPoint Pros Remodeling",
@@ -418,7 +470,7 @@ def build(scripts_v):
                 "We prime and paint the repair, or the full wall corner to corner when the color will not blend. You get a finished wall, not a patch waiting on a painter.",
             ],
             cards=[("", "Holes and Impact Damage", "Doorknob holes, furniture scrapes, TV mount scars and the mystery hole in the hallway."), ("", "Cracks and Nail Pops", "North Texas slabs move. We refasten, tape and mud so the crack stays closed."), ("", "Plumber and Electrician Cuts", "Access holes cut for a repair, closed up and textured so nobody knows they were there."), ("", "Water Stains and Soft Spots", "Once the leak is fixed, the damaged drywall comes out and new goes in."), ("", "Corners and Edges", "Dented corner bead and chipped edges rebuilt straight."), ("", "Garage Walls", "Unfinished or damaged garage drywall finished and ready for paint.")],
-            photos=[PHOTOS[0], PHOTOS[4], PHOTOS[2], PHOTOS[3]],
+            photos=REPAIR_PHOTOS,
             faq=[("What is the minimum for a drywall repair?", "Drywall projects start at $1,000. Group every repair in your home into one request and we quote them together."), ("How long does a repair take?", "A single patch is usually one visit with a return for paint once the mud is dry. Larger repairs take two or three visits so each coat can dry properly."), ("Will the patch show?", "Not when the texture is matched on a sample first and the wall is painted to a natural break. That is how we do every repair.")]),
         "ceiling-water-damage-repair.html": dict(
             title="Ceiling and Water Damage Drywall Repair The Colony TX | OnPoint Pros Remodeling",
@@ -431,7 +483,7 @@ def build(scripts_v):
                 "We finish with primer and ceiling paint across the whole ceiling or to a natural break, so there is no bright square where the patch was.",
             ],
             cards=[("", "Collapsed Ceilings", "Sections that came down after a leak or a storm, cleaned up and rebuilt."), ("", "Stains and Sags", "Bowed or stained drywall cut out and replaced, not painted over."), ("", "AC and Plumbing Access", "Holes cut by the HVAC or plumbing crew closed and textured."), ("", "Garage Ceilings", "Loose joints, cracked tape and damaged panels repaired and retextured."), ("", "Popcorn Ceilings", "Removed and refinished smooth or knockdown. See our popcorn removal page."), ("", "Attic Access and Vents", "Openings framed, trimmed and finished clean.")],
-            photos=[PHOTOS[1], PHOTOS[2], PHOTOS[3], PHOTOS[5]],
+            photos=CEILING_PHOTOS,
             faq=[("Can you repair the ceiling before the leak is fixed?", "No. We ask that the roofer or plumber finish first. If you need a referral we can point you to people we have worked beside."), ("Will insurance cover the ceiling?", "Often, when the cause is sudden like a burst line or storm damage. We write a clear scope and price you can hand to your adjuster."), ("Do you paint the whole ceiling?", "Usually yes. A painted patch on a ceiling shows. Painting to a natural break or the whole ceiling is included in the price we quote.")]),
         "texture-matching-popcorn-removal.html": dict(
             title="Texture Matching and Popcorn Ceiling Removal The Colony TX | OnPoint Pros Remodeling",
@@ -444,7 +496,7 @@ def build(scripts_v):
                 "Popcorn removal is its own job. We cover the room, wet and scrape the ceiling, repair the tape joints and nail pops that were hiding under the popcorn, skim where needed, then apply the finish you want and paint. Most homeowners choose smooth or a light knockdown.",
             ],
             cards=[("", "Knockdown", "The most common finish in newer homes here. Matched by splatter size and knockdown timing."), ("", "Orange Peel", "Fine spray texture matched by pressure and tip size."), ("", "Smooth, Level 5", "Skim coated flat walls and ceilings for a modern finish."), ("", "Popcorn Removal", "Scraped, repaired, refinished and painted."), ("", "Skip Trowel and Hand Textures", "Hand applied finishes matched by the same crew."), ("", "Retexture a Whole Wall", "When a patch will not blend, we retexture wall to wall.")],
-            photos=[PHOTOS[5], PHOTOS[4], PHOTOS[0], PHOTOS[1]],
+            photos=TEXTURE_PHOTOS,
             faq=[("Does popcorn ceiling removal fall under the $1,000 minimum?", "Yes. Popcorn removal is a drywall project and almost always comes in above the minimum. We quote by the room after seeing photos or a quick visit."), ("Can old popcorn contain asbestos?", "Popcorn applied before the 1980s can. If your home is from that period we recommend a test before any scraping. Most homes in The Colony and Frisco are newer and this is not an issue."), ("Will the new texture match the rest of the house?", "Yes. We match the existing finish in the rooms we touch, or apply a new finish across the whole ceiling if you are changing styles.")]),
         "drywall-installation.html": dict(
             title="Drywall Installation The Colony TX | Garages, Additions, Whole Rooms | OnPoint Pros Remodeling",
@@ -458,7 +510,7 @@ def build(scripts_v):
                 "For the long version, with rough ranges from our 2026 garage jobs, read <a href=\"https://www.linkedin.com/pulse/garage-drywall-installation-cost-onpoint-pros-ffqhc/\" class=\"text-red-600 font-semibold underline\">Garage Drywall Installation Cost</a> on LinkedIn.",
             ],
             cards=[("", "Garage Drywall", "Walls and ceilings hung and finished, with fire rated board where required."), ("", "Additions", "New rooms finished after framing, electrical and inspection."), ("", "Closets and Pantries", "Small spaces finished clean and ready for shelving."), ("", "Media and Game Rooms", "Finished walls and ceilings for converted spaces."), ("", "Ceilings", "New ceiling drywall hung, finished and textured."), ("", "Remodel Drywall", "Walls opened during a remodel closed up and finished.")],
-            photos=[PHOTOS[1], PHOTOS[3], PHOTOS[0], PHOTOS[4]],
+            photos=INSTALL_PHOTOS,
             faq=[("How much does it cost to drywall a garage?", "It depends on size, ceiling height and finish. Send rough dimensions and photos and we will quote it. Garage projects are well above our $1,000 minimum."), ("Do you handle the permit?", "Hanging and finishing drywall in an existing garage usually does not need one. Additions and new rooms do, and your builder or framer carries that permit. We finish after the inspection."), ("Can you paint it too?", "Yes. Primer and paint can be included in the quote so the room is finished when we leave.")]),
     }
     for path, d in svc_pages.items():
@@ -487,7 +539,7 @@ def build(scripts_v):
         ])
         body = header(None) + nav + hero(f"Drywall Repair and Installation in {city}, TX", f"{city} Drywall Repair From Our Colony Office",
             esc(f"Holes, cracks, water damaged ceilings, texture matching, popcorn removal and new garage drywall for {city} homeowners. OnPoint Pros Remodeling, run by Dillon Hubbard from Grandscape in The Colony. Rated 5.0 on Google."), f"Get a {city} Drywall Quote") + quick_answer(
-            f"<strong>{BIZ['name']} serves {esc(city)} from {esc(NAP)}, {BIZ['phone']}.</strong> Drywall projects start at $1,000. Open {BIZ['hours']}. Fully insured.") + prose(f"Drywall Work in {city}", city_copy[slug] + ["We show up when we say we will, protect your floors and furniture, give you one clear price before work starts and leave the house clean."]) + cards(f"What We Do in {city}", SERVICES) + photos("From Our Jobs", PHOTOS[:4]) + reviews("What Our Customers Say") + neighborhoods(city, hoods) + areas(slug) + f_sec + bathroom_handoff() + estimate(
+            f"<strong>{BIZ['name']} serves {esc(city)} from {esc(NAP)}, {BIZ['phone']}.</strong> Drywall projects start at $1,000. Open {BIZ['hours']}. Fully insured.") + prose(f"Drywall Work in {city}", city_copy[slug] + ["We show up when we say we will, protect your floors and furniture, give you one clear price before work starts and leave the house clean."]) + cards(f"What We Do in {city}", SERVICES) + photos("From Our Jobs", CITY_PHOTOS.get(slug, MIX_PHOTOS)) + reviews("What Our Customers Say") + neighborhoods(city, hoods) + areas(slug) + f_sec + bathroom_handoff() + estimate(
             f"Get a {city} Drywall Quote", "Send photos of every area and we will confirm the scope and price before work starts. Drywall projects start at $1,000.") + footer()
         written.append(page(path, f"Drywall Repair {city} TX | OnPoint Pros Remodeling, The Colony",
             f"Drywall repair, ceiling and water damage repair, texture matching, popcorn removal and garage drywall in {city}, TX from the OnPoint Pros Remodeling office in The Colony. Projects start at $1,000. Call {BIZ['phone']}.",
