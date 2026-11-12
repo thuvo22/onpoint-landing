@@ -59,50 +59,59 @@ PHOTOS = [
 def _p(cat, n, alt):
     return (f"/images/colony/{cat}-{n:02d}.jpg", alt, 1200, 900)
 
-REPAIR_PHOTOS = [
-    _p("repair", 3, "Before: ceiling drywall torn open next to the attic access panel"),
-    _p("repair", 4, "After: the ceiling patched, textured and painted around the panel"),
-    _p("repair", 5, "Before: the wall under a window opened back to the insulation"),
-    _p("repair", 6, "After: the same wall patched, textured and painted with the baseboard back on"),
-    _p("repair", 7, "Our crew finishing new drywall in a two story entry, floors covered in plastic"),
-]
-CEILING_PHOTOS = [
-    _p("ceiling", 1, "Before: ceiling drywall torn open beside an air vent after a leak"),
-    _p("ceiling", 2, "Before: a water damaged ceiling corner cut open to dry the framing"),
-    _p("ceiling", 3, "After: the same ceiling corner replaced, textured and painted"),
-    _p("ceiling", 4, "A bedroom ceiling cut open to the joists so the wet drywall can come out"),
-    _p("ceiling", 5, "Scaffold and plastic over the stairs for a two story living room ceiling repair"),
-    _p("ceiling", 7, "A water stain spreading across a textured ceiling, the first sign of a leak above"),
-    _p("ceiling", 9, "After: a kitchen ceiling patched, retextured and painted"),
-    _p("ceiling", 10, "A hallway ceiling patch cut square and ready for new drywall"),
-]
-TEXTURE_PHOTOS = [
-    _p("texture", 1, "Before: a popcorn ceiling in an empty room, ready for removal"),
-    _p("texture", 2, "Before: the same room from the window side, popcorn ceiling and old border"),
-    _p("texture", 3, "After: a ceiling finished in light orange peel around a recessed light"),
-    _p("texture", 4, "Our crew spraying new ceiling texture with the room sealed in plastic"),
-    _p("texture", 5, "Spraying texture across a garage ceiling from the ladder"),
-    _p("texture", 6, "The texture hopper gun at work, everything below covered"),
-    _p("texture", 7, "A living room masked in plastic before the ceiling is retextured"),
-    _p("texture", 9, "After: a retextured living room ceiling blended into the crown molding"),
-]
-INSTALL_PHOTOS = [
-    _p("install", 1, "New drywall going up next to open insulated studs in a garage conversion"),
-    _p("install", 2, "A garage conversion hung and taped, waiting on texture"),
-    _p("install", 3, "New drywall hung and mudded around a built in cabinet"),
-    _p("install", 4, "Before: a garage cleared out ahead of new drywall on every wall and the ceiling"),
+def _pair(title, before, after, caption):
+    return dict(title=title, before=before, after=after, caption=caption)
+
+PAIR_ATTIC = _pair("Ceiling hole next to the attic panel",
+    _p("repair", 3, "Ceiling drywall torn open next to the attic access panel"),
+    _p("repair", 4, "The same ceiling patched, textured and painted around the panel"),
+    "Torn ceiling drywall beside the attic access, then the same spot patched, textured and painted so the panel sits in a clean ceiling again.")
+PAIR_WINDOW = _pair("Wall under a window, rebuilt",
+    _p("repair", 5, "The wall under a window opened back to the insulation"),
+    _p("repair", 6, "The same wall patched, textured and painted with the baseboard back on"),
+    "The wall below the window was cut back to the insulation, then new drywall, texture, paint and the baseboard reinstalled.")
+PAIR_WET_CEILING = _pair("Water damaged ceiling corner",
+    _p("ceiling", 2, "A water damaged ceiling corner cut open to dry the framing"),
+    _p("ceiling", 3, "The same ceiling corner replaced, textured and painted"),
+    "The wet drywall came out so the framing could dry, then the corner was closed with new board, textured and painted.")
+PAIR_GARAGE = _pair("Garage drywall, studs to finished board",
     _p("install", 5, "The garage stripped to the studs with the floor protected"),
-    _p("install", 6, "Our crew hanging the new garage drywall"),
     _p("install", 7, "The garage hung and taped, ready for texture and paint"),
-    _p("install", 8, "New drywall hung in a closet during a bath remodel"),
-    _p("install", 9, "After: a small room finished smooth and primed"),
-]
-MIX_PHOTOS = [REPAIR_PHOTOS[2], REPAIR_PHOTOS[3], CEILING_PHOTOS[1], CEILING_PHOTOS[2], TEXTURE_PHOTOS[3], INSTALL_PHOTOS[6]]
+    "The garage stripped to the studs with the floor covered, then every wall and the ceiling hung and taped.")
+
+S_CREW_ENTRY = _p("repair", 7, "Our crew finishing new drywall in a two story entry, floors covered in plastic")
+S_CEIL_VENT = _p("ceiling", 1, "Ceiling drywall torn open beside an air vent after a leak, before we started")
+S_CEIL_JOISTS = _p("ceiling", 4, "A bedroom ceiling cut open to the joists so the wet drywall can come out")
+S_SCAFFOLD = _p("ceiling", 5, "Scaffold and plastic over the stairs for a two story living room ceiling repair")
+S_STAIN = _p("ceiling", 7, "A water stain spreading across a textured ceiling, the first sign of a leak above")
+S_KITCHEN_CEIL = _p("ceiling", 9, "A kitchen ceiling after the patch, retexture and paint")
+S_HALL_PATCH = _p("ceiling", 10, "A hallway ceiling patch cut square and ready for new drywall")
+S_POPCORN_1 = _p("texture", 1, "A popcorn ceiling in an empty room, ready for removal")
+S_POPCORN_2 = _p("texture", 2, "The same room from the window side, popcorn ceiling and old border")
+S_ORANGE_PEEL = _p("texture", 3, "A finished ceiling in light orange peel around a recessed light")
+S_SPRAY_1 = _p("texture", 4, "Our crew spraying new ceiling texture with the room sealed in plastic")
+S_SPRAY_2 = _p("texture", 5, "Spraying texture across a garage ceiling from the ladder")
+S_HOPPER = _p("texture", 6, "The texture hopper gun at work, everything below covered")
+S_MASKED = _p("texture", 7, "A living room masked in plastic before the ceiling is retextured")
+S_LIVING_CEIL = _p("texture", 9, "A retextured living room ceiling blended into the crown molding")
+S_CONV_HANG = _p("install", 1, "New drywall going up next to open insulated studs in a garage conversion")
+S_CONV_TAPED = _p("install", 2, "A garage conversion hung and taped, waiting on texture")
+S_CABINET = _p("install", 3, "New drywall hung and mudded around a built in cabinet")
+S_GARAGE_BEFORE = _p("install", 4, "A garage cleared out ahead of new drywall on every wall and the ceiling")
+S_GARAGE_CREW = _p("install", 6, "Our crew hanging the new garage drywall")
+S_CLOSET = _p("install", 8, "New drywall hung in a closet during a bath remodel")
+S_SMOOTH = _p("install", 9, "A small room finished smooth and primed")
+
+REPAIR_PHOTOS = dict(pairs=[PAIR_ATTIC, PAIR_WINDOW], singles=[S_CREW_ENTRY, S_HALL_PATCH, S_CABINET])
+CEILING_PHOTOS = dict(pairs=[PAIR_WET_CEILING, PAIR_ATTIC], singles=[S_CEIL_VENT, S_CEIL_JOISTS, S_STAIN, S_SCAFFOLD, S_HALL_PATCH, S_KITCHEN_CEIL])
+TEXTURE_PHOTOS = dict(pairs=[], singles=[S_POPCORN_1, S_POPCORN_2, S_ORANGE_PEEL, S_MASKED, S_SPRAY_1, S_SPRAY_2, S_HOPPER, S_LIVING_CEIL, S_SMOOTH])
+INSTALL_PHOTOS = dict(pairs=[PAIR_GARAGE], singles=[S_GARAGE_BEFORE, S_GARAGE_CREW, S_CONV_HANG, S_CONV_TAPED, S_CABINET, S_CLOSET])
+MIX_PHOTOS = dict(pairs=[PAIR_WET_CEILING, PAIR_WINDOW], singles=[S_SPRAY_1, S_GARAGE_CREW, S_SCAFFOLD])
 CITY_PHOTOS = {
-    "lewisville": [INSTALL_PHOTOS[4], INSTALL_PHOTOS[6], CEILING_PHOTOS[0], REPAIR_PHOTOS[3]],
-    "little-elm": [REPAIR_PHOTOS[2], REPAIR_PHOTOS[3], INSTALL_PHOTOS[1], TEXTURE_PHOTOS[2]],
-    "frisco": [CEILING_PHOTOS[1], CEILING_PHOTOS[2], TEXTURE_PHOTOS[6], INSTALL_PHOTOS[0]],
-    "plano": [TEXTURE_PHOTOS[0], TEXTURE_PHOTOS[2], REPAIR_PHOTOS[0], REPAIR_PHOTOS[1]],
+    "lewisville": dict(pairs=[PAIR_GARAGE], singles=[S_CEIL_VENT, S_GARAGE_CREW, S_SPRAY_1]),
+    "little-elm": dict(pairs=[PAIR_ATTIC], singles=[S_CONV_TAPED, S_ORANGE_PEEL, S_SCAFFOLD]),
+    "frisco": dict(pairs=[PAIR_WET_CEILING], singles=[S_MASKED, S_CONV_HANG, S_KITCHEN_CEIL]),
+    "plano": dict(pairs=[PAIR_WINDOW], singles=[S_POPCORN_1, S_ORANGE_PEEL, S_GARAGE_CREW]),
 }
 
 SERVICES = [
@@ -266,14 +275,31 @@ def cards(h2, items, link=True):
 """
 
 
+def _img(src, alt, w, h, extra=""):
+    return f'<img src="{src}" alt="{esc(alt)}" loading="lazy" class="w-full h-auto{extra}" width="{w}" height="{h}">'
+
 def photos(h2, picks):
-    figs = "".join(f'<figure class="bg-white rounded-2xl border border-slate-200 overflow-hidden"><img src="{src}" alt="{esc(alt)}" loading="lazy" class="w-full h-auto" width="{w}" height="{h}"><figcaption class="p-4 text-sm text-slate-600">{esc(alt)}</figcaption></figure>' for src, alt, w, h in picks)
+    pairs, singles = picks.get("pairs", []), picks.get("singles", [])
+    out = []
+    for pr in pairs:
+        b, a = pr["before"], pr["after"]
+        out.append(f'<figure class="bg-white rounded-2xl border border-slate-200 overflow-hidden mb-6"><div class="grid grid-cols-2 gap-1 bg-slate-200">'
+                   f'<div class="relative">{_img(*b)}<span class="absolute top-0 left-0 bg-slate-900 text-amber-300 text-xs sm:text-base font-bold tracking-wide px-2 py-1">BEFORE</span></div>'
+                   f'<div class="relative">{_img(*a)}<span class="absolute top-0 left-0 bg-slate-900 text-amber-300 text-xs sm:text-base font-bold tracking-wide px-2 py-1">AFTER</span></div></div>'
+                   f'<figcaption class="p-4"><h3 class="font-bold text-slate-900">{esc(pr["title"])}</h3><p class="text-sm text-slate-600 mt-1">{esc(pr["caption"])}</p></figcaption></figure>')
+    pair_html = "".join(out)
+    single_html = ""
+    if singles:
+        figs = "".join(f'<figure class="bg-white rounded-2xl border border-slate-200 overflow-hidden">{_img(src, alt, w, h)}<figcaption class="p-4 text-sm text-slate-600">{esc(alt)}</figcaption></figure>' for src, alt, w, h in singles)
+        sub = '<h3 class="text-xl font-bold text-slate-900 mt-10 mb-5 text-center">On the Job</h3>' if pairs else ""
+        single_html = f'{sub}<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">{figs}</div>'
+    intro = "Each before and after card is the same spot, shot by our crew before we started and once we were done." if pairs else "Our own jobs, photographed by our crew."
     return f"""
     <section class="py-16 bg-slate-100">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3 text-center">{esc(h2)}</h2>
-            <p class="text-center text-slate-500 mb-10">Our own jobs, photographed by our crew.</p>
-            <div class="grid md:grid-cols-2 gap-6">{figs}</div>
+            <p class="text-center text-slate-500 mb-10">{intro}</p>
+            {pair_html}{single_html}
         </div>
     </section>
 """
