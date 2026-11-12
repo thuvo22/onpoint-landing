@@ -1004,6 +1004,87 @@
       }
     ]
   },
+  "images/colony/review-anish.jpg": {
+    "sha256": "68894e2d0fb6e230c3c8df40a9c1817fa50b41206e0b8be2c77bb599dc10dc02",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 72079,
+    "original_width": 1076,
+    "original_height": 433,
+    "variants": [
+      {
+        "path": "images/optimized/review-anish-7c3eb9f61dfa-480w.webp",
+        "width": 480,
+        "height": 193,
+        "bytes": 12702
+      },
+      {
+        "path": "images/optimized/review-anish-7c3eb9f61dfa-800w.webp",
+        "width": 800,
+        "height": 322,
+        "bytes": 25718
+      },
+      {
+        "path": "images/optimized/review-anish-7c3eb9f61dfa-1076w.webp",
+        "width": 1076,
+        "height": 433,
+        "bytes": 36860
+      }
+    ]
+  },
+  "images/colony/review-jiya.jpg": {
+    "sha256": "8962cb80e57dcd652f4b13bbc21d89cd0106661997abdbd24de39b95e51f9f77",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 67770,
+    "original_width": 1076,
+    "original_height": 433,
+    "variants": [
+      {
+        "path": "images/optimized/review-jiya-d017f87fd294-480w.webp",
+        "width": 480,
+        "height": 193,
+        "bytes": 12042
+      },
+      {
+        "path": "images/optimized/review-jiya-d017f87fd294-800w.webp",
+        "width": 800,
+        "height": 322,
+        "bytes": 24018
+      },
+      {
+        "path": "images/optimized/review-jiya-d017f87fd294-1076w.webp",
+        "width": 1076,
+        "height": 433,
+        "bytes": 34392
+      }
+    ]
+  },
+  "images/colony/review-travis.jpg": {
+    "sha256": "f649c8ad0d523538c845ebcca3400a1bd5bb57334d96757a6b773b77cae86721",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 73826,
+    "original_width": 1076,
+    "original_height": 433,
+    "variants": [
+      {
+        "path": "images/optimized/review-travis-db727fa2c3fa-480w.webp",
+        "width": 480,
+        "height": 193,
+        "bytes": 13198
+      },
+      {
+        "path": "images/optimized/review-travis-db727fa2c3fa-800w.webp",
+        "width": 800,
+        "height": 322,
+        "bytes": 26510
+      },
+      {
+        "path": "images/optimized/review-travis-db727fa2c3fa-1076w.webp",
+        "width": 1076,
+        "height": 433,
+        "bytes": 37820
+      }
+    ]
+  },
   "images/colony/texture-01.jpg": {
     "sha256": "4f76b6f0cb6b36a85723c71d4982e06fe9cf5427d30d2ede4226ead31e918bd1",
     "recipe": "webp-q85-method6-lanczos-v1",

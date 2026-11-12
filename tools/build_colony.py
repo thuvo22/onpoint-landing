@@ -42,9 +42,13 @@ BIZ_ID = BASE + "#business"
 HERO = "/images/colony/hero-garage-drywall.jpg"
 
 REVIEWS = [
-    ("Anita", "Lewisville", "He showed up exactly when he promised. Did the drywall patch in only 2 hours, and the texture was great."),
-    ("Travis Winter", "Lewisville", "OnPoint Pros did a great job replacing the drywall in my garage in Lewisville, TX. Communication was clear throughout the project, and the entire crew was helpful, professional, and respectful of my home and family."),
-    ("Anish Bhattarai", "Lewisville", "We hired OnPoint Pros for a major garage ceiling drywall repair and refinishing project at our home in Lewisville, TX. The crew repaired damaged drywall and loose joints across the ceiling, then applied new texture."),
+    # (image, reviewer, alt text). Real screenshots of the Google reviews on the
+    # OnPoint Pros Remodeling listing, cropped to the review itself. Re-shoot if a
+    # reviewer edits or removes a review. Anita's review is left out because it
+    # says "handyman", a word we never put on the site.
+    ("/images/colony/review-travis.jpg", "Travis Winter", "Five star Google review from Travis Winter: OnPoint Pros replaced the drywall in a Lewisville garage, with clear communication and a crew respectful of the home"),
+    ("/images/colony/review-anish.jpg", "Anish Bhattarai", "Five star Google review from Anish Bhattarai: a major garage ceiling drywall repair and refinish in Lewisville, with shelves, belongings and floor covered before the work"),
+    ("/images/colony/review-jiya.jpg", "Jiya Patel", "Five star Google review from Jiya Patel: a leak damaged staircase ceiling in Lewisville patched and texture matched with no obvious patch"),
 ]
 
 PHOTOS = [
@@ -354,13 +358,17 @@ def photos(h2, picks):
 
 
 def reviews(h2):
-    cards_html = "".join(f'<div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 text-left"><div class="text-amber-400 mb-3">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="text-slate-600 mb-4">&ldquo;{esc(text)}&rdquo;</p><p class="font-bold text-slate-900">&mdash; {esc(name)}, {esc(city)}</p><p class="text-xs text-slate-400">Google review of OnPoint Pros Remodeling</p></div>' for name, city, text in REVIEWS)
+    cards_html = "".join(
+        f'<figure class="bg-slate-50 rounded-2xl p-3 sm:p-4 border border-slate-200">'
+        f'<a href="{BIZ["maps"]}" target="_blank" rel="noopener"><img src="{src}" alt="{esc(alt)}" width="1076" height="433" loading="lazy" decoding="async" class="w-full h-auto rounded-xl bg-white border border-slate-200"></a>'
+        f'<figcaption class="mt-2 text-xs text-slate-400 text-center">Screenshot of {esc(name)}\'s Google review of OnPoint Pros Remodeling</figcaption></figure>'
+        for src, name, alt in REVIEWS)
     return f"""
     <section id="reviews" class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3 text-center">{esc(h2)}</h2>
             <p class="text-center text-slate-500 mb-10">Rated <span class="font-bold text-slate-900">5.0</span> on Google. <a href="{BIZ['maps']}" target="_blank" rel="noopener" class="underline underline-offset-2 decoration-amber-400 decoration-2 hover:text-red-600">Read the reviews on our Google listing</a>.</p>
-            <div class="grid md:grid-cols-3 gap-6">{cards_html}</div>
+            <div class="grid gap-6 max-w-3xl mx-auto">{cards_html}</div>
         </div>
     </section>
 """
