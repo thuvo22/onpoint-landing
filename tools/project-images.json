@@ -1005,83 +1005,83 @@
     ]
   },
   "images/colony/review-anish.jpg": {
-    "sha256": "68894e2d0fb6e230c3c8df40a9c1817fa50b41206e0b8be2c77bb599dc10dc02",
+    "sha256": "a69ce1eb8dfb5618b8996de7f2d26cee2f5987b27dc6ec3ac9dd4ea57bc9d93c",
     "recipe": "webp-q85-method6-lanczos-v1",
-    "original_bytes": 72079,
+    "original_bytes": 69699,
     "original_width": 1076,
-    "original_height": 433,
+    "original_height": 435,
     "variants": [
       {
-        "path": "images/optimized/review-anish-7c3eb9f61dfa-480w.webp",
+        "path": "images/optimized/review-anish-6e9545d1f2d1-480w.webp",
         "width": 480,
-        "height": 193,
-        "bytes": 12702
+        "height": 194,
+        "bytes": 13150
       },
       {
-        "path": "images/optimized/review-anish-7c3eb9f61dfa-800w.webp",
+        "path": "images/optimized/review-anish-6e9545d1f2d1-800w.webp",
         "width": 800,
-        "height": 322,
-        "bytes": 25718
+        "height": 323,
+        "bytes": 25356
       },
       {
-        "path": "images/optimized/review-anish-7c3eb9f61dfa-1076w.webp",
+        "path": "images/optimized/review-anish-6e9545d1f2d1-1076w.webp",
         "width": 1076,
-        "height": 433,
-        "bytes": 36860
+        "height": 435,
+        "bytes": 36252
       }
     ]
   },
   "images/colony/review-jiya.jpg": {
-    "sha256": "8962cb80e57dcd652f4b13bbc21d89cd0106661997abdbd24de39b95e51f9f77",
+    "sha256": "09dfcd9f0b622e894dabedf59d8b1af06d9e5d14dd63cb9bf81d78a5e1f2dfe6",
     "recipe": "webp-q85-method6-lanczos-v1",
-    "original_bytes": 67770,
+    "original_bytes": 64935,
     "original_width": 1076,
-    "original_height": 433,
+    "original_height": 435,
     "variants": [
       {
-        "path": "images/optimized/review-jiya-d017f87fd294-480w.webp",
+        "path": "images/optimized/review-jiya-ded9370a4922-480w.webp",
         "width": 480,
-        "height": 193,
-        "bytes": 12042
+        "height": 194,
+        "bytes": 12066
       },
       {
-        "path": "images/optimized/review-jiya-d017f87fd294-800w.webp",
+        "path": "images/optimized/review-jiya-ded9370a4922-800w.webp",
         "width": 800,
-        "height": 322,
-        "bytes": 24018
+        "height": 323,
+        "bytes": 23538
       },
       {
-        "path": "images/optimized/review-jiya-d017f87fd294-1076w.webp",
+        "path": "images/optimized/review-jiya-ded9370a4922-1076w.webp",
         "width": 1076,
-        "height": 433,
-        "bytes": 34392
+        "height": 435,
+        "bytes": 33632
       }
     ]
   },
   "images/colony/review-travis.jpg": {
-    "sha256": "f649c8ad0d523538c845ebcca3400a1bd5bb57334d96757a6b773b77cae86721",
+    "sha256": "cc8e1c277882af39526651b504d357b10303b2e658c1de7f2689b68724ae3ae7",
     "recipe": "webp-q85-method6-lanczos-v1",
-    "original_bytes": 73826,
+    "original_bytes": 71504,
     "original_width": 1076,
-    "original_height": 433,
+    "original_height": 435,
     "variants": [
       {
-        "path": "images/optimized/review-travis-db727fa2c3fa-480w.webp",
+        "path": "images/optimized/review-travis-a08ff2093fa8-480w.webp",
         "width": 480,
-        "height": 193,
-        "bytes": 13198
+        "height": 194,
+        "bytes": 13426
       },
       {
-        "path": "images/optimized/review-travis-db727fa2c3fa-800w.webp",
+        "path": "images/optimized/review-travis-a08ff2093fa8-800w.webp",
         "width": 800,
-        "height": 322,
-        "bytes": 26510
+        "height": 323,
+        "bytes": 26334
       },
       {
-        "path": "images/optimized/review-travis-db727fa2c3fa-1076w.webp",
+        "path": "images/optimized/review-travis-a08ff2093fa8-1076w.webp",
         "width": 1076,
-        "height": 433,
-        "bytes": 37820
+        "height": 435,
+        "bytes": 37412
       }
     ]
   },

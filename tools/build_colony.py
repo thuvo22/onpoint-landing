@@ -359,7 +359,7 @@ def photos(h2, picks):
 
 def reviews(h2):
     cards_html = "".join(
-        f'<a href="{BIZ["maps"]}" target="_blank" rel="noopener" class="block"><img src="{src}" alt="{esc(alt)}" width="1076" height="433" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md"></a>'
+        f'<a href="{BIZ["maps"]}" target="_blank" rel="noopener" class="block"><img src="{src}" alt="{esc(alt)}" width="1076" height="435" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md"></a>'
         for src, name, alt in REVIEWS)
     return f"""
     <section id="reviews" class="py-16 bg-white">
@@ -612,7 +612,7 @@ def build(scripts_v):
             (f"How much does drywall repair cost in {city}?", f"Drywall projects at OnPoint Pros Remodeling start at $1,000. Put every repair area in one request, send photos, and we quote the whole job together. Texture and paint are included."),
             (f"Do you come out to {city} for one hole?", f"Yes, as long as the project reaches the $1,000 minimum. Most homes have more than one spot that needs attention, and grouping them is how one visit pays for itself."),
             (f"Can you match the texture in my {city} home?", f"Yes. We spray a sample first, compare it to your wall and adjust until it matches before we blend it in."),
-            ("Where are you based?", f"{NAP}, at Grandscape in The Colony. Open {BIZ['hours']}."),
+            ("Where are you based?", f"At Grandscape in The Colony. Open {BIZ['hours']}."),
         ])
         body = header(None) + nav + hero(f"Drywall Repair and Installation in {city}, TX", f"{city} Drywall Repair From Our Colony Office",
             esc(f"Holes, cracks, water damaged ceilings, texture matching, popcorn removal and new garage drywall for {city} homeowners. OnPoint Pros Remodeling, run by Dillon Hubbard from Grandscape in The Colony. Rated 5.0 on Google."), f"Get a {city} Drywall Quote") + quick_answer(
