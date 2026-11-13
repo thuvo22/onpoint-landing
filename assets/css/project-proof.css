@@ -7,3 +7,4 @@
 
 /* Shared bathroom work section (tools/build_bath_work.py): finished singles in a 3 up grid. */
 .proof-singles{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:1.5rem}.proof-singles img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}.proof-singles figcaption{font-size:.85rem}@media(max-width:640px){.proof-singles{grid-template-columns:1fr 1fr;gap:.75rem}.proof-singles figcaption{padding:.75rem}}
+.proof-sub{font-size:1.2rem;font-weight:750;color:#0f172a;margin:2.5rem 0 1rem}.proof-reviews{align-items:start}.proof-reviews a{display:block}.proof-reviews img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 4px 14px rgba(15,23,42,.12)}

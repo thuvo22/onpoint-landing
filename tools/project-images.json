@@ -1487,6 +1487,60 @@
       }
     ]
   },
+  "images/projects/bath/review-anshu-bhattarai.jpg": {
+    "sha256": "1c04c54b88afe298f6e469c82033edbb24a7aebfba1f499f985dbd1b77c4d361",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 151864,
+    "original_width": 1076,
+    "original_height": 1028,
+    "variants": [
+      {
+        "path": "images/optimized/review-anshu-bhattarai-29b3996b2412-480w.webp",
+        "width": 480,
+        "height": 459,
+        "bytes": 23756
+      },
+      {
+        "path": "images/optimized/review-anshu-bhattarai-29b3996b2412-800w.webp",
+        "width": 800,
+        "height": 764,
+        "bytes": 52202
+      },
+      {
+        "path": "images/optimized/review-anshu-bhattarai-29b3996b2412-1076w.webp",
+        "width": 1076,
+        "height": 1028,
+        "bytes": 77586
+      }
+    ]
+  },
+  "images/projects/bath/review-thuy-dung.jpg": {
+    "sha256": "fa6e7a9ffa9b4b9e68538ad61e84dab1abcc9c84f0f68031134562e87b074ea2",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 179633,
+    "original_width": 1076,
+    "original_height": 1125,
+    "variants": [
+      {
+        "path": "images/optimized/review-thuy-dung-41b1be6d79d9-480w.webp",
+        "width": 480,
+        "height": 502,
+        "bytes": 33672
+      },
+      {
+        "path": "images/optimized/review-thuy-dung-41b1be6d79d9-800w.webp",
+        "width": 800,
+        "height": 836,
+        "bytes": 69746
+      },
+      {
+        "path": "images/optimized/review-thuy-dung-41b1be6d79d9-1076w.webp",
+        "width": 1076,
+        "height": 1125,
+        "bytes": 104662
+      }
+    ]
+  },
   "images/projects/bath/shower-floor-after.jpg": {
     "sha256": "564750e84bcfe03db3da8a0c20085689213a168facd3e315e5f71da9f4b10a68",
     "recipe": "webp-q85-method6-lanczos-v1",

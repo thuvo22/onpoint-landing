@@ -42,6 +42,12 @@ SINGLES = {
     "dark-glass": ("single-dark-shower-glass.jpg", "Dark tile walk-in shower with frameless glass next to the tub deck"),
     "niche": ("single-niche-detail.jpg", "Built in shower niche trimmed in dark tile against a geometric patterned wall"),
 }
+# Screenshots of Google reviews that carry the homeowner's own photos (Allen listing).
+REVIEW_SHOTS = [
+    ("review-thuy-dung.jpg", 1076, 1125, "Five star Google review of a Flower Mound bathroom remodel with the homeowner's photo of the finished room: freestanding tub, gray double vanity with gold hardware and a marble look glass shower"),
+    ("review-anshu-bhattarai.jpg", 1076, 1028, "Five star Google review of an Allen guest bathroom shower rebuild with the homeowner's photo: large stone look tile, built in niche, rain shower head, sliding glass door and grab bar"),
+]
+GOOGLE = "https://www.google.com/maps?cid=12396670433062033498"
 SETS = [
     (["shower-tub", "shower-floor"], ["glass-band", "gray-hex", "tub-surround"]),
     (["tub-wall", "tub-wall-tile"], ["tub-deck", "gray-hex", "niche"]),
@@ -52,7 +58,7 @@ SETS = [
 CITY_PAGES = sorted(p for p in (ROOT / "bathroom").glob("*.html"))
 SERVICE = ROOT / "services/bathroom-remodel.html"
 INDEX = ROOT / "index.html"
-CSS_LINK = '<link rel="stylesheet" href="/assets/css/project-proof.css?v=20261113-bath-work">'
+CSS_LINK = '<link rel="stylesheet" href="/assets/css/project-proof.css?v=20261113-bath-work2">'
 
 def img(fname, alt, w, h):
     return f'<img src="{IMG}{fname}" alt="{html.escape(alt)}" loading="lazy" decoding="async" width="{w}" height="{h}">'
@@ -78,6 +84,8 @@ def section(pairs, singles, more_link=True, h2="Recent bathroom work from our cr
             f'<p class="proof-intro">Our own jobs, shot on the crew\'s phones. Each two photo card is the same spot when we started and when we finished, or two stages of the same build. The single photos are finished showers and tubs from other homes we worked in.</p>'
             f'<div class="proof-grid">{"".join(pair_card(k) for k in pairs)}</div>'
             f'<div class="proof-grid proof-singles">{"".join(single_card(k) for k in singles)}</div>'
+            f'<h3 class="proof-sub">Posted on Google by bathroom homeowners, with their own photos</h3>'
+            f'<div class="proof-grid proof-reviews">' + "".join(f'<a href="{GOOGLE}" target="_blank" rel="noopener"><img src="{IMG}{f}" alt="{html.escape(alt)}" loading="lazy" decoding="async" width="{w}" height="{h}"></a>' for f, w, h, alt in REVIEW_SHOTS) + '</div>'
             f'<div class="proof-actions">{actions}</div></div></section>\n{END}')
 
 def inject(path, block, anchor_re):
