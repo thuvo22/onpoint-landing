@@ -359,9 +359,7 @@ def photos(h2, picks):
 
 def reviews(h2):
     cards_html = "".join(
-        f'<figure class="bg-slate-50 rounded-2xl p-3 sm:p-4 border border-slate-200">'
-        f'<a href="{BIZ["maps"]}" target="_blank" rel="noopener"><img src="{src}" alt="{esc(alt)}" width="1076" height="433" loading="lazy" decoding="async" class="w-full h-auto rounded-xl bg-white border border-slate-200"></a>'
-        f'<figcaption class="mt-2 text-xs text-slate-400 text-center">Screenshot of {esc(name)}\'s Google review of OnPoint Pros Remodeling</figcaption></figure>'
+        f'<a href="{BIZ["maps"]}" target="_blank" rel="noopener" class="block"><img src="{src}" alt="{esc(alt)}" width="1076" height="433" loading="lazy" decoding="async" class="w-full h-auto rounded-xl shadow-md"></a>'
         for src, name, alt in REVIEWS)
     return f"""
     <section id="reviews" class="py-16 bg-white">
