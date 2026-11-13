@@ -42,12 +42,46 @@ SINGLES = {
     "dark-glass": ("single-dark-shower-glass.jpg", "Dark tile walk-in shower with frameless glass next to the tub deck"),
     "niche": ("single-niche-detail.jpg", "Built in shower niche trimmed in dark tile against a geometric patterned wall"),
 }
-# Screenshots of Google reviews that carry the homeowner's own photos (Allen listing).
-REVIEW_SHOTS = [
-    ("review-thuy-dung.jpg", 1076, 1125, "Five star Google review of a Flower Mound bathroom remodel with the homeowner's photo of the finished room: freestanding tub, gray double vanity with gold hardware and a marble look glass shower"),
-    ("review-anshu-bhattarai.jpg", 1076, 1028, "Five star Google review of an Allen guest bathroom shower rebuild with the homeowner's photo: large stone look tile, built in niche, rain shower head, sliding glass door and grab bar"),
+GOOGLE_LISTING = "https://www.google.com/maps?cid=12396670433062033498"
+# Google reviews from bathroom homeowners on the Allen listing, word for word, in the
+# card design from the bathroom offer page (avatar, name, meta line, stars, highlights,
+# the homeowner's own photos, Read on Google). Photos live in images/reviews/.
+REVIEWS = [
+    {"name": "Varun", "initial": "V", "avatar": "varun-avatar-20261028.png",
+     "meta": "Frisco, TX · primary bathroom remodel · October 2026",
+     "url": "https://maps.app.goo.gl/VAmCpaLmLo2xrXG56",
+     "text": "This is the second time I’ve hired OnPoint Pros, this time for our primary bathroom remodel in Frisco. They were just as responsive as before, respected our home and kept us updated whenever anything changed. We’re very happy with how the vanity and tiled shower with gold fixtures turned out. <mark>The finished bathroom exceeded our expectations</mark>, and we would happily hire them again.",
+     "photos": [("varun-review-shower-20261028", "Varun's review photo: tiled shower with gold fixtures"),
+                ("varun-review-vanity-front-20261028", "Varun's review photo: new vanity")]},
+    {"name": "Thùy Dung", "initial": "T", "avatar": "thuy-dung-avatar-20261022.webp",
+     "meta": "Flower Mound, TX · bathroom remodel · September 2026",
+     "url": "https://maps.app.goo.gl/tAL8x4fj7FrqtTqD7",
+     "text": "We had an excellent experience with our bathroom remodel in Flower Mound. <mark>The transformation came out beautiful!</mark> The new walk-in shower, frameless glass, tile work, flooring, and vanity area completely changed the look and feel of the bathroom. The team was professional, responsive, and paid attention to the details throughout the project. They communicated well, kept everything moving, and made sure we were happy with the finished work.",
+     "photos": [("thuy-dung-review-bathroom-20261028", "Thùy Dung's review photo: remodeled bathroom with walk-in shower")]},
+    {"name": "Mohan Yechuri", "initial": "M", "avatar": None,
+     "meta": "Allen, TX · primary bathroom remodel · November 2026",
+     "url": GOOGLE_LISTING,
+     "text": "My mom had difficulty getting in and out of the old shower, so we hired OnPoint Pros to remodel the primary bathroom in our Allen home. They also repaired the drywall and ceiling texture in the hallway. We’re really happy with how everything turned out, and <mark>it was a relief to have the same team handle both projects</mark>. We’d gladly call Dillon and his team again.",
+     "photos": [("mohan-yechuri-review-tub-20261113", "Mohan's review photo: freestanding tub against blue marble look tile with gold fixtures"),
+                ("mohan-yechuri-review-vanity-20261113", "Mohan's review photo: white vanity with gold faucet and arched mirror on blue marble look tile")]},
+    {"name": "Siya Patel", "initial": "S", "avatar": None,
+     "meta": "Allen, TX · shower remodel · November 2026",
+     "url": GOOGLE_LISTING,
+     "text": "The shower in our Allen home felt dated, and we were ready to replace the old tile and curtain. OnPoint Pros replaced them with <mark>green tile and frameless glass, which significantly improved the bathroom's appearance</mark>. They also added a niche and a new showerhead. We love how much more open the shower feels now. Really happy we decided to update it.",
+     "photos": []},
+    {"name": "Anshu Bhattarai", "initial": "A", "avatar": None,
+     "meta": "Allen, TX · guest bath shower rebuild · November 2026",
+     "url": GOOGLE_LISTING,
+     "text": "OnPoint Pros rebuilt the shower in our guest bathroom in Allen TX. They tore out the old tub, redid the waterproofing and pan, and tiled the walls in a large stone look tile with a built-in niche and a gray hex tile floor. We got a rain shower head, a sliding glass door, and a grab bar they set into blocking so it is solid. Dillon helped us pick the tile and laid out the niche so the pattern lined up. The crew kept the hallway covered, <mark>finished when they said they would, and the price matched the quote</mark>. The shower looks like it belongs in a much newer house.",
+     "photos": []},
+    {"name": "Evan K", "initial": "E", "avatar": None,
+     "meta": "Allen, TX · bathroom remodel · November 2026",
+     "url": GOOGLE_LISTING,
+     "text": "We had OnPoint Pros do our bathroom remodel and couldn’t be happier with the result. They <mark>helped us pick the design and materials, kept us informed the whole time</mark>, and were careful with our house. <mark>The shower came out beautiful.</mark> The tile, the hex floor, the glass doors and the shiplap all look great together. Would definitely recommend them!",
+     "photos": [("evan-k-review-shower-20261110", "Evan K's review photo: walk-in shower with frameless glass, beige tile and black fixtures"),
+                ("evan-k-review-shower-detail-20261110", "Evan K's review photo: shower tile with corner shelf and gray hex floor")]},
 ]
-GOOGLE = "https://www.google.com/maps?cid=12396670433062033498"
+REV_IMG = "/images/reviews/"
 SETS = [
     (["shower-tub", "shower-floor"], ["glass-band", "gray-hex", "tub-surround"]),
     (["tub-wall", "tub-wall-tile"], ["tub-deck", "gray-hex", "niche"]),
@@ -58,7 +92,7 @@ SETS = [
 CITY_PAGES = sorted(p for p in (ROOT / "bathroom").glob("*.html"))
 SERVICE = ROOT / "services/bathroom-remodel.html"
 INDEX = ROOT / "index.html"
-CSS_LINK = '<link rel="stylesheet" href="/assets/css/project-proof.css?v=20261113-bath-work2">'
+CSS_LINK = '<link rel="stylesheet" href="/assets/css/project-proof.css?v=20261113-bath-work3">'
 
 def img(fname, alt, w, h):
     return f'<img src="{IMG}{fname}" alt="{html.escape(alt)}" loading="lazy" decoding="async" width="{w}" height="{h}">'
@@ -75,6 +109,20 @@ def single_card(key):
     f, alt = SINGLES[key]
     return f'<figure class="proof-card">{img(f, alt, 1200, 1600)}<figcaption>{html.escape(alt)}</figcaption></figure>'
 
+def review_card(r):
+    if r["avatar"]:
+        av = f'<div class="rv-avatar"><img src="{REV_IMG}{r["avatar"]}" width="40" height="40" alt="" loading="lazy"></div>'
+    else:
+        av = f'<div class="rv-avatar" aria-hidden="true">{r["initial"]}</div>'
+    photos = ""
+    if r["photos"]:
+        photos = '<div class="rv-photos">' + "".join(
+            f'<a href="{REV_IMG}{f}.webp" target="_blank" rel="noopener"><img src="{REV_IMG}{f}-600.webp" alt="{html.escape(alt)}" loading="lazy" decoding="async" width="600" height="800"></a>'
+            for f, alt in r["photos"]) + '</div>'
+    return (f'<article class="rv-card"><div class="rv-head">{av}<div><p class="rv-name">{html.escape(r["name"])}</p><p class="rv-meta">{r["meta"]}</p></div></div>'
+            f'<div class="rv-stars" aria-label="5 stars">★★★★★</div><p class="rv-text">{r["text"]}</p>{photos}'
+            f'<a class="rv-link" href="{r["url"]}" target="_blank" rel="noopener">Read on Google</a></article>')
+
 def section(pairs, singles, more_link=True, h2="Recent bathroom work from our crew"):
     actions = '<a class="proof-button" href="#estimate">Plan your bathroom</a>'
     if more_link:
@@ -84,8 +132,8 @@ def section(pairs, singles, more_link=True, h2="Recent bathroom work from our cr
             f'<p class="proof-intro">Our own jobs, shot on the crew\'s phones. Each two photo card is the same spot when we started and when we finished, or two stages of the same build. The single photos are finished showers and tubs from other homes we worked in.</p>'
             f'<div class="proof-grid">{"".join(pair_card(k) for k in pairs)}</div>'
             f'<div class="proof-grid proof-singles">{"".join(single_card(k) for k in singles)}</div>'
-            f'<h3 class="proof-sub">Posted on Google by bathroom homeowners, with their own photos</h3>'
-            f'<div class="proof-grid proof-reviews">' + "".join(f'<a href="{GOOGLE}" target="_blank" rel="noopener"><img src="{IMG}{f}" alt="{html.escape(alt)}" loading="lazy" decoding="async" width="{w}" height="{h}"></a>' for f, w, h, alt in REVIEW_SHOTS) + '</div>'
+            f'<h3 class="proof-sub">Posted on Google by bathroom homeowners, word for word</h3>'
+            f'<div class="proof-grid proof-reviews">{"".join(review_card(r) for r in REVIEWS)}</div>'
             f'<div class="proof-actions">{actions}</div></div></section>\n{END}')
 
 def inject(path, block, anchor_re):
