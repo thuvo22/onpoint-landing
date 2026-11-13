@@ -442,7 +442,7 @@ def footer():
         <p class="text-white font-bold text-base">{BIZ['name']}</p>
         <p class="mt-1">{esc(NAP)}</p>
         <p class="mt-1"><a href="{BIZ['tel']}" class="hover:text-white">{BIZ['phone']}</a> &middot; Open {BIZ['hours']}</p>
-        <p class="mt-2">Drywall contractor serving {AREA_SENTENCE} &middot; Fully insured &middot; Owner Dillon Hubbard</p>
+        <p class="mt-2">Drywall contractor serving {AREA_SENTENCE} &middot; Fully insured &middot; Owner Dillon</p>
         <p class="mt-3"><a href="/the-colony/" class="hover:text-white">Home</a> &middot; <a href="/the-colony/drywall-repair.html" class="hover:text-white">Drywall Repair</a> &middot; <a href="/the-colony/ceiling-water-damage-repair.html" class="hover:text-white">Ceilings</a> &middot; <a href="/the-colony/texture-matching-popcorn-removal.html" class="hover:text-white">Texture</a> &middot; <a href="/the-colony/drywall-installation.html" class="hover:text-white">New Drywall</a> &middot; <a href="/the-colony/contact.html" class="hover:text-white">Contact</a> &middot; <a href="{BIZ['maps']}" target="_blank" rel="noopener" class="hover:text-white">Google listing</a></p>
         <p class="mt-3">Part of <a href="/" class="underline hover:text-white">OnPoint Pros</a>, Allen TX, for bathroom remodeling and drywall in Collin County.</p>
         <p class="mt-4 text-sm"><a href="/privacy.html" class="underline hover:text-white">Privacy Policy</a> &middot; <a href="/terms.html" class="underline hover:text-white">Terms and Conditions</a> &middot; <a href="#" data-cookie-settings class="underline hover:text-white">Cookie Settings</a></p>
@@ -515,12 +515,12 @@ def build(scripts_v):
         ("Do you handle the ceiling after a roof or plumbing leak?", "Yes. Once the leak is fixed we cut out the wet drywall, replace it, match the texture and paint the ceiling. Send a photo of the stain or sag and we will tell you what it needs."),
         ("Can you match the texture so the patch does not show?", "Yes. Most homes in The Colony, Lewisville and Frisco are knockdown or orange peel. We spray a sample first and adjust until it matches, then blend it into the wall."),
         ("Where is your office?", f"{NAP}, at Grandscape. We drive to {AREA_SENTENCE}. Open {BIZ['hours']}."),
-        ("Is this the same company as OnPoint Pros in Allen?", "Same owner, Dillon Hubbard. OnPoint Pros Remodeling is the drywall office for the west side of our area. Bathroom remodels run through the Allen office."),
+        ("Is this the same company as OnPoint Pros in Allen?", "Same owner, Dillon. OnPoint Pros Remodeling is the drywall office for the west side of our area. Bathroom remodels run through the Allen office."),
     ])
     body = header(None) + nav + hero(
         "Drywall Contractor in The Colony, TX",
         "Drywall Repair and Installation in The Colony",
-        f"OnPoint Pros Remodeling is the drywall office of OnPoint Pros, run by Dillon Hubbard from Grandscape in The Colony. We repair and install drywall, fix water damaged ceilings, match texture so the patch disappears, remove popcorn ceilings and paint the room when we are done. Rated 5.0 on Google.",
+        f"OnPoint Pros Remodeling is the drywall office of OnPoint Pros, run by Dillon from Grandscape in The Colony. We repair and install drywall, fix water damaged ceilings, match texture so the patch disappears, remove popcorn ceilings and paint the room when we are done. Rated 5.0 on Google.",
         "Get a Drywall Quote") + quick_answer(
         f"<strong>{BIZ['name']}, {esc(NAP)}, {BIZ['phone']}.</strong> Drywall projects start at $1,000. We serve {AREA_SENTENCE}, {BIZ['hours']}. Fully insured.") + prose(
         "What We Do, and How We Do It", [
@@ -615,7 +615,7 @@ def build(scripts_v):
             ("Where are you based?", f"At Grandscape in The Colony. Open {BIZ['hours']}."),
         ])
         body = header(None) + nav + hero(f"Drywall Repair and Installation in {city}, TX", f"{city} Drywall Repair From Our Colony Office",
-            esc(f"Holes, cracks, water damaged ceilings, texture matching, popcorn removal and new garage drywall for {city} homeowners. OnPoint Pros Remodeling, run by Dillon Hubbard from Grandscape in The Colony. Rated 5.0 on Google."), f"Get a {city} Drywall Quote") + quick_answer(
+            esc(f"Holes, cracks, water damaged ceilings, texture matching, popcorn removal and new garage drywall for {city} homeowners. OnPoint Pros Remodeling, run by Dillon from Grandscape in The Colony. Rated 5.0 on Google."), f"Get a {city} Drywall Quote") + quick_answer(
             f"<strong>{BIZ['name']} serves {esc(city)} from {esc(NAP)}, {BIZ['phone']}.</strong> Drywall projects start at $1,000. Open {BIZ['hours']}. Fully insured.") + prose(f"Drywall Work in {city}", city_copy[slug] + ["We show up when we say we will, protect your floors and furniture, give you one clear price before work starts and leave the house clean."]) + cards(f"What We Do in {city}", SERVICES) + photos("From Our Jobs", CITY_PHOTOS.get(slug, MIX_PHOTOS)) + reviews("What Our Customers Say") + neighborhoods(city, hoods) + areas(slug) + f_sec + bathroom_handoff() + estimate(
             f"Get a {city} Drywall Quote", "Send photos of every area and we will confirm the scope and price before work starts. Drywall projects start at $1,000.") + footer()
         written.append(page(path, f"Drywall Repair {city} TX | OnPoint Pros Remodeling, The Colony",
@@ -636,7 +636,7 @@ def build(scripts_v):
                     <div><dt class="font-bold">Office</dt><dd>{esc(NAP)}<br><a href="{BIZ['maps']}" target="_blank" rel="noopener" class="underline text-red-600">Open in Google Maps</a></dd></div>
                     <div><dt class="font-bold">Hours</dt><dd>Open {BIZ['hours']}</dd></div>
                     <div><dt class="font-bold">Service area</dt><dd>{AREA_SENTENCE}</dd></div>
-                    <div><dt class="font-bold">Owner</dt><dd>Dillon Hubbard</dd></div>
+                    <div><dt class="font-bold">Owner</dt><dd>Dillon</dd></div>
                     <div><dt class="font-bold">Insurance</dt><dd>Fully insured</dd></div>
                 </dl>
                 <p class="mt-8 text-slate-500">Bathroom remodels and drywall in Allen, McKinney and Prosper go through our Allen office, <a href="/contact.html" class="underline text-red-600">OnPoint Pros</a>.</p>
