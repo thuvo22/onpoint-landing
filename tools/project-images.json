@@ -1487,6 +1487,498 @@
       }
     ]
   },
+  "images/projects/bath/shower-floor-after.jpg": {
+    "sha256": "564750e84bcfe03db3da8a0c20085689213a168facd3e315e5f71da9f4b10a68",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 309478,
+    "original_width": 1600,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/shower-floor-after-c6e9cebfa85a-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 32698
+      },
+      {
+        "path": "images/optimized/shower-floor-after-c6e9cebfa85a-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 83700
+      },
+      {
+        "path": "images/optimized/shower-floor-after-c6e9cebfa85a-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 169350
+      },
+      {
+        "path": "images/optimized/shower-floor-after-c6e9cebfa85a-1600w.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 258130
+      }
+    ]
+  },
+  "images/projects/bath/shower-floor-before.jpg": {
+    "sha256": "f5144308f0f6f47a57c8036fd109074d5ec838cce7076a1453c65c574fc60d0a",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 156726,
+    "original_width": 1600,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/shower-floor-before-a0a97f1ac26c-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 17914
+      },
+      {
+        "path": "images/optimized/shower-floor-before-a0a97f1ac26c-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 35244
+      },
+      {
+        "path": "images/optimized/shower-floor-before-a0a97f1ac26c-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 56950
+      },
+      {
+        "path": "images/optimized/shower-floor-before-a0a97f1ac26c-1600w.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 82308
+      }
+    ]
+  },
+  "images/projects/bath/shower-tub-after.jpg": {
+    "sha256": "563288a7b3970bd3d086dab8e09ea1d57caaf080c8de46aa570d57fe0dcae6c6",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 232989,
+    "original_width": 1600,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/shower-tub-after-d329d4066a35-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 26684
+      },
+      {
+        "path": "images/optimized/shower-tub-after-d329d4066a35-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 59246
+      },
+      {
+        "path": "images/optimized/shower-tub-after-d329d4066a35-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 108396
+      },
+      {
+        "path": "images/optimized/shower-tub-after-d329d4066a35-1600w.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 163318
+      }
+    ]
+  },
+  "images/projects/bath/shower-tub-before.jpg": {
+    "sha256": "d5debca708527a209128ec63b81a0066d7dc2e0ad3f052a99a612cf813bdd09d",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 259917,
+    "original_width": 1600,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/shower-tub-before-974fd4e5bde6-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 29606
+      },
+      {
+        "path": "images/optimized/shower-tub-before-974fd4e5bde6-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 65870
+      },
+      {
+        "path": "images/optimized/shower-tub-before-974fd4e5bde6-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 123010
+      },
+      {
+        "path": "images/optimized/shower-tub-before-974fd4e5bde6-1600w.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 190152
+      }
+    ]
+  },
+  "images/projects/bath/single-dark-shower-glass.jpg": {
+    "sha256": "a21185264ee583efb8f09d3acfcd57cf3691453ca9cebd41b353f335ab63f403",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 274090,
+    "original_width": 1200,
+    "original_height": 1600,
+    "variants": [
+      {
+        "path": "images/optimized/single-dark-shower-glass-8cd03eeb1584-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 50758
+      },
+      {
+        "path": "images/optimized/single-dark-shower-glass-8cd03eeb1584-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 116308
+      },
+      {
+        "path": "images/optimized/single-dark-shower-glass-8cd03eeb1584-1200w.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 212576
+      }
+    ]
+  },
+  "images/projects/bath/single-niche-detail.jpg": {
+    "sha256": "6d13627f20d82217eb982e3c20fd4916892fad0b5ce3e0a1a6e5d97250bf644e",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 153650,
+    "original_width": 1200,
+    "original_height": 1600,
+    "variants": [
+      {
+        "path": "images/optimized/single-niche-detail-a3d376825c76-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 27428
+      },
+      {
+        "path": "images/optimized/single-niche-detail-a3d376825c76-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 53008
+      },
+      {
+        "path": "images/optimized/single-niche-detail-a3d376825c76-1200w.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 88418
+      }
+    ]
+  },
+  "images/projects/bath/single-shower-glass-band.jpg": {
+    "sha256": "590411f474c8fb41ef63bba7dab19f59c5c8bc329b6cb1ba6d00bb4bcec0bba1",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 239376,
+    "original_width": 1200,
+    "original_height": 1600,
+    "variants": [
+      {
+        "path": "images/optimized/single-shower-glass-band-cb42504347de-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 38800
+      },
+      {
+        "path": "images/optimized/single-shower-glass-band-cb42504347de-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 84930
+      },
+      {
+        "path": "images/optimized/single-shower-glass-band-cb42504347de-1200w.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 169604
+      }
+    ]
+  },
+  "images/projects/bath/single-shower-gray-hex.jpg": {
+    "sha256": "26f51da38ec55b80adf5c7e756a53a96ed0cbf7e4066cdb604938e16f3b108d9",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 224184,
+    "original_width": 1200,
+    "original_height": 1600,
+    "variants": [
+      {
+        "path": "images/optimized/single-shower-gray-hex-f17603cec6c3-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 35954
+      },
+      {
+        "path": "images/optimized/single-shower-gray-hex-f17603cec6c3-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 85668
+      },
+      {
+        "path": "images/optimized/single-shower-gray-hex-f17603cec6c3-1200w.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 157970
+      }
+    ]
+  },
+  "images/projects/bath/single-tub-deck-floor.jpg": {
+    "sha256": "eea2939d999809becf8b26b52962a0c11947de5e84cf8df0dbbfda1e055f3c94",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 195871,
+    "original_width": 1200,
+    "original_height": 1600,
+    "variants": [
+      {
+        "path": "images/optimized/single-tub-deck-floor-ff300421cd88-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 32304
+      },
+      {
+        "path": "images/optimized/single-tub-deck-floor-ff300421cd88-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 70016
+      },
+      {
+        "path": "images/optimized/single-tub-deck-floor-ff300421cd88-1200w.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 133086
+      }
+    ]
+  },
+  "images/projects/bath/single-tub-surround.jpg": {
+    "sha256": "d8ef0f93cc640e9f9363667d547572002b59d68adb4eb3a125a253ee08951bcd",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 210448,
+    "original_width": 1200,
+    "original_height": 1600,
+    "variants": [
+      {
+        "path": "images/optimized/single-tub-surround-aa88896dea39-480w.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 37344
+      },
+      {
+        "path": "images/optimized/single-tub-surround-aa88896dea39-800w.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 81278
+      },
+      {
+        "path": "images/optimized/single-tub-surround-aa88896dea39-1200w.webp",
+        "width": 1200,
+        "height": 1600,
+        "bytes": 147252
+      }
+    ]
+  },
+  "images/projects/bath/tub-wall-after.jpg": {
+    "sha256": "7e81aa2eceec07d0d24e75e527de896c43af9047ee5ca127fbe7cc48041696a6",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 272423,
+    "original_width": 1600,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/tub-wall-after-9cf6325ef1fa-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 25648
+      },
+      {
+        "path": "images/optimized/tub-wall-after-9cf6325ef1fa-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 66902
+      },
+      {
+        "path": "images/optimized/tub-wall-after-9cf6325ef1fa-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 136680
+      },
+      {
+        "path": "images/optimized/tub-wall-after-9cf6325ef1fa-1600w.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 223662
+      }
+    ]
+  },
+  "images/projects/bath/tub-wall-before.jpg": {
+    "sha256": "cd1d91d585f856b1671942519ad1fe06dc55b44d0d6dd0805776c72e626e1ed6",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 277939,
+    "original_width": 1600,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/tub-wall-before-f0962c4b3838-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 31634
+      },
+      {
+        "path": "images/optimized/tub-wall-before-f0962c4b3838-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 76286
+      },
+      {
+        "path": "images/optimized/tub-wall-before-f0962c4b3838-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 142606
+      },
+      {
+        "path": "images/optimized/tub-wall-before-f0962c4b3838-1600w.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 221318
+      }
+    ]
+  },
+  "images/projects/bath/tub-wall-board.jpg": {
+    "sha256": "bc45768e95cbae651adbb2ad96f2e3029c5126f3c8633c2e3fcb4a9ab5547f86",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 238332,
+    "original_width": 1600,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/tub-wall-board-79a3e2506231-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 24066
+      },
+      {
+        "path": "images/optimized/tub-wall-board-79a3e2506231-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 56820
+      },
+      {
+        "path": "images/optimized/tub-wall-board-79a3e2506231-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 106892
+      },
+      {
+        "path": "images/optimized/tub-wall-board-79a3e2506231-1600w.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 174358
+      }
+    ]
+  },
+  "images/projects/bath/tub-wall-tile.jpg": {
+    "sha256": "e73672b43f291b9e35c04ff9e34e67bbde20923fbf900f1b82921ed5c2f206ed",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 134610,
+    "original_width": 1600,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/tub-wall-tile-c6457344946e-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 19840
+      },
+      {
+        "path": "images/optimized/tub-wall-tile-c6457344946e-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 37580
+      },
+      {
+        "path": "images/optimized/tub-wall-tile-c6457344946e-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 59982
+      },
+      {
+        "path": "images/optimized/tub-wall-tile-c6457344946e-1600w.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 83274
+      }
+    ]
+  },
+  "images/projects/bath/vanity-side-after.jpg": {
+    "sha256": "46247410cdd8cf9f0bb593b999a4d75b2b60d0fd75d7ff4230daad6b6a8fa93f",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 236500,
+    "original_width": 1600,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/vanity-side-after-a5f7ea6afff2-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 26326
+      },
+      {
+        "path": "images/optimized/vanity-side-after-a5f7ea6afff2-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 59936
+      },
+      {
+        "path": "images/optimized/vanity-side-after-a5f7ea6afff2-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 109446
+      },
+      {
+        "path": "images/optimized/vanity-side-after-a5f7ea6afff2-1600w.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 166424
+      }
+    ]
+  },
+  "images/projects/bath/vanity-side-before.jpg": {
+    "sha256": "9bb8334942b19343c84801ae9de9f575733dc562e0dbcb2b9e20cb56940ee17b",
+    "recipe": "webp-q85-method6-lanczos-v1",
+    "original_bytes": 242885,
+    "original_width": 1600,
+    "original_height": 1200,
+    "variants": [
+      {
+        "path": "images/optimized/vanity-side-before-236498e4ad5d-480w.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 27170
+      },
+      {
+        "path": "images/optimized/vanity-side-before-236498e4ad5d-800w.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 59082
+      },
+      {
+        "path": "images/optimized/vanity-side-before-236498e4ad5d-1200w.webp",
+        "width": 1200,
+        "height": 900,
+        "bytes": 111280
+      },
+      {
+        "path": "images/optimized/vanity-side-before-236498e4ad5d-1600w.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 177174
+      }
+    ]
+  },
   "images/projects/frisco-primary-bathroom-shower-20261028.webp": {
     "sha256": "51c78c64e49444e1e6f4dda926b6d589eacd4545f557143a52067b5ede47148c",
     "recipe": "webp-q85-method6-lanczos-v1",

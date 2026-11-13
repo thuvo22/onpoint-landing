@@ -4,3 +4,6 @@
 .proof-work{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr}.proof-work img{display:block;width:100%;height:auto}.proof-work figcaption{display:flex;flex-direction:column;justify-content:center;padding:2rem}.proof-work p{margin-bottom:1.2rem}.proof-work .proof-button{align-self:flex-start}@media(max-width:640px){.proof-work{grid-template-columns:1fr}.proof-work figcaption{padding:1.25rem}}
 
 .proof-card[id]{scroll-margin-top:6rem}
+
+/* Shared bathroom work section (tools/build_bath_work.py): finished singles in a 3 up grid. */
+.proof-singles{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:1.5rem}.proof-singles img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}.proof-singles figcaption{font-size:.85rem}@media(max-width:640px){.proof-singles{grid-template-columns:1fr 1fr;gap:.75rem}.proof-singles figcaption{padding:.75rem}}
