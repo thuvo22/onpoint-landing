@@ -23,6 +23,10 @@
   "lastmod": "2026-11-17",
   "sha256": "a042b66c7b21bc386d3b6c1ddfdce8eda9c1043463d496538e4a0d55d526d015"
  },
+ "bathroom/cost-estimator.html": {
+  "lastmod": "2026-11-17",
+  "sha256": "f2aaab6d2581fbef8e384f2627cd9a0189c51bcb9c712da6a7cfffbf444c81bf"
+ },
  "bathroom/frisco.html": {
   "lastmod": "2026-11-17",
   "sha256": "397a2cf6f2d4ee7ffc45658d0d182e657110282377344e226a444d3371bde53e"
@@ -77,7 +81,7 @@
  },
  "blog/bathroom-remodel-cost-dfw.html": {
   "lastmod": "2026-11-17",
-  "sha256": "d7242427f325aa35c4fa7fb1b8d82ec568273dbfade7d6423cf92d700300f75a"
+  "sha256": "596389385c95e050280359f821b9dacc7ae941fe4fbf52f28718f1245f96b563"
  },
  "blog/best-flooring-dfw-homes.html": {
   "lastmod": "2026-11-12",
@@ -489,7 +493,7 @@
  },
  "services/bathroom-remodel.html": {
   "lastmod": "2026-11-17",
-  "sha256": "d45faa878e6cbae33d3921598b9d1d35e95a1031e672b1173c45cd3463b8c349"
+  "sha256": "eb5091139c5a3366cb37ab36832613d5b5336ef0ee88bd83277096e7732d4217"
  },
  "services/drywall-repair.html": {
   "lastmod": "2026-11-17",
