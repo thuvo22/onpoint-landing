@@ -21,8 +21,9 @@ class PricesJson(unittest.TestCase):
         want = [(f"{r['min']:,}", f"{r['max']:,}") for r in self.bath["planning_ranges"]]
         self.assertEqual(shown, want)
 
-    def test_no_blueprint_price(self):
-        self.assertNotRegex(json.dumps(self.p), r"Blueprint[^\"]*\$\d")
+    def test_never_mentions_blueprint(self):
+        # Thu 11/17: never mention the paid Blueprint anywhere public
+        self.assertNotRegex(json.dumps(self.p), r"(?i)blueprint|credited toward")
 
 
 if __name__ == "__main__":
