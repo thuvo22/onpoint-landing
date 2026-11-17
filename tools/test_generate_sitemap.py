@@ -66,6 +66,15 @@ class SitemapEligibilityTests(unittest.TestCase):
         self.assertEqual(dates["https://onpointprostx.com/about.html"], "2026-10-17")
         self.assertIn(b"<lastmod>2026-10-17</lastmod>", render_sitemap(["https://onpointprostx.com/about.html"], dates))
 
+    def test_script_cache_stamp_alone_does_not_move_lastmod(self):
+        canonical = '<link rel="canonical" href="https://onpointprostx.com/about.html">'
+        self.page("about.html", canonical + '<script src="/cookie-consent.js?v=242ca6aeb1e2"></script>')
+        entries = collect_entries(self.root)
+        dates, ledger = lastmod_map(self.root, entries, {}, today="2026-10-01")
+        self.page("about.html", canonical + '<script src="/cookie-consent.js?v=f1bf98aaa96d"></script>')
+        dates, ledger = lastmod_map(self.root, entries, ledger, today="2026-11-17")
+        self.assertEqual(dates["https://onpointprostx.com/about.html"], "2026-10-01")
+
     def test_removed_page_leaves_the_ledger(self):
         self.page("a.html", '<link rel="canonical" href="https://onpointprostx.com/a.html">')
         _, ledger = lastmod_map(self.root, collect_entries(self.root), {"gone.html": {"sha256": "x", "lastmod": "2026-01-01"}}, today="2026-10-17")

@@ -11,6 +11,11 @@
  *   Marketing   -> ad_storage, ad_user_data, ad_personalization
  *
  * House style: no dash punctuation in customer-facing copy, no emoji.
+ *
+ * Choices (Thu 2026-11-17, "give an option for them to reject too"): Allow all,
+ * Reject all, Let me choose. Reject all keeps only the necessary storage that
+ * the site cannot run without (it replaced the old "Necessary only" label,
+ * which did the same thing). The settings panel offers Reject all as well.
  */
 (function () {
   "use strict";
@@ -238,6 +243,9 @@
       var all = el("button", "opp-cc-btn opp-cc-reject", "Allow all");
       all.onclick = acceptAll;
       foot.appendChild(all);
+      var none = el("button", "opp-cc-btn opp-cc-reject", "Reject all");
+      none.onclick = rejectAll;
+      foot.appendChild(none);
     }
     panel.appendChild(foot);
 
@@ -261,7 +269,7 @@
     var actions = el("div", "opp-cc-actions");
     var b1 = el("button", "opp-cc-btn opp-cc-accept", "Allow all");
     b1.onclick = acceptAll;
-    var b2 = el("button", "opp-cc-btn opp-cc-reject", "Necessary only");
+    var b2 = el("button", "opp-cc-btn opp-cc-reject", "Reject all");
     b2.onclick = rejectAll;
     var b3 = el("button", "opp-cc-btn opp-cc-link", "Let me choose");
     b3.onclick = openPanel;

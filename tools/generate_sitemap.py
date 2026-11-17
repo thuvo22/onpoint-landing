@@ -12,6 +12,7 @@ import datetime
 import fnmatch
 import hashlib
 import json
+import re
 import subprocess
 from html.parser import HTMLParser
 from pathlib import Path
@@ -83,12 +84,22 @@ def load_ledger(root):
     return json.loads(path.read_text()) if path.exists() else {}
 
 
+# Shared script cache stamps (?v=<hex>) change on every page when one script changes;
+# that is not a content change, so they are blanked before hashing (2026-11-17).
+CACHE_STAMP = re.compile(rb"\?v=[0-9a-f]{6,64}")
+
+
+def content_digest(data):
+    return hashlib.sha256(CACHE_STAMP.sub(b"?v=", data)).hexdigest()
+
+
 def lastmod_map(root, entries, ledger, today=None, seed_from_git=False):
-    """Return ({url: date}, new_ledger). A date moves only when the file's hash changes."""
+    """Return ({url: date}, new_ledger). A date moves only when the page content changes
+    (cache version stamps on shared scripts do not count)."""
     today = today or datetime.date.today().isoformat()
     dates, new_ledger = {}, {}
     for url, relative in entries:
-        digest = hashlib.sha256((root / relative).read_bytes()).hexdigest()
+        digest = content_digest((root / relative).read_bytes())
         record = ledger.get(relative)
         if record and record.get("sha256") == digest:
             date = record["lastmod"]
