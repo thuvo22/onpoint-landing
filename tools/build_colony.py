@@ -417,7 +417,7 @@ def bathroom_handoff():
     <section class="py-16 bg-slate-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-extrabold mb-4">Bathroom Remodels Run Through Our Allen Office</h2>
-            <p class="text-lg text-slate-300 mb-6">OnPoint Pros Remodeling is the drywall side of OnPoint Pros. Full bathroom remodels start at $20,000 and are planned and built by the Allen office, the same owner and the same crew standards.</p>
+            <p class="text-lg text-slate-300 mb-6">OnPoint Pros Remodeling is the drywall side of OnPoint Pros. Full bathroom remodels start at $18,000 and are planned and built by the Allen office, the same owner and the same crew standards.</p>
             <a href="/services/bathroom-remodel.html" class="inline-flex px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700">See OnPoint Pros Bathroom Remodeling &rarr;</a>
         </div>
     </section>

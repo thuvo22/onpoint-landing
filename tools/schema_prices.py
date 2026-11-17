@@ -4,7 +4,7 @@
 Thu 2026-11-17, after the Brock Misner review ("everything that we missed, do it"): AI answers
 and Google read prices from structured data first, and our Service schema had none.
 Only prices already published on the site are used:
-  bathroom remodeling  -> full bathroom remodels start at $20,000 (llms.txt, bathroom pages)
+  bathroom remodeling  -> full bathroom remodels start at $18,000 (llms.txt, bathroom pages)
   drywall              -> $1,000 project minimum (drywall pages, Colony pages)
 Painting and flooring are quoted per project, so they get no price.
 
@@ -15,8 +15,8 @@ Usage: python3 tools/schema_prices.py [--check]
 import json, re, subprocess, sys
 
 BATH = {"@type": "Offer", "priceCurrency": "USD",
-        "priceSpecification": {"@type": "PriceSpecification", "minPrice": 20000, "priceCurrency": "USD"},
-        "description": "Full bathroom remodels start at $20,000. Most primary bathrooms are $25,000 to $45,000. Every project gets its own fixed written quote."}
+        "priceSpecification": {"@type": "PriceSpecification", "minPrice": 18000, "priceCurrency": "USD"},
+        "description": "Full bathroom remodels start at $18,000. Most primary bathrooms are $25,000 to $45,000. Every project gets its own fixed written quote."}
 DRY = {"@type": "Offer", "priceCurrency": "USD",
        "priceSpecification": {"@type": "PriceSpecification", "minPrice": 1000, "priceCurrency": "USD"},
        "description": "Drywall projects have a $1,000 minimum. Every project gets its own written quote."}

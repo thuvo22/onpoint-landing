@@ -17,7 +17,7 @@
     bathroom: 'Full bathroom remodel', repairs: 'Drywall & interior repairs',
     painting: 'Painting', flooring: 'Flooring', other: 'Other residential project'
   };
-  function budgetLabel(value) { return ({ under_20k: 'Under $20,000', '20k_30k': '$20,000 to $30,000', '30k_45k': '$30,000 to $45,000', '45k_plus': '$45,000 or more' })[value] || ''; }
+  function budgetLabel(value) { return ({ under_20k: 'Under $18,000', '20k_30k': '$18,000 to $30,000', '30k_45k': '$30,000 to $45,000', '45k_plus': '$45,000 or more' })[value] || ''; }
   function validService(value) { return Object.prototype.hasOwnProperty.call(serviceLabels, value); }
   function buttonLabel() { return service.value === 'bathroom' ? 'Request my bathroom planning call' : 'Request my project quote'; }
   function updateService() {

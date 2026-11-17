@@ -42,7 +42,7 @@
     painting: 'Painting', flooring: 'Flooring', other: 'Other residential project'
   };
 
-  function budgetLabel(value) { return ({ under_20k: 'Under $20,000', '20k_30k': '$20,000 to $30,000', '30k_45k': '$30,000 to $45,000', '45k_plus': '$45,000 or more' })[value] || ''; }
+  function budgetLabel(value) { return ({ under_20k: 'Under $18,000', '20k_30k': '$18,000 to $30,000', '30k_45k': '$30,000 to $45,000', '45k_plus': '$45,000 or more' })[value] || ''; }
   function submitLabel() { return isBathroom ? 'Request my bathroom planning call' : 'Get my free estimate'; }
 
   function pageName() {
@@ -99,14 +99,14 @@
         '<input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">' +
         '<p class="text-slate-900 font-extrabold text-lg mb-1">' + (isBathroom ? 'Tell us about your bathroom' : 'Or get your price by text') + '</p>' +
         '<p class="text-slate-600 text-sm mb-4">' + (isBathroom
-          ? 'Full bathroom remodels start at $20,000. Begin with a planning call. If the project is a fit, a paid Blueprint planning session is next: usually $1,000, credited toward your remodel. We will explain the scope and fee before you book it.'
+          ? 'Full bathroom remodels start at $18,000. Begin with a planning call. If the project is a fit, a paid Blueprint planning session is next: usually $1,000, credited toward your remodel. We will explain the scope and fee before you book it.'
           : 'Tell us what you need. We reply the same day, no obligation.') + '</p>' +
         '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">' +
           '<label class="block text-sm font-semibold text-slate-900">Name<input type="text" name="name" required autocomplete="name" placeholder="Your name" class="' + fieldClass + '"></label>' +
           '<label class="block text-sm font-semibold text-slate-900">Phone<input type="tel" name="phone" required autocomplete="tel" placeholder="Mobile phone" class="' + fieldClass + '"></label>' +
         '</div>' +
         '<label class="block mt-3 text-sm font-semibold text-slate-900">' + (isBathroom ? 'Project ZIP code' : 'ZIP code of the home') + '<input type="text" name="zip" required inputmode="numeric" autocomplete="postal-code" maxlength="10" placeholder="75002" class="' + fieldClass + '"></label>' +
-        (isBathroom ? '<label class="block mt-3 text-sm font-semibold text-slate-900">Budget range (optional)<select name="budget" class="' + fieldClass + '"><option value="">Not sure yet</option><option value="under_20k">Under $20,000</option><option value="20k_30k">$20,000 to $30,000</option><option value="30k_45k">$30,000 to $45,000</option><option value="45k_plus">$45,000 or more</option></select></label>' : '') +
+        (isBathroom ? '<label class="block mt-3 text-sm font-semibold text-slate-900">Budget range (optional)<select name="budget" class="' + fieldClass + '"><option value="">Not sure yet</option><option value="under_20k">Under $18,000</option><option value="20k_30k">$18,000 to $30,000</option><option value="30k_45k">$30,000 to $45,000</option><option value="45k_plus">$45,000 or more</option></select></label>' : '') +
         '<label class="block mt-3 text-sm font-semibold text-slate-900">' + (isBathroom ? 'Project scope &amp; preferred timing' : 'What do you need done?') +
           '<textarea name="message" rows="3" required placeholder="' + (isBathroom ? 'What would you change in your bathroom, and when would you like to begin?' : 'Tell us about your project.') + '" class="' + fieldClass + '"></textarea></label>' +
         '<label class="mt-3 flex items-start gap-2 text-xs text-slate-600 leading-relaxed">' +
