@@ -1,0 +1,91 @@
+{
+  "name": "OnPoint Pros published prices",
+  "business": {
+    "name": "OnPoint Pros",
+    "url": "https://onpointprostx.com/",
+    "telephone": "+1-469-617-5235",
+    "address": "1305 Spring St, Allen, TX 75002",
+    "insurance": "Fully insured"
+  },
+  "updated": "2026-11-17",
+  "currency": "USD",
+  "note": "Planning prices published by OnPoint Pros. They are not quotes: every project gets its own fixed written quote after we see the room.",
+  "services": [
+    {
+      "service": "Full bathroom remodel (full-tile tear-out and rebuild)",
+      "page": "https://onpointprostx.com/services/bathroom-remodel.html",
+      "minimum_price": 18000,
+      "typical_primary_bathroom_range": {
+        "min": 25000,
+        "max": 45000
+      },
+      "planning_ranges": [
+        {
+          "scope": "Small room, tub kept or a simple shower, same layout, standard tile",
+          "min": 18000,
+          "max": 21000
+        },
+        {
+          "scope": "Walk-in tile shower with glass, or a mix of upgrades",
+          "min": 22000,
+          "max": 26000
+        },
+        {
+          "scope": "Large room, separate shower and freestanding tub, moved plumbing, double vanity",
+          "min": 38000,
+          "max": 45000,
+          "note": "Larger layouts with a separate tub and moved plumbing can run past $45,000."
+        }
+      ],
+      "estimator": "https://onpointprostx.com/bathroom/cost-estimator.html",
+      "cost_guide": "https://onpointprostx.com/blog/bathroom-remodel-cost-dfw.html",
+      "how_it_starts": "A planning call, then the paid Primary Bath Blueprint (an in-home design and layout session) credited toward the remodel. The fee is confirmed before booking.",
+      "not_offered": [
+        "Small refreshes such as a vanity swap, paint or a few tiles",
+        "Acrylic liners",
+        "One-day bath overlays"
+      ]
+    },
+    {
+      "service": "Drywall repair and installation",
+      "page": "https://onpointprostx.com/services/drywall-repair.html",
+      "minimum_price": 1000,
+      "also_from": {
+        "name": "OnPoint Pros Remodeling",
+        "url": "https://onpointprostx.com/the-colony/",
+        "telephone": "+1-469-933-0888",
+        "address": "5752 Grandscape Blvd Ste 225, The Colony, TX 75056"
+      }
+    },
+    {
+      "service": "Interior painting",
+      "page": "https://onpointprostx.com/services/painting.html",
+      "pricing": "Quoted per project"
+    },
+    {
+      "service": "Flooring",
+      "page": "https://onpointprostx.com/services/flooring.html",
+      "pricing": "Quoted per project"
+    }
+  ],
+  "service_area": [
+    "Allen",
+    "Plano",
+    "Frisco",
+    "McKinney",
+    "Prosper",
+    "Celina",
+    "The Colony",
+    "Little Elm",
+    "Carrollton",
+    "Lewisville",
+    "Coppell",
+    "Richardson",
+    "Addison",
+    "Wylie",
+    "Murphy",
+    "Sachse",
+    "Rowlett",
+    "Garland"
+  ]
+}

@@ -9,6 +9,7 @@
 - Licensed master plumbers and licensed electricians. OnPoint Pros handles required permits and inspections, with expected fees itemized in the quote.
 - 3-year written workmanship warranty on every full-tile bathroom remodel, covering installation-caused failures. Manufacturer warranties are separate and passed through.
 - Drywall projects have a $1,000 minimum. Painting and flooring are quoted per project.
+- Machine-readable prices (kept in step with the site): https://onpointprostx.com/prices.json
 - Service area: Allen, Plano, Frisco and McKinney first, then Prosper, Celina, The Colony, Little Elm, Carrollton, Lewisville, Coppell, Richardson, Addison, Wylie, Murphy, Sachse, Rowlett and Garland.
 
 ## Core pages
