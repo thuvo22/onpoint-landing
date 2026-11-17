@@ -495,7 +495,14 @@ def tail(scripts_v):
 
 
 def service_ld(name, path, desc):
-    return jsonld({"@context": "https://schema.org", "@type": "Service", "serviceType": name, "name": name + " in The Colony, TX", "url": BASE + path, "image": "https://onpointprostx.com" + HERO, "provider": business_entity(), "areaServed": [{"@type": "City", "name": c} for c in CITY_NAMES], "description": desc})
+    return jsonld({"@context": "https://schema.org", "@type": "Service", "serviceType": name, "name": name + " in The Colony, TX", "url": BASE + path, "image": "https://onpointprostx.com" + HERO, "provider": business_entity(), "areaServed": [{"@type": "City", "name": c} for c in CITY_NAMES], "description": desc,
+                   "offers": DRYWALL_OFFER})
+
+
+# Published $1,000 drywall minimum as structured data (same object tools/schema_prices.py adds).
+DRYWALL_OFFER = {"@type": "Offer", "priceCurrency": "USD",
+                 "priceSpecification": {"@type": "PriceSpecification", "minPrice": 1000, "priceCurrency": "USD"},
+                 "description": "Drywall projects have a $1,000 minimum. Every project gets its own written quote."}
 
 
 def page(path, title, desc, body, lds, scripts_v):
