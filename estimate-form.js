@@ -11,7 +11,7 @@
  *     nothing shifts (CLS).
  *   - pages with no #estimate get only the sticky bar, linking to contact.
  *   - the main bathroom hub (or #estimate[data-service="bathroom"]) starts
- *     a planning call; other service/city pages retain their estimate flow.
+ *     a quick call and a free in-home visit; other service/city pages retain their estimate flow.
  * Never on /list/ (Meta funnel has its own form) or /contact.html.
  *
  * Posts to the same endpoint as contact.html with page = the path, so the
@@ -43,7 +43,7 @@
   };
 
   function budgetLabel(value) { return ({ under_20k: 'Under $18,000', '20k_30k': '$18,000 to $30,000', '30k_45k': '$30,000 to $45,000', '45k_plus': '$45,000 or more' })[value] || ''; }
-  function submitLabel() { return isBathroom ? 'Request my bathroom planning call' : 'Get my free estimate'; }
+  function submitLabel() { return isBathroom ? 'Book my free in-home visit' : 'Get my free on-site estimate'; }
 
   function pageName() {
     var p = path.replace(/^\//, '').replace(/\.html$/, '').replace(/\/index$/, '') || 'home';
@@ -99,7 +99,7 @@
         '<input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">' +
         '<p class="text-slate-900 font-extrabold text-lg mb-1">' + (isBathroom ? 'Tell us about your bathroom' : 'Or get your price by text') + '</p>' +
         '<p class="text-slate-600 text-sm mb-4">' + (isBathroom
-          ? 'Full bathroom remodels start at $18,000. Begin with a planning call. If the project is a fit, a paid Blueprint planning session is next, credited toward your remodel. We will explain the scope and fee before you book it.'
+          ? 'Full bathroom remodels start at $18,000. Begin with a quick call and a free in-home visit. If the project is a fit, a paid Blueprint planning session is next, credited toward your remodel. We will explain the scope and fee before you book it.'
           : 'Tell us what you need. We reply the same day, no obligation.') + '</p>' +
         '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">' +
           '<label class="block text-sm font-semibold text-slate-900">Name<input type="text" name="name" required autocomplete="name" placeholder="Your name" class="' + fieldClass + '"></label>' +
@@ -164,7 +164,7 @@
         submitted = true;
         form.querySelectorAll('input,textarea,select').forEach(function (el) { if (el.type !== 'hidden') el.disabled = true; });
         btn.remove();
-        say((isBathroom ? 'Thank you. We will contact you about your bathroom planning call.' : 'Thank you. We will contact you about your project request.') + ' Need us sooner? Call ' + PHONE_DISPLAY + '.', true);
+        say((isBathroom ? 'Thank you. We will call you to set up your free in-home visit.' : 'Thank you. We will contact you about your project request.') + ' Need us sooner? Call ' + PHONE_DISPLAY + '.', true);
         msg.focus();
         try { if (window.OnPointMeasurement) window.OnPointMeasurement.acceptedLead(res, 'estimate_form', serviceType); } catch (_) {}
       } catch (err) {
@@ -194,7 +194,7 @@
     if (document.querySelector('.opp-sticky-bar')) return;
     var contactTarget = '/contact.html' + (Object.prototype.hasOwnProperty.call(serviceLabels, serviceType) ? '?service=' + encodeURIComponent(serviceType) : '');
     var target = isHomepage ? '/contact.html' : (hasForm ? '#estimate' : contactTarget);
-    var actionLabel = isBathroom ? 'Planning Call' : 'Request a Quote';
+    var actionLabel = isBathroom ? 'Free Home Visit' : 'Request a Quote';
     var bar = document.createElement('div');
     bar.className = 'opp-sticky-bar sm:hidden fixed inset-x-0 bottom-0 z-40 bg-white/95 backdrop-blur border-t border-slate-200 px-3 py-2 flex gap-2';
     bar.style.paddingBottom = 'calc(0.5rem + env(safe-area-inset-bottom))';

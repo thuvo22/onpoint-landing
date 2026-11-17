@@ -19,7 +19,7 @@
   };
   function budgetLabel(value) { return ({ under_20k: 'Under $18,000', '20k_30k': '$18,000 to $30,000', '30k_45k': '$30,000 to $45,000', '45k_plus': '$45,000 or more' })[value] || ''; }
   function validService(value) { return Object.prototype.hasOwnProperty.call(serviceLabels, value); }
-  function buttonLabel() { return service.value === 'bathroom' ? 'Request my bathroom planning call' : 'Request my project quote'; }
+  function buttonLabel() { return service.value === 'bathroom' ? 'Book my free in-home visit' : 'Request my project quote'; }
   function updateService() {
     var bathroom = service.value === 'bathroom';
     document.getElementById('contactHeading').textContent = bathroom ? 'Start your bathroom remodel' : 'Tell us about your project';
@@ -120,7 +120,7 @@
       var res = await r.json().catch(function(){return {};});
       if (res.ok !== true) throw new Error('failed');
       submitted = true;
-      var acceptedMessage = selectedService === 'bathroom' ? 'Thank you. We received your bathroom planning call request.' : 'Thank you. We received your project request.';
+      var acceptedMessage = selectedService === 'bathroom' ? 'Thank you. We received your request for a free in-home visit.' : 'Thank you. We received your project request.';
       btn.textContent = 'Request sent';
       say(acceptedMessage + ' We will contact you about the next step.', true);
       msg.focus();
@@ -133,7 +133,7 @@
       }
       grid.querySelectorAll('img').forEach(function (img) { URL.revokeObjectURL(img.src); });
       f.reset(); service.value = selectedService; updateService(); photos = []; grid.innerHTML = ''; count();
-      say((selectedService === 'bathroom' ? 'Thank you. We will contact you about your bathroom planning call.' : 'Thank you. We will contact you about your project request.') + note + ' If you need us sooner, call (469) 617-5235.', true);
+      say((selectedService === 'bathroom' ? 'Thank you. We will call you to set up your free in-home visit.' : 'Thank you. We will contact you about your project request.') + note + ' If you need us sooner, call (469) 617-5235.', true);
       msg.focus();
     } catch (err) {
       say(err && err.message && err.message !== 'failed' ? err.message

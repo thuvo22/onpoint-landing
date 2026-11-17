@@ -45,7 +45,7 @@ test('an inline city form remains the mobile quote destination', () => {
 test('section service takes priority over body declaration', () => {
   const html = render({ pathname: '/custom.html', hasForm: true, sectionService: 'bathroom', bodyService: 'flooring' });
   assert.match(html, /href="#estimate"/);
-  assert.match(html, />Planning Call<\/a>/);
+  assert.match(html, />Free Home Visit<\/a>/);
 });
 test('homepage keeps the service chooser', () => {
   assert.match(render({ pathname: '/', bodyService: 'flooring' }), /href="\/contact.html"/);
