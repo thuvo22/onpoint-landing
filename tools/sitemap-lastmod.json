@@ -29,7 +29,7 @@
  },
  "bathroom/frisco.html": {
   "lastmod": "2026-11-17",
-  "sha256": "397a2cf6f2d4ee7ffc45658d0d182e657110282377344e226a444d3371bde53e"
+  "sha256": "53c91724bd446e9b0f43df4344cf026220ca446a9ebc1f3467abc309c7524e97"
  },
  "bathroom/garland.html": {
   "lastmod": "2026-11-17",
@@ -57,7 +57,7 @@
  },
  "bathroom/prosper.html": {
   "lastmod": "2026-11-17",
-  "sha256": "071fc891e704fff2c4e587e61656e8c04b155e5d862235b9252d01543db6e3a7"
+  "sha256": "e2c2c8bade5f62075c3910637df755db5b33b589d571e0d086fa7873c15542a4"
  },
  "bathroom/richardson.html": {
   "lastmod": "2026-11-17",
@@ -77,11 +77,11 @@
  },
  "bathroom/wylie.html": {
   "lastmod": "2026-11-17",
-  "sha256": "8f3d5089190720e5b9c908cb8925362ee0c7948ca54626ebbe13aeea4b444e54"
+  "sha256": "cfb8332b821c45d3125664b9ba83a8e552d87d322403cc7a5eaf6a8bb9e3d677"
  },
  "blog/bathroom-remodel-cost-dfw.html": {
   "lastmod": "2026-11-17",
-  "sha256": "37411d3ccb59d5a9580f88f2fd183bf7f7d6234a76523dc482a7fa1f9a0f4c08"
+  "sha256": "4871e058f4af77b736237510f95b9ea4acba6042111abcda9534e6e8125745a7"
  },
  "blog/best-flooring-dfw-homes.html": {
   "lastmod": "2026-11-12",
@@ -221,7 +221,7 @@
  },
  "dfw/lewisville.html": {
   "lastmod": "2026-11-17",
-  "sha256": "68f41b7fbd12532074de90c749e28e8228785c25ac47eac6a5d226bc966de830"
+  "sha256": "768cb9e151a4e55bf6077014efc44c31695ba11f463ca1f1e895978820d04432"
  },
  "dfw/little-elm.html": {
   "lastmod": "2026-11-17",
@@ -240,8 +240,8 @@
   "sha256": "9424eefc0872c5a77119bc458587d2e6f195efa65b926fcfb8bbbcc359415542"
  },
  "dfw/prosper.html": {
-  "lastmod": "2026-11-12",
-  "sha256": "621d8d12ce46f1252990608e7837577e4ae983e9e98f6e70646f20cb2676aa12"
+  "lastmod": "2026-11-17",
+  "sha256": "a62b24191999cb14f2151cbff71316d1be1241e96b2ea1a4c0cd35a8a58a9789"
  },
  "dfw/richardson.html": {
   "lastmod": "2026-11-17",
@@ -341,7 +341,7 @@
  },
  "flooring/allen.html": {
   "lastmod": "2026-11-17",
-  "sha256": "aa31cbdd519f49579e22be8aba27b21856ff07f6fd437e823ad99cb9b824467d"
+  "sha256": "5433e5ac4f018a04d2c1de826ee9612902e5e33576ae43f5abb7a532d843cc93"
  },
  "flooring/carrollton.html": {
   "lastmod": "2026-11-17",
@@ -357,7 +357,7 @@
  },
  "flooring/frisco.html": {
   "lastmod": "2026-11-17",
-  "sha256": "c1434fe6bf7db7e0370386461a6843558e7fa72c0c386706c3504f30d635966d"
+  "sha256": "e2b4af5d41f91422da0af12535d0b4cde615b021f1559dcfd79867a240aff485"
  },
  "flooring/garland.html": {
   "lastmod": "2026-11-17",
@@ -365,7 +365,7 @@
  },
  "flooring/lewisville.html": {
   "lastmod": "2026-11-17",
-  "sha256": "a81014ad972dedbcbcca2498144254eb69f331544fb94fc987658f96f272dc47"
+  "sha256": "efc04e96bc8beb87467fc3ed2275c9b5c887ba3af16ffb623386737499d9a8bf"
  },
  "flooring/little-elm.html": {
   "lastmod": "2026-11-17",
@@ -373,7 +373,7 @@
  },
  "flooring/mckinney.html": {
   "lastmod": "2026-11-17",
-  "sha256": "dfa6bd5245d652f675979d2d778ef70536347acba955f22064907092b9a02277"
+  "sha256": "9aae50096fb0ab5fb30b4c1faa51b203fdd6a69bcf517e0e9ddef590bd354311"
  },
  "flooring/murphy.html": {
   "lastmod": "2026-11-17",
@@ -381,7 +381,7 @@
  },
  "flooring/plano.html": {
   "lastmod": "2026-11-17",
-  "sha256": "6afeb37689ddf1cf94dec9df68ace591955c6c96759c14d22128b0aab9c23eb9"
+  "sha256": "c70c87f1db7be613632bd9228087e2f2bccf66436a4236a5842d51c6d99bdddb"
  },
  "flooring/prosper.html": {
   "lastmod": "2026-11-17",
@@ -413,7 +413,7 @@
  },
  "index.html": {
   "lastmod": "2026-11-17",
-  "sha256": "3dd6193a33ff561125e940e7544551192212e50fb937cb87f6122d94e1e6e161"
+  "sha256": "c01df3aebdc6da6e553bd00b66773610f937b4f9b0899b110bcff5a6607e8595"
  },
  "painting/addison.html": {
   "lastmod": "2026-11-17",
@@ -493,7 +493,7 @@
  },
  "services/bathroom-remodel.html": {
   "lastmod": "2026-11-17",
-  "sha256": "a86dc96f59d6106d1412f227d5550c1de7c8ab3763016ad6c8f4e14c5af31067"
+  "sha256": "3f34815d24e5946bf7eff33c03871d43c64d1ae61588603453c48e87fa154ead"
  },
  "services/drywall-repair.html": {
   "lastmod": "2026-11-17",
