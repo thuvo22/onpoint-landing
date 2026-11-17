@@ -1,9 +1,9 @@
 # OnPoint Pros
 
-> Family-owned residential remodeler based in Allen, Texas, founded by Dillon Hubbard. Primary service: full-tile primary bathroom remodels (tear-out and rebuild, custom tile showers, tub-to-shower conversions). Also drywall repair, interior painting and flooring installation. Fully insured. Google reviews: https://www.google.com/maps?cid=12396670433062033498. Current rating and count: https://bathroom.onpointprostx.com/api/reviews (cached for up to 24 hours). Phone: (469) 617-5235. Email: team@onpointprostx.com.
+> Family-owned residential remodeler based in Allen, Texas, founded by Dillon Hubbard. Primary service: full-tile bathroom remodels for primary, guest and hall bathrooms (tear-out and rebuild, custom tile showers, tub-to-shower conversions). Also drywall repair, interior painting and flooring installation. Fully insured. Google reviews: https://www.google.com/maps?cid=12396670433062033498. Current rating and count: https://bathroom.onpointprostx.com/api/reviews (cached for up to 24 hours). Phone: (469) 617-5235. Email: team@onpointprostx.com.
 
 ## Key facts
-- Full bathroom remodels start at $18,000. Most full-tile primary bathrooms are $25,000 to $45,000 depending on scope and finishes. Every project receives its own fixed quote.
+- Full bathroom remodels start at $18,000. Most full-tile bathroom remodels are $25,000 to $45,000 depending on scope and finishes. Every project receives its own fixed quote.
 - Process: a quick call and a free in-home visit with Dillon (measurements and a price range), then layout and selections planned together and a written fixed-price scope, then materials staged before demolition.
 - Shower waterproofing: a connected system behind the shower tile and under the shower floor. Every new tiled shower gets a documented 24-hour flood test before the floor tile is installed.
 - Licensed master plumbers and licensed electricians. OnPoint Pros handles required permits and inspections, with expected fees itemized in the quote.

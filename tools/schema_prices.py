@@ -16,7 +16,7 @@ import json, re, subprocess, sys
 
 BATH = {"@type": "Offer", "priceCurrency": "USD",
         "priceSpecification": {"@type": "PriceSpecification", "minPrice": 18000, "priceCurrency": "USD"},
-        "description": "Full bathroom remodels start at $18,000. Most primary bathrooms are $25,000 to $45,000. Every project gets its own fixed written quote."}
+        "description": "Full bathroom remodels start at $18,000. Most projects are $25,000 to $45,000. Every project gets its own fixed written quote."}
 DRY = {"@type": "Offer", "priceCurrency": "USD",
        "priceSpecification": {"@type": "PriceSpecification", "minPrice": 1000, "priceCurrency": "USD"},
        "description": "Drywall projects have a $1,000 minimum. Every project gets its own written quote."}

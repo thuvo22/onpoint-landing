@@ -15,7 +15,8 @@
       "service": "Full bathroom remodel (full-tile tear-out and rebuild)",
       "page": "https://onpointprostx.com/services/bathroom-remodel.html",
       "minimum_price": 18000,
-      "typical_primary_bathroom_range": {
+      "rooms": "Primary, guest and hall bathrooms",
+      "typical_range": {
         "min": 25000,
         "max": 45000
       },
