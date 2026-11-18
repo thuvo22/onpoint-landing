@@ -100,7 +100,7 @@
         '<p class="text-slate-900 font-extrabold text-lg mb-1">' + (isBathroom ? 'Tell us about your bathroom' : 'Or get your price by text') + '</p>' +
         '<p class="text-slate-600 text-sm mb-4">' + (isBathroom
           ? 'Full bathroom remodels start at $18,000. Begin with a quick call and a free in-home visit. Dillon measures the room and gives you a price range, and you get a fixed written price before any work starts.'
-          : 'Tell us what you need. We reply the same day, no obligation.') + '</p>' +
+          : 'Tell us what you need. We reply the same day.') + '</p>' +
         '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">' +
           '<label class="block text-sm font-semibold text-slate-900">Name<input type="text" name="name" required autocomplete="name" placeholder="Your name" class="' + fieldClass + '"></label>' +
           '<label class="block text-sm font-semibold text-slate-900">Phone<input type="tel" name="phone" required autocomplete="tel" placeholder="Mobile phone" class="' + fieldClass + '"></label>' +
