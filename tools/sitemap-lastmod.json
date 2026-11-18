@@ -84,8 +84,8 @@
   "sha256": "fe38485693c99960a483e2d803e28ab8dbd99c26179a993dddd34a925d23122a"
  },
  "blog/best-flooring-dfw-homes.html": {
-  "lastmod": "2026-11-12",
-  "sha256": "bc3e432ad704c70d55c5ba0e08a0d723d1eaada0bdbbc6859ca6df0b8d79942f"
+  "lastmod": "2026-11-17",
+  "sha256": "183269bd9e258ea6036e3b10b985a9cd8ad22c0939979d1e5a57e5cb995ffe0b"
  },
  "blog/cabinet-styles-dfw.html": {
   "lastmod": "2026-11-17",
@@ -129,7 +129,7 @@
  },
  "blog/how-to-pick-dfw-contractor.html": {
   "lastmod": "2026-11-17",
-  "sha256": "92dd496e01a445c24f5a5be16d8a0962b82f4882f1c134fa47a0de4726ad9eae"
+  "sha256": "6a97784f89e95ba8b3833fc0f9cb11ab5c17d424c60a28049998f4e9630e2a8f"
  },
  "blog/index.html": {
   "lastmod": "2026-11-12",
@@ -193,47 +193,47 @@
  },
  "dfw/addison.html": {
   "lastmod": "2026-11-17",
-  "sha256": "76e14e99d6f82d370f2a73d9651c0b6b9450101b68ca6a9fcfa49db1da99bfc8"
+  "sha256": "c4d11412de42b88d79a94b14b6b6e91bce7558ae20475216e9dadaee850d1636"
  },
  "dfw/allen.html": {
   "lastmod": "2026-11-17",
-  "sha256": "3198c5bc6d7638c12ea41b3cfe65b839c005b03c2470e545054374f6bac1a0b3"
+  "sha256": "4dc14cda670be21a73b9d7078574e2545ad719651683b3d1d3d93c14ec5a61de"
  },
  "dfw/carrollton.html": {
   "lastmod": "2026-11-17",
-  "sha256": "9774938254966ce71020fcf550888b315e9b29b38506bf60fa2d4c6065bb89eb"
+  "sha256": "f7522062dda4d9ee816df984efa06b292059d315816fad52c3aa03d5e0127149"
  },
  "dfw/celina.html": {
   "lastmod": "2026-11-17",
-  "sha256": "8cdcd3b83df6d944fc6c771cc6ed5cb609267a7323a22134c6bed41e76eb70df"
+  "sha256": "316b78953706349191034f08602cbebe0dfd993009e0d8fca398ccda0f7a4178"
  },
  "dfw/coppell.html": {
   "lastmod": "2026-11-17",
-  "sha256": "0e4b3946a91fe1e1b5bedecc958cf16cf10c2225d93fa3c275356be503d63f33"
+  "sha256": "a151b76da9748fab639d1f98d6d56149e22d2d84607e7b5fe043016d3108c3e9"
  },
  "dfw/frisco.html": {
   "lastmod": "2026-11-17",
-  "sha256": "f84f7b9837722c94d461145ef3fd9ad71385a2e4d0c71675773fc6c7b91be893"
+  "sha256": "804ca301af3600547b1f310e8713ecfec6b780f9195006ec177fe3371e989e3e"
  },
  "dfw/garland.html": {
   "lastmod": "2026-11-17",
-  "sha256": "209d509a455096552d305e30a462a89ded45b7a43bf8a5d847a06ddebb5acd1b"
+  "sha256": "7f155cc1d3a2c3003c3380c3d85cb68cab1bee23a2e8e3c9194af182852b4418"
  },
  "dfw/lewisville.html": {
   "lastmod": "2026-11-17",
-  "sha256": "768cb9e151a4e55bf6077014efc44c31695ba11f463ca1f1e895978820d04432"
+  "sha256": "43974a9281ef39c206a60927e383e3f543ae86afcb1a57a2ae1da400bcb5c26f"
  },
  "dfw/little-elm.html": {
   "lastmod": "2026-11-17",
-  "sha256": "0eb3391dc7c2479172d9086642609d866b3c9bf9b929140397d1a38bd9c87e37"
+  "sha256": "269ab8bda9504dabec299a57aeee20256ef67e65f8680bbf01ffc485d6db523b"
  },
  "dfw/mckinney.html": {
   "lastmod": "2026-11-17",
-  "sha256": "9095627420e1158918ede9bf68909a2ee526179abcb4c5ed5f41c22258d973f8"
+  "sha256": "e33acd427ab137644efb305b6209b708a852640275af2595f6da2f9619612728"
  },
  "dfw/murphy.html": {
   "lastmod": "2026-11-17",
-  "sha256": "07ed41318d923258f94b286061c23987d2d509cea508a1be2efbcbcc661e65ce"
+  "sha256": "5fa35f22b9f6b16d0a35103eaa64965041d9eed1715e2fdf95196567af7367d1"
  },
  "dfw/north-dallas.html": {
   "lastmod": "2026-11-17",
@@ -241,31 +241,31 @@
  },
  "dfw/plano.html": {
   "lastmod": "2026-11-17",
-  "sha256": "a90cc2bd22051bab081098f1ef55e1b1dfa33ecd7a76b45d5a181203129c2705"
+  "sha256": "abd5eaed6ecbb1e9b379de5e8343082256ef885316416096d4c20eb1bec848eb"
  },
  "dfw/prosper.html": {
   "lastmod": "2026-11-17",
-  "sha256": "c0d716d5ec98ab87cf5e4233772783b56c47c5d369a9f4b2698397e66ada5df8"
+  "sha256": "0cc50ddc3e33a22f7d61d26a84f2833cda8f92bbfd8d789a1dfb6da9d3f55421"
  },
  "dfw/richardson.html": {
   "lastmod": "2026-11-17",
-  "sha256": "8b6380cc331d7a54cb29916fe021360a81a388c74e1c57a3ca7eddbc2cdb2134"
+  "sha256": "6a20b45568c7e3b1e3e18c8c3f9cf9a1fc4528aa10853b49c21320b5d6f1aea4"
  },
  "dfw/rowlett.html": {
   "lastmod": "2026-11-17",
-  "sha256": "ff141eb06c6550d7213348bf58a399d06b9c7086f2c9d64fe41ed29bcfe0742f"
+  "sha256": "205a0226dfc15ddaad80d99cc3e77236ccf388814a3d9d7ff8b8bb9f8902fed9"
  },
  "dfw/sachse.html": {
   "lastmod": "2026-11-17",
-  "sha256": "2eefc98491934fefb29e7d1434f16aa2beb90e69cfe1aaefdc61a66f9c40a56f"
+  "sha256": "0b25f4d714f9f4b6621a3843389c2efb3016473b9896086c051fa75e164a12f0"
  },
  "dfw/the-colony.html": {
   "lastmod": "2026-11-17",
-  "sha256": "2a79ff75d7a7d86423381abb8b753310a5cd5c5c7da926d47230bb185db449db"
+  "sha256": "fd4dd5db1721228b60a7ba16208191b2d649d87a0b8fddd694a5846659011059"
  },
  "dfw/wylie.html": {
   "lastmod": "2026-11-17",
-  "sha256": "e6ec2d1a7a94ab01e7c4b310bbce3e6be840f106b2c477cd3932abbbd7b7a024"
+  "sha256": "dc4eb1475dbe051723295b32decccf29102fa3937b686098d4d1e6435f278564"
  },
  "drywall/addison.html": {
   "lastmod": "2026-11-17",
@@ -341,75 +341,75 @@
  },
  "flooring/addison.html": {
   "lastmod": "2026-11-17",
-  "sha256": "bdce2422a80f1f78219b830fd2315d6affd6a91fd2a9bd15219e49fed7a7a81c"
+  "sha256": "49067b979e148cb2174d88a1b35c3865fef3d854d0f58a79cf64fced3f147ad0"
  },
  "flooring/allen.html": {
   "lastmod": "2026-11-17",
-  "sha256": "5433e5ac4f018a04d2c1de826ee9612902e5e33576ae43f5abb7a532d843cc93"
+  "sha256": "c7abaaf7a521aaf1065b30ec584d896f7002a5d2718ff18469fcc4a6d2161c90"
  },
  "flooring/carrollton.html": {
   "lastmod": "2026-11-17",
-  "sha256": "749b624270ade255ebff63dba432ccd4b6a091b18422c9f98c8158f126ebd1d5"
+  "sha256": "4444ddfd080eb17a42dab00c75ea9508ee2c5069500f5967a1583c44efda9327"
  },
  "flooring/celina.html": {
   "lastmod": "2026-11-17",
-  "sha256": "260bce61a21adf20b68ac71bb981b4b0659ca3343df8e6ac89ae3955964b16d6"
+  "sha256": "cd63acc511a50641410c7a05494addda06388153b7b60ee6dd9f44243fc6757d"
  },
  "flooring/coppell.html": {
   "lastmod": "2026-11-17",
-  "sha256": "0ff646bd3bd013c1e1d154f3c107501f6409ac7d8d04e4e4611eda7c41c523ac"
+  "sha256": "547fbbb8b634e1e3f50cf3dc1774d508b3de6838bb337a01e0a486005b65cd51"
  },
  "flooring/frisco.html": {
   "lastmod": "2026-11-17",
-  "sha256": "e2b4af5d41f91422da0af12535d0b4cde615b021f1559dcfd79867a240aff485"
+  "sha256": "b47d91bdbd05bde2b9b481ce02958a3ff2bb9ffc75b6647c032580bfe21c2a83"
  },
  "flooring/garland.html": {
   "lastmod": "2026-11-17",
-  "sha256": "62b5bbe3228fe659822bc6e640d5062794e754b19df9811c1691e3b2edd431ee"
+  "sha256": "e0b87ed370b7fd315d5843a5232c2c8bb2ac147efeb5564cd4848391de10df31"
  },
  "flooring/lewisville.html": {
   "lastmod": "2026-11-17",
-  "sha256": "efc04e96bc8beb87467fc3ed2275c9b5c887ba3af16ffb623386737499d9a8bf"
+  "sha256": "f004fb318e9c97c2a8462cb757631187e9889fa3090a99af692a6c113c5044e4"
  },
  "flooring/little-elm.html": {
   "lastmod": "2026-11-17",
-  "sha256": "69d2be76b251e59fb47143cfc3a39db1614144f9195b5a4963a903abf3fb6404"
+  "sha256": "0b1588a0ba528654a59a4d7a543305b279dd8262e4319429349fde9075699e01"
  },
  "flooring/mckinney.html": {
   "lastmod": "2026-11-17",
-  "sha256": "9aae50096fb0ab5fb30b4c1faa51b203fdd6a69bcf517e0e9ddef590bd354311"
+  "sha256": "5776162f2b201370fdc7c3e4fbc09a3e4fdf2fc1fb70a746501c556ed42fa780"
  },
  "flooring/murphy.html": {
   "lastmod": "2026-11-17",
-  "sha256": "0b5712bae42b6fb115d2a6d85e9448f4b2edd3a6c20f5aa377bfa047168f9c8a"
+  "sha256": "0590c91483311ffdaa91ae241c7a0bb5e0c668c026985a01f918e07e716bd691"
  },
  "flooring/plano.html": {
   "lastmod": "2026-11-17",
-  "sha256": "c70c87f1db7be613632bd9228087e2f2bccf66436a4236a5842d51c6d99bdddb"
+  "sha256": "a5f5996399962b2831f2812cb31e7de94cb1a03afde93296d33f9f7e2b6ce8a4"
  },
  "flooring/prosper.html": {
   "lastmod": "2026-11-17",
-  "sha256": "25971f73843f1806cf3da371226740b0aaf9ee16d67d166c53e66f55e9234d49"
+  "sha256": "49b784720ebb0601efd5d80c56a503ef8f9905015c999fb4d933f28ff14d61f2"
  },
  "flooring/richardson.html": {
   "lastmod": "2026-11-17",
-  "sha256": "723e5b62d8802978803259f0ddbcaae5aa5ce6044c931b074b2bcae14820e0b4"
+  "sha256": "87c2a3055eafd0909a66d905fa5d0c1717cffa0b9e488cb715bee3f3202e4b68"
  },
  "flooring/rowlett.html": {
   "lastmod": "2026-11-17",
-  "sha256": "ea1b3c4912bbfaf946c4f660ca7ef2541d9bde3527583f20fc70c21d82ae00ad"
+  "sha256": "09c45cc6a146605f75ce9b8df604ce5eeb63e37d0d4943759e030144ef68f3cc"
  },
  "flooring/sachse.html": {
   "lastmod": "2026-11-17",
-  "sha256": "6f4fbc11aed07b44f6f893d3c36c1c08857e5411373c08e0a63b519db17213f6"
+  "sha256": "63ec1a23be38a1a2739e908b089868caf9b5d67be2f0a471c8b841b77c30ced1"
  },
  "flooring/the-colony.html": {
   "lastmod": "2026-11-17",
-  "sha256": "f151b12abfa436d681435a45eb657a724e71dba83dda1cc76114afd678061ecb"
+  "sha256": "770911ba002c9bc5a39faab009eb4f17cfdf90be1044bd0886e11b26c45c7315"
  },
  "flooring/wylie.html": {
   "lastmod": "2026-11-17",
-  "sha256": "c278b425d9bc8bbf42d708a65112b8a8fae2d67904c294d061f2a8578e93a33e"
+  "sha256": "3d1488b41cd455015309e54c4d2bf3346845dc00da8ec61cfb2d057eff1237a6"
  },
  "gallery.html": {
   "lastmod": "2026-11-17",
@@ -509,11 +509,11 @@
  },
  "services/drywall-repair.html": {
   "lastmod": "2026-11-17",
-  "sha256": "00b9472980e2f450f31f432381dedc63be25cc1293395d16054bc11608ca2cd8"
+  "sha256": "708ce53c238e47866680f09552a7ebba479c141c5d25f4b98e36e3decb4cffa9"
  },
  "services/flooring.html": {
   "lastmod": "2026-11-17",
-  "sha256": "4fa18f38188fde794f216e2dacbb2736079c6026ebdbe4c5d2694369b88d1f26"
+  "sha256": "e814780ee909b81e049add88760ac76e57a72a6322663f3bf2e3de3f1c210e85"
  },
  "services/guest-bathroom-remodel.html": {
   "lastmod": "2026-11-17",
