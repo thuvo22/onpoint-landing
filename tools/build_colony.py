@@ -153,6 +153,10 @@ S_GARAGE_CREW = _p("install", 6, "Our crew hanging the new garage drywall")
 S_CLOSET = _p("install", 8, "New drywall hung in a closet during a bath remodel")
 S_SMOOTH = _p("install", 9, "A small room finished smooth and primed")
 
+S_CONV_MUD = ("/images/jobs/single-1aje3xd4p9.jpg", "New drywall hung and mudded through the hallway of a garage conversion", 900, 1200)
+S_CONV_BEDROOM = ("/images/jobs/single-1tv1k6uyyk.jpg", "A bedroom finished in the same garage conversion, with paint, trim, a ceiling fan and plank flooring", 900, 1200)
+REMODEL_PHOTOS = dict(pairs=[PAIR_GARAGE, PAIR_ENTRY], singles=[S_CONV_HANG, S_CONV_MUD, S_CONV_BEDROOM])
+
 REPAIR_PHOTOS = dict(pairs=[PAIR_GARAGE_WALL, PAIR_LAUNDRY, PAIR_WINDOW, PAIR_ATTIC, PAIR_SINK, PAIR_ENTRY], singles=[S_SCAFFOLD, S_STAIN, S_KITCHEN_CEIL])
 CEILING_PHOTOS = dict(pairs=[PAIR_VENT, PAIR_HALLWAY, PAIR_WET_CEILING, PAIR_BEDROOM, PAIR_SHOWER, PAIR_LIGHT, PAIR_ATTIC], singles=[S_STAIN, S_SCAFFOLD, S_KITCHEN_CEIL])
 TEXTURE_PHOTOS = dict(pairs=[PAIR_POPCORN, PAIR_LIGHT, PAIR_SINK], singles=[S_MASKED, S_SPRAY_1, S_HOPPER, S_LIVING_CEIL, S_SMOOTH, S_KITCHEN_CEIL])
@@ -170,6 +174,7 @@ SERVICES = [
     ("ceiling-water-damage-repair.html", "Ceilings and Water Damage", "Wet, sagging or stained ceilings cut out, replaced, retextured and painted after the leak is fixed."),
     ("texture-matching-popcorn-removal.html", "Texture and Popcorn Removal", "Knockdown, orange peel and smooth finishes matched on a sample first. Popcorn scraped and refinished."),
     ("drywall-installation.html", "New Drywall", "Garages, additions, closets and whole rooms hung, taped, finished and ready for paint."),
+    ("interior-remodeling.html", "Interior Remodeling", "Garage conversions, rooms rebuilt after water damage and whole room refreshes: drywall, texture, paint, flooring and trim from one crew."),
 ]
 
 CITIES = [
@@ -187,6 +192,7 @@ NAV = [
     ("ceiling-water-damage-repair.html", "Ceilings"),
     ("texture-matching-popcorn-removal.html", "Texture"),
     ("drywall-installation.html", "New Drywall"),
+    ("interior-remodeling.html", "Remodeling"),
     ("index.html#areas", "Areas"),
     ("contact.html", "Contact"),
 ]
@@ -211,7 +217,7 @@ def business_entity(full=False):
             "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "06:00", "closes": "20:00"}],
             "areaServed": [{"@type": "City", "name": c} for c in CITY_NAMES],
             "parentOrganization": {"@type": "HomeAndConstructionBusiness", "name": "OnPoint Pros", "@id": "https://onpointprostx.com/#business", "url": "https://onpointprostx.com/"},
-            "knowsAbout": ["Drywall repair", "Drywall installation", "Ceiling repair", "Water damage drywall repair", "Texture matching", "Popcorn ceiling removal"],
+            "knowsAbout": ["Drywall repair", "Drywall installation", "Ceiling repair", "Water damage drywall repair", "Texture matching", "Popcorn ceiling removal", "Interior remodeling", "Garage conversion"],
             "founder": {"@type": "Person", "name": "Dillon Hubbard"},
         })
     return ent
@@ -247,8 +253,8 @@ def header(active):
     return f"""
     <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
-            <a href="/the-colony/" class="flex items-center gap-3"><img src="/images/logo.webp" alt="{BIZ['name']}" class="h-14 w-auto" width="93" height="102"><span class="hidden sm:block leading-tight"><span class="block font-extrabold text-slate-900">OnPoint Pros Remodeling</span><span class="block text-xs text-slate-500">Drywall office, The Colony TX</span></span></a>
-            <nav class="hidden lg:flex items-center gap-6 text-slate-700 font-medium">{links}</nav>
+            <a href="/the-colony/" class="flex items-center gap-3"><img src="/images/logo.webp" alt="{BIZ['name']}" class="h-14 w-auto" width="93" height="102"><span class="hidden sm:block leading-tight"><span class="block font-extrabold text-slate-900">OnPoint Pros Remodeling</span><span class="block text-xs text-slate-500">Drywall and remodeling, The Colony TX</span></span></a>
+            <nav class="hidden lg:flex items-center gap-4 text-sm text-slate-700 font-medium">{links}</nav>
             <div class="flex items-center gap-3"><a href="{BIZ['tel']}" class="inline-flex items-center px-5 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-lg">{BIZ['phone']}</a></div>
         </div>
     </header>
@@ -417,7 +423,7 @@ def bathroom_handoff():
     <section class="py-16 bg-slate-900 text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-extrabold mb-4">Bathroom Remodels Run Through Our Allen Office</h2>
-            <p class="text-lg text-slate-300 mb-6">OnPoint Pros Remodeling is the drywall side of OnPoint Pros. Full bathroom remodels start at $18,000 and are planned and built by the Allen office, the same owner and the same crew standards.</p>
+            <p class="text-lg text-slate-300 mb-6">OnPoint Pros Remodeling is the drywall and interior remodeling side of OnPoint Pros. Full bathroom remodels start at $18,000 and are planned and built by the Allen office, the same owner and the same crew standards.</p>
             <a href="/services/bathroom-remodel.html" class="inline-flex px-6 py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700">See OnPoint Pros Bathroom Remodeling &rarr;</a>
         </div>
     </section>
@@ -522,23 +528,28 @@ def build(scripts_v):
         ("Do you handle the ceiling after a roof or plumbing leak?", "Yes. Once the leak is fixed we cut out the wet drywall, replace it, match the texture and paint the ceiling. Send a photo of the stain or sag and we will tell you what it needs."),
         ("Can you match the texture so the patch does not show?", "Yes. Most homes in The Colony, Lewisville and Frisco are knockdown or orange peel. We spray a sample first and adjust until it matches, then blend it into the wall."),
         ("Where is your office?", f"{NAP}, at Grandscape. We drive to {AREA_SENTENCE}. Open {BIZ['hours']}."),
-        ("Is this the same company as OnPoint Pros in Allen?", "Same owner, Dillon. OnPoint Pros Remodeling is the drywall office for the west side of our area. Bathroom remodels run through the Allen office."),
+        ("Is this the same company as OnPoint Pros in Allen?", "Same owner, Dillon. OnPoint Pros Remodeling is the drywall and interior remodeling office for the west side of our area. Bathroom remodels run through the Allen office."),
+        ("Do you remodel whole rooms, or only repair drywall?", "Both. Drywall is where most of our jobs start, and when a room needs more than a patch the same crew finishes it: texture, paint, flooring and trim. Garage conversions and rooms rebuilt after water damage are the most common. Bathroom remodels run through the Allen office."),
     ])
     body = header(None) + nav + hero(
-        "Drywall Contractor in The Colony, TX",
-        "Drywall Repair and Installation in The Colony",
-        f"OnPoint Pros Remodeling is the drywall office of OnPoint Pros, run by Dillon from Grandscape in The Colony. We repair and install drywall, fix water damaged ceilings, match texture so the patch disappears, remove popcorn ceilings and paint the room when we are done. Rated 5.0 on Google.",
+        "Drywall and Remodeling Contractor in The Colony, TX",
+        "Drywall and Interior Remodeling in The Colony",
+        f"OnPoint Pros Remodeling is the drywall and interior remodeling office of OnPoint Pros, run by Dillon from Grandscape in The Colony. We repair and install drywall, fix water damaged ceilings, match texture so the patch disappears and remove popcorn ceilings. When a room needs more than a patch, the same crew finishes it with paint, flooring and trim. Rated 5.0 on Google.",
         "Get a Drywall Quote") + quick_answer(
         f"<strong>{BIZ['name']}, {esc(NAP)}, {BIZ['phone']}.</strong> Drywall projects start at $1,000. We serve {AREA_SENTENCE}, {BIZ['hours']}. Fully insured.") + prose(
         "What We Do, and How We Do It", [
-            "Drywall is the whole job here, not a side service. Garages that were never finished, additions that need hanging and taping, ceilings that came down after a leak, holes left behind by a plumber or an electrician, popcorn ceilings that need to go. We handle all of it from the Colony office.",
+            "Drywall is where every job here starts. Garages that were never finished, additions that need hanging and taping, ceilings that came down after a leak, holes left behind by a plumber or an electrician, popcorn ceilings that need to go. We handle all of it from the Colony office, and when the room needs more than drywall we stay and finish it.",
             "A patch is easy. A patch you cannot find in afternoon light is the part most crews get wrong. We spray the texture on a sample board first, match it to your wall, then blend it in so the repair disappears. Then we prime and paint, so you are not left with a patch that still needs a painter.",
             "We show up when we say we will, protect your floors and furniture, give you one clear price before work starts and leave the house clean. That is the standard on every job, from a doorknob hole to a full garage.",
-        ]) + cards("Drywall Services From the Colony Office", SERVICES) + photos("Recent Drywall Work", MIX_PHOTOS) + reviews("What Our Customers Say") + areas("the-colony") + neighborhoods("The Colony", CITIES[0][3]) + f_sec + bathroom_handoff() + estimate(
+        ]) + cards("Drywall and Remodeling Services From the Colony Office", SERVICES) + prose(
+        "Interior Remodeling From the Colony Office", [
+            "Some jobs are bigger than a repair. A garage the family wants to live in, a room opened to the studs after a leak, a flex room that needs to become an office. Drywall sits in the middle of every one of those jobs, so our drywall crew finishes the room: new board, matched texture, paint, flooring and trim.",
+            "You get one written scope and one price before work starts. Bathroom remodels are the one exception: those are planned and built by our Allen office. <a href=\"/the-colony/interior-remodeling.html\" class=\"text-red-600 font-semibold underline\">See how our interior remodeling works</a>.",
+        ]) + photos("Recent Drywall Work", MIX_PHOTOS) + reviews("What Our Customers Say") + areas("the-colony") + neighborhoods("The Colony", CITIES[0][3]) + f_sec + bathroom_handoff() + estimate(
         "Get a Drywall Quote From the Colony Office", "Drywall projects start at $1,000. Send photos of every area and we will confirm the scope and price before work starts.") + footer()
     written.append(page("index.html",
-        "Drywall Contractor The Colony TX | OnPoint Pros Remodeling",
-        f"OnPoint Pros Remodeling, the drywall office of OnPoint Pros at Grandscape in The Colony. Drywall repair, water damaged ceilings, texture matching, popcorn removal and new drywall in {AREA_SENTENCE}. Call {BIZ['phone']}.",
+        "Drywall & Remodeling Contractor The Colony TX | OnPoint Pros Remodeling",
+        f"OnPoint Pros Remodeling, the drywall and interior remodeling office of OnPoint Pros at Grandscape in The Colony. Drywall repair, water damaged ceilings, texture matching, popcorn removal, new drywall and room remodels in {AREA_SENTENCE}. Call {BIZ['phone']}.",
         body, [jsonld({"@context": "https://schema.org", **business_entity(full=True)}), bc, f_ld], scripts_v))
 
     # ---------------- service pages ----------------
@@ -596,14 +607,31 @@ def build(scripts_v):
             cards=[("", "Garage Drywall", "Walls and ceilings hung and finished, with fire rated board where required."), ("", "Additions", "New rooms finished after framing, electrical and inspection."), ("", "Closets and Pantries", "Small spaces finished clean and ready for shelving."), ("", "Media and Game Rooms", "Finished walls and ceilings for converted spaces."), ("", "Ceilings", "New ceiling drywall hung, finished and textured."), ("", "Remodel Drywall", "Walls opened during a remodel closed up and finished.")],
             photos=INSTALL_PHOTOS,
             faq=[("How much does it cost to drywall a garage?", "It depends on size, ceiling height and finish. Send rough dimensions and photos and we will quote it. Garage projects are well above our $1,000 minimum."), ("Do you handle the permit?", "Hanging and finishing drywall in an existing garage usually does not need one. Additions and new rooms do, and your builder or framer carries that permit. We finish after the inspection."), ("Can you paint it too?", "Yes. Primer and paint can be included in the quote so the room is finished when we leave.")]),
+        "interior-remodeling.html": dict(
+            title="Interior Remodeling The Colony TX | Garage Conversions, Room Rebuilds | OnPoint Pros Remodeling",
+            desc="Interior remodeling in The Colony, Lewisville, Little Elm, Frisco and Plano: garage conversions, rooms rebuilt after water damage and whole room refreshes with drywall, texture, paint, flooring and trim by OnPoint Pros Remodeling.",
+            kicker="Interior Remodeling, The Colony Office", h1="Rooms Rebuilt From the Studs to the Paint",
+            lead="Garage conversions, rooms rebuilt after water damage and whole room refreshes. One crew hangs the drywall, matches the texture, paints, and sets the flooring and trim.",
+            h2="How an Interior Remodel Runs", paragraphs=[
+                "Most of our remodels start as drywall jobs that grew. A garage the family wants to live in. A room that flooded and had to be opened to the studs. A flex room that needs to become an office. Drywall sits in the middle of every one of those jobs, so it made sense for the drywall crew to finish the room.",
+                "It starts with a visit. We walk the space, measure, and give you one written scope and one price before any work starts. Where the job needs framing, electrical or plumbing changes, we work alongside those trades. Once the inspection is passed we hang, tape, finish and texture the drywall, then prime and paint, and set the flooring and trim.",
+                "The price depends on the size of the room, what has to come out and the finishes you choose. Send photos and rough dimensions and we will tell you what it needs.",
+                "Bathroom remodels are the one thing we send across town. They are planned and built by our Allen office and start at $18,000. Everything on this page is the rest of the house.",
+            ],
+            cards=[("", "Garage Conversions", "An unfinished garage turned into living space: drywall, texture, paint, flooring and trim."), ("", "Rooms Rebuilt After Water Damage", "Walls and ceilings opened to the studs, rebuilt, textured and painted so the room is whole again."), ("", "Flex Room to Office or Bedroom", "A flex room finished as an office or a bedroom."), ("", "Whole Room Refresh", "New texture, paint, flooring and trim planned together so the room is finished in one job."), ("", "Garage Finishing", "Walls and ceilings hung, taped, textured and painted."), ("", "Popcorn Removal, Whole Home", "Every ceiling scraped, repaired, refinished and painted.")],
+            photos=REMODEL_PHOTOS,
+            faq=[("Do you remodel bathrooms from the Colony office?", "Bathroom remodels are planned and built by our Allen office, OnPoint Pros. They start at $18,000 and begin with a quick call and a free in-home visit. Call either number and we will route it."), ("What does a garage conversion involve?", "Framing, electrical and any plumbing come first, with the permit and inspection that go with them. Your builder or framer carries that permit. After the inspection we hang and finish the drywall, texture, paint, and set the flooring and trim."), ("How is a remodel priced?", "By the room, after a visit. You get one written scope and one price before work starts."), ("Where do you work?", "The Colony, Lewisville, Little Elm, Frisco and Plano, from our office at Grandscape.")],
+            cta="Get a Remodeling Quote", est_h2="Get an Interior Remodeling Quote",
+            quick="Interior remodeling and drywall for The Colony, Lewisville, Little Elm, Frisco and Plano. Bathroom remodels run through our Allen office.",
+            est_lead="Send photos of the room and rough dimensions. We visit, confirm the scope and give you one price before work starts."),
     }
     for path, d in svc_pages.items():
         name = [t for h, t, _ in SERVICES if h == path][0]
         nav, bc = crumbs([("OnPoint Pros", "/"), ("The Colony Drywall Office", "/the-colony/"), (name, None)])
         f_sec, f_ld = faq(f"{name} Questions", d["faq"])
-        body = header(path) + nav + hero(d["kicker"], d["h1"], esc(d["lead"]), "Get a Drywall Quote") + quick_answer(
-            f"<strong>{BIZ['name']}, {esc(NAP)}, {BIZ['phone']}.</strong> Drywall projects start at $1,000. Serving {AREA_SENTENCE}, {BIZ['hours']}. Fully insured.") + prose(d["h2"], d["paragraphs"]) + cards(f"{name}: What We Handle", d["cards"], link=False) + photos("From Our Jobs", d["photos"]) + reviews("What Our Customers Say") + areas() + f_sec + estimate(
-            f"Get a {name} Quote", "Send photos of every area and we will confirm the scope and price before work starts. Drywall projects start at $1,000.") + footer()
+        body = header(path) + nav + hero(d["kicker"], d["h1"], esc(d["lead"]), d.get("cta", "Get a Drywall Quote")) + quick_answer(
+            f"<strong>{BIZ['name']}, {esc(NAP)}, {BIZ['phone']}.</strong> " + (f"{d['quick']} Open {BIZ['hours']}. Fully insured." if d.get("quick") else f"Drywall projects start at $1,000. Serving {AREA_SENTENCE}, {BIZ['hours']}. Fully insured.")) + prose(d["h2"], d["paragraphs"]) + cards(f"{name}: What We Handle", d["cards"], link=False) + photos("From Our Jobs", d["photos"]) + reviews("What Our Customers Say") + areas() + f_sec + estimate(
+            d.get("est_h2", f"Get a {name} Quote"), d.get("est_lead", "Send photos of every area and we will confirm the scope and price before work starts. Drywall projects start at $1,000.")) + footer()
         written.append(page(path, d["title"], d["desc"], body, [service_ld(name, path, d["desc"]), bc, f_ld], scripts_v))
 
     # ---------------- city pages ----------------

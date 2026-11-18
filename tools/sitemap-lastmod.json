@@ -541,42 +541,46 @@
  },
  "the-colony/ceiling-water-damage-repair.html": {
   "lastmod": "2026-11-17",
-  "sha256": "f18a14883750682c1fe6ebb038039a4b9550a7ccbfbbda68f0d09499a34f9a8a"
+  "sha256": "fe0406c38eb42aad994bac18d8792d7b6918e27ecd6e92c9318d3c30301494c5"
  },
  "the-colony/contact.html": {
-  "lastmod": "2026-11-13",
-  "sha256": "aeb55d8cb825239082208cc3f0aa7ca6511472a3a7d6289d002b9ec7d6429db9"
+  "lastmod": "2026-11-17",
+  "sha256": "2652d66a2b9f731e3ef210c2b461ede654d704578ad9987a343e0c1c1df7b2c8"
  },
  "the-colony/drywall-installation.html": {
   "lastmod": "2026-11-17",
-  "sha256": "757d8280a5ee3877c831a98af3640b353b96d539a9a01d6d2b0418864fba7740"
+  "sha256": "9a4398eb31242749da1c1b9539dac292bcd3f25ea5fc80876db979075d7c1d6a"
  },
  "the-colony/drywall-repair.html": {
   "lastmod": "2026-11-17",
-  "sha256": "72b80c141de56831dbff36177ae11fe477daed6f26fe3b8e6ce441cfd431ca26"
+  "sha256": "fa44e98c00f2c3d9575cda0e5112ae1ad739eb57949203da8331eb11c32010d1"
  },
  "the-colony/frisco.html": {
   "lastmod": "2026-11-17",
-  "sha256": "d2a1fe595f1b438c820a4c8de8a3946253402f21c49515f36f2931ff44842674"
+  "sha256": "803cf8d974942dff52707290e75f8b718d5d0cbd0c641a4bcf38917adc653f5b"
  },
  "the-colony/index.html": {
   "lastmod": "2026-11-17",
-  "sha256": "fc12e156d66ad24ccb8209b536b948ddae9ab03ba1f7feedeeb890e029290633"
+  "sha256": "5d59b6296c98ba6579b391db662cab2c044c2a3df99b2126bbe909e4864b024b"
+ },
+ "the-colony/interior-remodeling.html": {
+  "lastmod": "2026-11-17",
+  "sha256": "bc523edb9a38784a743c19316f08cd541976475b0d86f060382bc81de7d07aa4"
  },
  "the-colony/lewisville.html": {
   "lastmod": "2026-11-17",
-  "sha256": "be8456306570982f18a4b917902fabc0bcbd2ad503385b198098990aa6fbc2c5"
+  "sha256": "768ea25af977c1779c706e19a90b534cab3bdfd1c73d14e3299347cac1a69c68"
  },
  "the-colony/little-elm.html": {
   "lastmod": "2026-11-17",
-  "sha256": "b1fd52b026a2f3176552109b373014a132186faaa2eb5f2632fdc20185e7ad73"
+  "sha256": "8bbfaa83b4e07c20b127e48c7c2ff94108c381167e6f4cac5fdcd0e17beafbef"
  },
  "the-colony/plano.html": {
   "lastmod": "2026-11-17",
-  "sha256": "f1ba53f92fbb9054c51326cdd87038243557112b4634d2d7a8d42044f225bd42"
+  "sha256": "67ebfcc81b74ce22e5b2c2adf25e42dcb72126a2b1fb415cf0b5415b998babb8"
  },
  "the-colony/texture-matching-popcorn-removal.html": {
   "lastmod": "2026-11-17",
-  "sha256": "230b31e678bffd29b41313bbc184259b67ad7be92a43aef7690741bc625063da"
+  "sha256": "293f1ef4282bce69683b0c1a1ba64027db8ae6f6c7a4666b25926487af5ba309"
  }
 }
