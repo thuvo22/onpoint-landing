@@ -534,7 +534,7 @@ def build(scripts_v):
     body = header(None) + nav + hero(
         "Drywall and Remodeling Contractor in The Colony, TX",
         "Drywall and Interior Remodeling in The Colony",
-        f"OnPoint Pros Remodeling is the drywall and interior remodeling office of OnPoint Pros, run by Dillon from Grandscape in The Colony. We repair and install drywall, fix water damaged ceilings, match texture so the patch disappears and remove popcorn ceilings. When a room needs more than a patch, the same crew finishes it with paint, flooring and trim. Rated 5.0 on Google.",
+        f"OnPoint Pros Remodeling is the drywall and interior remodeling office of OnPoint Pros, run by Dillon from Grandscape in The Colony. We repair and install drywall, also called sheetrock, fix water damaged ceilings, match texture so the patch disappears and remove popcorn ceilings. When a room needs more than a patch, the same crew finishes it with paint, flooring and trim. Rated 5.0 on Google.",
         "Get a Drywall Quote") + quick_answer(
         f"<strong>{BIZ['name']}, {esc(NAP)}, {BIZ['phone']}.</strong> Drywall projects start at $1,000. We serve {AREA_SENTENCE}, {BIZ['hours']}. Fully insured.") + prose(
         "What We Do, and How We Do It", [
@@ -555,18 +555,18 @@ def build(scripts_v):
     # ---------------- service pages ----------------
     svc_pages = {
         "drywall-repair.html": dict(
-            title="Drywall Repair The Colony TX | OnPoint Pros Remodeling",
-            desc=f"Drywall repair in The Colony, Lewisville, Little Elm, Frisco and Plano from the OnPoint Pros Remodeling office at Grandscape. Holes, cracks, nail pops and plumber cuts patched, textured and painted. Projects start at $1,000.",
+            title="Drywall & Sheetrock Repair The Colony TX | OnPoint Pros Remodeling",
+            desc=f"Drywall and sheetrock repair in The Colony, Lewisville, Little Elm, Frisco and Plano from the OnPoint Pros Remodeling office at Grandscape. Holes, cracks, nail pops and plumber cuts patched, textured and painted. Projects start at $1,000.",
             kicker="Drywall Repair, The Colony Office", h1="Drywall Repair You Cannot Find Afterward",
             lead="Holes, cracks, nail pops, damage from a plumber or electrician, and walls that have taken a beating. We patch, texture and paint from our office in The Colony.",
             h2="How We Repair Drywall", paragraphs=[
-                "Every repair starts with photos. Send a picture of each area and we will tell you what it needs and give you one price for the whole list. Drywall projects start at $1,000, so it makes sense to put every hole, crack and corner in the same request.",
+                "Drywall repair and sheetrock repair are the same work, and every repair starts with photos. Send a picture of each area and we will tell you what it needs and give you one price for the whole list. Drywall projects start at $1,000, so it makes sense to put every hole, crack and corner in the same request.",
                 "On the day, we cover the floor and furniture, cut the damaged area back to solid drywall, set a backer or new piece, tape, mud in two or three coats, and sand. Then the part that matters: texture. We spray a sample board first, compare it to your wall, and adjust until it matches. Knockdown, orange peel, splatter or smooth.",
                 "We prime and paint the repair, or the full wall corner to corner when the color will not blend. You get a finished wall, not a patch waiting on a painter.",
             ],
             cards=[("", "Holes and Impact Damage", "Doorknob holes, furniture scrapes, TV mount scars and the mystery hole in the hallway."), ("", "Cracks and Nail Pops", "North Texas slabs move. We refasten, tape and mud so the crack stays closed."), ("", "Plumber and Electrician Cuts", "Access holes cut for a repair, closed up and textured so nobody knows they were there."), ("", "Water Stains and Soft Spots", "Once the leak is fixed, the damaged drywall comes out and new goes in."), ("", "Corners and Edges", "Dented corner bead and chipped edges rebuilt straight."), ("", "Garage Walls", "Unfinished or damaged garage drywall finished and ready for paint.")],
             photos=REPAIR_PHOTOS,
-            faq=[("What is the minimum for a drywall repair?", "Drywall projects start at $1,000. Group every repair in your home into one request and we quote them together."), ("How long does a repair take?", "A single patch is usually one visit with a return for paint once the mud is dry. Larger repairs take two or three visits so each coat can dry properly."), ("Will the patch show?", "Not when the texture is matched on a sample first and the wall is painted to a natural break. That is how we do every repair.")]),
+            faq=[("Is sheetrock repair the same as drywall repair?", "Yes. Sheetrock is a brand name for drywall, so sheetrock repair and drywall repair are the same job. We patch, texture and paint both the same way."), ("What is the minimum for a drywall repair?", "Drywall projects start at $1,000. Group every repair in your home into one request and we quote them together."), ("How long does a repair take?", "A single patch is usually one visit with a return for paint once the mud is dry. Larger repairs take two or three visits so each coat can dry properly."), ("Will the patch show?", "Not when the texture is matched on a sample first and the wall is painted to a natural break. That is how we do every repair.")]),
         "ceiling-water-damage-repair.html": dict(
             title="Ceiling and Water Damage Drywall Repair The Colony TX | OnPoint Pros Remodeling",
             desc="Water damaged ceiling repair in The Colony, Lewisville, Little Elm, Frisco and Plano. Sagging, stained and collapsed ceiling drywall replaced, retextured and painted by OnPoint Pros Remodeling.",
