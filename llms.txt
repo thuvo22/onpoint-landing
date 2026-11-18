@@ -15,6 +15,10 @@
 ## Core pages
 - [Home](https://onpointprostx.com/): bathroom remodeling and tile in North Dallas, services, service areas.
 - [Full-Tile Bathroom Remodeling](https://onpointprostx.com/services/bathroom-remodel.html): scope, pricing, process, waterproofing, warranty, project photos.
+- [Walk-In Shower Remodels](https://onpointprostx.com/services/walk-in-shower.html): walk-in tile showers built as part of a full bathroom remodel; from $18,000.
+- [Tub-to-Shower Conversions](https://onpointprostx.com/services/tub-to-shower-conversion.html): tub removed, drain and valve moved, waterproofed and flood-tested tile shower; from $18,000.
+- [Guest and Hall Bathroom Remodels](https://onpointprostx.com/services/guest-bathroom-remodel.html): the full-tile remodel scope in a smaller room; from $18,000.
+- [Curbless and Accessible Showers](https://onpointprostx.com/services/accessible-shower.html): curbless or low-curb entry, grab bar blocking, bench, handheld shower; from $18,000.
 - [Our Process](https://onpointprostx.com/process.html): free in-home visit, design and selections, written scope, build, walkthrough; waterproofing and flood test; permits and trades; full warranty terms.
 - [About](https://onpointprostx.com/about.html): the founders and the team.
 - [Gallery](https://onpointprostx.com/gallery.html): documented projects.
@@ -48,7 +52,10 @@
 - [Drywall Repair](https://onpointprostx.com/services/drywall-repair.html): patches, texture matching, popcorn ceiling removal, water-damage repair; $1,000 minimum. City pages under https://onpointprostx.com/drywall/<city>.html.
 - [Flooring Installation](https://onpointprostx.com/services/flooring.html): LVP, hardwood, tile, laminate, carpet. City pages under https://onpointprostx.com/flooring/<city>.html.
 - [Interior Painting](https://onpointprostx.com/services/painting.html): whole-home repaints and cabinet refinishing. City pages under https://onpointprostx.com/painting/<city>.html.
-- [Home Refresh](https://onpointprostx.com/services/home-refresh.html): drywall, paint, flooring and trim as one interior project.
+- [Ceiling Water Damage Repair](https://onpointprostx.com/services/ceiling-water-damage-repair.html): wet drywall out, new board, texture match, paint, after the leak is fixed; $1,000 minimum.
+- [Popcorn Ceiling Removal](https://onpointprostx.com/services/popcorn-ceiling-removal.html): one room or the whole house, scraped, repaired, refinished smooth or textured, primed and painted; $1,000 minimum.
+- [Whole-House Flooring, Paint and Trim](https://onpointprostx.com/services/home-refresh.html): flooring, interior paint, baseboards and trim planned as one project.
+- [North Dallas](https://onpointprostx.com/dfw/north-dallas.html): north central and northwest Dallas ZIP codes we serve.
 
 ## Bathroom guides
 - [Bathroom remodel cost in DFW](https://onpointprostx.com/blog/bathroom-remodel-cost-dfw.html)
