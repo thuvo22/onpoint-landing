@@ -13,6 +13,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 START, END = "<!-- bath-work:start -->", "<!-- bath-work:end -->"
 
 GOOGLE_LISTING = "https://www.google.com/maps?cid=12396670433062033498"
+COLONY_LISTING = "https://www.google.com/maps/place/?q=place_id:ChIJL1TLkO8lvi8RPjwtQBlCM3s"   # OnPoint Pros Remodeling, The Colony
 # Google reviews from bathroom homeowners on the Allen listing, word for word, in the
 # card design from the bathroom offer page (avatar, name, meta line, stars, highlights,
 # the homeowner's own photos, Read on Google). Photos live in images/reviews/.
@@ -53,20 +54,21 @@ REVIEWS = [
                 ("evan-k-review-glass-door-20261110", "Evan K's review photo: frameless glass door on the new shower")]},
 ]
 # Home page only (Thu 2026-11-19: "replace two of the weaker ones with biggest drywall jobs or bundle jobs you find
-# on our page or the colony listing"). Both are Google reviews on the Allen listing, word for word, matched to the
-# largest whole-house job and the largest drywall job that have a review. The second photo on the first review shows
-# kitchen cabinets and is left out (no kitchen pictures on the site).
+# on our page or the colony listing", then "use E and Loomer"). Word for word from Google: Erin Knight on the Allen
+# listing (the largest whole-house job with a review) and Ian Loomer on the Colony listing (the largest drywall job
+# there with a review, and it has photos). Erin's second photo shows kitchen cabinets and is left out.
 HOME_EXTRA = [
     {"name": "Erin Knight", "initial": "E", "avatar": None,
      "meta": "Richardson, TX · whole-house floors, paint and wall repair · October 2026",
      "url": GOOGLE_LISTING,
      "text": "I can’t recommend On Point Pros enough. Dillon was amazing to work with. His communication and dedication to the project is unmatched. On Point Pros <mark>painted our interior, did flooring throughout the house, repaired cracks in the walls, and updated lighting</mark>. His team was very respectful and made sure the job was done well. They did a fantastic job and I will definitely use them again.",
      "photos": [("erin-knight-review-floor-20261018", "Erin's review photo: a room with new plank flooring, fresh wall paint and new baseboards")]},
-    {"name": "Chris Lenczycki", "initial": "C", "avatar": None,
-     "meta": "McKinney, TX · drywall repair and painting in several rooms · September 2026",
-     "url": GOOGLE_LISTING,
-     "text": "Dillon and his team did a terrific job with <mark>drywall repairs and painting in several rooms of my house, plus a challenging area over a staircase</mark>. Dillon is a great project manager and communicator; he kept my apprised of what was happening at all stages. The work crews are prompt, professional, experienced, hard working, and always do quality work. <mark>Fair pricing too.</mark> I highly recommend OnPoint Pros for any remodeling project.",
-     "photos": []},
+    {"name": "Ian Loomer", "initial": "I", "avatar": None,
+     "meta": "Frisco, TX · skim coat of a stairwell and the whole upstairs · November 2026",
+     "url": COLONY_LISTING,
+     "text": "Dillon and his team at On Point Pros were great to work with. Im Frisco based and he was able to swing by quickly to get a good estimate. I had a large stairwell I was looking to have skim coated to remove the knockdown texture. Dillon was able to quote such a good deal and meet timelines in an expedited way <mark>I ended up having his team do my whole upstairs</mark>. <mark>The team even wrapped it up a day ahead of schedule.</mark> All throughout I was in consistent communication and had good Project manager over site from On Point Pros.",
+     "photos": [("ian-loomer-review-stairwell-20261118", "Ian's review photo: tall stairwell with smooth skim coated walls and ceiling"),
+                ("ian-loomer-review-upstairs-20261118", "Ian's review photo: upstairs landing with smooth walls after the skim coat")]},
 ]
 REV_IMG = "/images/reviews/"
 SETS = [
@@ -127,7 +129,7 @@ inject(SERVICE, section(more_link=False), r'[ \t]*<section id="customer-stories"
 _by = {r["name"]: r for r in REVIEWS}
 inject(INDEX, section(cards=[HOME_EXTRA[0], HOME_EXTRA[1], _by["Varun"], _by["Mohan Yechuri"]],
                       h2="What our customers posted on Google",
-                      intro="Reviews from homeowners on our Google listing, word for word, with the photos they posted.",
+                      intro="Reviews from homeowners on our Google listings, word for word, with the photos they posted.",
                       button="Get a free estimate"),
        r'[ \t]*<section id="customer-stories"')
 print("injected", len(CITY_PAGES) + 2, "pages")
