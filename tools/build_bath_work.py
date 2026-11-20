@@ -52,6 +52,22 @@ REVIEWS = [
                 ("evan-k-review-shower-detail-20261110", "Evan K's review photo: shower tile with corner shelf and gray hex floor"),
                 ("evan-k-review-glass-door-20261110", "Evan K's review photo: frameless glass door on the new shower")]},
 ]
+# Home page only (Thu 2026-11-19: "replace two of the weaker ones with biggest drywall jobs or bundle jobs you find
+# on our page or the colony listing"). Both are Google reviews on the Allen listing, word for word, matched to the
+# largest whole-house job and the largest drywall job that have a review. The second photo on the first review shows
+# kitchen cabinets and is left out (no kitchen pictures on the site).
+HOME_EXTRA = [
+    {"name": "Erin Knight", "initial": "E", "avatar": None,
+     "meta": "Richardson, TX · whole-house floors, paint and wall repair · October 2026",
+     "url": GOOGLE_LISTING,
+     "text": "I can’t recommend On Point Pros enough. Dillon was amazing to work with. His communication and dedication to the project is unmatched. On Point Pros <mark>painted our interior, did flooring throughout the house, repaired cracks in the walls, and updated lighting</mark>. His team was very respectful and made sure the job was done well. They did a fantastic job and I will definitely use them again.",
+     "photos": [("erin-knight-review-floor-20261018", "Erin's review photo: a room with new plank flooring, fresh wall paint and new baseboards")]},
+    {"name": "Chris Lenczycki", "initial": "C", "avatar": None,
+     "meta": "McKinney, TX · drywall repair and painting in several rooms · September 2026",
+     "url": GOOGLE_LISTING,
+     "text": "Dillon and his team did a terrific job with <mark>drywall repairs and painting in several rooms of my house, plus a challenging area over a staircase</mark>. Dillon is a great project manager and communicator; he kept my apprised of what was happening at all stages. The work crews are prompt, professional, experienced, hard working, and always do quality work. <mark>Fair pricing too.</mark> I highly recommend OnPoint Pros for any remodeling project.",
+     "photos": []},
+]
 REV_IMG = "/images/reviews/"
 SETS = [
     (["shower-tub", "shower-floor"], ["glass-band", "gray-hex", "tub-surround"]),
@@ -60,7 +76,8 @@ SETS = [
     (["tub-wall-tile", "shower-tub"], ["tub-deck", "gray-hex", "tub-surround"]),
     (["tub-wall", "shower-floor"], ["glass-band", "niche", "tub-surround"]),
 ]
-CITY_PAGES = sorted(p for p in (ROOT / "bathroom").glob("*.html"))
+# city pages only: a page without the reviews section (the cost estimator, added Nov 17) is not touched
+CITY_PAGES = sorted(p for p in (ROOT / "bathroom").glob("*.html") if '<section id="reviews"' in p.read_text())
 SERVICE = ROOT / "services/bathroom-remodel.html"
 INDEX = ROOT / "index.html"
 CSS_LINK = '<link rel="stylesheet" href="/assets/css/project-proof.css?v=20261113-bath-work4">'
@@ -79,14 +96,16 @@ def review_card(r):
             f'<div class="rv-stars" aria-label="5 stars">★★★★★</div><p class="rv-text">{r["text"]}</p>{photos}'
             f'<a class="rv-link" href="{r["url"]}" target="_blank" rel="noopener">Read on Google</a></article>')
 
-def section(keys=None, h2="Bathrooms our customers posted on Google", more_link=True):
-    cards = [r for r in REVIEWS if keys is None or r["name"] in keys]
-    actions = '<a class="proof-button" href="#estimate">Plan your bathroom</a>'
+BATH_INTRO = "Finished bathrooms photographed by the homeowners themselves and posted with their Google reviews. Their words are word for word."
+
+def section(keys=None, h2="Bathrooms our customers posted on Google", more_link=True, cards=None, intro=BATH_INTRO, button="Plan your bathroom"):
+    cards = cards if cards is not None else [r for r in REVIEWS if keys is None or r["name"] in keys]
+    actions = f'<a class="proof-button" href="#estimate">{button}</a>'
     if more_link:
         actions += '<a class="proof-button secondary" href="/services/bathroom-remodel.html#bathroom-work">See more bathroom reviews</a>'
     return (f'{START}\n<section id="bathroom-work" class="project-proof" aria-labelledby="bathroom-work-title"><div class="proof-wrap">'
             f'<h2 id="bathroom-work-title">{html.escape(h2)}</h2>'
-            f'<p class="proof-intro">Finished bathrooms photographed by the homeowners themselves and posted with their Google reviews. Their words are word for word.</p>'
+            f'<p class="proof-intro">{intro}</p>'
             f'<div class="proof-grid proof-reviews">{"".join(review_card(r) for r in cards)}</div>'
             f'<div class="proof-actions">{actions}</div></div></section>\n{END}')
 
@@ -103,6 +122,12 @@ def inject(path, block, anchor_re):
 for p in CITY_PAGES:
     inject(p, section(), r'[ \t]*<section id="reviews"')
 inject(SERVICE, section(more_link=False), r'[ \t]*<section id="customer-stories"')
-# home page: the four reviews with the most photos
-inject(INDEX, section(keys=["Varun", "Mohan Yechuri", "Evan K", "Thùy Dung"]), r'[ \t]*<section id="customer-stories"')
+# home page: the largest whole-house job and the largest drywall job with a review, then two bathroom reviews
+# (the repeat customer, and the one that had a bathroom and drywall done together)
+_by = {r["name"]: r for r in REVIEWS}
+inject(INDEX, section(cards=[HOME_EXTRA[0], HOME_EXTRA[1], _by["Varun"], _by["Mohan Yechuri"]],
+                      h2="What our customers posted on Google",
+                      intro="Reviews from homeowners on our Google listing, word for word, with the photos they posted.",
+                      button="Get a free estimate"),
+       r'[ \t]*<section id="customer-stories"')
 print("injected", len(CITY_PAGES) + 2, "pages")
