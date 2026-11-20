@@ -56,13 +56,15 @@ REVIEWS = [
 # Home page only (Thu 2026-11-19: "replace two of the weaker ones with biggest drywall jobs or bundle jobs you find
 # on our page or the colony listing", then "use E and Loomer"). Word for word from Google: Erin Knight on the Allen
 # listing (the largest whole-house job with a review) and Ian Loomer on the Colony listing (the largest drywall job
-# there with a review, and it has photos). Erin's second photo shows kitchen cabinets and is left out.
+# there with a review, and it has photos). Erin's second photo shows painted kitchen cabinets; Thu allowed this one
+# photo the same evening ("You can use [her] second photo"). The no-kitchen rule still stands everywhere else.
 HOME_EXTRA = [
     {"name": "Erin Knight", "initial": "E", "avatar": None,
      "meta": "Richardson, TX · whole-house floors, paint and wall repair · October 2026",
      "url": GOOGLE_LISTING,
      "text": "I can’t recommend On Point Pros enough. Dillon was amazing to work with. His communication and dedication to the project is unmatched. On Point Pros <mark>painted our interior, did flooring throughout the house, repaired cracks in the walls, and updated lighting</mark>. His team was very respectful and made sure the job was done well. They did a fantastic job and I will definitely use them again.",
-     "photos": [("erin-knight-review-floor-20261018", "Erin's review photo: a room with new plank flooring, fresh wall paint and new baseboards")]},
+     "photos": [("erin-knight-review-floor-20261018", "Erin's review photo: a room with new plank flooring, fresh wall paint and new baseboards"),
+                ("erin-knight-review-cabinets-20261018", "Erin's review photo: cabinets painted a light color with new gold hardware")]},
     {"name": "Ian Loomer", "initial": "I", "avatar": None,
      "meta": "Frisco, TX · skim coat of a stairwell and the whole upstairs · November 2026",
      "url": COLONY_LISTING,
