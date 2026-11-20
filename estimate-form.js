@@ -43,8 +43,9 @@
   };
 
   function budgetLabel(value) { return ({ under_20k: 'Under $18,000', '20k_30k': '$18,000 to $30,000', '30k_45k': '$30,000 to $45,000', '45k_plus': '$45,000 or more' })[value] || ''; }
-  // Thu 2026-11-19: "Remove the zip and photos for now in the form." Set to true to ask for the ZIP code again.
-  var ASK_ZIP = false;
+  // Thu 2026-11-19: the ZIP code came off the form, then went back on as an optional field the same evening.
+  // It tells Dillon where the job is and lets the backend hold an out-of-area request; nobody is stopped by leaving it blank.
+  var ASK_ZIP = true;
   function submitLabel() { return isBathroom ? 'Book my free in-home visit' : 'Get my free on-site estimate'; }
 
   function pageName() {
@@ -107,7 +108,7 @@
           '<label class="block text-sm font-semibold text-slate-900">Name<input type="text" name="name" required autocomplete="name" placeholder="Your name" class="' + fieldClass + '"></label>' +
           '<label class="block text-sm font-semibold text-slate-900">Phone<input type="tel" name="phone" required autocomplete="tel" placeholder="Mobile phone" class="' + fieldClass + '"></label>' +
         '</div>' +
-        (!ASK_ZIP ? '' : '<label class="block mt-3 text-sm font-semibold text-slate-900">' + (isBathroom ? 'Project ZIP code' : 'ZIP code of the home') + '<input type="text" name="zip" required inputmode="numeric" autocomplete="postal-code" maxlength="10" placeholder="75002" class="' + fieldClass + '"></label>') +
+        (!ASK_ZIP ? '' : '<label class="block mt-3 text-sm font-semibold text-slate-900">' + (isBathroom ? 'Project ZIP code' : 'ZIP code of the home') + ' <span class="font-normal text-slate-500">(optional)</span><input type="text" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="10" placeholder="75002" class="' + fieldClass + '"></label>') +
         (isBathroom ? '<label class="block mt-3 text-sm font-semibold text-slate-900">Budget range (optional)<select name="budget" class="' + fieldClass + '"><option value="">Not sure yet</option><option value="under_20k">Under $18,000</option><option value="20k_30k">$18,000 to $30,000</option><option value="30k_45k">$30,000 to $45,000</option><option value="45k_plus">$45,000 or more</option></select></label>' : '') +
         '<label class="block mt-3 text-sm font-semibold text-slate-900">' + (isBathroom ? 'Project scope &amp; preferred timing' : 'What do you need done?') +
           '<textarea name="message" rows="3" required placeholder="' + (isBathroom ? 'What would you change in your bathroom, and when would you like to begin?' : 'Tell us about your project.') + '" class="' + fieldClass + '"></textarea></label>' +
@@ -133,7 +134,7 @@
       var digits = (form.phone.value.match(/\d/g) || []).join('');
       if (!form.name.value.trim()) { say('Please enter your name.', false); form.name.focus(); return; }
       if (digits.length < 10) { say('Please enter a 10 digit phone number.', false); form.phone.focus(); return; }
-      if (ASK_ZIP && form.zip && !/^\d{5}(-\d{4})?$/.test(form.zip.value.trim())) { say('Please enter the 5 digit ZIP code of the home.', false); form.zip.focus(); return; }
+      if (ASK_ZIP && form.zip && form.zip.value.trim() && !/^\d{5}(-\d{4})?$/.test(form.zip.value.trim())) { say('Please enter a 5 digit ZIP code, or leave it blank.', false); form.zip.focus(); return; }
       if (!form.message.value.trim()) { say('Please tell us what you need done.', false); form.message.focus(); return; }
       inFlight = true;
       btn.disabled = true; btn.textContent = 'Checking number...';
